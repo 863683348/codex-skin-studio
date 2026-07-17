@@ -23,7 +23,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh" data-theme="dark" suppressHydrationWarning>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Codex Skin Studio',
+              url: 'https://codex-skin-studio.com',
+              description:
+                '基于 CDP 注入技术的桌面端换肤工具，不修改官方文件，一键切换主题。',
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

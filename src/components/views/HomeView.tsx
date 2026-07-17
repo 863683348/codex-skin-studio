@@ -14,15 +14,6 @@ const featureIcons: Record<FeatureKey, LucideIcon> = {
   restore: RotateCcw,
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Codex Skin Studio',
-  operatingSystem: 'macOS, Windows',
-  applicationCategory: 'DesktopApplication',
-  url: 'https://codex-skin-studio.com',
-};
-
 export function HomeView({ locale }: { locale: Locale }) {
   const dict = getDict(locale);
   const features: { key: FeatureKey; title: string; desc: string }[] = [
@@ -32,6 +23,35 @@ export function HomeView({ locale }: { locale: Locale }) {
     { key: 'restore', ...dict.home.features.restore },
   ];
   const featured = themes.slice(0, 4);
+
+  const priceCurrency = locale === 'zh' ? 'CNY' : 'USD';
+  const offerList = dict.pricing.plans.map((p) => ({
+    '@type': 'Offer',
+    name: p.name,
+    price: p.free ? '0' : p.price.replace(/[^0-9.]/g, '') || '0',
+    priceCurrency,
+  }));
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Codex Skin Studio',
+    operatingSystem: 'macOS, Windows',
+    applicationCategory: 'DesktopApplication',
+    url: 'https://codex-skin-studio.com',
+    description: dict.home.heroDescription,
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency,
+      lowPrice: '0',
+      offerCount: offerList.length,
+      offers: offerList,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Codex Skin Studio',
+      url: 'https://codex-skin-studio.com',
+    },
+  };
 
   return (
     <div>
@@ -50,16 +70,16 @@ export function HomeView({ locale }: { locale: Locale }) {
         <p className="mt-4 max-w-2xl text-body text-text-secondary">
           {dict.home.heroDescription}
         </p>
-        <div className="mt-8 flex gap-4">
+        <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:w-auto">
           <Link
             href={`/${locale}/gallery`}
-            className="rounded-md bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-hover"
+            className="w-full rounded-md bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-hover sm:w-auto"
           >
             {dict.home.ctaBrowse}
           </Link>
           <Link
             href={`/${locale}/docs`}
-            className="rounded-md border border-border px-6 py-3 text-body font-medium text-text-primary transition-colors hover:border-border-hover"
+            className="w-full rounded-md border border-border px-6 py-3 text-body font-medium text-text-primary transition-colors hover:border-border-hover sm:w-auto"
           >
             {dict.home.ctaQuickstart}
           </Link>

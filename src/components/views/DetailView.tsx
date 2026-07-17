@@ -89,12 +89,12 @@ export function DetailView({
               </li>
             ))}
           </ol>
-          <div className="mt-8 flex gap-3">
+          <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row">
             <a
               href={RELEASE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-hover"
+              className="flex w-full items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-hover sm:w-auto"
             >
               <Download size={18} />
               {dict.detail.downloadTool}
@@ -103,7 +103,7 @@ export function DetailView({
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-md border border-border px-6 py-3 text-body font-medium text-text-primary transition-colors hover:border-border-hover"
+              className="flex w-full items-center justify-center gap-2 rounded-md border border-border px-6 py-3 text-body font-medium text-text-primary transition-colors hover:border-border-hover sm:w-auto"
             >
               <Github size={18} />
               {dict.detail.viewGithub}

@@ -8,6 +8,7 @@
 # env (keep .env.example tracked as template)
 .env
 .env.local
+scripts/
 .env.*.local
 
 # misc

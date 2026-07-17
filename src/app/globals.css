@@ -58,6 +58,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  overflow-wrap: break-word;
   transition: background-color 200ms ease, color 200ms ease;
 }
 
@@ -99,6 +100,12 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* 长内容（代码/URL）防横向溢出 */
+pre {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 /* ===== 通用动画 ===== */
