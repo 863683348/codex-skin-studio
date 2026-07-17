@@ -1,0 +1,29 @@
+import './globals.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Codex Skin Studio',
+    template: '%s | Codex Skin Studio',
+  },
+  description:
+    '基于 CDP 注入技术的桌面端换肤工具，不修改官方文件，一键切换主题。',
+  metadataBase: new URL('https://codex-skin-studio.com'),
+  openGraph: {
+    title: 'Codex Skin Studio',
+    description: '给 Codex 换一张会呼吸的脸。基于 CDP 注入的桌面端换肤工具。',
+    type: 'website',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="zh" data-theme="dark" suppressHydrationWarning>
+      <body>{children}</body>
+    </html>
+  );
+}

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codex-skin-studio.vercel.app
+
+# Sitemaps
+Sitemap: https://codex-skin-studio.vercel.app/sitemap.xml
