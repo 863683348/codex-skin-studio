@@ -5,6 +5,7 @@ export const zh = {
     pricing: '定价',
     docs: '使用教程',
     github: 'GitHub',
+    contact: '联系我们',
   },
   home: {
     heroTitle: 'Codex Skin Studio',
@@ -168,6 +169,13 @@ export const zh = {
     accountMenu: '账户菜单',
     myThemes: '我的主题',
     signOut: '退出登录',
+  },
+  contact: {
+    title: '联系我们',
+    subtitle: '有任何问题或建议？欢迎来信',
+    email: 'ahmedlzany423@gmail.com',
+    emailLabel: '发送邮件',
+    response: '我们会在 24 小时内回复',
   },
   footer: {
     copyright: 'Codex Skin Studio. 开源项目，MIT 许可证.',

@@ -7,6 +7,7 @@ export const en: Dict = {
     pricing: 'Pricing',
     docs: 'Docs',
     github: 'GitHub',
+    contact: 'Contact',
   },
   home: {
     heroTitle: 'Codex Skin Studio',
@@ -170,6 +171,13 @@ export const en: Dict = {
     accountMenu: 'Account menu',
     myThemes: 'My Themes',
     signOut: 'Sign out',
+  },
+  contact: {
+    title: 'Contact Us',
+    subtitle: 'Have questions or suggestions? We\'d love to hear from you.',
+    email: 'ahmedlzany423@gmail.com',
+    emailLabel: 'Send Email',
+    response: 'We\'ll get back to you within 24 hours',
   },
   footer: {
     copyright: 'Codex Skin Studio. Open source, MIT License.',

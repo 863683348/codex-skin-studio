@@ -1,4 +1,4 @@
-import { Github } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 import { getDict } from '@/lib/i18n';
 import { GITHUB_URL } from '@/lib/site';
 import type { Locale } from '@/lib/i18n/config';
@@ -15,6 +15,13 @@ export function Footer({ locale }: { locale: Locale }) {
           <span className="text-xs text-text-tertiary">
             {dict.footer.madeWith}
           </span>
+          <a
+            href={`mailto:${dict.contact.email}`}
+            aria-label="Email"
+            className="text-text-secondary transition-colors hover:text-accent"
+          >
+            <Mail size={18} />
+          </a>
           <a
             href={GITHUB_URL}
             target="_blank"

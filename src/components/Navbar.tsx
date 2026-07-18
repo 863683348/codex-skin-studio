@@ -21,6 +21,7 @@ export function Navbar({ locale }: { locale: Locale }) {
     { href: `/${locale}/gallery`, label: dict.nav.gallery },
     { href: `/${locale}/pricing`, label: dict.nav.pricing },
     { href: `/${locale}/docs`, label: dict.nav.docs },
+    { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
   const isActive = (href: string) => pathname === href;
 
