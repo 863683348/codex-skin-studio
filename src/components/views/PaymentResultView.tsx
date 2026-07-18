@@ -14,7 +14,7 @@ export function PaymentResultView({ locale }: { locale: Locale }) {
     const params = new URLSearchParams(window.location.search);
     if (params.get('canceled') === 'true') {
       setStatus('cancel');
-    } else if (params.get('session_id')) {
+    } else if (params.get('session_id') || params.get('subscription_id') || params.get('token')) {
       setStatus('success');
     } else {
       setStatus('cancel');

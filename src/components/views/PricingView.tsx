@@ -1,18 +1,47 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { Check, Loader2 } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { getDict } from '@/lib/i18n';
 import { useAuth } from '@/lib/auth';
 import type { Locale } from '@/lib/i18n/config';
 
-// Stripe Price ID 映射——用户在 Stripe Dashboard 创建商品后填入这里
-// 格式: stripe/price_xxxx
+type PayPalAction = {
+  subscription: {
+    create: (options: { plan_id: string }) => Promise<string>;
+  };
+};
+
+type PayPalActions = {
+  subscription: {
+    create: (options: { plan_id: string }) => Promise<string>;
+  };
+};
+
+declare global {
+  interface Window {
+    paypal?: {
+      Buttons: (config: {
+        createSubscription: (data: unknown, actions: PayPalActions) => Promise<string>;
+        onApprove: (data: { subscriptionID: string }, actions: unknown) => Promise<void>;
+        onError: (err: Error) => void;
+        style?: Record<string, string>;
+      }) => {
+        render: (selector: string) => Promise<void>;
+      };
+    };
+  }
+}
+
+// PayPal Plan ID 映射——用户在 PayPal Dashboard 创建订阅计划后填入
 // 留空时对应方案的 CTA 会提示"即将上线"
-const STRIPE_PRICE_IDS: Record<string, string> = {
-  pro: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO ?? '',
-  team: process.env.NEXT_PUBLIC_STRIPE_PRICE_TEAM ?? '',
+const PAYPAL_CONFIG = {
+  clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID ?? '',
+  plans: {
+    pro: process.env.NEXT_PUBLIC_PAYPAL_PLAN_PRO ?? '',
+    team: process.env.NEXT_PUBLIC_PAYPAL_PLAN_TEAM ?? '',
+  } as Record<string, string>,
 };
 
 export function PricingView({ locale }: { locale: Locale }) {
@@ -20,14 +49,77 @@ export function PricingView({ locale }: { locale: Locale }) {
   const { user, signInWithGoogle } = useAuth();
   const plans = dict.pricing.plans;
   const [notice, setNotice] = useState<{ type: 'info' | 'error'; text: string } | null>(null);
-  const [loading, setLoading] = useState<string | null>(null); // plan key being processed
+  const [paypalLoading, setPaypalLoading] = useState<string | null>(null);
+  const [sdkLoaded, setSdkLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const currentPlanRef = useRef<string | null>(null);
 
-  const handlePaid = async (planKey: string) => {
+  // 动态加载 PayPal SDK
+  const loadPayPalSDK = useCallback(() => {
+    return new Promise<void>((resolve, reject) => {
+      if (window.paypal) {
+        setSdkLoaded(true);
+        resolve();
+        return;
+      }
+      const clientId = PAYPAL_CONFIG.clientId;
+      if (!clientId) {
+        reject(new Error('PAYPAL_NOT_CONFIGURED'));
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&vault=true&intent=subscription&locale=${locale === 'zh' ? 'zh_CN' : 'en_US'}`;
+      script.async = true;
+      script.onload = () => {
+        setSdkLoaded(true);
+        resolve();
+      };
+      script.onerror = () => reject(new Error('PayPal SDK 加载失败'));
+      document.head.appendChild(script);
+    });
+  }, [locale]);
+
+  // 渲染 PayPal 按钮到容器
+  const renderPayPalButton = useCallback(async (planKey: string) => {
+    const planId = PAYPAL_CONFIG.plans[planKey];
+    if (!planId || !window.paypal) return;
+
+    // 清空容器
+    if (containerRef.current) {
+      containerRef.current.innerHTML = '';
+    }
+
+    // 稍等一帧等 DOM 更新
+    await new Promise((r) => setTimeout(r, 50));
+
+    window.paypal
+      .Buttons({
+        createSubscription: (_data, actions) =>
+          actions.subscription.create({ plan_id: planId }),
+        onApprove: async (data) => {
+          // 付款成功，跳转到结果页
+          window.location.href = `/${locale}/pricing/result?subscription_id=${data.subscriptionID}`;
+        },
+        onError: (err) => {
+          console.error('PayPal error:', err);
+          setNotice({ type: 'error', text: 'PayPal 支付异常，请稍后重试' });
+          setPaypalLoading(null);
+          currentPlanRef.current = null;
+        },
+        style: {
+          label: 'subscribe',
+          shape: 'rect',
+          color: 'gold',
+        },
+      })
+      .render('#paypal-button-container');
+  }, [locale]);
+
+  const handleSubscribe = async (planKey: string) => {
     setNotice(null);
 
-    // 检查是否配置了 Stripe Price ID
-    const priceId = STRIPE_PRICE_IDS[planKey];
-    if (!priceId) {
+    // 检查 PayPal 是否已配置
+    if (!PAYPAL_CONFIG.clientId || !PAYPAL_CONFIG.plans[planKey]) {
       setNotice({ type: 'info', text: dict.pricing.checkoutSoon });
       return;
     }
@@ -47,39 +139,33 @@ export function PricingView({ locale }: { locale: Locale }) {
       }
     }
 
-    // 登录完后调用 Stripe API
-    setLoading(planKey);
+    setPaypalLoading(planKey);
+    currentPlanRef.current = planKey;
+
     try {
-      const resp = await fetch('/api/checkout/session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          priceId,
-          userId: user?.uid,
-          locale,
-        }),
-      });
-
-      if (!resp.ok) {
-        const err = await resp.json().catch(() => ({ error: 'Unknown error' }));
-        if (err.error === 'STRIPE_NOT_CONFIGURED') {
-          setNotice({ type: 'info', text: dict.pricing.checkoutSoon });
-          return;
-        }
-        throw new Error(err.error);
-      }
-
-      const data = await resp.json();
-      if (data.url) {
-        window.location.href = data.url;
-      }
+      await loadPayPalSDK();
+      // 用小延迟确保 DOM 就绪
+      setTimeout(() => void renderPayPalButton(planKey), 100);
     } catch (e) {
-      console.error('Checkout error:', e);
-      setNotice({ type: 'error', text: dict.pricing.checkoutError ?? '结账服务异常，请稍后重试' });
-    } finally {
-      setLoading(null);
+      const msg = e instanceof Error ? e.message : '';
+      if (msg === 'PAYPAL_NOT_CONFIGURED') {
+        setNotice({ type: 'info', text: dict.pricing.checkoutSoon });
+      } else {
+        setNotice({ type: 'error', text: '加载支付失败，请刷新重试' });
+      }
+      setPaypalLoading(null);
+      currentPlanRef.current = null;
     }
   };
+
+  // 清除 PayPal 按钮区域
+  useEffect(() => {
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
+      }
+    };
+  }, []);
 
   return (
     <section className="mx-auto max-w-container px-4 py-12 md:px-8">
@@ -107,9 +193,9 @@ export function PricingView({ locale }: { locale: Locale }) {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {plans.map((plan) => {
           const isRecommended = Boolean(plan.highlighted);
-          const planKey = plan.name.toLowerCase(); // 'free' | 'pro' | 'team'
+          const planKey = plan.name.toLowerCase();
           const isFree = Boolean(plan.free);
-          const isLoading = loading === planKey;
+          const isLoading = paypalLoading === planKey;
 
           return (
             <div
@@ -149,12 +235,13 @@ export function PricingView({ locale }: { locale: Locale }) {
                   </Link>
                 ) : (
                   <button
-                    onClick={() => void handlePaid(planKey)}
-                    disabled={isLoading}
-                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-accent py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
+                    onClick={() => void handleSubscribe(planKey)}
+                    disabled={isLoading && currentPlanRef.current === planKey}
+                    className="w-full rounded-lg bg-accent py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {isLoading && <Loader2 size={16} className="animate-spin" />}
-                    {isLoading ? '处理中...' : plan.ctaLabel}
+                    {isLoading && currentPlanRef.current === planKey
+                      ? '加载 PayPal...'
+                      : plan.ctaLabel}
                   </button>
                 )}
               </div>
@@ -162,6 +249,17 @@ export function PricingView({ locale }: { locale: Locale }) {
           );
         })}
       </div>
+
+      {/* PayPal 按钮渲染容器 */}
+      {paypalLoading && (
+        <div className="mt-8 flex justify-center">
+          <div
+            id="paypal-button-container"
+            ref={containerRef}
+            className="w-full max-w-sm"
+          />
+        </div>
+      )}
 
       <p className="mt-8 text-center text-sm text-text-tertiary">
         {dict.pricing.trust}
