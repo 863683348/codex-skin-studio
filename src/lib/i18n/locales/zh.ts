@@ -109,6 +109,7 @@ export const zh = {
     trust: '所有方案含 30 天退款',
     recommended: '推荐',
     checkoutSoon: '结账功能即将上线（Stripe 集成中），已为你保留席位',
+    checkoutError: '结账服务异常，请稍后重试',
     plans: [
       {
         name: 'Free',

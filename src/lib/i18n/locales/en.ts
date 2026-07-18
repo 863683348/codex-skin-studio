@@ -111,6 +111,7 @@ export const en: Dict = {
     trust: 'All plans include a 30-day refund',
     recommended: 'Recommended',
     checkoutSoon: 'Checkout is coming soon (Stripe integration in progress). Your seat is reserved.',
+    checkoutError: 'Checkout service error. Please try again later.',
     plans: [
       {
         name: 'Free',

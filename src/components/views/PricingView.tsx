@@ -2,36 +2,83 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Check } from 'lucide-react';
+import { Check, Loader2 } from 'lucide-react';
 import { getDict } from '@/lib/i18n';
 import { useAuth } from '@/lib/auth';
-import { CHECKOUT_URL } from '@/lib/site';
 import type { Locale } from '@/lib/i18n/config';
+
+// Stripe Price ID 映射——用户在 Stripe Dashboard 创建商品后填入这里
+// 格式: stripe/price_xxxx
+// 留空时对应方案的 CTA 会提示"即将上线"
+const STRIPE_PRICE_IDS: Record<string, string> = {
+  pro: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO ?? '',
+  team: process.env.NEXT_PUBLIC_STRIPE_PRICE_TEAM ?? '',
+};
 
 export function PricingView({ locale }: { locale: Locale }) {
   const dict = getDict(locale);
   const { user, signInWithGoogle } = useAuth();
   const plans = dict.pricing.plans;
-  const [notice, setNotice] = useState<string | null>(null);
+  const [notice, setNotice] = useState<{ type: 'info' | 'error'; text: string } | null>(null);
+  const [loading, setLoading] = useState<string | null>(null); // plan key being processed
 
-  const handlePaid = async () => {
+  const handlePaid = async (planKey: string) => {
     setNotice(null);
+
+    // 检查是否配置了 Stripe Price ID
+    const priceId = STRIPE_PRICE_IDS[planKey];
+    if (!priceId) {
+      setNotice({ type: 'info', text: dict.pricing.checkoutSoon });
+      return;
+    }
+
+    // 未登录先登录
     if (!user) {
       const res = await signInWithGoogle();
       if (!res.ok) {
-        setNotice(
-          res.error === 'FIREBASE_NOT_CONFIGURED'
-            ? dict.auth.notConfigured
-            : dict.auth.loginFailed,
-        );
+        setNotice({
+          type: 'error',
+          text:
+            res.error === 'FIREBASE_NOT_CONFIGURED'
+              ? dict.auth.notConfigured
+              : dict.auth.loginFailed,
+        });
         return;
       }
     }
-    if (CHECKOUT_URL) {
-      window.location.href = CHECKOUT_URL;
-      return;
+
+    // 登录完后调用 Stripe API
+    setLoading(planKey);
+    try {
+      const resp = await fetch('/api/checkout/session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          priceId,
+          userId: user?.uid,
+          locale,
+        }),
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({ error: 'Unknown error' }));
+        if (err.error === 'STRIPE_NOT_CONFIGURED') {
+          setNotice({ type: 'info', text: dict.pricing.checkoutSoon });
+          return;
+        }
+        throw new Error(err.error);
+      }
+
+      const data = await resp.json();
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    } catch (e) {
+      console.error('Checkout error:', e);
+      setNotice({ type: 'error', text: dict.pricing.checkoutError ?? '结账服务异常，请稍后重试' });
+    } finally {
+      setLoading(null);
     }
-    setNotice(dict.pricing.checkoutSoon);
   };
 
   return (
@@ -46,14 +93,24 @@ export function PricingView({ locale }: { locale: Locale }) {
       </header>
 
       {notice && (
-        <p className="mx-auto mb-6 max-w-container rounded-lg border border-border bg-bg-secondary px-4 py-3 text-center text-sm text-text-secondary">
-          {notice}
+        <p
+          className={`mx-auto mb-6 max-w-container rounded-lg border px-4 py-3 text-center text-sm ${
+            notice.type === 'error'
+              ? 'border-red-200 bg-red-50 text-red-700'
+              : 'border-border bg-bg-secondary text-text-secondary'
+          }`}
+        >
+          {notice.text}
         </p>
       )}
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {plans.map((plan) => {
           const isRecommended = Boolean(plan.highlighted);
+          const planKey = plan.name.toLowerCase(); // 'free' | 'pro' | 'team'
+          const isFree = Boolean(plan.free);
+          const isLoading = loading === planKey;
+
           return (
             <div
               key={plan.name}
@@ -83,7 +140,7 @@ export function PricingView({ locale }: { locale: Locale }) {
                 ))}
               </ul>
               <div className="mt-6">
-                {plan.free ? (
+                {isFree ? (
                   <Link
                     href={`/${locale}/gallery`}
                     className="block w-full rounded-lg border border-border bg-bg-tertiary py-2.5 text-center text-sm font-medium text-text-primary transition-colors hover:border-accent hover:text-accent"
@@ -92,10 +149,12 @@ export function PricingView({ locale }: { locale: Locale }) {
                   </Link>
                 ) : (
                   <button
-                    onClick={() => void handlePaid()}
-                    className="block w-full rounded-lg bg-accent py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+                    onClick={() => void handlePaid(planKey)}
+                    disabled={isLoading}
+                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-accent py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {plan.ctaLabel}
+                    {isLoading && <Loader2 size={16} className="animate-spin" />}
+                    {isLoading ? '处理中...' : plan.ctaLabel}
                   </button>
                 )}
               </div>
