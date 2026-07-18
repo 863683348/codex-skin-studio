@@ -76,14 +76,14 @@ export function AccountMenu({ locale }: { locale: Locale }) {
         )}
       </button>
       {menuOpen && (
-        <div className="absolute right-0 mt-2 w-44 overflow-hidden rounded-lg border border-border bg-bg-secondary py-1 shadow-lg">
-          <div className="border-b border-border px-3 py-2 text-xs text-text-tertiary">
+        <div className="absolute right-0 z-50 mt-2 min-w-[180px] overflow-hidden rounded-lg border border-border bg-bg-secondary py-1 shadow-lg">
+          <div className="max-w-[240px] truncate border-b border-border px-3 py-2 text-xs text-text-tertiary">
             {user.displayName ?? user.email}
           </div>
           <Link
             href={`/${locale}/gallery`}
             onClick={() => setMenuOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 text-sm text-text-primary transition-colors hover:bg-bg-tertiary"
+            className="flex items-center gap-2 whitespace-nowrap px-3 py-2 text-sm text-text-primary transition-colors hover:bg-bg-tertiary"
           >
             <Palette size={16} /> {dict.auth.myThemes}
           </Link>
@@ -92,7 +92,7 @@ export function AccountMenu({ locale }: { locale: Locale }) {
               setMenuOpen(false);
               void signOut();
             }}
-            className="flex w-full items-center gap-2 px-3 py-2 text-sm text-text-primary transition-colors hover:bg-bg-tertiary"
+            className="flex w-full items-center gap-2 whitespace-nowrap px-3 py-2 text-sm text-text-primary transition-colors hover:bg-bg-tertiary"
           >
             <LogOut size={16} /> {dict.auth.signOut}
           </button>

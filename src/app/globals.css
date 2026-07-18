@@ -41,7 +41,10 @@
 /* ===== 全局重置（mobile-first） ===== */
 * {
   box-sizing: border-box;
-  max-width: 100%;
+}
+/* 防止子元素 max-width 撑大父容器（针对下拉菜单/弹层等需要固定宽度的场景） */
+div, section, header, nav, main, aside, footer, ul, ol, li, article {
+  max-width: revert;
 }
 
 html {
