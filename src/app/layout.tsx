@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     '基于 CDP 注入技术的桌面端换肤工具，不修改官方文件，一键切换主题。',
   metadataBase: new URL('https://codex-skin-studio.com'),
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Codex Skin Studio',
     description: '给 Codex 换一张会呼吸的脸。基于 CDP 注入的桌面端换肤工具。',
