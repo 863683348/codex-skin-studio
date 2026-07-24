@@ -37,8 +37,8 @@ export function HomeView({ locale }: { locale: Locale }) {
     name: 'Codex Skin Studio',
     operatingSystem: 'macOS, Windows',
     applicationCategory: 'DesktopApplication',
-    url: 'https://codex-skin-studio.com',
-    description: dict.home.heroDescription,
+    url: 'https://codex-skin-studio.shop',
+    description: 'Codex 桌面端换肤工具，基于 CDP 注入，不修改官方文件。支持 macOS 和 Windows。',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency,
@@ -49,7 +49,7 @@ export function HomeView({ locale }: { locale: Locale }) {
     publisher: {
       '@type': 'Organization',
       name: 'Codex Skin Studio',
-      url: 'https://codex-skin-studio.com',
+      url: 'https://codex-skin-studio.shop',
     },
   };
 

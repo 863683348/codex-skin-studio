@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://codex-skin-studio.vercel.app',
+  siteUrl: 'https://codex-skin-studio.shop',
   outDir: './out',
   generateRobotsTxt: true,
   changefreq: 'weekly',
@@ -9,11 +9,11 @@ module.exports = {
   exclude: ['/404'],
   alternateRefs: [
     {
-      href: 'https://codex-skin-studio.vercel.app/zh',
+      href: 'https://codex-skin-studio.shop/zh',
       hreflang: 'zh',
     },
     {
-      href: 'https://codex-skin-studio.vercel.app/en',
+      href: 'https://codex-skin-studio.shop/en',
       hreflang: 'en',
     },
   ],

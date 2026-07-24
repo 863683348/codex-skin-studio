@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://codex-skin-studio.vercel.app
+Host: https://codex-skin-studio.shop
 
 # Sitemaps
-Sitemap: https://codex-skin-studio.vercel.app/sitemap.xml
+Sitemap: https://codex-skin-studio.shop/sitemap.xml
