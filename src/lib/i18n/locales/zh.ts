@@ -10,18 +10,18 @@ export const zh = {
   home: {
     heroTitle: 'Codex Skin Studio',
     heroSubtitle: '给 Codex 换一张会呼吸的脸',
-    heroDescription: '基于 CDP 注入技术的桌面端换肤工具，不修改官方文件，一键切换主题。',
+    heroDescription: '基于本机 CDP 回环注入技术的桌面端换肤工具，不修改 app.asar 与官方签名文件。支持 macOS 和 Windows，一键切换 8+ 预设主题，可自定义背景与配色。侧栏、建议卡、输入框等原生控件保留完整交互。',
     ctaBrowse: '浏览主题',
     ctaQuickstart: '快速开始',
     featuresTitle: '核心功能',
     features: {
       cdp: {
-        title: 'CDP 注入',
-        desc: '本机回环注入，不碰官方文件',
+        title: 'CDP 本机回环注入',
+        desc: '不修改 app.asar，不破坏代码签名，安全隔离',
       },
       image: {
         title: '可换图',
-        desc: '自定义背景图，自适应安全区',
+        desc: '自定义背景图，自适应安全区，一键更换风格',
       },
       palette: {
         title: '可存主题',

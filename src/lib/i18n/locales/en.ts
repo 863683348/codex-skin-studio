@@ -12,20 +12,19 @@ export const en: Dict = {
   home: {
     heroTitle: 'Codex Skin Studio',
     heroSubtitle: 'Give Codex a living, breathing face',
-    heroDescription: 'A desktop skinning tool powered by CDP injection. No official files modified. Switch themes instantly.',
+    heroDescription: 'A desktop skinning tool powered by local CDP loopback injection. No app.asar modification, no code signature alteration. Supports macOS & Windows with 8+ preset themes, custom backgrounds, and color schemes. Sidebar, suggestion cards, and input fields remain fully interactive native controls.',
     ctaBrowse: 'Browse Themes',
     ctaQuickstart: 'Quick Start',
     featuresTitle: 'Core Features',
     features: {
       cdp: {
-        title: 'CDP Injection',
-        desc: 'Local loopback injection, no official files touched',
+        title: 'Local CDP Injection',
+        desc: 'No app.asar patching, no signature breakage, sandboxed isolation',
       },
       image: {
-        title: 'Custom Images',
-        desc: 'Import background images with auto safe-area',
-      },
-      palette: {
+        title: 'Custom Backgrounds',
+        desc: 'Personalize with any image, auto-safe area, one-click switch',
+      },      palette: {
         title: 'Theme Presets',
         desc: 'Save and switch local theme presets',
       },
