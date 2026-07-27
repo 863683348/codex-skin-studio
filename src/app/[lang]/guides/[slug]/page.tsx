@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { GuideView } from '@/components/views/GuideView';
 import { guides, getGuide } from '@/data/guides';
 import type { Locale } from '@/lib/i18n/config';
+import { localeAlternates } from '@/lib/seo';
 
 export const dynamicParams = false;
 
@@ -22,9 +23,7 @@ export async function generateMetadata({
   return {
     title: locale === 'en' ? guide.en.metaTitle : guide.zh.metaTitle,
     description: locale === 'en' ? guide.en.metaDescription : guide.zh.metaDescription,
-    alternates: {
-      languages: { 'zh-CN': `/zh/guides/${slug}`, en: `/en/guides/${slug}` },
-    },
+    alternates: localeAlternates(`/${locale}/guides/${slug}`),
   };
 }
 

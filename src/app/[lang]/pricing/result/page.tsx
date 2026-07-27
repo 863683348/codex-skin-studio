@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PaymentResultView } from '@/components/views/PaymentResultView';
 import type { Locale } from '@/lib/i18n/config';
+import { localeAlternates } from '@/lib/seo';
 
 const META: Record<'zh' | 'en', { title: string; description: string }> = {
   zh: { title: '支付结果', description: '支付完成或取消' },
@@ -14,7 +15,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale: Locale = lang === 'en' ? 'en' : 'zh';
-  return META[locale];
+  return { ...META[locale], alternates: localeAlternates(`/${locale}/pricing/result`) };
 }
 
 export default async function Page({

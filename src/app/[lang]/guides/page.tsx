@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { GuidesHubView } from '@/components/views/GuidesHubView';
 import type { Locale } from '@/lib/i18n/config';
+import { localeAlternates } from '@/lib/seo';
 
 const META: Record<'zh' | 'en', { title: string; description: string }> = {
   zh: {
@@ -24,7 +25,7 @@ export async function generateMetadata({
   const locale: Locale = lang === 'en' ? 'en' : 'zh';
   return {
     ...META[locale],
-    alternates: { languages: { 'zh-CN': '/zh/guides', en: '/en/guides' } },
+    alternates: localeAlternates(`/${locale}/guides`),
   };
 }
 

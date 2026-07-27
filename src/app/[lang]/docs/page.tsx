@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { DocsView } from '@/components/views/DocsView';
 import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { localeAlternates } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
   return {
     title: dict.docs.title,
     description: dict.docs.description,
-    alternates: { languages: { 'zh-CN': '/zh/docs', en: '/en/docs' } },
+    alternates: localeAlternates(`/${locale}/docs`),
   };
 }
 
