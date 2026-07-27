@@ -1,6 +1,7 @@
 'use client';
 
 import { getDict } from '@/lib/i18n';
+import Link from 'next/link';
 import { GITHUB_URL } from '@/lib/site';
 import type { Locale } from '@/lib/i18n/config';
 
@@ -58,6 +59,30 @@ export function AboutView({ locale }: { locale: Locale }) {
               {dict.contact.emailLabel}
             </a>
           </section>
+        </div>
+
+        {/* Internal links */}
+        <div className="mt-10 border-t border-border pt-6">
+          <div className="flex flex-wrap gap-4 text-small">
+            <Link
+              href={`/${locale}/gallery`}
+              className="text-accent hover:text-accent-hover hover:underline"
+            >
+              {locale === 'zh' ? '浏览主题画廊 →' : 'Browse themes →'}
+            </Link>
+            <Link
+              href={`/${locale}/guides`}
+              className="text-accent hover:text-accent-hover hover:underline"
+            >
+              {locale === 'zh' ? '阅读使用指南 →' : 'Read the guides →'}
+            </Link>
+            <Link
+              href={`/${locale}/pricing`}
+              className="text-accent hover:text-accent-hover hover:underline"
+            >
+              {locale === 'zh' ? '查看定价 →' : 'See pricing →'}
+            </Link>
+          </div>
         </div>
       </div>
     </div>

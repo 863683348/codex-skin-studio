@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { FAQ } from '@/components/FAQ';
 import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
@@ -55,6 +56,24 @@ export function DocsView({ locale }: { locale: Locale }) {
         <h2 className="text-h2 text-text-primary">{dict.docs.faqTitle}</h2>
         <div className="mt-4">
           <FAQ items={dict.docs.faqs} />
+        </div>
+      </div>
+
+      {/* Internal links */}
+      <div className="mt-10 border-t border-border pt-6">
+        <div className="flex flex-wrap gap-4 text-small">
+          <Link
+            href={`/${locale}/gallery`}
+            className="text-accent hover:text-accent-hover hover:underline"
+          >
+            {locale === 'zh' ? '浏览主题画廊 →' : 'Browse themes →'}
+          </Link>
+          <Link
+            href={`/${locale}/guides`}
+            className="text-accent hover:text-accent-hover hover:underline"
+          >
+            {locale === 'zh' ? '阅读使用指南 →' : 'Read the guides →'}
+          </Link>
         </div>
       </div>
     </div>

@@ -52,6 +52,16 @@ export function GuidesHubView({ locale }: { locale: Locale }) {
             );
           })}
         </div>
+
+        {/* Internal link to gallery */}
+        <div className="mt-10 border-t border-border pt-6">
+          <Link
+            href={`/${locale}/gallery`}
+            className="text-small text-accent hover:text-accent-hover hover:underline"
+          >
+            {locale === 'zh' ? '← 浏览全部主题主题画廊' : '← Browse all themes in the gallery'}
+          </Link>
+        </div>
       </div>
     </div>
   );

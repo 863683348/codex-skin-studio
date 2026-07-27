@@ -264,6 +264,28 @@ export function PricingView({ locale }: { locale: Locale }) {
       <p className="mt-8 text-center text-sm text-text-tertiary">
         {dict.pricing.trust}
       </p>
+
+      {/* Internal links */}
+      <div className="mt-10 flex flex-wrap justify-center gap-4 border-t border-border pt-6 text-small">
+        <Link
+          href={`/${locale}/gallery`}
+          className="text-accent hover:text-accent-hover hover:underline"
+        >
+          {locale === 'zh' ? '浏览主题画廊 →' : 'Browse the gallery →'}
+        </Link>
+        <Link
+          href={`/${locale}/guides`}
+          className="text-accent hover:text-accent-hover hover:underline"
+        >
+          {locale === 'zh' ? '查看使用指南 →' : 'Read the guides →'}
+        </Link>
+        <Link
+          href={`/${locale}/about`}
+          className="text-accent hover:text-accent-hover hover:underline"
+        >
+          {locale === 'zh' ? '了解我们的项目 →' : 'About this project →'}
+        </Link>
+      </div>
     </section>
   );
 }
