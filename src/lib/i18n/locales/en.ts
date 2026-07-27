@@ -4,10 +4,27 @@ export const en: Dict = {
   nav: {
     home: 'Home',
     gallery: 'Gallery',
-    pricing: 'Pricing',
+    guides: 'Guides',
     docs: 'Docs',
+    pricing: 'Pricing',
+    about: 'About',
     github: 'GitHub',
     contact: 'Contact',
+  },
+  about: {
+    title: 'About Codex Skin Studio',
+    subtitle: 'An open-source, non-intrusive skinning project for the Codex desktop app.',
+    missionTitle: 'Our mission',
+    mission:
+      'Let every developer tune their coding tool to look the way they like. We believe interface comfort directly affects focus, and personalization should never cost safety or stability.',
+    howTitle: 'How it works',
+    how: 'Codex Skin Studio skins the Codex desktop app at runtime via local CDP (Chrome DevTools Protocol) loopback injection of CSS. It does not modify app.asar or any signed official file, and fully reverts when stopped — zero intrusion on official updates.',
+    openTitle: 'Open source and auditable',
+    open: 'The project is MIT-licensed and hosted on GitHub. Anyone can read the implementation, verify Release hashes, and build from source. Open source means the security assumptions are independently checkable.',
+    pressTitle: 'Press and brand',
+    press: 'Media, creators, or community moderators who need assets, data, or an interview are welcome to reach out via the email below. We provide brand logos, UI screenshots, and project background.',
+    contactTitle: 'Contact',
+    contact: 'For partnerships, press, or general inquiries, we’d love to hear from you.',
   },
   home: {
     heroTitle: 'Codex Skin Studio',

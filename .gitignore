@@ -14,5 +14,6 @@ scripts/
 # misc
 .DS_Store
 *.log
+*.tsbuildinfo
 
 .vercel

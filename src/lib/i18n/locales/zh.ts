@@ -2,10 +2,27 @@ export const zh = {
   nav: {
     home: '首页',
     gallery: '主题画廊',
-    pricing: '定价',
+    guides: '使用指南',
     docs: '使用教程',
+    pricing: '定价',
+    about: '关于',
     github: 'GitHub',
     contact: '联系我们',
+  },
+  about: {
+    title: '关于 Codex Skin Studio',
+    subtitle: '一个开源、非侵入式的 Codex 桌面端换肤项目。',
+    missionTitle: '我们的使命',
+    mission:
+      '让每位开发者都能把 coding 工具调成自己顺眼的样子。我们相信界面的舒适度直接影响专注力，而个性化不该以牺牲安全或稳定性为代价。',
+    howTitle: '工作原理',
+    how: 'Codex Skin Studio 通过本机 CDP（Chrome DevTools Protocol）回环注入 CSS，对 Codex 桌面端做运行时换肤。它不修改 app.asar 或任何官方签名文件，停止后即完全还原，对官方更新零侵入。',
+    openTitle: '开源与可审计',
+    open: '项目以 MIT 许可证开源，源码托管在 GitHub，任何人都可以阅读实现、核对 Release 哈希、自行编译。开源意味着安全假设可被独立验证。',
+    pressTitle: '媒体与品牌',
+    press: '媒体、创作者或社区管理员如需素材、数据或采访，欢迎通过下方邮箱联系。我们提供品牌徽标、界面截图与项目背景资料。',
+    contactTitle: '联系我们',
+    contact: '合作、媒体或一般咨询，都欢迎来信。',
   },
   home: {
     heroTitle: 'Codex Skin Studio',

@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/", "destination": "/zh", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
