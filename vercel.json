@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/zh", "permanent": true }
+    { "source": "/", "destination": "/en", "permanent": true }
   ],
   "headers": [
     {

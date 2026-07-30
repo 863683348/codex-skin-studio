@@ -37,7 +37,7 @@ export function Navbar({ locale }: { locale: Locale }) {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-7 xl:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -57,7 +57,7 @@ export function Navbar({ locale }: { locale: Locale }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={dict.nav.github}
-            className="hidden p-2 text-text-secondary transition-colors hover:text-accent lg:block"
+            className="hidden p-2 text-text-secondary transition-colors hover:text-accent xl:block"
           >
             <Github size={20} />
           </a>
@@ -69,11 +69,11 @@ export function Navbar({ locale }: { locale: Locale }) {
               toggleToDark: dict.theme.toggleToDark,
             }}
           />
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <AccountMenu locale={locale} />
           </div>
           <button
-            className="p-2 text-text-secondary lg:hidden"
+            className="p-2 text-text-secondary xl:hidden"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >
@@ -83,7 +83,7 @@ export function Navbar({ locale }: { locale: Locale }) {
       </nav>
 
       {open && (
-        <div className="border-t border-border bg-bg-primary lg:hidden">
+        <div className="border-t border-border bg-bg-primary xl:hidden">
           <div className="flex flex-col px-4 py-2">
             {links.map((l) => (
               <Link
