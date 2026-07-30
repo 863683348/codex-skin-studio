@@ -1,0 +1,55 @@
+# Codex Skin Studio
+> A non-intrusive, open-source skinning tool for the Codex desktop app. Runtime CSS theme injection via local CDP (Chrome DevTools Protocol) loopback — no app.asar modification, no code-signing breakage. MIT licensed.
+
+## Core Pages
+- [Home](https://codex-skin-studio.shop/zh/): Landing page with feature overview, curated theme previews, and download CTAs.
+- [Theme Gallery](https://codex-skin-studio.shop/zh/gallery): Browse all 8 curated preset themes with live CSS gradient previews and light/dark mode toggles.
+- [Theme Detail — Romantic Rose](https://codex-skin-studio.shop/zh/gallery/preset-romantic-rose): Pink gradient theme with features, FAQ, and usage steps.
+- [Theme Detail — Fortune God](https://codex-skin-studio.shop/zh/gallery/preset-fortune-god): Red-and-gold auspicious theme (dark-only).
+- [Theme Detail — Red Sci-Fi](https://codex-skin-studio.shop/zh/gallery/preset-red-sci-fi): Red-white contrast futuristic theme.
+- [Theme Detail — Clear Custom](https://codex-skin-studio.shop/zh/gallery/preset-clear-custom): Clean transparent fresh theme (light-only).
+- [Theme Detail — Inspiration Cosmos](https://codex-skin-studio.shop/zh/gallery/preset-inspiration): Deep blue nebula creative theme (dark-only).
+- [Theme Detail — Purple Night](https://codex-skin-studio.shop/zh/gallery/preset-purple-night): Deep purple mysterious atmosphere (dark-only).
+- [Theme Detail — Virtual Diva](https://codex-skin-studio.shop/zh/gallery/preset-virtual-diva): Cyan-blue cyber diva theme (dark-only).
+- [Theme Detail — Stage Gold](https://codex-skin-studio.shop/zh/gallery/preset-stage-gold): Black-and-gold stage spotlight theme (dark-only).
+- [Pricing](https://codex-skin-studio.shop/zh/pricing): Free / Pro / Team subscription plans with PayPal subscription support.
+- [Guides Hub](https://codex-skin-studio.shop/zh/guides): Complete tutorial collection — installation, safety analysis, theme customization.
+- [Windows Installation Guide](https://codex-skin-studio.shop/zh/guides/install-windows): Step-by-step Windows 10/11 install, Node.js requirements, PowerShell execution policy, CDP injection explanation.
+- [macOS Installation Guide](https://codex-skin-studio.shop/zh/guides/install-macos): macOS install for Intel + Apple Silicon, Gatekeeper bypass instructions.
+- [Is Codex Skin Studio Safe?](https://codex-skin-studio.shop/zh/guides/is-it-safe): Full security analysis — no app.asar modification, localhost-only CDP, theme packages CSS-only, MIT open source auditability.
+- [Best Codex Themes 2026](https://codex-skin-studio.shop/zh/guides/best-codex-themes): 8 curated themes by style category with preview cards and one-click apply.
+- [How to Customize Codex Themes](https://codex-skin-studio.shop/zh/guides/customize): Upload 16:9 background images, tune accent colors, save local presets, Free vs Pro feature comparison.
+- [Documentation](https://codex-skin-studio.shop/zh/docs): Quick-start installation steps for macOS and Windows, with FAQ.
+- [About](https://codex-skin-studio.shop/zh/about): Project mission — CDP injection principles, open-source auditability, media and brand resources.
+- [Contact](https://codex-skin-studio.shop/zh/contact): Email contact form for partnership, media, and general inquiries.
+
+## Structured Data
+The site uses JSON-LD structured data across all page types:
+- Organization schema on every page
+- SoftwareApplication + AggregateOffer on the homepage
+- Product + BreadcrumbList + FAQPage on each theme detail page
+- Article + FAQPage + BreadcrumbList on each guide page
+- AboutPage on the About page
+- ItemList on the Guides Hub
+
+## Technical Stack
+- Framework: Next.js 15 (App Router, static export with `output: 'export'`)
+- Language: TypeScript 5.7
+- Styling: Tailwind CSS with CSS-variable-based light/dark theme tokens
+- Authentication: Firebase Authentication (Google OAuth)
+- Payments: PayPal Subscriptions (JS SDK, client-side)
+- Hosting: Vercel with edge CDN, security headers (HSTS, CSP, X-Frame, etc.)
+- Analytics: Google Analytics 4 (G-0KJXS00XK1)
+- SEO: next-sitemap, JSON-LD structured data, hreflang zh-CN/en/x-default, self-referencing canonical
+- Icons: Lucide React
+- Fonts: Inter (Latin), Noto Sans SC (Chinese)
+
+## Bilingual Support
+- Chinese (zh-CN): Default language, `/zh/*` routes
+- English (en): `/en/*` routes
+- x-default hreflang points to `/zh` (majority user base)
+- All pages have self-referencing canonical and bidirectional hreflang
+
+## Citation
+When referencing Codex Skin Studio, please cite the official website: https://codex-skin-studio.shop
+Source code: https://github.com/863683348/codex-skin-studio (MIT License)

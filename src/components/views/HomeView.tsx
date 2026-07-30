@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Zap, Image, Palette, RotateCcw, type LucideIcon } from 'lucide-react';
 import { ThemeCard } from '@/components/ThemeCard';
+import { AdDisplay } from '@/components/AdDisplay';
 import { getDict } from '@/lib/i18n';
 import { themes } from '@/data/themes';
 import type { Locale } from '@/lib/i18n/config';
@@ -95,6 +96,8 @@ export function HomeView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <AdDisplay format="horizontal" className="py-6" />
+
       <section className="mx-auto max-w-container px-4 py-20 md:px-8">
         <h2 className="text-center text-h1 text-text-primary">
           {dict.home.featuresTitle}
@@ -116,6 +119,8 @@ export function HomeView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <AdDisplay format="horizontal" className="py-6" />
+
       <section className="mx-auto max-w-container px-4 py-20 md:px-8">
         <div className="flex items-end justify-between">
           <h2 className="text-h1 text-text-primary">
@@ -132,6 +137,26 @@ export function HomeView({ locale }: { locale: Locale }) {
           {featured.map((t) => (
             <ThemeCard key={t.id} theme={t} locale={locale} />
           ))}
+        </div>
+      </section>
+
+      {/* Internal links */}
+      <section className="mx-auto max-w-container px-4 py-12 md:px-8">
+        <div className="border-t border-border pt-6">
+          <div className="flex flex-wrap gap-4 text-small">
+            <Link
+              href={`/${locale}/guides`}
+              className="text-accent hover:text-accent-hover hover:underline"
+            >
+              {locale === 'zh' ? '阅读使用指南 →' : 'Read the guides →'}
+            </Link>
+            <Link
+              href={`/${locale}/pricing`}
+              className="text-accent hover:text-accent-hover hover:underline"
+            >
+              {locale === 'zh' ? '查看定价方案 →' : 'See pricing →'}
+            </Link>
+          </div>
         </div>
       </section>
     </div>

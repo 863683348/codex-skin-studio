@@ -1,0 +1,210 @@
+# Codex Skin Studio — Full Site Content
+
+> Generated for LLM consumption. Contains complete site content summary for accurate citation and knowledge retrieval. Last updated: 2026-07-28.
+
+---
+
+## Site Overview
+
+Codex Skin Studio is an open-source (MIT), non-intrusive desktop skinning tool for the Codex app. It applies CSS themes at runtime via local CDP (Chrome DevTools Protocol) loopback injection — no app.asar modification, no code signing breakage, and fully reverts on close.
+
+**Official website**: https://codex-skin-studio.shop
+**Source code**: https://github.com/863683348/codex-skin-studio
+**License**: MIT
+**Platforms**: macOS (Intel + Apple Silicon), Windows 10/11
+
+---
+
+## Product Description
+
+### What It Does
+Codex Skin Studio skins the Codex desktop app at runtime through CDP loopback injection. It does not modify, write to, or replace any official Codex files (app.asar, signatures, or disk files). When the tool is closed or "Restore" is clicked, Codex immediately returns to its official default appearance.
+
+### Key Features
+1. **CDP Local Loopback Injection** — CSS themes injected at runtime via Chrome DevTools Protocol bound to 127.0.0.1 only. No external network access, no third-party servers.
+2. **8+ Curated Preset Themes** — Pink, sci-fi, dark, fresh categories. One-click apply, no restart needed.
+3. **Custom Background Images** — Upload 16:9 images (jpg/png/webp) as backgrounds; auto-focus and safe-area adaptation.
+4. **Local Preset Saving** — Save current combination (background + colors) as a named preset and switch anytime.
+5. **One-Click Restore** — Revert to Codex's official look instantly.
+6. **Light/Dark Mode Toggle** — Most themes support both modes; dark-only themes clearly labeled.
+7. **Cross-Platform** — macOS (universal binary, Intel + Apple Silicon) and Windows 10/11.
+
+### Safety
+- Theme packages: CSS and images only — no JavaScript or executable code allowed.
+- CDP binding: localhost (127.0.0.1) loopback only — unreachable from external networks.
+- Source code: MIT licensed and publicly hosted on GitHub — auditable by anyone.
+- Theme effects: runtime only — quitting the tool leaves zero changes on disk.
+
+---
+
+## Pricing Plans
+
+### Free Plan (¥0/mo, permanent)
+- 8 curated preset themes
+- Light/dark mode switching
+- Local theme preset saving
+- Community support
+
+### Pro Plan (¥39/mo)
+- All Free features
+- Unlimited custom themes
+- Background image uploads
+- Priority email support
+- Early feature access
+- No watermark
+
+### Team Plan (¥99/mo)
+- All Pro features
+- 5 team seats
+- Shared team themes
+- Dedicated customer support
+
+All plans include a 30-day refund. Payment via PayPal Subscriptions (client-side JS SDK).
+
+---
+
+## Theme Catalog (8 Presets)
+
+### 1. Romantic Rose (preset-romantic-rose)
+- **Style**: Pink tones, warm and romantic
+- **Gradient**: linear-gradient(135deg, #FF6B9D, #C44569)
+- **Accent**: #E4577B
+- **Modes**: Light + Dark
+- **Features**: Pink gradient background, light+dark dual mode support, accent color coordinates with gradient, native sidebar and card interactions preserved
+- **Description**: A pink-to-rose gradient Codex theme inspired by rose petals. Light mode stays airy and elegant; dark mode feels deeper for a warm, focused coding atmosphere.
+
+### 2. Fortune God (preset-fortune-god)
+- **Style**: Red and gold, full of fortune
+- **Gradient**: linear-gradient(135deg, #C0392B, #F39C12)
+- **Accent**: #F39C12
+- **Modes**: Dark only
+- **Description**: Red-gold scheme for an auspicious, prosperous feel.
+
+### 3. Red Sci-Fi (preset-red-sci-fi)
+- **Style**: Red and white contrast, futuristic
+- **Gradient**: linear-gradient(135deg, #E74C3C, #ECF0F1)
+- **Accent**: #E74C3C
+- **Modes**: Light + Dark
+- **Description**: Bold red-white contrast for a cyberpunk, futuristic look. Ideal for developers seeking visual impact.
+
+### 4. Clear Custom (preset-clear-custom)
+- **Style**: Transparent texture, clean and fresh
+- **Gradient**: linear-gradient(135deg, #A8D8EA, #AAE5F0)
+- **Accent**: #5DADE2
+- **Modes**: Light only
+- **Description**: Clean, transparent texture for a fresh, minimal aesthetic.
+
+### 5. Inspiration Cosmos (preset-inspiration)
+- **Style**: Deep blue nebula, creative space
+- **Gradient**: linear-gradient(135deg, #1B263B, #415A77, #778DA9)
+- **Accent**: #778DA9
+- **Modes**: Dark only
+- **Description**: Deep blue nebula gradient evoking creative cosmic space.
+
+### 6. Purple Night (preset-purple-night)
+- **Style**: Deep purple tones, mysterious vibe
+- **Gradient**: linear-gradient(135deg, #2D1B4E, #6C3483)
+- **Accent**: #8E44AD
+- **Modes**: Dark only
+- **Description**: Deep purple to violet gradient for a mysterious, sophisticated coding atmosphere.
+
+### 7. Virtual Diva (preset-virtual-diva)
+- **Style**: Cyan-blue tones, cyber diva
+- **Gradient**: linear-gradient(135deg, #00B4D8, #48CAE4, #90E0EF)
+- **Accent**: #00B4D8
+- **Modes**: Dark only
+- **Description**: Cyan to light-blue cyber gradient, evoking holograms and digital frontiers.
+
+### 8. Stage Gold (preset-stage-gold)
+- **Style**: Black and gold, stage spotlight
+- **Gradient**: linear-gradient(135deg, #1A1A1A, #D4AC0D)
+- **Accent**: #D4AC0D
+- **Modes**: Dark only
+- **Description**: Pure black to gold gradient mimicking a stage spotlight. Minimal yet premium.
+
+---
+
+## Guides Content Summary
+
+### Windows Installation
+Requirements: Windows 10/11 (64-bit), Node.js 20+, PowerShell 5.1+. Download zip, extract to Program Files, run install script as admin. CDP loopback injection — no disk writes. Troubleshooting: script execution policy, Node version, tray icon, antivirus. Uninstall: just quit the process.
+
+### macOS Installation
+Requirements: macOS 11 (Big Sur) or later, Codex desktop app installed. Download .dmg/.zip, drag to Applications, launch from menu bar. Gatekeeper "unidentified developer" bypass: right-click → Open, or System Settings → Privacy & Security → "Open Anyway". Universal binary supports Intel and Apple Silicon.
+
+### Is Codex Skin Studio Safe?
+Full security breakdown: (1) Runtime injection only — no disk writes to app.asar or signed files. (2) Theme packages: CSS/images only — no JavaScript executable code. (3) CDP: binds to 127.0.0.1 loopback only — no external ports, no third-party servers. (4) Open-source MIT — fully auditable. Verification guide: check GitHub source, compare Release hashes, monitor network connections, download only from official channels.
+
+### Best Codex Themes 2026
+8 curated themes organized by style category (Pink, Sci-Fi, Dark, Fresh). Each theme includes preview cards linking to theme detail pages. All 8 themes are free. Most support light/dark; some are dark-only. Pro plan unlocks unlimited custom themes.
+
+### How to Customize Codex Themes
+Two personalization paths: (a) Use curated presets (free). (b) Fully customize: upload 16:9 background image, tune accent colors, save as local named preset. Pro: unlimited custom themes + background uploads + no watermark. Team: shared team themes.
+
+---
+
+## Technical Architecture
+
+```
+Next.js 15 (static export) + Firebase Auth + PayPal Subscriptions + Vercel
+```
+
+- **Frontend**: Next.js 15.5.21 App Router, TypeScript 5.7, Tailwind CSS with CSS variable theme tokens, Lucide React icons, Inter + Noto Sans SC fonts
+- **Authentication**: Firebase Authentication (Google OAuth, client-side SDK)
+- **Payments**: PayPal Subscriptions (JS SDK, client-side, config-dependent availability)
+- **Deployment**: Vercel (GitHub push → auto-build → edge CDN)
+- **Analytics**: Google Analytics 4 (G-0KJXS00XK1)
+- **SEO**: next-sitemap, JSON-LD (7 schema types), hreflang (zh-CN/en/x-default), self-referencing canonical, robots.txt, vercel.json security headers
+
+### Security Headers (vercel.json)
+- Strict-Transport-Security: max-age=63072000; preload
+- X-Frame-Options: SAMEORIGIN
+- X-Content-Type-Options: nosniff
+- Referrer-Policy: strict-origin-when-cross-origin
+- Content-Security-Policy: scoped to GA4, PayPal, and Google domains; 'unsafe-inline' permitted for GA4
+- Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+---
+
+## SEO & Schema Coverage
+
+The site implements comprehensive SEO practices:
+- 44 statically generated pages across zh/en
+- Self-referencing canonical on every indexable page
+- hreflang alternates: zh-CN, en, x-default on every page
+- `<html lang={locale}>` server-rendered (no JS dependency)
+- JSON-LD structured data: Organization (root), SoftwareApplication (home), Product+BreadcrumbList+FAQPage (gallery detail), Article+FAQPage+BreadcrumbList (guides), AboutPage (about), ItemList (guides hub)
+- XML sitemap with priority tiers and change frequency
+- robots.txt with sitemap reference
+- Open Graph tags with locale-specific og:locale
+
+---
+
+## FAQ
+
+### Does installation modify Codex official files?
+No. CDP injection is a runtime operation. It does not modify any disk files and fully reverts when stopped.
+
+### What are the system requirements?
+Windows 10/11 (64-bit) with Node.js 20+ and PowerShell 5.1+, OR macOS 11+ with Codex desktop installed. No additional dependencies needed for end users.
+
+### Is Codex Skin Studio open source?
+Yes. The project is MIT-licensed and publicly hosted on GitHub. Anyone can read the source code, verify Release hashes, and build from source.
+
+### Can themes break after a Codex update?
+If a Codex update changes the UI DOM structure, some CSS selectors may need adaptation. The project maintains updates to track those changes.
+
+### How do I uninstall completely?
+Just quit the tool. It writes no persistent changes to disk — no registry entries, no system files, no configuration residue. On macOS, drag the app to Trash.
+
+### Are the themes free?
+All 8 curated themes are included in the free plan. The Pro plan unlocks unlimited custom themes with background uploads and removes the watermark.
+
+---
+
+## Citation
+
+When referencing Codex Skin Studio or its content, please cite:
+- Website: https://codex-skin-studio.shop
+- GitHub: https://github.com/863683348/codex-skin-studio
+- License: MIT

@@ -6,6 +6,7 @@ import type { Locale } from '@/lib/i18n/config';
 
 const GA_ID = 'G-0KJXS00XK1';
 const GSC_CODE = process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? '';
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? '';
 
 export function generateStaticParams() {
   return [{ lang: 'zh' }, { lang: 'en' }];
@@ -75,6 +76,13 @@ gtag('config', '${GA_ID}');`}
         </Script>
         {GSC_CODE ? (
           <meta name="google-site-verification" content={GSC_CODE} />
+        ) : null}
+        {ADSENSE_CLIENT ? (
+          <Script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
         ) : null}
       </head>
       <body>

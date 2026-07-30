@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ThemeCard } from '@/components/ThemeCard';
 import { CategoryFilter } from '@/components/CategoryFilter';
+import { AdDisplay } from '@/components/AdDisplay';
 import { themes, type ThemeCategory } from '@/data/themes';
 import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
@@ -23,7 +24,15 @@ export function GalleryView({ locale }: { locale: Locale }) {
         <CategoryFilter locale={locale} active={active} onChange={setActive} />
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((t) => (
+        {filtered.slice(0, 4).map((t) => (
+          <ThemeCard key={t.id} theme={t} locale={locale} />
+        ))}
+      </div>
+
+      <AdDisplay format="horizontal" className="py-8" />
+
+      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {filtered.slice(4).map((t) => (
           <ThemeCard key={t.id} theme={t} locale={locale} />
         ))}
       </div>
