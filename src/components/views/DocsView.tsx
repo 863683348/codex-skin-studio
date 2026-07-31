@@ -37,6 +37,16 @@ export function DocsView({ locale }: { locale: Locale }) {
         ))}
       </div>
 
+      <h2 className="mt-8 text-h3 text-text-primary">{dict.docs.prereqTitle}</h2>
+      <ul className="mt-4 space-y-2">
+        {dict.docs.prereqs.map((s, i) => (
+          <li key={i} className="flex gap-3 text-body text-text-secondary">
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            {s}
+          </li>
+        ))}
+      </ul>
+
       <h2 className="mt-8 text-h3 text-text-primary">{title}</h2>
       <ol className="mt-4 space-y-4">
         {steps.map((s, i) => (

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, CheckCircle2, Clock } from 'lucide-react';
 import { getDict, type Dict } from '@/lib/i18n';
 import { categories, type ThemePreset } from '@/data/themes';
 import type { Locale } from '@/lib/i18n/config';
@@ -41,6 +41,20 @@ export function ThemeCard({
             className="absolute inset-0"
             style={{ background: theme.gradient }}
           />
+          {/* 状态徽标 */}
+          <div className="absolute left-2 top-2 z-10">
+            {theme.available ? (
+              <span className="inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-medium text-emerald-300 backdrop-blur-sm">
+                <CheckCircle2 size={12} />
+                {dict.gallery.availableBadge}
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-medium text-text-tertiary backdrop-blur-sm">
+                <Clock size={12} />
+                {dict.gallery.comingSoonBadge}
+              </span>
+            )}
+          </div>
           <div
             className={`absolute inset-0 bg-bg-primary transition-opacity duration-crossfade ${
               dark ? 'opacity-55' : 'opacity-0'

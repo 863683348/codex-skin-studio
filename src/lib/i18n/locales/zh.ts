@@ -63,6 +63,9 @@ export const zh = {
     modes: '亮色+暗色',
     version: '版本',
     backToGallery: '← 返回画廊',
+    availableBadge: '可安装',
+    comingSoonBadge: '即将上架',
+    availableNote: '安装包内置，下载安装后可直接使用',
   },
   detail: {
     usage: '使用方法',
@@ -85,6 +88,9 @@ export const zh = {
     faqCustomizeA: '免费版可直接套用预设主题。Pro 版支持上传背景图并自定义配色，保存为专属预设。',
     faqCompatible: '这个主题在哪个模式下效果最好？',
     faqCompatibleA: '请查看上方"适配模式"标注。大部分主题同时支持亮色/暗色模式，部分仅适配暗色。',
+    comingSoonTitle: '即将上架',
+    comingSoonDesc: '这个主题目前处于预览阶段，还未随安装包发布。我们会陆续把更多预设主题打包进安装器，敬请期待。',
+    comingSoonCta: '返回画廊',
   },
   docs: {
     title: '使用教程',
@@ -93,19 +99,25 @@ export const zh = {
     windows: 'Windows',
     macOSTitle: 'macOS 安装指南',
     windowsTitle: 'Windows 安装指南',
-    macOSSteps: [
-      '下载最新的 Release 包（.dmg 或 .zip）',
-      '解压后将 Codex Skin Studio 拖入应用程序文件夹',
-      '双击启动，菜单栏将出现 Codex Skin Studio 图标',
-      '点击图标，从主题列表中选择喜欢的主题',
-      'Codex 界面将立即应用主题效果',
+    prereqTitle: '前提条件',
+    prereqs: [
+      'Windows 10/11 x64 或 macOS（Apple Silicon / Intel）',
+      '已从官方渠道安装 Codex 桌面客户端（Windows 为 Microsoft Store 版 OpenAI.Codex）',
+      'Windows PowerShell 5.1+（系统自带，安装包会自动调用）',
     ],
     windowsSteps: [
-      '下载最新的 Release 包（.zip）',
-      '解压到任意目录（推荐 C:\\\\Program Files\\\\CodexSkinStudio）',
-      '右键以管理员身份运行 install-codex-skin-studio.ps1',
-      '系统托盘将出现 Codex Skin Studio 图标',
-      '右键图标，从主题列表中选择喜欢的主题',
+      '从 GitHub Releases 下载最新的 CodexDreamSkin-Setup.exe 安装包',
+      '双击运行安装器（当前用户安装，无需管理员权限）',
+      '桌面与开始菜单将出现 3 个快捷方式：启动 / 托盘控制 / 恢复官方外观',
+      '点击「Codex Dream Skin」快捷方式启动（若 Codex 正在运行会提示先退出）',
+      '通过托盘菜单选择主题，Codex 界面立即套用',
+    ],
+    macOSSteps: [
+      '从 GitHub Releases 下载最新的安装包（.dmg）',
+      '将 Codex Skin Studio 拖入应用程序文件夹',
+      '首次运行：右键图标 → 打开（绕过未签名警告）',
+      '点击菜单栏图标，选择喜欢的主题',
+      'Codex 界面将立即应用主题效果',
     ],
     faqTitle: '常见问题',
     faqs: [
@@ -126,8 +138,12 @@ export const zh = {
         a: '主题包只允许 CSS 和图片，禁止 JavaScript。CDP 只绑定 127.0.0.1 本机回环，外部无法访问。',
       },
       {
-        q: 'Windows 上需要什么环境？',
-        a: '需要 Node.js 20+ 和 PowerShell 5.1+（Windows 10/11 自带）。',
+        q: '为什么安装包显示的名字和官网不一样？',
+        a: '当前安装包沿用社区引擎品牌（Codex Dream Skin），与官网（Codex Skin Studio）同源同引擎。品牌迁移正在推进中，不影响功能与安全。',
+      },
+      {
+        q: '为什么只有部分主题标了"可安装"？',
+        a: '标"可安装"的主题已随安装包内置，下载安装即可使用；标"即将上架"的主题目前为预览，正在打包进安装器，会陆续发布。',
       },
     ],
   },
@@ -207,6 +223,7 @@ export const zh = {
   footer: {
     copyright: 'Codex Skin Studio. 开源项目，MIT 许可证.',
     madeWith: '用 CDP 注入技术制作',
+    brandNote: '安装包暂沿用社区引擎品牌 Codex Dream Skin，与本站同源同引擎，品牌迁移中',
   },
   theme: {
     toggleToLight: '切换到亮色模式',

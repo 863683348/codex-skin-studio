@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Download, Github, Check, BookOpen } from 'lucide-react';
+import { Download, Github, Check, BookOpen, Clock } from 'lucide-react';
 import { ThemePreview } from '@/components/ThemePreview';
 import { getDict, type Dict } from '@/lib/i18n';
 import {
@@ -108,15 +108,22 @@ export function DetailView({
           </ol>
 
           <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row">
-            <a
-              href={RELEASE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-hover sm:w-auto"
-            >
-              <Download size={18} />
-              {dict.detail.downloadTool}
-            </a>
+            {theme.available ? (
+              <a
+                href={RELEASE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-hover sm:w-auto"
+              >
+                <Download size={18} />
+                {dict.detail.downloadTool}
+              </a>
+            ) : (
+              <span className="flex w-full items-center justify-center gap-2 rounded-md border border-border bg-bg-tertiary px-6 py-3 text-body font-medium text-text-tertiary sm:w-auto">
+                <Clock size={18} />
+                {dict.detail.comingSoonTitle}
+              </span>
+            )}
             <a
               href={GITHUB_URL}
               target="_blank"
@@ -129,6 +136,16 @@ export function DetailView({
           </div>
         </div>
       </div>
+
+      {/* 未上架提示 */}
+      {!theme.available && (
+        <section className="mt-8 max-w-3xl rounded-lg border border-border bg-bg-tertiary p-6">
+          <p className="flex items-start gap-3 text-body text-text-secondary">
+            <Clock size={18} className="mt-1 shrink-0 text-text-tertiary" />
+            {dict.detail.comingSoonDesc}
+          </p>
+        </section>
+      )}
 
       {/* Long description */}
       <section className="mt-12">

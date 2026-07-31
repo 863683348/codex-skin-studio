@@ -16,6 +16,8 @@ export interface ThemePreset {
   modes: ('light' | 'dark')[];
   gradient: string;
   accentColor: string;
+  /** true = 引擎内置可用；false = 预览主题（即将上架） */
+  available: boolean;
   /** 关联的指南 slug 列表 */
   relatedGuides: string[];
 }
@@ -89,6 +91,7 @@ export const themes: ThemePreset[] = [
       zh: ['粉红渐变背景', '支持亮色/暗色双模式', '强调色玫红与渐变协调', '侧栏与建议卡保留原生交互'],
       en: ['Pink gradient background', 'Light + dark dual mode support', 'Accent color coordinates with the gradient', 'Native sidebar and card interactions preserved'],
     },
+    available: false,
     relatedGuides: ['install-windows', 'install-macos', 'best-codex-themes'],
     category: 'pink',
     version: '1.0.0',
@@ -109,6 +112,7 @@ export const themes: ThemePreset[] = [
       zh: ['大红底色配金色强调色', '仅适配暗色模式', '高对比度，代码可读性强', '独一无二的红金氛围'],
       en: ['Crimson background with gold accents', 'Dark mode only', 'High contrast for strong readability', 'Unique red-gold atmosphere'],
     },
+    available: false,
     relatedGuides: ['install-windows', 'install-macos', 'best-codex-themes'],
     category: 'dark',
     version: '1.0.0',
@@ -129,6 +133,7 @@ export const themes: ThemePreset[] = [
       zh: ['红白高对比配色', '支持亮色/暗色双模式', '科幻氛围，视觉冲击力强', '代码语法高亮清晰分明'],
       en: ['Red-white high contrast palette', 'Light + dark dual mode support', 'Sci-fi atmosphere with visual punch', 'Clear, crisp syntax highlighting'],
     },
+    available: false,
     relatedGuides: ['install-windows', 'install-macos', 'best-codex-themes'],
     category: 'scifi',
     version: '1.0.0',
@@ -149,6 +154,7 @@ export const themes: ThemePreset[] = [
       zh: ['淡蓝渐变透明质感', '仅适配亮色模式', '极致清爽风格', '极简界面，减少视觉疲劳'],
       en: ['Pale blue gradient with transparent feel', 'Light mode only', 'Minimalist and refreshing style', 'Reduces visual fatigue during long sessions'],
     },
+    available: false,
     relatedGuides: ['customize', 'install-windows', 'best-codex-themes'],
     category: 'fresh',
     version: '1.0.0',
@@ -169,6 +175,7 @@ export const themes: ThemePreset[] = [
       zh: ['深蓝渐变模拟星云', '仅适配暗色模式', '沉浸式深邃氛围', '蓝灰层次分明，双眼舒适'],
       en: ['Deep blue gradient mimicking a nebula', 'Dark mode only', 'Immersive, deep atmosphere', 'Layered blue-grey tones for eye comfort'],
     },
+    available: false,
     relatedGuides: ['install-windows', 'install-macos', 'best-codex-themes'],
     category: 'scifi',
     version: '1.0.0',
@@ -189,6 +196,7 @@ export const themes: ThemePreset[] = [
       zh: ['深紫到紫罗兰渐变', '仅适配暗色模式', '精致神秘视觉氛围', '紫色高亮与深色背景协调'],
       en: ['Deep purple to violet gradient', 'Dark mode only', 'Sophisticated, mysterious look', 'Purple highlights harmonize with the dark background'],
     },
+    available: false,
     relatedGuides: ['install-windows', 'install-macos', 'best-codex-themes'],
     category: 'dark',
     version: '1.0.0',
@@ -209,6 +217,7 @@ export const themes: ThemePreset[] = [
       zh: ['青蓝到浅蓝赛博渐变', '仅适配暗色模式', '科技感冷调氛围', '强调色与全息感协调'],
       en: ['Cyan-to-light-blue cyber gradient', 'Dark mode only', 'Cool-toned tech atmosphere', 'Accents coordinate with the holographic vibe'],
     },
+    available: false,
     relatedGuides: ['install-windows', 'install-macos', 'best-codex-themes'],
     category: 'scifi',
     version: '1.0.0',
@@ -229,6 +238,7 @@ export const themes: ThemePreset[] = [
       zh: ['纯黑到金色渐变', '仅适配暗色模式', '舞台聚光灯灵感', '黑金配色，简洁高级'],
       en: ['Pure black to gold gradient', 'Dark mode only', 'Stage-spotlight inspired', 'Black-and-gold, minimal yet premium'],
     },
+    available: false,
     relatedGuides: ['install-windows', 'install-macos', 'best-codex-themes'],
     category: 'dark',
     version: '1.0.0',
@@ -236,6 +246,48 @@ export const themes: ThemePreset[] = [
     modes: ['dark'],
     gradient: 'linear-gradient(135deg, #1A1A1A, #D4AC0D)',
     accentColor: '#D4AC0D',
+  },
+  {
+    id: 'preset-gothic-void-crusade',
+    name: { zh: '哥特虚空远征', en: 'Gothic Void Crusade' },
+    description: { zh: '黑金棕调，大教堂氛围', en: 'Black-gold-brown, cathedral mood' },
+    longDescription: {
+      zh: '哥特虚空远征以庄重的暗色调与大教堂般的肃穆氛围营造深度专注的编码空间。黑金棕配色源自引擎内置预设，安装即用，支持暗色模式，适合追求仪式感与专注力的开发者。',
+      en: 'Gothic Void Crusade wraps your workspace in a solemn, cathedral-like atmosphere. Black-gold-brown palette, built into the engine installer — install and apply instantly in dark mode. For developers who code with gravitas.',
+    },
+    features: {
+      zh: ['引擎内置，安装即用', '黑金棕大教堂配色', '暗色模式沉浸体验', '本地主题仓库直接应用'],
+      en: ['Built into the installer, works out of the box', 'Cathedral black-gold-brown palette', 'Immersive dark mode', 'Applies directly from the local theme repo'],
+    },
+    available: true,
+    relatedGuides: ['install-windows', 'install-macos'],
+    category: 'dark',
+    version: '1.0.0',
+    author: 'Codex Skin Studio',
+    modes: ['dark'],
+    gradient: 'linear-gradient(135deg, #0d0d0e, #171513, #c8a55a)',
+    accentColor: '#c8a55a',
+  },
+  {
+    id: 'preset-arina-hashimoto',
+    name: { zh: '桥本有菜', en: 'Arina Hashimoto' },
+    description: { zh: '柔光玫瑰，温暖工作台', en: 'Soft glow and roses' },
+    longDescription: {
+      zh: '桥本有菜主题把柔光与玫瑰带进日常工作台，暖色调与通透层次兼顾舒适与美感。引擎内置预设，支持亮暗自动模式，安装即可应用，适合偏好温暖视觉风格的开发者。',
+      en: 'Arina Hashimoto brings soft light and roses to your daily workspace, balancing warmth and clarity. Built into the engine installer with auto light/dark appearance — install and apply right away.',
+    },
+    features: {
+      zh: ['引擎内置，安装即用', '柔光玫瑰暖色调', '亮暗自动适配', '本地主题仓库直接应用'],
+      en: ['Built into the installer, works out of the box', 'Soft glow and rose tones', 'Auto light/dark appearance', 'Applies directly from the local theme repo'],
+    },
+    available: true,
+    relatedGuides: ['install-windows', 'install-macos'],
+    category: 'pink',
+    version: '1.0.0',
+    author: 'Codex Skin Studio',
+    modes: ['light', 'dark'],
+    gradient: 'linear-gradient(135deg, #f7d7dd, #e8a0b4, #c76a85)',
+    accentColor: '#c76a85',
   },
 ];
 

@@ -64,6 +64,9 @@ export const en: Dict = {
     modes: 'Light + Dark',
     version: 'Version',
     backToGallery: '← Back to Gallery',
+    availableBadge: 'Installable',
+    comingSoonBadge: 'Coming Soon',
+    availableNote: 'Built into the installer — ready to use after download',
   },
   detail: {
     usage: 'How to Use',
@@ -86,6 +89,9 @@ export const en: Dict = {
     faqCustomizeA: 'The free plan lets you use this preset as-is. Pro supports unlimited custom themes with background uploads and color tuning — save them as your own presets.',
     faqCompatible: 'Which mode looks best on this theme?',
     faqCompatibleA: 'Check the "Modes" badge above. Most themes support both Light and Dark; a few are dark-mode only.',
+    comingSoonTitle: 'Coming Soon',
+    comingSoonDesc: 'This theme is currently in preview and has not been shipped with the installer yet. We will keep packing more presets into the installer — stay tuned.',
+    comingSoonCta: 'Back to Gallery',
   },
   docs: {
     title: 'Documentation',
@@ -94,19 +100,25 @@ export const en: Dict = {
     windows: 'Windows',
     macOSTitle: 'macOS Installation Guide',
     windowsTitle: 'Windows Installation Guide',
-    macOSSteps: [
-      'Download the latest Release package (.dmg or .zip)',
-      'Extract and drag Codex Skin Studio to Applications folder',
-      'Double-click to launch, Codex Skin Studio icon appears in menu bar',
-      'Click the icon and select a theme from the list',
-      'Codex interface will apply the theme instantly',
+    prereqTitle: 'Prerequisites',
+    prereqs: [
+      'Windows 10/11 x64 or macOS (Apple Silicon / Intel)',
+      'Official Codex desktop app installed (Windows: Microsoft Store OpenAI.Codex)',
+      'Windows PowerShell 5.1+ (built-in; the installer calls it automatically)',
     ],
     windowsSteps: [
-      'Download the latest Release package (.zip)',
-      'Extract to any directory (recommended: C:\\\\Program Files\\\\CodexSkinStudio)',
-      'Right-click and run install-codex-skin-studio.ps1 as Administrator',
-      'Codex Skin Studio icon appears in system tray',
-      'Right-click the icon and select a theme from the list',
+      'Download the latest CodexDreamSkin-Setup.exe from GitHub Releases',
+      'Run the installer (per-user install, no admin rights required)',
+      'Three shortcuts appear: Launch / Tray control / Restore official look',
+      'Click the "Codex Dream Skin" shortcut to start (quit Codex first if it is running)',
+      'Pick a theme from the tray menu — the Codex UI updates instantly',
+    ],
+    macOSSteps: [
+      'Download the latest installer (.dmg) from GitHub Releases',
+      'Drag Codex Skin Studio into the Applications folder',
+      'First run: right-click the icon → Open (bypass unsigned warning)',
+      'Click the menu-bar icon and choose a theme',
+      'The Codex UI applies the theme instantly',
     ],
     faqTitle: 'FAQ',
     faqs: [
@@ -127,8 +139,12 @@ export const en: Dict = {
         a: 'Theme packages only allow CSS and images, no JavaScript. CDP only binds to 127.0.0.1 local loopback, inaccessible from outside.',
       },
       {
-        q: 'What does Windows need?',
-        a: 'Node.js 20+ and PowerShell 5.1+ (built into Windows 10/11).',
+        q: 'Why does the installer show a different name than the website?',
+        a: 'The current installer keeps the community engine brand (Codex Dream Skin), which shares the same engine as this site (Codex Skin Studio). Brand migration is in progress — functionality and security are unaffected.',
+      },
+      {
+        q: 'Why are only some themes marked "Installable"?',
+        a: '"Installable" themes are already built into the installer and work right after download. "Coming Soon" themes are previews that will be packed into the installer in upcoming releases.',
       },
     ],
   },
@@ -208,6 +224,7 @@ export const en: Dict = {
   footer: {
     copyright: 'Codex Skin Studio. Open source, MIT License.',
     madeWith: 'Built with CDP injection technology',
+    brandNote: 'The installer currently carries the community engine brand (Codex Dream Skin) — same engine, brand migration in progress',
   },
   theme: {
     toggleToLight: 'Switch to Light Mode',

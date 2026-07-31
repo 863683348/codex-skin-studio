@@ -8,8 +8,13 @@ export function Footer({ locale }: { locale: Locale }) {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-container flex-col items-center justify-between gap-4 px-4 py-12 md:flex-row md:px-8">
-        <div className="text-sm text-text-tertiary">
-          {dict.footer.copyright}
+        <div>
+          <div className="text-sm text-text-tertiary">
+            {dict.footer.copyright}
+          </div>
+          <div className="mt-1 text-xs text-text-tertiary/70">
+            {dict.footer.brandNote}
+          </div>
         </div>
         <div className="flex items-center gap-4">
           <span className="text-xs text-text-tertiary">
