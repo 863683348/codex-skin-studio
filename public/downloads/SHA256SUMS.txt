@@ -1,0 +1,2 @@
+2fdbfb9b95f2090fb0bee48ba806472b6cb21a2632148c2e9dd4a054913e57ad *CodexSkinStudio-Setup-v1.0.0.exe
+b0eebad96a27e77ac8a02a003e087567a72c01d65474b7a388a2d1b5f6edf47e *CodexSkinStudio-v1.0.0.dmg
