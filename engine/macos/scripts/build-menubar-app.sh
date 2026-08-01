@@ -122,8 +122,8 @@ done
 [ -d "$ROOT/assets" ] || { printf 'Engine directory missing: assets\n' >&2; exit 1; }
 /usr/bin/rsync -a "$ROOT/assets/" "$ENGINE/assets/"
 PUBLIC_PRESET="preset-kung-fu-womens-football"
-PUBLIC_PRESET_SHA256="b76a7cbe2ff9d923846e931984d243a7ba1f25de8d190b5c6412c809c41aee42"
-PUBLIC_PRESET_THEME_SHA256="8316c6ad29e3b84806358ab4a730c7e063b261e379179b9608cf751c282d66a7"
+PUBLIC_PRESET_SHA256="df22230c83ad2fb2d8546ccd9f742c9f4b5c735e0133db7b9e50e4c20f446749"
+PUBLIC_PRESET_THEME_SHA256="b1f7bfb790f89e97ec06fa7dd0733c357971f7de5f39b61e57d0343a36962881"
 [ -d "$ROOT/presets/$PUBLIC_PRESET" ] \
   || { printf 'Public release preset missing: %s\n' "$PUBLIC_PRESET" >&2; exit 1; }
 actual_public_preset_sha256="$(LC_ALL=C /usr/bin/shasum -a 256 \
