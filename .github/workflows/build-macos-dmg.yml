@@ -17,8 +17,13 @@ jobs:
         run: |
           cd engine/macos
           bash scripts/build-dmg.sh --skip-tests > build.log 2>&1
-          tail -40 build.log
-          ls -la release/
+          code=$?
+          echo "exit=$code"
+          # 日志写进 annotations（run 页面匿名可见，无需登录）
+          while IFS= read -r line; do
+            echo "::error file=build.log,line=1::macbuild | ${line}"
+          done < <(tail -50 build.log)
+          exit $code
         env:
           LC_ALL: C
           LANG: C
