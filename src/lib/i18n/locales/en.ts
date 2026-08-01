@@ -181,7 +181,7 @@ export const en: Dict = {
     subtitle: 'Pick the plan that fits you — upgrade anytime',
     trust: 'All plans include a 30-day refund',
     recommended: 'Recommended',
-    checkoutSoon: 'Checkout is coming soon (Stripe integration in progress). Your seat is reserved.',
+    checkoutSoon: 'Checkout is coming soon (PayPal subscription). Your seat is reserved.',
     checkoutError: 'Checkout service error. Please try again later.',
     plans: [
       {

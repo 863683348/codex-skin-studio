@@ -7,6 +7,7 @@ Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName Microsoft.VisualBasic
 . (Join-Path $PSScriptRoot 'common-windows.ps1')
 . (Join-Path $PSScriptRoot 'theme-windows.ps1')
+. (Join-Path $PSScriptRoot 'license-dream-skin.ps1')
 
 Assert-DreamSkinPort -Port $Port
 $SkillRoot = Split-Path -Parent $PSScriptRoot
@@ -123,6 +124,9 @@ try {
     if ($null -ne $active -and $null -ne $active.Theme -and $active.Theme.name) {
       $status += " · $($active.Theme.name)"
     }
+    $proLicense = Read-DreamSkinProLicense -StateRoot $StateRoot
+    $proUnlocked = ($null -ne $proLicense)
+    if ($proUnlocked) { $status += ' · Pro 已激活' }
     $null = Add-DreamSkinTrayItem -Items $menu.Items -Text $status -Action $null -Enabled $false
     [void]$menu.Items.Add([System.Windows.Forms.ToolStripSeparator]::new())
 
@@ -255,6 +259,74 @@ try {
       }
     }
     [void]$menu.Items.Add($savedMenu)
+
+    # 主题库：安装包内置 preset（免费 + PRO）。PRO 需 License Key 解锁。
+    $themeLibMenu = [System.Windows.Forms.ToolStripMenuItem]::new('主题库')
+    $presetManifestPath = Join-Path $SkillRoot 'presets\manifest.json'
+    $presetManifest = $null
+    if (Test-Path -LiteralPath $presetManifestPath -PathType Leaf) {
+      try { $presetManifest = Get-Content -LiteralPath $presetManifestPath -Raw -Encoding UTF8 | ConvertFrom-Json } catch {}
+    }
+    if ($null -eq $presetManifest) {
+      $emptyLib = [System.Windows.Forms.ToolStripMenuItem]::new('暂无内置主题')
+      $emptyLib.Enabled = $false
+      [void]$themeLibMenu.DropDownItems.Add($emptyLib)
+    } else {
+      $libIds = @()
+      if ($null -ne $presetManifest.free) { $libIds += @($presetManifest.free) }
+      if ($null -ne $presetManifest.pro) { $libIds += @($presetManifest.pro) }
+      $proIds = @()
+      if ($null -ne $presetManifest.pro) { $proIds = @($presetManifest.pro) }
+      foreach ($libId in $libIds) {
+        $libPath = Join-Path $paths.Saved $libId
+        if (-not (Test-Path -LiteralPath (Join-Path $libPath 'theme.json') -PathType Leaf)) { continue }
+        $libName = $libId
+        try {
+          $libTheme = Read-DreamSkinTheme -ThemeDirectory $libPath -SkipImageMetadata
+          if ($null -ne $libTheme.Theme -and $libTheme.Theme.name) { $libName = "$($libTheme.Theme.name)" }
+        } catch {}
+        $isPro = $libId -in $proIds
+        if ($isPro -and -not $proUnlocked) {
+          $locked = [System.Windows.Forms.ToolStripMenuItem]::new("[未解锁] $libName (PRO)")
+          $locked.Enabled = $false
+          [void]$themeLibMenu.DropDownItems.Add($locked)
+        } else {
+          $libAction = {
+            $null = Invoke-DreamSkinTrayThemeOperation -Action {
+              $null = Use-DreamSkinSavedTheme -ThemeDirectory $libPath -StateRoot $StateRoot
+              Set-DreamSkinPaused -Paused $false -StateRoot $StateRoot | Out-Null
+            }
+            $notify.ShowBalloonTip(1800, 'Codex Skin Studio', "已应用：$libName", [System.Windows.Forms.ToolTipIcon]::Info)
+          }.GetNewClosure()
+          $null = Add-DreamSkinTrayItem -Items $themeLibMenu.DropDownItems -Text $libName -Action $libAction
+        }
+      }
+      [void]$themeLibMenu.DropDownItems.Add([System.Windows.Forms.ToolStripSeparator]::new())
+      $activateAction = {
+        $keyInput = [Microsoft.VisualBasic.Interaction]::InputBox(
+          '输入 License Key（购买后从邮件获取）：', '激活 Codex Skin Studio Pro', '')
+        if (-not [string]::IsNullOrWhiteSpace($keyInput)) {
+          $licResult = Write-DreamSkinProLicense -LicenseKey $keyInput.Trim() -StateRoot $StateRoot
+          if ($licResult.Valid -and -not $licResult.Expired) {
+            $notify.ShowBalloonTip(
+              2500,
+              'Codex Skin Studio',
+              "Pro 激活成功！方案：$($licResult.Plan)，有效期至 $($licResult.Expires.ToString('yyyy-MM-dd'))。",
+              [System.Windows.Forms.ToolTipIcon]::Info
+            )
+          } else {
+            [void][System.Windows.Forms.MessageBox]::Show(
+              "License Key 无效或已过期（$($licResult.Reason)）。请检查输入或重新购买。",
+              'Codex Skin Studio',
+              [System.Windows.Forms.MessageBoxButtons]::OK,
+              [System.Windows.Forms.MessageBoxIcon]::Warning
+            )
+          }
+        }
+      }
+      $null = Add-DreamSkinTrayItem -Items $themeLibMenu.DropDownItems -Text '激活 Pro…' -Action $activateAction
+    }
+    [void]$menu.Items.Add($themeLibMenu)
 
     $null = Add-DreamSkinTrayItem -Items $menu.Items -Text '打开主题文件夹' -Action {
       $themeDirectoryToken = ConvertTo-DreamSkinProcessArgument -Value $paths.Saved

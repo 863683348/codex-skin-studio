@@ -2,8 +2,8 @@ export const DOWNLOADS = {
   windows: {
     name: 'Windows',
     file: '/downloads/CodexSkinStudio-Setup-v1.0.0.exe',
-    size: '26.5 MB',
-    sha256: 'f22212fe3839ad9c8c98ff2ae30627350bb00b9611097abb60bfe5d3bda9b5f9',
+    size: '28.3 MB',
+    sha256: '585b59d6fe0f3031b89a919b5d0f0d8ef753ef1a166099fc734ba6ce09842f0e',
   },
   macos: {
     name: 'macOS',

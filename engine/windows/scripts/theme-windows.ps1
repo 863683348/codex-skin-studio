@@ -502,6 +502,39 @@ function Initialize-DreamSkinThemeStore {
       }
     }
   }
+  # Seed bundled presets (free + PRO) into the saved library — copy once, never overwrite.
+  # PRO themes ship in the installer and are unlocked by License Key (see license-dream-skin.ps1).
+  $presetManifestPath = Join-Path $SkillRoot 'presets\manifest.json'
+  if (Test-Path -LiteralPath $presetManifestPath -PathType Leaf) {
+    try {
+      $presetManifest = Get-Content -LiteralPath $presetManifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+      $presetIds = @()
+      if ($null -ne $presetManifest.free) { $presetIds += @($presetManifest.free) }
+      if ($null -ne $presetManifest.pro) { $presetIds += @($presetManifest.pro) }
+      foreach ($presetId in ($presetIds | Select-Object -Unique)) {
+        $sourcePreset = Join-Path $SkillRoot ('presets\{0}' -f $presetId)
+        $sourceTheme = Join-Path $sourcePreset 'theme.json'
+        if (-not (Test-Path -LiteralPath $sourceTheme -PathType Leaf)) { continue }
+        $presetDirectory = Join-Path $paths.Saved $presetId
+        $presetTheme = Join-Path $presetDirectory 'theme.json'
+        Assert-DreamSkinNoReparseComponents -Path $presetDirectory
+        Assert-DreamSkinNoReparseComponents -Path $presetTheme
+        if (-not (Test-Path -LiteralPath $presetTheme -PathType Leaf)) {
+          Ensure-DreamSkinManagedDirectory -Path $presetDirectory -Root $paths.Root
+          $presetPack = Read-DreamSkinTheme -ThemeDirectory $sourcePreset
+          $presetImage = Join-Path $presetDirectory ([System.IO.Path]::GetFileName($presetPack.ImagePath))
+          Assert-DreamSkinNoReparseComponents -Path $presetImage
+          Copy-Item -LiteralPath $presetPack.ImagePath -Destination $presetImage -Force
+          Assert-DreamSkinNoReparseComponents -Path $presetImage
+          Assert-DreamSkinImageFile -Path $presetImage
+          Assert-DreamSkinNoReparseComponents -Path $presetTheme
+          Copy-Item -LiteralPath $presetPack.ThemePath -Destination $presetTheme -Force
+        }
+      }
+    } catch {
+      # Preset seeding must never break theme store init
+    }
+  }
   $null = Read-DreamSkinTheme -ThemeDirectory $paths.Active
   return $paths
 }
