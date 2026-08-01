@@ -3,11 +3,6 @@ name: Build macOS DMG
 on:
   push:
     branches: [main]
-    paths:
-      - 'engine/macos/**'
-      - 'engine/runtime/**'
-      - 'engine/windows/VERSION'
-      - 'engine/macos/VERSION'
   workflow_dispatch:
 
 jobs:

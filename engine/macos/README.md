@@ -255,3 +255,4 @@ Thanks to **[passion8.cc](https://passion8.cc/register?aff=TuPe)** for sponsorin
 - Not an API proxy: theming does not change model providers or API keys
 
 If you use a third-party API relay, configure it separately — keep theme install and API config as two explicit steps.
+
