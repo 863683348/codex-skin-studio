@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 
 # Fast status for SwiftBar. No codesign / CDP probes by default.
 

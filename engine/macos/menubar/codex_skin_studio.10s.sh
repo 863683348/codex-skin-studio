@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 
 # SwiftBar plugin — dynamic theme list from themes/ + images/ drop folder.
 

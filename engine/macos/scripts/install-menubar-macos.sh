@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 
 # Install the SwiftBar plugin and optionally install SwiftBar itself.
 
