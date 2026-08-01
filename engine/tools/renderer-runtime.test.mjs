@@ -281,7 +281,7 @@ export async function runRendererRuntimeTest(assetRoot) {
   assert.equal(home.document.adoptedStyleSheets.length, 1);
   assert.equal(state.scope.baseState, "home");
   assert.equal(state.scope.level, "L1");
-  assert.equal(home.rootStyle.values.get("--dream-skin-brand-subtitle"), '"CODEX DREAM SKIN"');
+  assert.equal(home.rootStyle.values.get("--dream-skin-brand-subtitle"), '"CODEX SKIN STUDIO"');
   assert.equal(home.rootStyle.values.get("--dream-skin-status"), '"DREAM SKIN ONLINE"');
   assert.equal(home.rootStyle.values.get("--ds-theme-surface-radius"), "12px");
   assert.equal(home.rootStyle.values.get("--ds-theme-surface-opacity"), "1");

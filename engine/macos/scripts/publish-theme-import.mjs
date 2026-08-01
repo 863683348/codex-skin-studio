@@ -88,7 +88,7 @@ function safeBaseId(value, fingerprint) {
 
 function displayName(theme) {
   const value = typeof theme.name === "string" ? theme.name.trim() : "";
-  return Array.from(value || "Codex Dream Skin").slice(0, 120).join("");
+  return Array.from(value || "Codex Skin Studio").slice(0, 120).join("");
 }
 
 async function readStoredTheme(directory) {

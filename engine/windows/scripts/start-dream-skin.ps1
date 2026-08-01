@@ -382,7 +382,7 @@ try {
     throw $startupError
   }
 
-  Write-Host "Codex Dream Skin is active on verified loopback port $Port."
+  Write-Host "Codex Skin Studio is active on verified loopback port $Port."
 } finally {
   if ($null -ne $operationLock) { Exit-DreamSkinOperationLock -Mutex $operationLock }
 }

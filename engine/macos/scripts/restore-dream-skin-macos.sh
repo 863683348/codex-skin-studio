@@ -85,10 +85,10 @@ clear_operation_state
 /bin/rm -f "$OPERATION_ACK_PATH"
 if [ "$UNINSTALL" = "true" ]; then
   for launcher in \
-    "$HOME/Desktop/Codex Dream Skin.command" \
-    "$HOME/Desktop/Codex Dream Skin - Customize.command" \
-    "$HOME/Desktop/Codex Dream Skin - Verify.command" \
-    "$HOME/Desktop/Codex Dream Skin - Restore.command"; do
+    "$HOME/Desktop/Codex Skin Studio.command" \
+    "$HOME/Desktop/Codex Skin Studio - Customize.command" \
+    "$HOME/Desktop/Codex Skin Studio - Verify.command" \
+    "$HOME/Desktop/Codex Skin Studio - Restore.command"; do
     if [ -f "$launcher" ] && [ ! -L "$launcher" ] &&
        /usr/bin/grep -F -q '# CodexDreamSkinStudio launcher' "$launcher"; then
       /bin/rm -f "$launcher"

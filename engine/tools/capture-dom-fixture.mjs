@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Codex Dream Skin · DOM 结构快照工具（macOS / Windows 双端通用）
+ * Codex Skin Studio · DOM 结构快照工具（macOS / Windows 双端通用）
  * ================================================================
  * 从一个正在运行、带本机 CDP 调试端口的官方 Codex 桌面端导出
  * 「脱敏 DOM 结构快照」（fixture），用于：

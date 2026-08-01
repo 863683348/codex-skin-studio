@@ -1,4 +1,4 @@
-# Codex Dream Skin
+# Codex Skin Studio
 
 <p align="center">
   <strong>中文</strong> · <a href="./README.en.md">English</a>
@@ -204,7 +204,7 @@ macOS 菜单栏和 Windows 托盘都有「主题库 Gallery」和「在线 Studi
 
 | 平台 | 目录 | 入口 |
 |------|------|------|
-| Apple Silicon / Intel Mac | [`macos/`](./macos/) | 双击 `Install Codex Dream Skin.command` |
+| Apple Silicon / Intel Mac | [`macos/`](./macos/) | 双击 `Install Codex Skin Studio.command` |
 | Windows | [`windows/`](./windows/) | `scripts/install-dream-skin.ps1` → `start-dream-skin.ps1` |
 
 更细的说明：

@@ -541,8 +541,8 @@ html[data-dream-skin="active"] __DREAM_SELECTOR_SHELL_MAIN__ > __DREAM_SELECTOR_
 /* Decorative chrome lives on the native shell; no injected positioning host is needed. */
 html[data-dream-skin="active"]
   __DREAM_SELECTOR_SHELL_MAIN__:not(:has(__DREAM_SELECTOR_HOME_ROUTE_CSS__)) > __DREAM_SELECTOR_HEADER_TINT__::before {
-  content: var(--dream-skin-name, "Codex Dream Skin") " · "
-    var(--dream-skin-brand-subtitle, "CODEX DREAM SKIN");
+  content: var(--dream-skin-name, "Codex Skin Studio") " · "
+    var(--dream-skin-brand-subtitle, "CODEX SKIN STUDIO");
   position: absolute;
   left: 22px;
   top: 4px;
@@ -781,7 +781,7 @@ html[data-dream-skin="active"] __DREAM_SELECTOR_HOME_ROUTE__ __DREAM_SELECTOR_GA
 }
 
 html[data-dream-skin="active"] __DREAM_SELECTOR_HOME_ROUTE__ __DREAM_SELECTOR_GAME_SOURCE__::before {
-  content: var(--dream-skin-name, "Codex Dream Skin");
+  content: var(--dream-skin-name, "Codex Skin Studio");
   display: block;
   margin-bottom: 9px;
   color: var(--ds-accent);

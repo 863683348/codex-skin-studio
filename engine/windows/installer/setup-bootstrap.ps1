@@ -12,7 +12,7 @@ $payloadScripts = Join-Path $payloadRoot 'scripts'
 $commonPath = Join-Path $payloadScripts 'common-windows.ps1'
 $themePath = Join-Path $payloadScripts 'theme-windows.ps1'
 $stateRoot = Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'
-$startupShortcut = Join-Path ([Environment]::GetFolderPath('Startup')) 'Codex Dream Skin.lnk'
+$startupShortcut = Join-Path ([Environment]::GetFolderPath('Startup')) 'Codex Skin Studio.lnk'
 
 function Show-DreamSkinBootstrapMessage {
   param(
@@ -28,7 +28,7 @@ function Show-DreamSkinBootstrapMessage {
   }
   [void][System.Windows.Forms.MessageBox]::Show(
     $Message,
-    'Codex Dream Skin',
+    'Codex Skin Studio',
     [System.Windows.Forms.MessageBoxButtons]::OK,
     $icon
   )
@@ -39,11 +39,11 @@ function Wait-DreamSkinCodexClosedForSetup {
     $registered = @(Get-DreamSkinRegisteredCodexInstalls)
     $running = @($registered | Where-Object { (Get-DreamSkinCodexProcesses -Codex $_).Count -gt 0 })
     if ($running.Count -eq 0) { return }
-    if ($Silent) { throw 'Close Codex before installing or updating Codex Dream Skin.' }
+    if ($Silent) { throw 'Close Codex before installing or updating Codex Skin Studio.' }
     Add-Type -AssemblyName System.Windows.Forms
     $choice = [System.Windows.Forms.MessageBox]::Show(
       'Codex is currently running. Close it, then click Retry to continue setup.',
-      'Codex Dream Skin Setup',
+      'Codex Skin Studio Setup',
       [System.Windows.Forms.MessageBoxButtons]::RetryCancel,
       [System.Windows.Forms.MessageBoxIcon]::Information
     )
@@ -70,7 +70,7 @@ try {
     $restoreRequired = (Test-Path -LiteralPath $engine.Root -PathType Container) -or
       (Test-Path -LiteralPath (Join-Path $stateRoot 'config.before-dream-skin.toml') -PathType Leaf)
     if ($restoreRequired -and -not (Test-Path -LiteralPath $engine.Restore -PathType Leaf)) {
-      throw 'The installed restore engine is missing. Reinstall Codex Dream Skin, then uninstall again so Codex can be restored safely.'
+      throw 'The installed restore engine is missing. Reinstall Codex Skin Studio, then uninstall again so Codex can be restored safely.'
     }
     if ($restoreRequired) {
       $restoreParameters = @{
@@ -105,7 +105,7 @@ try {
   } else { '' }
   if ($installedVersion -cmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$' -and
     ([version]$installedVersion) -gt ([version]$payloadVersion)) {
-    throw "A newer Codex Dream Skin v$installedVersion is already installed. Download that version or newer instead of downgrading to v$payloadVersion."
+    throw "A newer Codex Skin Studio v$installedVersion is already installed. Download that version or newer instead of downgrading to v$payloadVersion."
   }
   $backupExists = Test-Path -LiteralPath (Join-Path $stateRoot 'config.before-dream-skin.toml') -PathType Leaf
   $requiredEngineFiles = @(

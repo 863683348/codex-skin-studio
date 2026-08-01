@@ -309,11 +309,11 @@
       const rgb = rgbString(value);
       if (rgb) setStyleProperty(root, name, rgb);
     }
-    setStyleProperty(root, "--dream-skin-name", cssString(THEME.name || "Codex Dream Skin"));
+    setStyleProperty(root, "--dream-skin-name", cssString(THEME.name || "Codex Skin Studio"));
     setStyleProperty(root, "--dream-skin-tagline", cssString(THEME.tagline || "Make something wonderful."));
     setStyleProperty(root, "--dream-skin-quote", cssString(THEME.quote || "MAKE SOMETHING WONDERFUL"));
     setStyleProperty(root, "--dream-skin-brand-subtitle", cssString(
-      THEME.brandSubtitle || "CODEX DREAM SKIN",
+      THEME.brandSubtitle || "CODEX SKIN STUDIO",
     ));
     setStyleProperty(root, "--dream-skin-status", cssString(THEME.statusText || "DREAM SKIN ONLINE"));
     setStyleProperty(root, "--dream-skin-project-prefix", cssString(THEME.projectPrefix || "选择项目 · "));

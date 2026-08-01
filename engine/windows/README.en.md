@@ -1,10 +1,10 @@
-# Codex Dream Skin for Windows
+# Codex Skin Studio for Windows
 
 <p align="center">
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
 
-Codex Dream Skin loads an external theme into the official Codex Windows desktop app through loopback CDP. The native sidebar, project picker, task content, and composer remain interactive. The tool does not modify WindowsApps, `app.asar`, or the app signature.
+Codex Skin Studio loads an external theme into the official Codex Windows desktop app through loopback CDP. The native sidebar, project picker, task content, and composer remain interactive. The tool does not modify WindowsApps, `app.asar`, or the app signature.
 
 ## Requirements
 
@@ -40,9 +40,9 @@ powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File .\scripts\install-
 
 The installer validates the official Codex Store package and Node.js, saves a recoverable appearance baseline, and initializes the local theme store. By default it also creates these shortcuts:
 
-- `Codex Dream Skin`: launch or reapply the skin.
-- `Codex Dream Skin - Tray`: open the system tray theme controls.
-- `Codex Dream Skin - Restore`: restore the stock appearance and close the saved CDP session.
+- `Codex Skin Studio`: launch or reapply the skin.
+- `Codex Skin Studio - Tray`: open the system tray theme controls.
+- `Codex Skin Studio - Restore`: restore the stock appearance and close the saved CDP session.
 
 Source-install commands and daily shortcuts both use `RemoteSigned`, so they do not override system or enterprise Group Policy. The installer verifies the runtime copy with SHA-256, then clears download-zone markers only from managed PowerShell copies under `%LOCALAPPDATA%\CodexDreamSkin\engine`.
 
@@ -58,7 +58,7 @@ Exit the Dream Skin tray and close Codex, update the checkout (`git pull`, or do
 
 ## Launch and verify
 
-The `Codex Dream Skin` shortcut is the recommended launcher. It asks for confirmation before restarting an open Codex window.
+The `Codex Skin Studio` shortcut is the recommended launcher. It asks for confirmation before restarting an open Codex window.
 
 Command-line launch:
 
@@ -85,7 +85,7 @@ Next, use the generated screenshot to check horizontal overflow and text contras
 
 ## Change and save themes
 
-Open `Codex Dream Skin - Tray` to:
+Open `Codex Skin Studio - Tray` to:
 
 - Import a PNG, JPEG, or WebP background.
 - Import an ordinary `.zip` theme pack into Saved Themes (`.dreamskin` is not supported).
@@ -192,7 +192,7 @@ When `-Port` is omitted, the launcher searches for a free port beginning at `933
 
 ### Verification cannot find a CDP endpoint
 
-Launch Codex through the `Codex Dream Skin` shortcut, then run verification. A normal Codex launch does not open the debug session used by Dream Skin.
+Launch Codex through the `Codex Skin Studio` shortcut, then run verification. A normal Codex launch does not open the debug session used by Dream Skin.
 
 Starting with Codex Store `26.715.10079.0`, the owl runtime may convert package-activation arguments into a `codex://` path. The launcher detects that behavior and makes one raw-argument fallback attempt against the exact `ChatGPT.exe` in the same validated Store package; it does not change files or WindowsApps permissions.
 

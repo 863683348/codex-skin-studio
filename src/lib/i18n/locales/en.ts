@@ -140,7 +140,7 @@ export const en: Dict = {
       },
       {
         q: 'Why does the installer show a different name than the website?',
-        a: 'The current installer keeps the community engine brand (Codex Dream Skin), which shares the same engine as this site (Codex Skin Studio). Brand migration is in progress — functionality and security are unaffected.',
+        a: 'The Windows installer now uses the Codex Skin Studio brand; the macOS package still carries the community engine brand (Codex Dream Skin). Same engine underneath — functionality and security are unaffected.',
       },
       {
         q: 'Why are only some themes marked "Installable"?',
@@ -224,7 +224,7 @@ export const en: Dict = {
   footer: {
     copyright: 'Codex Skin Studio. Open source, MIT License.',
     madeWith: 'Built with CDP injection technology',
-    brandNote: 'The installer currently carries the community engine brand (Codex Dream Skin) — same engine, brand migration in progress',
+    brandNote: 'Windows installer uses the Codex Skin Studio brand; the macOS package still carries the community engine brand (migration in progress)',
   },
   theme: {
     toggleToLight: 'Switch to Light Mode',

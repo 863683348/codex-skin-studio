@@ -1,4 +1,4 @@
-# Codex Dream Skin Studio
+# Codex Skin Studio Studio
 
 Unofficial macOS theme studio for the **official Codex Desktop** app.
 
@@ -38,10 +38,10 @@ contributors, diagnostics, and legacy deployments.
 # ~/.codex/codex-dream-skin-studio/scripts/customize-theme-macos.sh
 
 # 4) Start/re-apply, verify, or restore via Desktop:
-#    Codex Dream Skin.command
-#    Codex Dream Skin - Customize.command
-#    Codex Dream Skin - Verify.command
-#    Codex Dream Skin - Restore.command
+#    Codex Skin Studio.command
+#    Codex Skin Studio - Customize.command
+#    Codex Skin Studio - Verify.command
+#    Codex Skin Studio - Restore.command
 
 # 5) Legacy only: install the old SwiftBar menu (do not enable it beside the native app)
 ./Install\ Menu\ Bar.command

@@ -139,7 +139,7 @@ export const zh = {
       },
       {
         q: '为什么安装包显示的名字和官网不一样？',
-        a: '当前安装包沿用社区引擎品牌（Codex Dream Skin），与官网（Codex Skin Studio）同源同引擎。品牌迁移正在推进中，不影响功能与安全。',
+        a: 'Windows 安装包已使用 Codex Skin Studio 品牌；macOS 包暂沿用社区引擎品牌（Codex Dream Skin）。同源同引擎，不影响功能与安全。',
       },
       {
         q: '为什么只有部分主题标了"可安装"？',
@@ -223,7 +223,7 @@ export const zh = {
   footer: {
     copyright: 'Codex Skin Studio. 开源项目，MIT 许可证.',
     madeWith: '用 CDP 注入技术制作',
-    brandNote: '安装包暂沿用社区引擎品牌 Codex Dream Skin，与本站同源同引擎，品牌迁移中',
+    brandNote: 'Windows 安装包已使用 Codex Skin Studio 品牌；macOS 安装包暂沿用社区引擎品牌（迁移中）',
   },
   theme: {
     toggleToLight: '切换到亮色模式',
