@@ -121,7 +121,7 @@ for name in "${RUNTIME_SCRIPTS[@]}"; do
 done
 [ -d "$ROOT/assets" ] || { printf 'Engine directory missing: assets\n' >&2; exit 1; }
 /usr/bin/rsync -a "$ROOT/assets/" "$ENGINE/assets/"
-PUBLIC_PRESET="preset-gothic-void-crusade"
+PUBLIC_PRESET="preset-kung-fu-womens-football"
 PUBLIC_PRESET_SHA256="b76a7cbe2ff9d923846e931984d243a7ba1f25de8d190b5c6412c809c41aee42"
 PUBLIC_PRESET_THEME_SHA256="8316c6ad29e3b84806358ab4a730c7e063b261e379179b9608cf751c282d66a7"
 [ -d "$ROOT/presets/$PUBLIC_PRESET" ] \

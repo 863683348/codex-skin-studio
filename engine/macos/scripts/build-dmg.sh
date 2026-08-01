@@ -73,7 +73,7 @@ MOUNTED_ICON_NAME="$(/usr/bin/plutil -extract CFBundleIconFile raw -o - \
 MOUNTED_ICON="$MOUNTED_APP/Contents/Resources/${MOUNTED_ICON_NAME%.icns}.icns"
 [ -s "$MOUNTED_ICON" ] \
   || { printf 'Mounted app icon is missing or empty: %s\n' "$MOUNTED_ICON" >&2; exit 1; }
-[ -f "$MOUNTED_APP/Contents/Resources/engine/presets/preset-gothic-void-crusade/theme.json" ] \
+[ -f "$MOUNTED_APP/Contents/Resources/engine/presets/preset-kung-fu-womens-football/theme.json" ] \
   || { printf 'Mounted app is missing the public release preset.\n' >&2; exit 1; }
 [ ! -e "$MOUNTED_APP/Contents/Resources/engine/presets/preset-arina-hashimoto" ] \
   || { printf 'Mounted app contains a rights-restricted preset.\n' >&2; exit 1; }

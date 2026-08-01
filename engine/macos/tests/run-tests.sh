@@ -327,8 +327,8 @@ fi
   done
   seed_bundled_presets
   seed_bundled_presets
-  [ -f "$themes/preset-gothic-void-crusade/theme.json" ] || exit 1
-  [ -f "$themes/preset-gothic-void-crusade/background.jpg" ] || exit 1
+  [ -f "$themes/preset-kung-fu-womens-football/theme.json" ] || exit 1
+  [ -f "$themes/preset-kung-fu-womens-football/background.jpg" ] || exit 1
   [ -f "$themes/preset-arina-hashimoto/theme.json" ] || exit 1
   [ -f "$themes/preset-arina-hashimoto/background.jpg" ] || exit 1
   [ -f "$themes/custom-keepme/theme.json" ] || exit 1
@@ -670,7 +670,7 @@ STATUS_PID=""
 # The common stop path must reject a real watcher running on 19341 when the
 # saved state claims 1934, even though nodePath/injectorPath/start-time all
 # match. This exercises the signal gate directly (status has its own matcher).
-"$NODE" "$ROOT/scripts/injector.mjs" --watch --port 19341 --theme-dir "$ROOT/presets/preset-gothic-void-crusade" \
+"$NODE" "$ROOT/scripts/injector.mjs" --watch --port 19341 --theme-dir "$ROOT/presets/preset-kung-fu-womens-football" \
   >"$TMP/near-prefix-injector.out" 2>&1 &
 WATCH_PID="$!"
 /bin/sleep 0.2
