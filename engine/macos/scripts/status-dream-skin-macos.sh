@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 # Fast status for SwiftBar. No codesign / CDP probes by default.
 
@@ -17,7 +17,7 @@ while [ "$#" -gt 0 ]; do
   esac
 done
 
-STATE_ROOT="${HOME}/Library/Application Support/CodexDreamSkinStudio"
+STATE_ROOT="${HOME}/Library/Application Support/CodexSkinStudio"
 STATE_PATH="${STATE_ROOT}/state.json"
 OPERATION_STATE_PATH="${STATE_ROOT}/operation-state.plist"
 THEME_DIR="${STATE_ROOT}/theme"

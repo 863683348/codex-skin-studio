@@ -91,6 +91,8 @@ export const zh = {
     comingSoonTitle: '即将上架',
     comingSoonDesc: '这个主题目前处于预览阶段，还未随安装包发布。我们会陆续把更多预设主题打包进安装器，敬请期待。',
     comingSoonCta: '返回画廊',
+    proCta: '升级 Pro 解锁',
+    proDesc: 'PRO 专属主题：升级后随安装包解锁，可在主题列表中一键套用。',
   },
   docs: {
     title: '使用教程',

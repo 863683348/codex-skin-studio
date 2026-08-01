@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "preset-judy-hopps",
+  "name": "朱迪 Judy Hopps",
+  "brandSubtitle": "CODEX SKIN STUDIO",
+  "tagline": "在动物城，任何事都有可能。",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "◉  选择项目",
+  "statusText": "JUDY HOPPS ON DUTY",
+  "quote": "MAKE SOMETHING WONDERFUL",
+  "image": "background.jpg",
+  "appearance": "dark",
+  "art": {
+    "focusX": 0.72,
+    "focusY": 0.45,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#16142e",
+    "panel": "#201d3d",
+    "panelAlt": "#2a2650",
+    "accent": "#7c5cd6",
+    "accentAlt": "#4ecdc4",
+    "secondary": "#5a3fa8",
+    "highlight": "#6a4fc0",
+    "text": "#efecff",
+    "muted": "#a8a3d8",
+    "line": "rgba(124, 92, 214, .28)"
+  },
+  "promoTitle": "Codex Skin Studio",
+  "promoSub": "疯狂动物城 · 朱迪",
+  "promoUrl": "https://codex-skin-studio.shop"
+}

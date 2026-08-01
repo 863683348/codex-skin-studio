@@ -1,4 +1,4 @@
-# Codex Skin Studio Studio
+﻿# Codex Skin Studio Studio
 
 Unofficial macOS theme studio for the **official Codex Desktop** app.
 
@@ -17,7 +17,7 @@ This project injects through **local loopback CDP**. It does **not** modify the 
 ## Release install (recommended)
 
 普通用户请从 [GitHub Releases](https://github.com/Fei-Away/Codex-Dream-Skin/releases) 下载
-`CodexDreamSkin-vX.Y.Z.dmg`，按 [`docs/install-macos.md`](../docs/install-macos.md) 的图形界面步骤
+`CodexSkinStudio-vX.Y.Z.dmg`，按 [`docs/install-macos.md`](../docs/install-macos.md) 的图形界面步骤
 拖入 Applications。首次运行可能需要在“系统设置 → 隐私与安全性 → 仍要打开”确认一次；不需要
 运行 `xattr` 或安装源码。后续更新下载新的 DMG 覆盖安装即可，用户主题和图片会保留。
 
@@ -53,7 +53,7 @@ Install location after step 2:
 | Item | Path |
 | --- | --- |
 | Engine | `~/.codex/codex-dream-skin-studio` |
-| State / logs / user images | `~/Library/Application Support/CodexDreamSkinStudio` |
+| State / logs / user images | `~/Library/Application Support/CodexSkinStudio` |
 | Theme backup | under Application Support (`theme-backup.json`) |
 
 ## Legacy standalone ZIP (maintainer/offline packaging only)
@@ -138,7 +138,7 @@ active/last-known-good copy. Reimporting identical content reports a duplicate;
 a different pack using an existing ID is saved under a new safe ID.
 
 Manual fallback: choose **打开主题文件夹**, or open
-`~/Library/Application Support/CodexDreamSkinStudio/themes/`, then move in the
+`~/Library/Application Support/CodexSkinStudio/themes/`, then move in the
 complete extracted directory whose immediate children are `theme.json`, `theme.css`, and the
 referenced image. Reopen the menu afterward. Do not add another wrapper folder;
 manual placement bypasses archive checks, so use trusted content only.

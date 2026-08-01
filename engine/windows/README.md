@@ -1,4 +1,4 @@
-# Codex Skin Studio for Windows
+﻿# Codex Skin Studio for Windows
 
 <p align="center">
   <strong>中文</strong> · <a href="./README.en.md">English</a>
@@ -16,7 +16,7 @@ Codex Skin Studio 通过本机回环 CDP 给官方 Codex Windows 桌面应用加
 ## Release 安装（推荐普通用户）
 
 普通用户请从 [GitHub Releases](https://github.com/Fei-Away/Codex-Dream-Skin/releases) 下载
-`CodexDreamSkin-Setup-vX.Y.Z.exe`，按 [`docs/install-windows.md`](../docs/install-windows.md) 的图形
+`CodexSkinStudio-Setup-vX.Y.Z.exe`，按 [`docs/install-windows.md`](../docs/install-windows.md) 的图形
 界面步骤安装。安装器自带固定 Node 运行时，不需要 clone 仓库或运行 `.ps1`；默认按当前用户安装，
 不应要求管理员权限。未签名的新下载偶尔会触发 SmartScreen，按“更多信息 → 仍要运行”即可，
 不要关闭 Defender。后续更新运行新的 Setup.exe 覆盖安装，主题和图片会保留。
@@ -37,7 +37,7 @@ powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File .\scripts\install-
 - `Codex Skin Studio - Tray`：打开系统托盘主题控制。
 - `Codex Skin Studio - Restore`：恢复官方外观并关闭已保存的 CDP 会话。
 
-源码安装命令与日常快捷方式都使用 `RemoteSigned`，不会绕过系统或企业组策略。安装器会先校验运行时副本的 SHA-256，再仅对 `%LOCALAPPDATA%\CodexDreamSkin\engine` 中受管的 PowerShell 副本清除下载区标记。
+源码安装命令与日常快捷方式都使用 `RemoteSigned`，不会绕过系统或企业组策略。安装器会先校验运行时副本的 SHA-256，再仅对 `%LOCALAPPDATA%\CodexSkinStudio\engine` 中受管的 PowerShell 副本清除下载区标记。
 
 如需使用自定义端口，可以在安装时传入 `-Port`。端口范围必须是 `1024` 到 `65535`。
 
@@ -104,7 +104,7 @@ powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File .\scripts\verify-d
 保存为新的安全 ID。
 
 也可从托盘选择“打开主题文件夹”，手动把已解压、且直接包含 `theme.json`、`theme.css` 与背景图的完整目录移动到
-`%LOCALAPPDATA%\CodexDreamSkin\themes\`。重新打开托盘菜单后即可看到；不要再套一层目录。手动目录
+`%LOCALAPPDATA%\CodexSkinStudio\themes\`。重新打开托盘菜单后即可看到；不要再套一层目录。手动目录
 不会经过 ZIP 导入器的归档校验，请只移动可信内容。
 
 ## 恢复与卸载快捷方式
@@ -129,14 +129,14 @@ powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File .\scripts\restore-
 
 | 用途 | 路径 |
 |------|------|
-| Dream Skin 状态根目录 | `%LOCALAPPDATA%\CodexDreamSkin` |
-| 当前主题 | `%LOCALAPPDATA%\CodexDreamSkin\active-theme` |
-| 已保存主题 | `%LOCALAPPDATA%\CodexDreamSkin\themes` |
-| 导入图片归档 | `%LOCALAPPDATA%\CodexDreamSkin\images` |
-| 会话状态 | `%LOCALAPPDATA%\CodexDreamSkin\state.json` |
-| 注入器日志 | `%LOCALAPPDATA%\CodexDreamSkin\injector.log` |
-| 注入器错误日志 | `%LOCALAPPDATA%\CodexDreamSkin\injector-error.log` |
-| 验证日志 | `%LOCALAPPDATA%\CodexDreamSkin\verify.log` |
+| Dream Skin 状态根目录 | `%LOCALAPPDATA%\CodexSkinStudio` |
+| 当前主题 | `%LOCALAPPDATA%\CodexSkinStudio\active-theme` |
+| 已保存主题 | `%LOCALAPPDATA%\CodexSkinStudio\themes` |
+| 导入图片归档 | `%LOCALAPPDATA%\CodexSkinStudio\images` |
+| 会话状态 | `%LOCALAPPDATA%\CodexSkinStudio\state.json` |
+| 注入器日志 | `%LOCALAPPDATA%\CodexSkinStudio\injector.log` |
+| 注入器错误日志 | `%LOCALAPPDATA%\CodexSkinStudio\injector-error.log` |
+| 验证日志 | `%LOCALAPPDATA%\CodexSkinStudio\verify.log` |
 | Codex 配置 | `%USERPROFILE%\.codex\config.toml` |
 
 更完整的平台路径说明见 [`../docs/platforms.md`](../docs/platforms.md)。

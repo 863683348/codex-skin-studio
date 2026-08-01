@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 export LC_ALL=C
@@ -7,7 +7,7 @@ export LC_CTYPE=C
 ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
 VERSION="$(/usr/bin/tr -d '[:space:]' < "$ROOT/VERSION")"
 RELEASE_DIR="$ROOT/release"
-DMG="$RELEASE_DIR/CodexDreamSkin-v$VERSION.dmg"
+DMG="$RELEASE_DIR/CodexSkinStudio-v$VERSION.dmg"
 SKIP_TESTS="false"
 
 while [ "$#" -gt 0 ]; do
@@ -93,7 +93,7 @@ for excluded in build-client-release.sh build-dmg.sh build-menubar-app.sh build-
   [ ! -e "$MOUNTED_APP/Contents/Resources/engine/scripts/$excluded" ] \
     || { printf 'Mounted runtime contains build-only script: %s\n' "$excluded" >&2; exit 1; }
 done
-MOUNTED_ARCHS="$(/usr/bin/lipo -archs "$MOUNTED_APP/Contents/MacOS/CodexDreamSkinMenuBar")"
+MOUNTED_ARCHS="$(/usr/bin/lipo -archs "$MOUNTED_APP/Contents/MacOS/CodexSkinStudioMenuBar")"
 read -r -a EXPECTED_ARCHS <<< "${DREAMSKIN_ARCHS:-arm64 x86_64}"
 for arch in "${EXPECTED_ARCHS[@]}"; do
   case " $MOUNTED_ARCHS " in

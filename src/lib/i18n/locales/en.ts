@@ -92,6 +92,8 @@ export const en: Dict = {
     comingSoonTitle: 'Coming Soon',
     comingSoonDesc: 'This theme is currently in preview and has not been shipped with the installer yet. We will keep packing more presets into the installer — stay tuned.',
     comingSoonCta: 'Back to Gallery',
+    proCta: 'Unlock with Pro',
+    proDesc: 'PRO theme: unlock it with a Pro plan and apply it instantly from the theme list.',
   },
   docs: {
     title: 'Documentation',

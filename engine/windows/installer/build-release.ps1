@@ -27,11 +27,11 @@ $innoSetupLicensePath = Join-Path $innoLanguageRoot 'Inno-Setup-License.txt'
 $innoChineseLanguageSha256 = '7d544b9bb1d142cfa11f2e5d3cc8abe2e55f8e066c5124e3772675aa236e1278'
 $innoSetupLicenseSha256 = '0c81595601bce47eeef8d865d5da7f9ca2c6a12235b7482b29f5ab23ed02ee5a'
 $publicPresetRoot = Join-Path (Join-Path (Join-Path $repositoryRoot 'macos') 'presets') `
-  'preset-gothic-void-crusade'
+  'preset-kung-fu-womens-football'
 $publicPresetImagePath = Join-Path $publicPresetRoot 'background.jpg'
 $publicPresetThemePath = Join-Path $publicPresetRoot 'theme.json'
-$publicPresetImageSha256 = 'b76a7cbe2ff9d923846e931984d243a7ba1f25de8d190b5c6412c809c41aee42'
-$publicPresetThemeSha256 = '8e0c4ba29d459f5a6fb7053718578cd605fbb5cd5ccfdc33b07de3142b11c80c'
+$publicPresetImageSha256 = 'df22230c83ad2fb2d8546ccd9f742c9f4b5c735e0133db7b9e50e4c20f446749'
+$publicPresetThemeSha256 = '37e623b0060a583e1cefd82c5564c86729ccde389c363b894f27c90a7bcfcd5a'
 
 function Read-ReleaseTextFile {
   param([Parameter(Mandatory = $true)][string]$Path)
@@ -303,7 +303,7 @@ if ($innoSetupLicenseHash -cne $innoSetupLicenseSha256) {
   throw "The pinned Inno Setup license changed. Expected $innoSetupLicenseSha256, found $innoSetupLicenseHash."
 }
 $publicPresetTheme = (Read-ReleaseTextFile -Path $publicPresetThemePath) | ConvertFrom-Json
-if ("$($publicPresetTheme.id)" -cne 'preset-gothic-void-crusade' -or
+if ("$($publicPresetTheme.id)" -cne 'preset-kung-fu-womens-football' -or
   "$($publicPresetTheme.image)" -cne 'background.jpg') {
   throw 'The public Windows release preset metadata is unexpected.'
 }
@@ -370,7 +370,7 @@ try {
   Copy-ReleaseDirectory -Source (Join-Path $windowsRoot 'assets') -Destination (Join-Path $payloadRoot 'assets')
   Copy-ReleaseDirectory -Source (Join-Path $windowsRoot 'scripts') -Destination (Join-Path $payloadRoot 'scripts')
   Copy-ReleaseDirectory -Source $publicPresetRoot `
-    -Destination (Join-Path $payloadRoot 'presets\preset-gothic-void-crusade')
+    -Destination (Join-Path $payloadRoot 'presets\preset-kung-fu-womens-football')
   Copy-Item -LiteralPath $publicPresetImagePath `
     -Destination (Join-Path (Join-Path $payloadRoot 'assets') 'dream-reference.jpg') -Force
   $publicPresetTheme.image = 'dream-reference.jpg'
@@ -414,8 +414,8 @@ try {
     'assets\theme-package-validator.mjs',
     'assets\theme.json',
     'assets\codex-dream-skin.ico',
-    'presets\preset-gothic-void-crusade\background.jpg',
-    'presets\preset-gothic-void-crusade\theme.json',
+    'presets\preset-kung-fu-womens-football\background.jpg',
+    'presets\preset-kung-fu-womens-football\theme.json',
     'scripts\apply-community-theme.ps1',
     'scripts\check-update.ps1',
     'scripts\common-windows.ps1',
@@ -446,7 +446,7 @@ try {
     -Path (Join-Path (Join-Path $payloadRoot 'assets') 'theme.json')) | ConvertFrom-Json
   if ($stagedPublicImageHash -cne $publicPresetImageSha256 -or
     $stagedPublicThemeHash -cne $publicPresetThemeSha256 -or
-    "$($stagedPublicTheme.id)" -cne 'preset-gothic-void-crusade' -or
+    "$($stagedPublicTheme.id)" -cne 'preset-kung-fu-womens-football' -or
     "$($stagedPublicTheme.image)" -cne 'dream-reference.jpg') {
     throw 'Staged installer payload did not retain the reviewed public release theme.'
   }

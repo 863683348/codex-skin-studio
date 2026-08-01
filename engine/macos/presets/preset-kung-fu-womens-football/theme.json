@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "preset-kung-fu-womens-football",
+  "name": "功夫女足",
+  "brandSubtitle": "CODEX SKIN STUDIO",
+  "tagline": "球场上的功夫，代码里的江湖。",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "◉  选择项目",
+  "statusText": "KUNG FU FOOTBALL ONLINE",
+  "quote": "MAKE SOMETHING WONDERFUL",
+  "image": "background.jpg",
+  "appearance": "dark",
+  "art": {
+    "focusX": 0.72,
+    "focusY": 0.45,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#170f0a",
+    "panel": "#221610",
+    "panelAlt": "#2c1d14",
+    "accent": "#e06a2e",
+    "accentAlt": "#f4b642",
+    "secondary": "#8f3b1d",
+    "highlight": "#a34d22",
+    "text": "#f6ead8",
+    "muted": "#c9a97f",
+    "line": "rgba(224, 106, 46, .28)"
+  },
+  "promoTitle": "Codex Skin Studio",
+  "promoSub": "功夫女足 Kung Fu Women's Football",
+  "promoUrl": "https://codex-skin-studio.shop"
+}

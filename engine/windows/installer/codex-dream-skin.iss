@@ -1,4 +1,4 @@
-#ifndef AppVersion
+﻿#ifndef AppVersion
   #error AppVersion must be supplied by build-release.ps1
 #endif
 #ifndef StageRoot
@@ -23,7 +23,7 @@ AppPublisher={#AppPublisher}
 AppPublisherURL={#AppUrl}
 AppSupportURL={#AppUrl}
 AppUpdatesURL=https://github.com/863683348/codex-skin-studio/releases
-DefaultDirName={localappdata}\Programs\CodexDreamSkin
+DefaultDirName={localappdata}\Programs\CodexSkinStudio
 DefaultGroupName={#AppName}
 DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
@@ -77,10 +77,10 @@ Name: "{group}\Codex Skin Studio"; Filename: "{#PersistentPowerShellPath}"; Para
 Name: "{userstartup}\Codex Skin Studio"; Filename: "{#PersistentPowerShellPath}"; Parameters: "-NoProfile -STA -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File ""{app}\setup-bootstrap.ps1"" -LaunchTray"; WorkingDir: "{app}"; IconFilename: "{app}\payload\assets\codex-dream-skin.ico"; Tasks: startup
 
 [Registry]
-Root: HKCU; Subkey: "Software\Classes\dreamskin"; ValueType: string; ValueName: ""; ValueData: "URL:DreamSkin Protocol"; Flags: uninsdeletekey
+Root: HKCU; Subkey: "Software\Classes\dreamskin"; ValueType: string; ValueName: ""; ValueData: "URL:Codex Skin Studio Protocol"; Flags: uninsdeletekey
 Root: HKCU; Subkey: "Software\Classes\dreamskin"; ValueType: string; ValueName: "URL Protocol"; ValueData: ""
 Root: HKCU; Subkey: "Software\Classes\dreamskin\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\payload\assets\codex-dream-skin.ico"
-Root: HKCU; Subkey: "Software\Classes\dreamskin\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{#PersistentPowerShellPath}"" -NoProfile -STA -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File ""{localappdata}\CodexDreamSkin\engine\scripts\apply-community-theme.ps1"" ""%1"""
+Root: HKCU; Subkey: "Software\Classes\dreamskin\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{#PersistentPowerShellPath}"" -NoProfile -STA -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File ""{localappdata}\CodexSkinStudio\engine\scripts\apply-community-theme.ps1"" ""%1"""
 
 [Run]
 Filename: "{#PowerShellPath}"; Parameters: "-NoProfile -STA -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File ""{app}\setup-bootstrap.ps1"" -LaunchTray"; WorkingDir: "{app}"; Description: "Launch Codex Skin Studio"; Flags: nowait postinstall skipifsilent

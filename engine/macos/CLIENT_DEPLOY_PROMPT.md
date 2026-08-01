@@ -1,4 +1,4 @@
-# Codex 主题编辑器｜客户部署提示词
+﻿# Codex 主题编辑器｜客户部署提示词
 
 使用方法：把完整的 `Codex 主题编辑器.zip`、客户喜欢的主题图片（可选）和下面整段提示词，一起发送给客户自己的 macOS Codex。不要提前删除 ZIP 内的隐藏目录。
 
@@ -52,7 +52,7 @@
    - `Codex Skin Studio - Verify.command`
    - `Codex Skin Studio - Restore.command`
 
-9. 如果失败，读取 `~/Library/Application Support/CodexDreamSkinStudio/` 下的日志并继续修复。不得降低代码签名、回环端口归属、PID 身份、原生结构或截图验证标准；不得用“预计重启后生效”“应该完成”等措辞代替验收。
+9. 如果失败，读取 `~/Library/Application Support/CodexSkinStudio/` 下的日志并继续修复。不得降低代码签名、回环端口归属、PID 身份、原生结构或截图验证标准；不得用“预计重启后生效”“应该完成”等措辞代替验收。
 
 最终向我汇报：
 - Codex 主题编辑器版本与官方 Codex 版本；

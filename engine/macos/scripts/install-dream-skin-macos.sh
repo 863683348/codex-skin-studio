@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 . "$(cd "$(dirname "$0")" && pwd -P)/common-macos.sh"
@@ -118,12 +118,12 @@ shell_quote() {
 write_launcher() {
   local target="$1"
   local command="$2"
-  if [ -e "$target" ] && ! /usr/bin/grep -q '^# CodexDreamSkinStudio launcher$' "$target" 2>/dev/null; then
+  if [ -e "$target" ] && ! /usr/bin/grep -q '^# CodexSkinStudio launcher$' "$target" 2>/dev/null; then
     fail "Refusing to overwrite an unrelated Desktop file: $target"
   fi
   /usr/bin/printf '%s\n' \
     '#!/bin/bash' \
-    '# CodexDreamSkinStudio launcher' \
+    '# CodexSkinStudio launcher' \
     'set -e' \
     "$command" > "$target"
   /bin/chmod 700 "$target"

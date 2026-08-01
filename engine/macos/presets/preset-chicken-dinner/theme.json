@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "preset-chicken-dinner",
+  "name": "吃鸡大吉 Chicken Dinner",
+  "brandSubtitle": "CODEX SKIN STUDIO",
+  "tagline": "大吉大利，今晚吃鸡！",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "◉  选择项目",
+  "statusText": "CHICKEN DINNER ONLINE",
+  "quote": "MAKE SOMETHING WONDERFUL",
+  "image": "background.jpg",
+  "appearance": "dark",
+  "art": {
+    "focusX": 0.72,
+    "focusY": 0.45,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#101410",
+    "panel": "#1a2018",
+    "panelAlt": "#242c20",
+    "accent": "#d98e32",
+    "accentAlt": "#8ab84a",
+    "secondary": "#a06a1f",
+    "highlight": "#c07c28",
+    "text": "#e8f0e0",
+    "muted": "#a8b8a0",
+    "line": "rgba(217, 142, 50, .28)"
+  },
+  "promoTitle": "Codex Skin Studio",
+  "promoSub": "吃鸡大吉 · 战术橙绿",
+  "promoUrl": "https://codex-skin-studio.shop"
+}

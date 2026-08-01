@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
   [switch]$Install,
   [switch]$LaunchTray,
@@ -11,7 +11,7 @@ $payloadRoot = Join-Path $PSScriptRoot 'payload'
 $payloadScripts = Join-Path $payloadRoot 'scripts'
 $commonPath = Join-Path $payloadScripts 'common-windows.ps1'
 $themePath = Join-Path $payloadScripts 'theme-windows.ps1'
-$stateRoot = Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'
+$stateRoot = Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'
 $startupShortcut = Join-Path ([Environment]::GetFolderPath('Startup')) 'Codex Skin Studio.lnk'
 
 function Show-DreamSkinBootstrapMessage {
@@ -119,8 +119,8 @@ try {
     'assets\selectors.json',
     'assets\theme-package-validator.mjs',
     'assets\theme.json',
-    'presets\preset-gothic-void-crusade\background.jpg',
-    'presets\preset-gothic-void-crusade\theme.json',
+    'presets\preset-kung-fu-womens-football\background.jpg',
+    'presets\preset-kung-fu-womens-football\theme.json',
     'scripts\apply-community-theme.ps1',
     'scripts\check-update.ps1',
     'scripts\common-windows.ps1',

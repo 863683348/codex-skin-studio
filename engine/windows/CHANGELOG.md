@@ -1,4 +1,4 @@
-# Windows Changelog
+﻿# Windows Changelog
 
 ## Unreleased
 
@@ -111,7 +111,7 @@
 - 新增 SmartScreen 未签名发行包的图形界面放行说明。只在确认文件来自项目 Release 后使用“更多信息 → 仍要运行”，不要求关闭 Defender 或执行 PowerShell 放行命令。
 - 新增手动覆盖更新流程与状态保留说明；主题、图片和配置备份不会因更新安装器而删除。
 - 新增 Release workflow：校验 tag 与双端版本一致性，构建 Setup.exe、生成 SHA-256 校验和并创建待审核的 Draft Release。
-- Setup.exe 只把安装目录中的 payload 作为不可变种子，实际执行统一来自 `%LOCALAPPDATA%\CodexDreamSkin\engine`；同版本缺文件时会自动修复，升级时先安全关闭旧托盘并原子替换引擎。
+- Setup.exe 只把安装目录中的 payload 作为不可变种子，实际执行统一来自 `%LOCALAPPDATA%\CodexSkinStudio\engine`；同版本缺文件时会自动修复，升级时先安全关闭旧托盘并原子替换引擎。
 - 托盘新增正式图标、点击检查更新、打开 DreamSkin.cc 与登录启动开关；不做后台联网，登录启动在安装向导中默认不勾选。
 - 卸载确认后先调用受管恢复引擎；只有 Codex 外观、CDP 与运行状态安全恢复成功才删除安装文件，失败会中止卸载并保留修复入口。
 - 安装、启动、托盘与恢复均使用 `RemoteSigned`，不再要求普通用户执行 `.ps1`、修改 Execution Policy 或安装全局 Node.js。
@@ -121,12 +121,12 @@
 
 ### 新增
 
-- Windows 安装器会先校验并原子复制运行所需的 `assets/` 与 `scripts/` 到 `%LOCALAPPDATA%\CodexDreamSkin\engine`，启动、恢复和托盘快捷方式统一指向该受管副本；安装完成后可移动或删除源码克隆。重装前若旧托盘仍在运行，安装器会明确要求退出，避免新旧脚本混用。
+- Windows 安装器会先校验并原子复制运行所需的 `assets/` 与 `scripts/` 到 `%LOCALAPPDATA%\CodexSkinStudio\engine`，启动、恢复和托盘快捷方式统一指向该受管副本；安装完成后可移动或删除源码克隆。重装前若旧托盘仍在运行，安装器会明确要求退出，避免新旧脚本混用。
 - 渲染层支持通用自适应图像主题：本地 Canvas 采样图像亮度、主色、焦点和比例，为壁纸层提供自适应色彩与构图建议；支持 `appearance: auto | light | dark`、`art.focusX/focusY`（`0..1`）、`art.safeArea: auto | left | right | center | none`、`art.taskMode: auto | ambient | banner | off`。外观壳仍由显式主题或原生外观信号决定。
 - 显式外观与艺术元数据优先于分析结果；超宽图默认任务横幅，普通比例图默认环境背景，`off` 可关闭任务页图像。分析完全在渲染器本地完成，不上传图片。
 - Windows 发行 payload 直接读取受管 `theme.json`，完整支持与 macOS 一致的外观、焦点、安全区和任务页模式契约，不再依赖预先设置的 renderer 全局变量。
 - 新增纯 PowerShell/Windows Forms 系统托盘入口，可快速查看状态、应用或暂停皮肤、更换背景、保存和切换主题、打开图片文件夹，以及执行完整恢复；不引入第三方依赖。
-- 新增 `%LOCALAPPDATA%\CodexDreamSkin` 主题仓库，用户图片会复制到受管目录，活动主题和已保存主题均保持图片与配置自包含。
+- 新增 `%LOCALAPPDATA%\CodexSkinStudio` 主题仓库，用户图片会复制到受管目录，活动主题和已保存主题均保持图片与配置自包含。
 - Windows 首次安装会把 UI-free 的 2560 × 1440「桥本有菜」设为活动主题并播种到「已保存主题」，无需再从 macOS 目录手动导入。
 
 ### 修复

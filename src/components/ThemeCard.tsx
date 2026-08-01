@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Sun, Moon, CheckCircle2, Clock } from 'lucide-react';
+import { Sun, Moon, CheckCircle2, Clock, Star } from 'lucide-react';
 import { getDict, type Dict } from '@/lib/i18n';
 import { categories, type ThemePreset } from '@/data/themes';
 import type { Locale } from '@/lib/i18n/config';
@@ -43,7 +43,12 @@ export function ThemeCard({
           />
           {/* 状态徽标 */}
           <div className="absolute left-2 top-2 z-10">
-            {theme.available ? (
+            {theme.tier === 'pro' ? (
+              <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">
+                <Star size={12} />
+                PRO
+              </span>
+            ) : theme.available ? (
               <span className="inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-medium text-emerald-300 backdrop-blur-sm">
                 <CheckCircle2 size={12} />
                 {dict.gallery.availableBadge}

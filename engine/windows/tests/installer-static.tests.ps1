@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param()
 
 $ErrorActionPreference = 'Stop'
@@ -57,7 +57,7 @@ foreach ($requiredDefinition in @(
   'PrivilegesRequired=lowest',
   'ArchitecturesAllowed=x64compatible',
   'ChangesAssociations=yes',
-  'OutputBaseFilename=CodexDreamSkin-Setup-v{#AppVersion}',
+  'OutputBaseFilename=CodexSkinStudio-Setup-v{#AppVersion}',
   'Source: "{#StageRoot}\payload\*"',
   'DestDir: "{app}\payload"',
   'Flags: unchecked',
@@ -81,7 +81,7 @@ foreach ($requiredDefinition in @(
   'Root: HKCU; Subkey: "Software\Classes\dreamskin"',
   'ValueName: "URL Protocol"; ValueData: ""',
   'Software\Classes\dreamskin\shell\open\command',
-  '{localappdata}\CodexDreamSkin\engine\scripts\apply-community-theme.ps1',
+  '{localappdata}\CodexSkinStudio\engine\scripts\apply-community-theme.ps1',
   '""%1""'
 )) {
   if (-not $definition.Contains($requiredDefinition)) {
@@ -172,7 +172,7 @@ foreach ($requiredBuilderContract in @(
   "'LICENSE.txt'",
   "'NOTICE.md'",
   "Write-DreamSkinIcon -Path",
-  '"CodexDreamSkin-Setup-v$version.exe"'
+  '"CodexSkinStudio-Setup-v$version.exe"'
 )) {
   if (-not $builder.Contains($requiredBuilderContract)) {
     throw "Windows release builder is missing a required operation: $requiredBuilderContract"

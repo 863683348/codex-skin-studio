@@ -1,4 +1,4 @@
-import fs from "node:fs/promises";
+﻿import fs from "node:fs/promises";
 import { existsSync } from "node:fs";
 import http from "node:http";
 import os from "node:os";
@@ -12,7 +12,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const macosRoot = path.resolve(here, "..");
 const source = path.join(
   macosRoot,
-  "menubar-app/Sources/CodexDreamSkinMenuBar/BoundedCommunityHTTPClient.swift",
+  "menubar-app/Sources/CodexSkinStudioMenuBar/BoundedCommunityHTTPClient.swift",
 );
 const harness = path.join(here, "bounded-community-http.test.swift");
 function sdkPath() {

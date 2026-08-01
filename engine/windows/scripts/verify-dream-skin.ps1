@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
   [int]$Port = 9335,
   [string]$ScreenshotPath
@@ -13,7 +13,7 @@ $injector = Join-Path $PSScriptRoot 'injector.mjs'
 $operationLock = Enter-DreamSkinOperationLock
 $verifyExitCode = 1
 try {
-  $StatePath = Join-Path $env:LOCALAPPDATA 'CodexDreamSkin\state.json'
+  $StatePath = Join-Path $env:LOCALAPPDATA 'CodexSkinStudio\state.json'
   $state = Read-DreamSkinState -Path $StatePath
   if (-not $PortExplicit -and $null -ne $state -and $state.port) { $Port = [int]$state.port }
   Assert-DreamSkinPort -Port $Port
@@ -52,7 +52,7 @@ try {
   # bundled assets theme, so verification compares the live skin against the
   # wrong expected theme and never passes.  Always verify against the staged
   # active theme, exactly like the watcher applies it.
-  $themePaths = Get-DreamSkinThemePaths -StateRoot (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin')
+  $themePaths = Get-DreamSkinThemePaths -StateRoot (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio')
   $arguments = @($injector, '--verify', '--port', "$Port", '--browser-id', $cdpIdentity.BrowserId,
     '--theme-dir', $themePaths.Active, '--timeout-ms', '30000')
   if ($ScreenshotPath) { $arguments += @('--screenshot', $ScreenshotPath) }

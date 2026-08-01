@@ -1,4 +1,4 @@
-# Codex Skin Studio
+﻿# Codex Skin Studio
 
 <p align="center">
   <a href="./README.md">中文</a> · <strong>English</strong>
@@ -47,8 +47,8 @@ Passion8 has a benefit for this project's users: register through <a href="https
 Ordinary users first install and quit the official Codex / ChatGPT app once,
 then download from [GitHub Releases](https://github.com/Fei-Away/Codex-Dream-Skin/releases):
 
-- macOS: open `CodexDreamSkin-vX.Y.Z.dmg` and drag the app to Applications.
-- Windows: run `CodexDreamSkin-Setup-vX.Y.Z.exe` and follow the wizard.
+- macOS: open `CodexSkinStudio-vX.Y.Z.dmg` and drag the app to Applications.
+- Windows: run `CodexSkinStudio-Setup-vX.Y.Z.exe` and follow the wizard.
 
 No source checkout, Node.js install, `.sh`, or `.ps1` command is required. See
 the [macOS guide](./docs/install-macos.md) or
@@ -188,8 +188,8 @@ follow the graphical first-run guide:
 
 | Platform | Download | Install guide |
 |------|------|----------|
-| macOS | `CodexDreamSkin-vX.Y.Z.dmg` | [`docs/install-macos.md`](./docs/install-macos.md) |
-| Windows | `CodexDreamSkin-Setup-vX.Y.Z.exe` | [`docs/install-windows.md`](./docs/install-windows.md) |
+| macOS | `CodexSkinStudio-vX.Y.Z.dmg` | [`docs/install-macos.md`](./docs/install-macos.md) |
+| Windows | `CodexSkinStudio-Setup-vX.Y.Z.exe` | [`docs/install-windows.md`](./docs/install-windows.md) |
 
 After installation, use the menu bar (macOS) or system tray (Windows). Updates
 are manual: download the new package and install over the existing one; themes
@@ -225,8 +225,8 @@ preserved under a new safe ID.
 For a manual fallback, extract the archive and move the complete directory
 containing `theme.json`, `theme.css`, and its image into the saved-theme folder:
 
-- macOS: `~/Library/Application Support/CodexDreamSkinStudio/themes/`
-- Windows: `%LOCALAPPDATA%\CodexDreamSkin\themes\`
+- macOS: `~/Library/Application Support/CodexSkinStudio/themes/`
+- Windows: `%LOCALAPPDATA%\CodexSkinStudio\themes\`
 
 Both controls include **Open Themes Folder**. Reopen the menu/tray after moving
 the directory. Do not add another wrapper level, links, nested archives, or an

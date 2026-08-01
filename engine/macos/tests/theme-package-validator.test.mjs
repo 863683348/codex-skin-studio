@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+﻿import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
@@ -332,7 +332,7 @@ try {
   if (process.platform === "darwin" &&
     process.env.CODEX_DREAM_SKIN_SKIP_SIGNED_RUNTIME_TESTS !== "1") {
     const importHome = path.join(tempRoot, "import-home");
-    const active = path.join(importHome, "Library", "Application Support", "CodexDreamSkinStudio", "theme");
+    const active = path.join(importHome, "Library", "Application Support", "CodexSkinStudio", "theme");
     await fs.mkdir(active, { recursive: true });
     await fs.copyFile(path.join(base.source, "theme.json"), path.join(active, "theme.json"));
     await fs.copyFile(path.join(base.source, "background.png"), path.join(active, "background.png"));
@@ -354,7 +354,7 @@ try {
       importHome,
       "Library",
       "Application Support",
-      "CodexDreamSkinStudio",
+      "CodexSkinStudio",
       "themes",
     );
     assert.equal(await fs.access(savedThemesRoot).then(() => true, () => false), false);
@@ -395,7 +395,7 @@ try {
       importHome,
       "Library",
       "Application Support",
-      "CodexDreamSkinStudio",
+      "CodexSkinStudio",
       "themes",
       licenseImport.id,
       "LICENSE.txt",

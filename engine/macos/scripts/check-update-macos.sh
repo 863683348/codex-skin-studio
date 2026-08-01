@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
@@ -63,7 +63,7 @@ else
     --connect-timeout 5 --max-time 12 \
     --header 'Accept: application/vnd.github+json' \
     --header 'X-GitHub-Api-Version: 2022-11-28' \
-    --user-agent 'CodexDreamSkin-UpdateCheck' \
+    --user-agent 'CodexSkinStudio-UpdateCheck' \
     "https://api.github.com/repos/$REPOSITORY/releases/latest" \
     --output "$RESPONSE" \
     || fail "Could not connect to GitHub."

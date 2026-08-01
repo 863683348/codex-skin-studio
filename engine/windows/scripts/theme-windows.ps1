@@ -303,7 +303,7 @@ function Assert-DreamSkinSafeCssFile {
 }
 
 function Get-DreamSkinThemePaths {
-  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'))
+  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'))
   $fullRoot = [System.IO.Path]::GetFullPath($StateRoot)
   return [pscustomobject]@{
     Root = $fullRoot
@@ -427,7 +427,7 @@ function Get-DreamSkinActiveThemeAppearance {
 function Initialize-DreamSkinThemeStore {
   param(
     [Parameter(Mandatory = $true)][string]$SkillRoot,
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin')
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio')
   )
   $paths = Get-DreamSkinThemePaths -StateRoot $StateRoot
   foreach ($directory in @($paths.Root, $paths.Active, $paths.Saved, $paths.Images)) {
@@ -540,7 +540,7 @@ function Set-DreamSkinActiveTheme {
     [AllowNull()][object]$Theme,
     [string]$Name,
     [AllowNull()][string]$SafeCssPath,
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin')
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio')
   )
   $paths = Get-DreamSkinThemePaths -StateRoot $StateRoot
   Ensure-DreamSkinManagedDirectory -Path $paths.Root -Root $paths.Root
@@ -613,7 +613,7 @@ function Set-DreamSkinActiveTheme {
 function Save-DreamSkinCurrentTheme {
   param(
     [Parameter(Mandatory = $true)][string]$Name,
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin')
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio')
   )
   $trimmed = $Name.Trim()
   if (-not $trimmed -or $trimmed.Length -gt 80 -or $trimmed -match '[\u0000-\u001f]') {
@@ -1007,7 +1007,7 @@ function Expand-DreamSkinThemeZipSecurely {
 function Import-DreamSkinThemeZip {
   param(
     [Parameter(Mandatory = $true)][string]$ArchivePath,
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'),
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'),
     [int64]$ExpectedArchiveBytes = -1,
     [AllowNull()][string]$ExpectedArchiveSha256
   )
@@ -1016,7 +1016,7 @@ function Import-DreamSkinThemeZip {
     Ensure-DreamSkinManagedDirectory -Path $directory -Root $paths.Root
   }
   $sid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexDreamSkin.$sid.ThemeImport")
+  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexSkinStudio.$sid.ThemeImport")
   $acquired = $false
   $workRoot = Join-Path $paths.Root ('.theme-import-work-' + [guid]::NewGuid().ToString('N'))
   $publishStage = $null
@@ -1185,7 +1185,7 @@ function Import-DreamSkinThemeZip {
 
 function Get-DreamSkinSavedThemes {
   param(
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'),
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'),
     [switch]$SkipImageMetadata
   )
   $paths = Get-DreamSkinThemePaths -StateRoot $StateRoot
@@ -1209,7 +1209,7 @@ function Get-DreamSkinSavedThemes {
 function Use-DreamSkinSavedTheme {
   param(
     [Parameter(Mandatory = $true)][string]$ThemeDirectory,
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin')
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio')
   )
   $paths = Get-DreamSkinThemePaths -StateRoot $StateRoot
   Ensure-DreamSkinManagedDirectory -Path $paths.Root -Root $paths.Root
@@ -1230,7 +1230,7 @@ function Use-DreamSkinSavedTheme {
 function Set-DreamSkinPaused {
   param(
     [Parameter(Mandatory = $true)][bool]$Paused,
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin')
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio')
   )
   $paths = Get-DreamSkinThemePaths -StateRoot $StateRoot
   Ensure-DreamSkinManagedDirectory -Path $paths.Root -Root $paths.Root
@@ -1245,12 +1245,12 @@ function Set-DreamSkinPaused {
 }
 
 function Test-DreamSkinPaused {
-  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'))
+  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'))
   return (Test-Path -LiteralPath (Get-DreamSkinThemePaths -StateRoot $StateRoot).PauseFile -PathType Leaf)
 }
 
 function Get-DreamSkinLiveSessionContext {
-  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'))
+  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'))
   $paths = Get-DreamSkinThemePaths -StateRoot $StateRoot
   $state = $null
   try { $state = Read-DreamSkinState -Path $paths.State } catch { $state = $null }
@@ -1326,7 +1326,7 @@ function Show-DreamSkinOperationUi {
 # Writing only the pause file leaves CSS in the renderer until the watcher polls.
 function Invoke-DreamSkinLiveRemove {
   param(
-    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'),
+    [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'),
     [int]$TimeoutMs = 8000
   )
   if ($TimeoutMs -lt 250 -or $TimeoutMs -gt 120000) {

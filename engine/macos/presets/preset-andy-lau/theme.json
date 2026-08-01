@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "preset-andy-lau",
+  "name": "刘德华 Andy Lau",
+  "brandSubtitle": "CODEX SKIN STUDIO",
+  "tagline": "一生何求，代码与歌。",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "◉  选择项目",
+  "statusText": "ANDY LAU STAGE",
+  "quote": "MAKE SOMETHING WONDERFUL",
+  "image": "background.jpg",
+  "appearance": "dark",
+  "art": {
+    "focusX": 0.72,
+    "focusY": 0.45,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#141414",
+    "panel": "#1e1e1e",
+    "panelAlt": "#2a2a2a",
+    "accent": "#c8a45c",
+    "accentAlt": "#e8d8a8",
+    "secondary": "#8a6d3a",
+    "highlight": "#a88a4a",
+    "text": "#f5f0e6",
+    "muted": "#b8b0a0",
+    "line": "rgba(200, 164, 92, .28)"
+  },
+  "promoTitle": "Codex Skin Studio",
+  "promoSub": "刘德华 · 舞台黑金",
+  "promoUrl": "https://codex-skin-studio.shop"
+}

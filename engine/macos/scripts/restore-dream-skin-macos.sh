@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 . "$(cd "$(dirname "$0")" && pwd -P)/common-macos.sh"
@@ -90,7 +90,7 @@ if [ "$UNINSTALL" = "true" ]; then
     "$HOME/Desktop/Codex Skin Studio - Verify.command" \
     "$HOME/Desktop/Codex Skin Studio - Restore.command"; do
     if [ -f "$launcher" ] && [ ! -L "$launcher" ] &&
-       /usr/bin/grep -F -q '# CodexDreamSkinStudio launcher' "$launcher"; then
+       /usr/bin/grep -F -q '# CodexSkinStudio launcher' "$launcher"; then
       /bin/rm -f "$launcher"
     fi
   done

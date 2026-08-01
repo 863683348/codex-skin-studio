@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param([Parameter(Mandatory = $true)][string]$Root)
 
 $ErrorActionPreference = 'Stop'
@@ -244,7 +244,7 @@ foreach ($requiredSafety in @(
   '$request.AllowAutoRedirect = $false',
   "'Accept-Encoding'] = 'identity'",
   '[System.Windows.Forms.MessageBoxDefaultButton]::Button2',
-  'Local\CodexDreamSkin.$sid.CommunityApply',
+  'Local\CodexSkinStudio.$sid.CommunityApply',
   "('.community-apply-' + [guid]::NewGuid().ToString('N'))",
   '$written -gt $Metadata.PackageBytes',
   'Get-FileHash -LiteralPath $ArchivePath -Algorithm SHA256',

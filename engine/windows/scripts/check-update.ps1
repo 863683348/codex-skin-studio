@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
   [switch]$Json,
   [switch]$Interactive
@@ -55,7 +55,7 @@ try {
   }
   $currentText = ([System.IO.File]::ReadAllText($versionPath)).Trim()
   $current = ConvertTo-DreamSkinVersion -Value $currentText
-  $headers = @{ Accept = 'application/vnd.github+json'; 'User-Agent' = 'CodexDreamSkin' }
+  $headers = @{ Accept = 'application/vnd.github+json'; 'User-Agent' = 'CodexSkinStudio' }
   $previousProtocol = [Net.ServicePointManager]::SecurityProtocol
   try {
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12

@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 
@@ -13,7 +13,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd -P)"
 INJECTOR="$SCRIPT_DIR/injector.mjs"
 INSTALL_ROOT="$HOME/.codex/codex-dream-skin-studio"
-STATE_ROOT="$HOME/Library/Application Support/CodexDreamSkinStudio"
+STATE_ROOT="$HOME/Library/Application Support/CodexSkinStudio"
 STATE_PATH="$STATE_ROOT/state.json"
 OPERATION_STATE_PATH="$STATE_ROOT/operation-state.plist"
 OPERATION_ACK_PATH="$STATE_ROOT/operation-control-ack.json"

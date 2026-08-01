@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 import fs from "node:fs/promises";
 import os from "node:os";
@@ -154,9 +154,9 @@ async function fetchJson(port, pathname, timeoutMs = 900) {
 async function stateFilePorts() {
   const files = [];
   if (process.platform === "darwin") {
-    files.push(path.join(os.homedir(), "Library/Application Support/CodexDreamSkinStudio/state.json"));
+    files.push(path.join(os.homedir(), "Library/Application Support/CodexSkinStudio/state.json"));
   } else if (process.platform === "win32" && process.env.LOCALAPPDATA) {
-    files.push(path.join(process.env.LOCALAPPDATA, "CodexDreamSkin", "state.json"));
+    files.push(path.join(process.env.LOCALAPPDATA, "CodexSkinStudio", "state.json"));
   }
   const ports = [];
   for (const file of files) {

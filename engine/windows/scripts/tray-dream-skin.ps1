@@ -10,7 +10,7 @@ Add-Type -AssemblyName Microsoft.VisualBasic
 
 Assert-DreamSkinPort -Port $Port
 $SkillRoot = Split-Path -Parent $PSScriptRoot
-$StateRoot = Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'
+$StateRoot = Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'
 $paths = $null
 $powershell = (Get-Command powershell.exe -ErrorAction Stop).Source
 $startScript = Join-Path $PSScriptRoot 'start-dream-skin.ps1'
@@ -19,7 +19,7 @@ $checkUpdateScript = Join-Path $PSScriptRoot 'check-update.ps1'
 $startupShortcut = Join-Path ([Environment]::GetFolderPath('Startup')) 'Codex Skin Studio.lnk'
 
 $sid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-$mutex = [System.Threading.Mutex]::new($false, "Local\CodexDreamSkin.$sid.Tray")
+$mutex = [System.Threading.Mutex]::new($false, "Local\CodexSkinStudio.$sid.Tray")
 $acquired = $false
 $notify = $null
 $trayIcon = $null

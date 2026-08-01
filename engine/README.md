@@ -1,4 +1,4 @@
-# Codex Skin Studio
+﻿# Codex Skin Studio
 
 <p align="center">
   <strong>中文</strong> · <a href="./README.en.md">English</a>
@@ -47,8 +47,8 @@ Passion8 为本项目用户准备了专属福利：通过<a href="https://passio
 普通用户只需先安装并退出一次官方 Codex / ChatGPT，然后从
 [GitHub Releases](https://github.com/Fei-Away/Codex-Dream-Skin/releases) 下载：
 
-- macOS：打开 `CodexDreamSkin-vX.Y.Z.dmg`，把 App 拖进 Applications。
-- Windows：双击 `CodexDreamSkin-Setup-vX.Y.Z.exe`，按安装向导完成。
+- macOS：打开 `CodexSkinStudio-vX.Y.Z.dmg`，把 App 拖进 Applications。
+- Windows：双击 `CodexSkinStudio-Setup-vX.Y.Z.exe`，按安装向导完成。
 
 不需要 clone 源码、安装 Node.js 或手动运行 `.sh` / `.ps1`。首次未签名放行、更新和卸载步骤见
 [macOS 安装说明](./docs/install-macos.md) / [Windows 安装说明](./docs/install-windows.md)。
@@ -166,8 +166,8 @@ macOS 菜单栏和 Windows 托盘都有「主题库 Gallery」和「在线 Studi
 
 | 平台 | 下载 | 安装说明 |
 |------|------|----------|
-| macOS | `CodexDreamSkin-vX.Y.Z.dmg` | [`docs/install-macos.md`](./docs/install-macos.md) |
-| Windows | `CodexDreamSkin-Setup-vX.Y.Z.exe` | [`docs/install-windows.md`](./docs/install-windows.md) |
+| macOS | `CodexSkinStudio-vX.Y.Z.dmg` | [`docs/install-macos.md`](./docs/install-macos.md) |
+| Windows | `CodexSkinStudio-Setup-vX.Y.Z.exe` | [`docs/install-windows.md`](./docs/install-windows.md) |
 
 安装后从菜单栏（macOS）或系统托盘（Windows）使用。更新时下载新安装包覆盖安装，主题和图片会保留；
 未签名的新下载文件在个别系统上仍可能再次出现一次安全提示，文档列出了放行方法。
@@ -191,8 +191,8 @@ macOS 菜单栏和 Windows 托盘都有「主题库 Gallery」和「在线 Studi
 
 也可以先手动解压，再把包含 `theme.json`、`theme.css` 和背景图的完整主题目录移动到本机主题库：
 
-- macOS：`~/Library/Application Support/CodexDreamSkinStudio/themes/`
-- Windows：`%LOCALAPPDATA%\CodexDreamSkin\themes\`
+- macOS：`~/Library/Application Support/CodexSkinStudio/themes/`
+- Windows：`%LOCALAPPDATA%\CodexSkinStudio\themes\`
 
 菜单里有“打开主题文件夹”快捷入口。移动后重新打开菜单/托盘即可；不要再套一层目录，也不要放链接、
 嵌套压缩包或缺少三件套的文件夹。手动目录不会经过 ZIP 导入器的归档校验，请只使用可信内容。升级前

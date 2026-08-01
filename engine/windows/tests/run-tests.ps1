@@ -741,7 +741,7 @@ try {
     throw 'Packaged-app argument line quoting failed.'
   }
   Initialize-DreamSkinPackageLauncher
-  if (-not ('CodexDreamSkin.PackageLauncher' -as [type])) {
+  if (-not ('CodexSkinStudio.PackageLauncher' -as [type])) {
     throw 'Packaged-app activation helper did not compile.'
   }
   $invalidActivationRejected = $false

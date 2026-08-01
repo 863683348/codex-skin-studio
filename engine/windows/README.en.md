@@ -1,4 +1,4 @@
-# Codex Skin Studio for Windows
+﻿# Codex Skin Studio for Windows
 
 <p align="center">
   <a href="./README.md">中文</a> · <strong>English</strong>
@@ -17,7 +17,7 @@ Codex Skin Studio loads an external theme into the official Codex Windows deskto
 
 ## Release install (recommended for users)
 
-Download `CodexDreamSkin-Setup-vX.Y.Z.exe` from
+Download `CodexSkinStudio-Setup-vX.Y.Z.exe` from
 [GitHub Releases](https://github.com/Fei-Away/Codex-Dream-Skin/releases) and
 follow [`docs/install-windows.md`](../docs/install-windows.md). The installer
 contains the pinned Node runtime, so users do not need a source checkout or to
@@ -44,7 +44,7 @@ The installer validates the official Codex Store package and Node.js, saves a re
 - `Codex Skin Studio - Tray`: open the system tray theme controls.
 - `Codex Skin Studio - Restore`: restore the stock appearance and close the saved CDP session.
 
-Source-install commands and daily shortcuts both use `RemoteSigned`, so they do not override system or enterprise Group Policy. The installer verifies the runtime copy with SHA-256, then clears download-zone markers only from managed PowerShell copies under `%LOCALAPPDATA%\CodexDreamSkin\engine`.
+Source-install commands and daily shortcuts both use `RemoteSigned`, so they do not override system or enterprise Group Policy. The installer verifies the runtime copy with SHA-256, then clears download-zone markers only from managed PowerShell copies under `%LOCALAPPDATA%\CodexSkinStudio\engine`.
 
 Pass `-Port` during installation to use a fixed custom port. Valid ports range from `1024` through `65535`.
 
@@ -124,7 +124,7 @@ duplicated, while a different pack using an existing ID receives a new safe ID.
 For the manual fallback, choose **Open Themes Folder** and move in the complete
 extracted directory whose immediate children are `theme.json`, `theme.css`, and
 its image:
-`%LOCALAPPDATA%\CodexDreamSkin\themes\`. Reopen the tray menu afterward; do not
+`%LOCALAPPDATA%\CodexSkinStudio\themes\`. Reopen the tray menu afterward; do not
 add another wrapper directory. Manual placement bypasses archive checks, so use
 trusted content only.
 
@@ -150,14 +150,14 @@ powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File .\scripts\restore-
 
 | Purpose | Path |
 |---------|------|
-| Dream Skin state root | `%LOCALAPPDATA%\CodexDreamSkin` |
-| Active theme | `%LOCALAPPDATA%\CodexDreamSkin\active-theme` |
-| Saved themes | `%LOCALAPPDATA%\CodexDreamSkin\themes` |
-| Imported image archive | `%LOCALAPPDATA%\CodexDreamSkin\images` |
-| Session state | `%LOCALAPPDATA%\CodexDreamSkin\state.json` |
-| Injector log | `%LOCALAPPDATA%\CodexDreamSkin\injector.log` |
-| Injector error log | `%LOCALAPPDATA%\CodexDreamSkin\injector-error.log` |
-| Verification log | `%LOCALAPPDATA%\CodexDreamSkin\verify.log` |
+| Dream Skin state root | `%LOCALAPPDATA%\CodexSkinStudio` |
+| Active theme | `%LOCALAPPDATA%\CodexSkinStudio\active-theme` |
+| Saved themes | `%LOCALAPPDATA%\CodexSkinStudio\themes` |
+| Imported image archive | `%LOCALAPPDATA%\CodexSkinStudio\images` |
+| Session state | `%LOCALAPPDATA%\CodexSkinStudio\state.json` |
+| Injector log | `%LOCALAPPDATA%\CodexSkinStudio\injector.log` |
+| Injector error log | `%LOCALAPPDATA%\CodexSkinStudio\injector-error.log` |
+| Verification log | `%LOCALAPPDATA%\CodexSkinStudio\verify.log` |
 | Codex configuration | `%USERPROFILE%\.codex\config.toml` |
 
 See [`../docs/platforms.md`](../docs/platforms.md) for the complete platform path reference.

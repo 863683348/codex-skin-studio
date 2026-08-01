@@ -1,4 +1,4 @@
----
+﻿---
 name: codex-dream-skin
 description: Apply, launch, verify, repair, update, or restore a full decorative skin for the Windows Codex desktop app. Use when the user asks for a Codex theme that goes beyond official color settings, wants the pink-purple Dream/Fiona-style interface, needs the skin reapplied after a Codex update, or needs a safe rollback without modifying WindowsApps or app.asar.
 ---
@@ -9,8 +9,8 @@ Apply a reversible renderer skin through Chromium DevTools Protocol while launch
 
 ## Workflow
 
-1. Install Node.js 22 or newer, close Codex, then run `scripts/install-dream-skin.ps1` once. The installer preserves the user's native appearance settings, seeds the Arina Hashimoto theme, copies the runtime to `%LOCALAPPDATA%\CodexDreamSkin\engine`, and creates launch/restore/tray shortcuts that do not depend on the source checkout.
-2. Use the `Codex Skin Studio` shortcut, or run `%LOCALAPPDATA%\CodexDreamSkin\engine\scripts\start-dream-skin.ps1`. The shortcut asks before restarting an already-open Codex app; CLI callers must explicitly add `-RestartExisting`.
+1. Install Node.js 22 or newer, close Codex, then run `scripts/install-dream-skin.ps1` once. The installer preserves the user's native appearance settings, seeds the Arina Hashimoto theme, copies the runtime to `%LOCALAPPDATA%\CodexSkinStudio\engine`, and creates launch/restore/tray shortcuts that do not depend on the source checkout.
+2. Use the `Codex Skin Studio` shortcut, or run `%LOCALAPPDATA%\CodexSkinStudio\engine\scripts\start-dream-skin.ps1`. The shortcut asks before restarting an already-open Codex app; CLI callers must explicitly add `-RestartExisting`.
 3. Run `scripts/verify-dream-skin.ps1 -ScreenshotPath <absolute-path>` after launch. Treat a missing continuous wallpaper, home shell, native composer, sidebar layer, or injection marker as failure. The native suggestion count is responsive and may be two to four.
 4. To add a complete downloaded pack, use the tray's “导入主题 ZIP…”. Accept ordinary `.zip` only. Every new official Studio pack contains `manifest.json`, non-empty `theme.json`, non-empty locally validated `theme.css`, exactly one registered background, and optional license/signature files; the trusted local simplified format contains exactly `theme.json`, `theme.css`, and its referenced image. Import into saved themes without changing the active theme. A manually extracted complete three-file directory may instead be moved into the saved themes folder. Previously saved legacy themes without CSS remain switchable but inject no extra CSS.
 5. A compatible DreamSkin.cc theme can use the exact `dreamskin://apply?version=ver_...` link registered by Setup.exe. The handler always obtains approved metadata and the ZIP from the fixed API, requires `applyCompatible: true`, shows a native confirmation, verifies byte count and SHA-256, then reuses the strict importer before applying. It never accepts an arbitrary URL/path/command or a silent-apply flag.
@@ -28,9 +28,9 @@ Apply a reversible renderer skin through Chromium DevTools Protocol while launch
 - On app updates, rerun install and launch; the scripts discover the current Appx package dynamically. Saved paths are never trusted for process control unless they still match a registered package identity.
 - Keep manifest-derived package activation as the preferred Windows launch. The exact Store `app\ChatGPT.exe` fallback is allowed only after visible process arguments prove owl encoded the CDP flag inside `codex://`, and only with the package identity/path checks in `common-windows.ps1`. Preserve the pre-launch PID set during rollback. Treat access denial and raw arguments without a verified listener as terminal. This fallback is diagnostic, not proof of owl compatibility; never change WindowsApps ACLs to make it run.
 - The default launcher scans for a free port when `9335` is occupied. An explicitly requested occupied port fails closed.
-- Keep the injection daemon running for navigation/reload resilience. Its state and logs live under `%LOCALAPPDATA%\CodexDreamSkin`.
+- Keep the injection daemon running for navigation/reload resilience. Its state and logs live under `%LOCALAPPDATA%\CodexSkinStudio`.
 - The watcher registers a generation-checked early payload for connected renderers so reload/navigation can paint the skin before the normal load-event fallback; unsupported CDP targets fall back safely.
-- The active theme, saved themes, imported images, pause marker, and tray controls live under `%LOCALAPPDATA%\CodexDreamSkin`. Reject empty or over-10 MB images before copying or encoding them.
+- The active theme, saved themes, imported images, pause marker, and tray controls live under `%LOCALAPPDATA%\CodexSkinStudio`. Reject empty or over-10 MB images before copying or encoding them.
 - Theme-pack import does not support `.dreamskin`; reject traversal, links/reparse entries, nested archives, ambiguous roots, Windows-reserved paths, size/count abuse, and packs that fail the existing theme/image payload checks.
 - Community deep links accept only a canonical version ID. Reject redirects, non-approved or non-compatible metadata, mismatched IDs, non-boolean compatibility, unsafe display metadata, unexpected media types, byte/hash mismatches, and concurrent applies before changing the active theme.
 - Every managed-store write rejects junctions and other reparse points in every existing path component. Imports also use the bundled Node metadata parser before copying to reject dimensions above 16384px or 50MP.
@@ -38,7 +38,7 @@ Apply a reversible renderer skin through Chromium DevTools Protocol while launch
 - Loopback prevents LAN exposure, but Chromium CDP has no same-user authentication. Run only trusted local software while the skin is active, and use restore to close the debug session when it is no longer needed.
 - Preserve `config.toml` as strict UTF-8. Never use encoding-dependent whole-file PowerShell reads/writes, silently transcode UTF-16, or overwrite a file that changed after it was read. Ambiguous TOML shapes must fail before writing rather than receive a best-effort rewrite.
 - Keep install/start/restore/verify serialized with the per-user operation lock in `common-windows.ps1`.
-- Treat `%LOCALAPPDATA%\CodexDreamSkin\engine` as an installer-managed runtime. Exit the Dream Skin tray before reinstalling so the installer can replace that runtime atomically and update every shortcut to the same copy.
+- Treat `%LOCALAPPDATA%\CodexSkinStudio\engine` as an installer-managed runtime. Exit the Dream Skin tray before reinstalling so the installer can replace that runtime atomically and update every shortcut to the same copy.
 - Keep installed shortcuts and tray child processes on `RemoteSigned`, never `Bypass`. Clear Internet-zone markers only from staged managed `.ps1` copies after their byte-content hashes match the selected source; never change the user's persistent execution policy or override Group Policy.
 
 ## Checks

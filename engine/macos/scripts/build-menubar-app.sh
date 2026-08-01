@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
@@ -50,21 +50,21 @@ for arch in "${ARCHS[@]}"; do
       -o "$direct/libDreamSkinCore.a"
     /usr/bin/swiftc -O -sdk "$DREAMSKIN_SDK" -target "$triple" \
       -I "$direct" -L "$direct" -lDreamSkinCore \
-      "$PACKAGE_ROOT"/Sources/CodexDreamSkinMenuBar/*.swift \
-      -o "$direct/CodexDreamSkinMenuBar"
-    binary="$direct/CodexDreamSkinMenuBar"
+      "$PACKAGE_ROOT"/Sources/CodexSkinStudioMenuBar/*.swift \
+      -o "$direct/CodexSkinStudioMenuBar"
+    binary="$direct/CodexSkinStudioMenuBar"
   else
     scratch="$PACKAGE_ROOT/.build-$arch"
     /usr/bin/swift build --package-path "$PACKAGE_ROOT" --scratch-path "$scratch" \
-      --configuration release --triple "$triple" --product CodexDreamSkinMenuBar
+      --configuration release --triple "$triple" --product CodexSkinStudioMenuBar
     binary_dir="$(/usr/bin/swift build --package-path "$PACKAGE_ROOT" \
       --scratch-path "$scratch" --configuration release --triple "$triple" \
       --show-bin-path)"
-    binary="$binary_dir/CodexDreamSkinMenuBar"
+    binary="$binary_dir/CodexSkinStudioMenuBar"
   fi
   [ -x "$binary" ] || { printf 'Built executable missing: %s\n' "$binary" >&2; exit 1; }
-  /bin/cp "$binary" "$TMP/CodexDreamSkinMenuBar-$arch"
-  BINARIES+=("$TMP/CodexDreamSkinMenuBar-$arch")
+  /bin/cp "$binary" "$TMP/CodexSkinStudioMenuBar-$arch"
+  BINARIES+=("$TMP/CodexSkinStudioMenuBar-$arch")
 done
 
 APP="$TMP/Codex Skin Studio.app"
@@ -75,11 +75,11 @@ ENGINE="$RESOURCES/engine"
 /bin/mkdir -p "$MACOS_DIR" "$ENGINE" "$(dirname "$OUTPUT_APP")"
 
 if [ "${#BINARIES[@]}" -eq 1 ]; then
-  /bin/cp "${BINARIES[0]}" "$MACOS_DIR/CodexDreamSkinMenuBar"
+  /bin/cp "${BINARIES[0]}" "$MACOS_DIR/CodexSkinStudioMenuBar"
 else
-  /usr/bin/lipo -create "${BINARIES[@]}" -output "$MACOS_DIR/CodexDreamSkinMenuBar"
+  /usr/bin/lipo -create "${BINARIES[@]}" -output "$MACOS_DIR/CodexSkinStudioMenuBar"
 fi
-/bin/chmod 755 "$MACOS_DIR/CodexDreamSkinMenuBar"
+/bin/chmod 755 "$MACOS_DIR/CodexSkinStudioMenuBar"
 
 /usr/bin/sed "s/__VERSION__/$VERSION/g" \
   "$PACKAGE_ROOT/Resources/Info.plist.template" > "$CONTENTS/Info.plist"
@@ -155,8 +155,8 @@ actual_public_preset_theme_sha256="$(LC_ALL=C /usr/bin/shasum -a 256 \
 /usr/bin/ditto "$APP" "$OUTPUT_APP"
 /usr/bin/codesign --verify --deep --strict "$OUTPUT_APP"
 /usr/bin/printf 'Created %s\n' "$OUTPUT_APP"
-/usr/bin/file "$OUTPUT_APP/Contents/MacOS/CodexDreamSkinMenuBar"
-ACTUAL_ARCHS="$(/usr/bin/lipo -archs "$OUTPUT_APP/Contents/MacOS/CodexDreamSkinMenuBar")"
+/usr/bin/file "$OUTPUT_APP/Contents/MacOS/CodexSkinStudioMenuBar"
+ACTUAL_ARCHS="$(/usr/bin/lipo -archs "$OUTPUT_APP/Contents/MacOS/CodexSkinStudioMenuBar")"
 for arch in "${ARCHS[@]}"; do
   case " $ACTUAL_ARCHS " in
     *" $arch "*) ;;

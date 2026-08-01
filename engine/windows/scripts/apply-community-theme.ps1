@@ -78,7 +78,7 @@ function New-DreamSkinCommunityHttpRequest {
   }
   $request.Method = 'GET'
   $request.Accept = $Accept
-  $request.UserAgent = 'CodexDreamSkin/1 community-theme-apply'
+  $request.UserAgent = 'CodexSkinStudio/1 community-theme-apply'
   $request.AllowAutoRedirect = $false
   $request.AutomaticDecompression = [System.Net.DecompressionMethods]::None
   $request.CachePolicy = [System.Net.Cache.RequestCachePolicy]::new(
@@ -680,11 +680,11 @@ function Invoke-DreamSkinCommunityApply {
   $versionId = Resolve-DreamSkinCommunityApplyUri -Uri $ApplyUri
   $endpoints = Get-DreamSkinCommunityThemeEndpoints -VersionId $versionId
   $sid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexDreamSkin.$sid.CommunityApply")
+  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexSkinStudio.$sid.CommunityApply")
   $acquired = $false
   $workRoot = $null
   $retainWorkRoot = $false
-  $stateRoot = Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'
+  $stateRoot = Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'
   try {
     try { $acquired = $mutex.WaitOne(0) } catch [System.Threading.AbandonedMutexException] {
       $acquired = $true

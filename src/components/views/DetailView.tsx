@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Download, Github, Check, BookOpen, Clock } from 'lucide-react';
+import { Download, Github, Check, BookOpen, Clock, Star } from 'lucide-react';
 import { ThemePreview } from '@/components/ThemePreview';
 import { getDict, type Dict } from '@/lib/i18n';
 import {
@@ -118,6 +118,14 @@ export function DetailView({
                 <Download size={18} />
                 {dict.detail.downloadTool}
               </a>
+            ) : theme.tier === 'pro' ? (
+              <Link
+                href={`/${locale}/pricing`}
+                className="flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-amber-500 to-yellow-400 px-6 py-3 text-body font-medium text-white shadow-sm transition-colors hover:from-amber-600 hover:to-yellow-500 sm:w-auto"
+              >
+                <Star size={18} />
+                {dict.detail.proCta}
+              </Link>
             ) : (
               <span className="flex w-full items-center justify-center gap-2 rounded-md border border-border bg-bg-tertiary px-6 py-3 text-body font-medium text-text-tertiary sm:w-auto">
                 <Clock size={18} />
@@ -137,8 +145,18 @@ export function DetailView({
         </div>
       </div>
 
+      {/* PRO 主题提示 */}
+      {theme.tier === 'pro' && (
+        <section className="mt-8 max-w-3xl rounded-lg border border-amber-500/30 bg-gradient-to-r from-amber-500/10 to-transparent p-6">
+          <p className="flex items-start gap-3 text-body text-text-secondary">
+            <Star size={18} className="mt-1 shrink-0 text-amber-400" />
+            {dict.detail.proDesc}
+          </p>
+        </section>
+      )}
+
       {/* 未上架提示 */}
-      {!theme.available && (
+      {!theme.available && theme.tier !== 'pro' && (
         <section className="mt-8 max-w-3xl rounded-lg border border-border bg-bg-tertiary p-6">
           <p className="flex items-start gap-3 text-body text-text-secondary">
             <Clock size={18} className="mt-1 shrink-0 text-text-tertiary" />

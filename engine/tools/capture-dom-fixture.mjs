@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * Codex Skin Studio · DOM 结构快照工具（macOS / Windows 双端通用）
  * ================================================================
@@ -347,9 +347,9 @@ async function fetchJson(port, pathname, timeoutMs = 900) {
 async function stateFilePorts() {
   const files = [];
   if (process.platform === "darwin") {
-    files.push(path.join(os.homedir(), "Library/Application Support/CodexDreamSkinStudio/state.json"));
+    files.push(path.join(os.homedir(), "Library/Application Support/CodexSkinStudio/state.json"));
   } else if (process.platform === "win32" && process.env.LOCALAPPDATA) {
-    const root = path.join(process.env.LOCALAPPDATA, "CodexDreamSkin");
+    const root = path.join(process.env.LOCALAPPDATA, "CodexSkinStudio");
     files.push(path.join(root, "state.json"));
     try {
       for (const entry of await fs.readdir(root)) {

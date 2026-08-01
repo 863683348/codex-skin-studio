@@ -1,16 +1,16 @@
-// swift-tools-version: 5.9
+﻿// swift-tools-version: 5.9
 
 import PackageDescription
 
 let package = Package(
-  name: "CodexDreamSkinMenuBar",
+  name: "CodexSkinStudioMenuBar",
   platforms: [
     .macOS(.v13)
   ],
   products: [
     .executable(
-      name: "CodexDreamSkinMenuBar",
-      targets: ["CodexDreamSkinMenuBar"]
+      name: "CodexSkinStudioMenuBar",
+      targets: ["CodexSkinStudioMenuBar"]
     )
   ],
   targets: [
@@ -19,9 +19,9 @@ let package = Package(
       path: "Sources/DreamSkinCore"
     ),
     .executableTarget(
-      name: "CodexDreamSkinMenuBar",
+      name: "CodexSkinStudioMenuBar",
       dependencies: ["DreamSkinCore"],
-      path: "Sources/CodexDreamSkinMenuBar"
+      path: "Sources/CodexSkinStudioMenuBar"
     ),
     .testTarget(
       name: "DreamSkinCoreTests",

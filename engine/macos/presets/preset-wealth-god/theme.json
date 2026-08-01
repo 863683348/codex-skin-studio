@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "preset-wealth-god",
+  "name": "财神爷撒金币 Wealth God",
+  "brandSubtitle": "CODEX SKIN STUDIO",
+  "tagline": "财神到，好运来！",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "◉  选择项目",
+  "statusText": "WEALTH GOD ONLINE",
+  "quote": "MAKE SOMETHING WONDERFUL",
+  "image": "background.jpg",
+  "appearance": "dark",
+  "art": {
+    "focusX": 0.72,
+    "focusY": 0.45,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#1c0f08",
+    "panel": "#2a150c",
+    "panelAlt": "#381d10",
+    "accent": "#e0472e",
+    "accentAlt": "#f4b642",
+    "secondary": "#a8331f",
+    "highlight": "#c03d26",
+    "text": "#fff0dc",
+    "muted": "#d4b08a",
+    "line": "rgba(244, 182, 66, .28)"
+  },
+  "promoTitle": "Codex Skin Studio",
+  "promoSub": "财神爷撒金币 · 红金喜庆",
+  "promoUrl": "https://codex-skin-studio.shop"
+}

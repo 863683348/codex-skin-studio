@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
@@ -37,7 +37,7 @@ if /usr/bin/grep -R -n --include='*.sh' -E '/usr/bin/osascript[[:space:]]+-e[[:s
   exit 1
 fi
 if ! /usr/bin/grep -F -q 'sfimage=paintpalette.fill' \
-  "$ROOT/menubar/codex_dream_skin.10s.sh"; then
+  "$ROOT/menubar/codex_skin_studio.10s.sh"; then
   printf 'SwiftBar menu title must retain the Dream Skin palette icon.\n' >&2
   exit 1
 fi
@@ -59,7 +59,7 @@ fi
 # Xcode platform. CommandLineTools-only hosts report this platform blocker;
 # build-menubar-app.sh is still independently verifiable with DREAMSKIN_SDK.
 if /usr/bin/xcrun --sdk macosx --show-sdk-platform-path >/dev/null 2>&1; then
-  /usr/bin/swift build --package-path "$ROOT/menubar-app" --product CodexDreamSkinMenuBar
+  /usr/bin/swift build --package-path "$ROOT/menubar-app" --product CodexSkinStudioMenuBar
   /usr/bin/swift test --package-path "$ROOT/menubar-app"
 else
   printf 'SKIP: native SwiftPM build/XCTest require a full matching Xcode macOS platform.\n'
@@ -70,9 +70,9 @@ fi
 /usr/bin/grep -F -q '<key>CFBundleURLSchemes</key>' "$ROOT/menubar-app/Resources/Info.plist.template"
 /usr/bin/grep -F -q '<string>dreamskin</string>' "$ROOT/menubar-app/Resources/Info.plist.template"
 /usr/bin/grep -F -q '"assets/selectors.json"' \
-  "$ROOT/menubar-app/Sources/CodexDreamSkinMenuBar/AppDelegate.swift"
+  "$ROOT/menubar-app/Sources/CodexSkinStudioMenuBar/AppDelegate.swift"
 /usr/bin/grep -F -q 'CommunityRecovery.preserveRollbackSnapshot' \
-  "$ROOT/menubar-app/Sources/CodexDreamSkinMenuBar/AppDelegate.swift"
+  "$ROOT/menubar-app/Sources/CodexSkinStudioMenuBar/AppDelegate.swift"
 /usr/bin/grep -F -q 'recovery/community-*/active-before' \
   "$ROOT/scripts/switch-theme-macos.sh"
 /usr/bin/grep -F -q 'CFBundleURLTypes.0.CFBundleURLSchemes.0' "$ROOT/scripts/build-dmg.sh"
@@ -130,11 +130,11 @@ if [ -z "$INSTALL_DISCOVER_LINE" ] || [ -z "$INSTALL_GUARD_LINE" ] ||
 fi
 if /usr/bin/grep -F -q \
   'message: "请先退出 ChatGPT，再从菜单选择“安装 / 升级引擎”。' \
-  "$ROOT/menubar-app/Sources/CodexDreamSkinMenuBar/AppDelegate.swift"; then
+  "$ROOT/menubar-app/Sources/CodexSkinStudioMenuBar/AppDelegate.swift"; then
   printf 'The menu bar must not attribute every engine-install failure to ChatGPT still running.\n' >&2
   exit 1
 fi
-if ! /usr/bin/grep -F -q '# CodexDreamSkinStudio launcher' \
+if ! /usr/bin/grep -F -q '# CodexSkinStudio launcher' \
    "$ROOT/scripts/restore-dream-skin-macos.sh"; then
   printf 'macOS uninstall must remove only launchers owned by Dream Skin.\n' >&2
   exit 1
@@ -288,7 +288,7 @@ UNSAFE_ENGINE="$TMP/unsafe\"engine"
 /bin/chmod +x "$UNSAFE_ENGINE/scripts/start-dream-skin-macos.sh"
 UNSAFE_MENU_OUTPUT="$(
   /usr/bin/env CODEX_DREAM_SKIN_ENGINE="$UNSAFE_ENGINE" \
-    "$ROOT/menubar/codex_dream_skin.10s.sh"
+    "$ROOT/menubar/codex_skin_studio.10s.sh"
 )"
 /usr/bin/printf '%s\n' "$UNSAFE_MENU_OUTPUT" | /usr/bin/grep -F -q \
   'Engine path contains unsupported SwiftBar characters'
@@ -298,14 +298,14 @@ if /usr/bin/printf '%s\n' "$UNSAFE_MENU_OUTPUT" | /usr/bin/grep -F -q 'bash='; t
 fi
 
 MENU_HOME="$TMP/menu-home"
-MENU_IMAGES="$MENU_HOME/Library/Application Support/CodexDreamSkinStudio/images"
+MENU_IMAGES="$MENU_HOME/Library/Application Support/CodexSkinStudio/images"
 /bin/mkdir -p "$MENU_IMAGES"
 : > "$MENU_IMAGES/safe-image.png"
 : > "$MENU_IMAGES/"$'bad\timage.png'
 : > "$MENU_IMAGES/"$'bad\033image.png'
 MENU_IMAGE_OUTPUT="$(
   /usr/bin/env HOME="$MENU_HOME" CODEX_DREAM_SKIN_ENGINE="$ROOT" \
-    "$ROOT/menubar/codex_dream_skin.10s.sh"
+    "$ROOT/menubar/codex_skin_studio.10s.sh"
 )"
 /usr/bin/printf '%s\n' "$MENU_IMAGE_OUTPUT" | /usr/bin/grep -F -q 'safe-image.png'
 if /usr/bin/printf '%s\n' "$MENU_IMAGE_OUTPUT" | /usr/bin/grep -F -q 'bad'; then
@@ -339,7 +339,7 @@ fi
 
 run_signed_runtime_switch_test() {
   local switch_home="$TMP/switch-home"
-  local switch_state="$switch_home/Library/Application Support/CodexDreamSkinStudio"
+  local switch_state="$switch_home/Library/Application Support/CodexSkinStudio"
   /bin/mkdir -p "$switch_state/themes/preset-switch-fixture" "$switch_state/theme"
   /bin/cp "$ROOT/assets/portal-hero.png" "$switch_state/themes/preset-switch-fixture/background.png"
   /usr/bin/printf '%s\n' \
@@ -476,7 +476,7 @@ else
 fi
 
 RUNTIME_HOME="$TMP/runtime-home"
-RUNTIME_STATE_ROOT="$RUNTIME_HOME/Library/Application Support/CodexDreamSkinStudio"
+RUNTIME_STATE_ROOT="$RUNTIME_HOME/Library/Application Support/CodexSkinStudio"
 RUNTIME_STATE="$RUNTIME_STATE_ROOT/state.json"
 STATE_EVAL_MARKER="$TMP/state-eval-marker"
 UNTRUSTED_NODE_MARKER="$TMP/untrusted-node-executed"
@@ -546,7 +546,7 @@ run_signed_runtime_state_tests() {
 # A reused live PID must never be killed or treated as a successfully stopped
 # injector when its command identity does not match the recorded watcher.
 STOP_HOME="$TMP/stop-home"
-STOP_STATE_ROOT="$STOP_HOME/Library/Application Support/CodexDreamSkinStudio"
+STOP_STATE_ROOT="$STOP_HOME/Library/Application Support/CodexSkinStudio"
 /bin/mkdir -p "$STOP_STATE_ROOT"
 "$NODE" -e 'process.on("SIGTERM", () => process.exit(0)); setTimeout(() => {}, 600000);' &
 DUMMY_PID="$!"
@@ -610,7 +610,7 @@ DUMMY_PID=""
 # SwiftBar status must not call a live, reused PID "active" merely because
 # kill -0 succeeds.  A watcher state needs matching command/path/start data.
 STATUS_HOME="$TMP/status-home"
-STATUS_STATE_ROOT="$STATUS_HOME/Library/Application Support/CodexDreamSkinStudio"
+STATUS_STATE_ROOT="$STATUS_HOME/Library/Application Support/CodexSkinStudio"
 /bin/mkdir -p "$STATUS_STATE_ROOT"
 "$NODE" -e 'process.on("SIGTERM", () => process.exit(0)); setTimeout(() => {}, 600000);' &
 STATUS_PID="$!"

@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 # Menu-bar apply with visible progress notifications.
 
@@ -6,7 +6,7 @@ set +e
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:${PATH:-}"
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd -P)"
-STATE_ROOT="${HOME}/Library/Application Support/CodexDreamSkinStudio"
+STATE_ROOT="${HOME}/Library/Application Support/CodexSkinStudio"
 LOG_OUT="${STATE_ROOT}/menubar-apply.log"
 
 /bin/mkdir -p "$STATE_ROOT" 2>/dev/null

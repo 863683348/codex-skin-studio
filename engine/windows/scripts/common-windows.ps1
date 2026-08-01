@@ -1,4 +1,4 @@
-. (Join-Path $PSScriptRoot 'config-utf8.ps1')
+﻿. (Join-Path $PSScriptRoot 'config-utf8.ps1')
 
 function Enter-DreamSkinOperationLock {
   param(
@@ -6,7 +6,7 @@ function Enter-DreamSkinOperationLock {
     [int]$TimeoutMilliseconds = 0
   )
   $sid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexDreamSkin.$sid.Operation")
+  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexSkinStudio.$sid.Operation")
   $acquired = $false
   try {
     $acquired = $mutex.WaitOne($TimeoutMilliseconds)
@@ -56,7 +56,7 @@ function Test-DreamSkinPathWithin {
 }
 
 function Get-DreamSkinRuntimeEnginePaths {
-  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'))
+  param([string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'))
   $root = Join-Path ([System.IO.Path]::GetFullPath($StateRoot)) 'engine'
   $scripts = Join-Path $root 'scripts'
   return [pscustomobject]@{
@@ -74,7 +74,7 @@ function Get-DreamSkinRuntimeEnginePaths {
 
 function Test-DreamSkinTrayActive {
   $sid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexDreamSkin.$sid.Tray")
+  $mutex = [System.Threading.Mutex]::new($false, "Local\CodexSkinStudio.$sid.Tray")
   $acquired = $false
   try {
     try { $acquired = $mutex.WaitOne(0) } catch [System.Threading.AbandonedMutexException] {
@@ -191,8 +191,8 @@ function Install-DreamSkinRuntimeEngine {
     'assets\selectors.json',
     'assets\theme-package-validator.mjs',
     'assets\theme.json',
-    'presets\preset-gothic-void-crusade\background.jpg',
-    'presets\preset-gothic-void-crusade\theme.json',
+    'presets\preset-kung-fu-womens-football\background.jpg',
+    'presets\preset-kung-fu-womens-football\theme.json',
     'scripts\apply-community-theme.ps1',
     'scripts\common-windows.ps1',
     'scripts\check-update.ps1',
@@ -570,12 +570,12 @@ function Get-DreamSkinCodexInstall {
 }
 
 function Initialize-DreamSkinPackageLauncher {
-  if ('CodexDreamSkin.PackageLauncher' -as [type]) { return }
+  if ('CodexSkinStudio.PackageLauncher' -as [type]) { return }
   Add-Type -TypeDefinition @'
 using System;
 using System.Runtime.InteropServices;
 
-namespace CodexDreamSkin {
+namespace CodexSkinStudio {
   [Flags]
   internal enum ActivateOptions : uint {
     None = 0
@@ -629,7 +629,7 @@ function Start-DreamSkinCodex {
   }
   Initialize-DreamSkinPackageLauncher
   $argumentLine = ConvertTo-DreamSkinArgumentLine -Arguments $Arguments
-  $processId = [CodexDreamSkin.PackageLauncher]::Launch($appUserModelId, $argumentLine)
+  $processId = [CodexSkinStudio.PackageLauncher]::Launch($appUserModelId, $argumentLine)
   if ($processId -le 0) { throw 'Windows did not return a Codex process ID after package activation.' }
   return $processId
 }

@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
   [int]$Port = 9335,
   [switch]$Uninstall,
@@ -21,7 +21,7 @@ try {
   }
   Assert-DreamSkinPort -Port $Port
 
-  $StateRoot = Join-Path $env:LOCALAPPDATA 'CodexDreamSkin'
+  $StateRoot = Join-Path $env:LOCALAPPDATA 'CodexSkinStudio'
   $themePaths = Get-DreamSkinThemePaths -StateRoot $StateRoot
   Ensure-DreamSkinManagedDirectory -Path $themePaths.Root -Root $themePaths.Root
   $StatePath = Join-Path $StateRoot 'state.json'

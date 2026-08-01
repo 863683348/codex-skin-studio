@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "preset-phoenix-legend",
+  "name": "凤凰传奇 Phoenix Legend",
+  "brandSubtitle": "CODEX SKIN STUDIO",
+  "tagline": "苍茫的天涯是我的爱…",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "◉  选择项目",
+  "statusText": "PHOENIX LEGEND ONLINE",
+  "quote": "MAKE SOMETHING WONDERFUL",
+  "image": "background.jpg",
+  "appearance": "dark",
+  "art": {
+    "focusX": 0.72,
+    "focusY": 0.45,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#1a0a08",
+    "panel": "#26100c",
+    "panelAlt": "#33150f",
+    "accent": "#e03a2e",
+    "accentAlt": "#f0b429",
+    "secondary": "#a8271f",
+    "highlight": "#c03028",
+    "text": "#ffe8d8",
+    "muted": "#d4a88a",
+    "line": "rgba(224, 58, 46, .28)"
+  },
+  "promoTitle": "Codex Skin Studio",
+  "promoSub": "凤凰传奇 · 国潮红金",
+  "promoUrl": "https://codex-skin-studio.shop"
+}

@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
@@ -32,6 +32,6 @@ fi
 /usr/bin/grep -F -q 'private import snapshot no longer matches the approved package byte count' \
   "$TMP/bytes-output"
 
-STATE_ROOT="$TMP/home/Library/Application Support/CodexDreamSkinStudio"
+STATE_ROOT="$TMP/home/Library/Application Support/CodexSkinStudio"
 [ -z "$(/usr/bin/find "$STATE_ROOT" -maxdepth 1 -name '.theme-import-work.*' -print -quit 2>/dev/null)" ]
 printf 'PASS: community import rechecks approved bytes and SHA-256 on its private ZIP snapshot.\n'
