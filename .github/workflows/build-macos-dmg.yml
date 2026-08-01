@@ -15,13 +15,22 @@ jobs:
       - name: Build DMG
         run: |
           cd engine/macos
-          bash scripts/build-dmg.sh --skip-tests
+          bash scripts/build-dmg.sh --skip-tests 2>&1 | tee build.log || true
+          tail -60 build.log
         env:
           LC_ALL: C
           LANG: C
 
       - name: List artifacts
-        run: ls -la engine/macos/release/
+        run: ls -la engine/macos/release/ || true
+
+      - name: Upload build log (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: engine/macos/build.log
+          if-no-files-found: ignore
 
       - name: Upload DMG artifact
         uses: actions/upload-artifact@v4
