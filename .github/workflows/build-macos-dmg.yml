@@ -1,0 +1,50 @@
+name: Build macOS DMG
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'engine/macos/**'
+      - 'engine/runtime/**'
+      - 'engine/windows/VERSION'
+      - 'engine/macos/VERSION'
+  workflow_dispatch:
+
+jobs:
+  build-dmg:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build DMG
+        run: |
+          cd engine/macos
+          bash scripts/build-dmg.sh --skip-tests
+        env:
+          LC_ALL: C
+          LANG: C
+
+      - name: List artifacts
+        run: ls -la engine/macos/release/
+
+      - name: Upload DMG artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CodexSkinStudio-macOS
+          path: engine/macos/release/*.dmg
+          if-no-files-found: error
+
+      - name: Publish to GitHub Release (auto)
+        if: startsWith(github.ref, 'refs/heads/main')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: macos-v1.0.0
+          name: Codex Skin Studio macOS v1.0.0
+          body: |
+            macOS 安装包（GitHub Actions 云构建）。
+
+            注意：当前为未签名构建，首次运行需右键 → 打开。
+          files: engine/macos/release/*.dmg
+          draft: false
+          prerelease: true
