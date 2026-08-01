@@ -164,13 +164,11 @@ function Write-DreamSkinIcon {
         $alphaRow = New-Object byte[] $size
         for ($column = 0; $column -lt $size; $column++) {
           $coverage = 0
-          $darkCoverage = 0
-          $dotCoverage = 0
-          $edgeCoverage = 0
+          $lineCoverage = 0
           foreach ($sampleY in @(0.125, 0.375, 0.625, 0.875)) {
             foreach ($sampleX in @(0.125, 0.375, 0.625, 0.875)) {
-              # DreamSkin 品牌 mark（与网站 favicon 同源）：白圆角方 +
-              # 墨色对角半区（x+y>=1）+ 青点 + 14% 发丝描边环。
+              # 小猫简笔图标：白圆角方底 + 黑色简笔猫
+              # （圆脸轮廓 + 圆耳 + 内耳 + 圆眼 + 菱形鼻 + 嘴 + 胡须）
               $x = ($column + $sampleX) / $size
               $y = ($row + $sampleY) / $size
               $dx = [Math]::Max([Math]::Abs($x - 0.5) - 0.16, 0.0)
@@ -178,29 +176,47 @@ function Write-DreamSkinIcon {
               $edgeDistance = [Math]::Sqrt($dx * $dx + $dy * $dy)
               if ($edgeDistance -le 0.285) {
                 $coverage++
-                if (($x + $y) -ge 1.0) { $darkCoverage++ }
-                $ddx = $x - 0.719
-                $ddy = $y - 0.281
-                if (($ddx * $ddx + $ddy * $ddy) -le (0.08 * 0.08)) { $dotCoverage++ }
-                if ($edgeDistance -gt (0.285 - [Math]::Max(0.028, 1.1 / $size))) { $edgeCoverage++ }
+                # 脸轮廓：圆心(0.5,0.56) 半径0.24 环宽0.02
+                $fx = $x - 0.5
+                $fy = $y - 0.56
+                $faceDist = [Math]::Sqrt($fx * $fx + $fy * $fy)
+                if ([Math]::Abs($faceDist - 0.24) -le 0.02) { $lineCoverage++ }
+                # 耳朵轮廓：左圆(0.30,0.27) 右圆(0.70,0.27) 半径0.115 环宽0.02
+                $elx = $x - 0.30; $ely = $y - 0.27
+                $erx = $x - 0.70; $ery = $y - 0.27
+                $earL = [Math]::Sqrt($elx * $elx + $ely * $ely)
+                $earR = [Math]::Sqrt($erx * $erx + $ery * $ery)
+                if ([Math]::Abs($earL - 0.115) -le 0.02 -or [Math]::Abs($earR - 0.115) -le 0.02) { $lineCoverage++ }
+                # 内耳：半径0.05 环宽0.014
+                if ([Math]::Abs($earL - 0.05) -le 0.014 -or [Math]::Abs($earR - 0.05) -le 0.014) { $lineCoverage++ }
+                # 眼睛：实心圆 (0.415,0.52) (0.585,0.52) 半径0.05
+                $ey1 = ($x - 0.415) * ($x - 0.415) + ($y - 0.52) * ($y - 0.52)
+                $ey2 = ($x - 0.585) * ($x - 0.585) + ($y - 0.52) * ($y - 0.52)
+                if ($ey1 -le 0.0011 -or $ey2 -le 0.0011) { $lineCoverage++ }
+                # 鼻子：菱形 中心(0.5,0.605) 半宽0.022 半高0.017
+                if (([Math]::Abs($x - 0.5) / 0.022) + ([Math]::Abs($y - 0.605) / 0.017) -le 1.0) { $lineCoverage++ }
+                # 嘴：两条斜线（左 (0.5,0.625)->(0.44,0.665)，右 (0.5,0.625)->(0.56,0.665)）宽0.011
+                if ($y -ge 0.618 -and $y -le 0.67 -and $x -ge 0.43 -and $x -le 0.57) {
+                  $lDist = [Math]::Abs(0.04 * ($x - 0.5) + 0.06 * ($y - 0.625)) / 0.07211
+                  $rDist = [Math]::Abs(0.04 * ($x - 0.5) - 0.06 * ($y - 0.625)) / 0.07211
+                  if ($lDist -le 0.011 -or $rDist -le 0.011) { $lineCoverage++ }
+                }
+                # 胡须：左右各3条横线 宽0.012
+                foreach ($wy in @(0.44, 0.50, 0.56)) {
+                  if ([Math]::Abs($y - $wy) -le 0.012 -and $x -ge 0.195 -and $x -le 0.305) { $lineCoverage++ }
+                  if ([Math]::Abs($y - $wy) -le 0.012 -and $x -ge 0.695 -and $x -le 0.805) { $lineCoverage++ }
+                }
               }
             }
           }
 
           $alpha = [int][Math]::Round(255.0 * $coverage / 16.0)
           $alphaRow[$column] = [byte]$alpha
-          $darkBlend = $darkCoverage / 16.0
-          $dotBlend = $dotCoverage / 16.0
-          $edgeBlend = 0.14 * ($edgeCoverage / 16.0)
-          $red = 253.0 * (1.0 - $darkBlend) + 23.0 * $darkBlend
-          $green = 253.0 * (1.0 - $darkBlend) + 24.0 * $darkBlend
-          $blue = 252.0 * (1.0 - $darkBlend) + 28.0 * $darkBlend
-          $red = $red * (1.0 - $dotBlend) + 45.0 * $dotBlend
-          $green = $green * (1.0 - $dotBlend) + 225.0 * $dotBlend
-          $blue = $blue * (1.0 - $dotBlend) + 194.0 * $dotBlend
-          $red = [int][Math]::Round($red * (1.0 - $edgeBlend) + 23.0 * $edgeBlend)
-          $green = [int][Math]::Round($green * (1.0 - $edgeBlend) + 24.0 * $edgeBlend)
-          $blue = [int][Math]::Round($blue * (1.0 - $edgeBlend) + 28.0 * $edgeBlend)
+          $inkBlend = [Math]::Min($lineCoverage, 16) / 16.0
+          # 白底(#FAFAFA) + 黑色简笔线条(#262626)
+          $red = [int][Math]::Round(250.0 * (1.0 - $inkBlend) + 38.0 * $inkBlend)
+          $green = [int][Math]::Round(250.0 * (1.0 - $inkBlend) + 38.0 * $inkBlend)
+          $blue = [int][Math]::Round(250.0 * (1.0 - $inkBlend) + 38.0 * $inkBlend)
           $writer.Write([byte]$blue)
           $writer.Write([byte]$green)
           $writer.Write([byte]$red)
@@ -441,11 +457,11 @@ try {
     "/DOutputDir=$OutputDirectory",
     $definitionPath
   )
-  Write-Host "Building CodexDreamSkin-Setup-v$version.exe..."
+  Write-Host "Building CodexSkinStudio-Setup-v$version.exe..."
   & $compiler @arguments
   if ($LASTEXITCODE -ne 0) { throw "ISCC.exe failed with exit code $LASTEXITCODE." }
 
-  $artifactPath = Join-Path $OutputDirectory "CodexDreamSkin-Setup-v$version.exe"
+  $artifactPath = Join-Path $OutputDirectory "CodexSkinStudio-Setup-v$version.exe"
   if (-not (Test-Path -LiteralPath $artifactPath -PathType Leaf)) {
     throw "Inno Setup did not create the expected artifact: $artifactPath"
   }
