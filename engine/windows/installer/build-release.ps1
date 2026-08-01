@@ -440,7 +440,7 @@ try {
   $stagedPublicImage = Join-Path (Join-Path $payloadRoot 'assets') 'dream-reference.jpg'
   $stagedPublicImageHash = (Get-FileHash -LiteralPath $stagedPublicImage -Algorithm SHA256).Hash.ToLowerInvariant()
   $stagedPublicThemePath = Join-Path (Join-Path $payloadRoot 'presets') `
-    'preset-gothic-void-crusade\theme.json'
+    'preset-kung-fu-womens-football\theme.json'
   $stagedPublicThemeHash = (Get-FileHash -LiteralPath $stagedPublicThemePath -Algorithm SHA256).Hash.ToLowerInvariant()
   $stagedPublicTheme = (Read-ReleaseTextFile `
     -Path (Join-Path (Join-Path $payloadRoot 'assets') 'theme.json')) | ConvertFrom-Json

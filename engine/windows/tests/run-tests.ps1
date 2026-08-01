@@ -1005,11 +1005,11 @@ try {
   $preseededIds = @($preseededThemes | ForEach-Object { $_.Id })
   if ($preseededThemes.Count -lt 2 -or
     $preseededIds -notcontains 'preset-arina-hashimoto' -or
-    $preseededIds -notcontains 'preset-gothic-void-crusade') {
+    $preseededIds -notcontains 'preset-kung-fu-womens-football') {
     throw 'Windows did not preseed both Arina Hashimoto and Gothic Void Crusade.'
   }
-  $gothicSeed = $preseededThemes | Where-Object { $_.Id -ceq 'preset-gothic-void-crusade' } | Select-Object -First 1
-  if ($null -eq $gothicSeed -or $gothicSeed.Name -cne 'Gothic Void Crusade') {
+  $gothicSeed = $preseededThemes | Where-Object { $_.Id -ceq 'preset-kung-fu-womens-football' } | Select-Object -First 1
+  if ($null -eq $gothicSeed -or $gothicSeed.Name -cne 'Kung Fu Women''s Football') {
     throw 'Gothic Void Crusade was not preseeded with the expected display name.'
   }
   $updatedTheme = Set-DreamSkinActiveTheme -ImagePath (Join-Path $Root 'assets\dream-reference.jpg') `
@@ -1033,10 +1033,10 @@ try {
   $releaseFixtureAssets = Join-Path $releaseFixtureRoot 'assets'
   $releaseFixtureScripts = Join-Path $releaseFixtureRoot 'scripts'
   $releaseFixturePresets = Join-Path $releaseFixtureRoot 'presets'
-  $releaseFixturePresetDirectory = Join-Path $releaseFixturePresets 'preset-gothic-void-crusade'
+  $releaseFixturePresetDirectory = Join-Path $releaseFixturePresets 'preset-kung-fu-womens-football'
   $releaseFixtureState = Join-Path $temporaryRoot 'release-theme-state'
   $repositoryRoot = Split-Path -Parent $Root
-  $publicPresetRoot = Join-Path $repositoryRoot 'macos\presets\preset-gothic-void-crusade'
+  $publicPresetRoot = Join-Path $repositoryRoot 'macos\presets\preset-kung-fu-womens-football'
   New-Item -ItemType Directory -Path $releaseFixtureAssets, $releaseFixtureScripts, $releaseFixturePresetDirectory -Force | Out-Null
   Copy-Item -LiteralPath (Join-Path $Root 'VERSION') -Destination $releaseFixtureRoot -Force
   foreach ($releaseAsset in @(
@@ -1074,14 +1074,14 @@ try {
     -StateRoot $releaseFixtureState
   $releaseActiveTheme = Read-DreamSkinTheme -ThemeDirectory $releaseThemePaths.Active
   $releaseSavedThemes = @(Get-DreamSkinSavedThemes -StateRoot $releaseFixtureState)
-  if ($releaseActiveTheme.Theme.id -cne 'preset-gothic-void-crusade' -or
+  if ($releaseActiveTheme.Theme.id -cne 'preset-kung-fu-womens-football' -or
     $releaseSavedThemes.Count -ne 1 -or
-    $releaseSavedThemes[0].Id -cne 'preset-gothic-void-crusade') {
+    $releaseSavedThemes[0].Id -cne 'preset-kung-fu-womens-football') {
     throw 'Release-safe bundled theme did not seed dynamically by its validated preset id.'
   }
   $releaseEngine = Install-DreamSkinRuntimeEngine -SkillRoot $releaseFixtureRoot `
     -StateRoot (Join-Path $temporaryRoot 'release-engine-state')
-  if (-not (Test-Path -LiteralPath (Join-Path $releaseEngine.Root 'presets\preset-gothic-void-crusade\theme.json') -PathType Leaf)) {
+  if (-not (Test-Path -LiteralPath (Join-Path $releaseEngine.Root 'presets\preset-kung-fu-womens-football\theme.json') -PathType Leaf)) {
     throw 'Release-shaped payload could not stage its public Gothic preset into the managed engine.'
   }
 

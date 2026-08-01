@@ -28,7 +28,7 @@ assert.equal(readImageMetadata(malformedPng, ".png"), null);
 const gothic = await fs.readFile(path.join(
   macosRoot,
   "presets",
-  "preset-gothic-void-crusade",
+  "preset-kung-fu-womens-football",
   "background.jpg",
 ));
 assert.deepEqual(readImageMetadata(gothic, ".jpg"), {

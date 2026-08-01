@@ -477,26 +477,6 @@ function Initialize-DreamSkinThemeStore {
   Assert-DreamSkinImageFile -Path $presetImage
   Assert-DreamSkinNoReparseComponents -Path $presetTheme
   Copy-Item -LiteralPath (Join-Path $assetRoot 'theme.json') -Destination $presetTheme -Force
-  # Bundled Gothic Void Crusade (same pack as macOS presets/).
-  $gothicSource = Join-Path $SkillRoot 'presets\preset-gothic-void-crusade'
-  $gothicDirectory = Join-Path $paths.Saved 'preset-gothic-void-crusade'
-  $gothicTheme = Join-Path $gothicDirectory 'theme.json'
-  $gothicSourceTheme = Join-Path $gothicSource 'theme.json'
-  $gothicSourceImage = Join-Path $gothicSource 'background.jpg'
-  Assert-DreamSkinNoReparseComponents -Path $gothicDirectory
-  Assert-DreamSkinNoReparseComponents -Path $gothicTheme
-  if ((Test-Path -LiteralPath $gothicSourceTheme -PathType Leaf) -and
-    (Test-Path -LiteralPath $gothicSourceImage -PathType Leaf)) {
-    Ensure-DreamSkinManagedDirectory -Path $gothicDirectory -Root $paths.Root
-    $gothicImage = Join-Path $gothicDirectory 'background.jpg'
-    Assert-DreamSkinNoReparseComponents -Path $gothicImage
-    Assert-DreamSkinImageFile -Path $gothicSourceImage
-    Copy-Item -LiteralPath $gothicSourceImage -Destination $gothicImage -Force
-    Assert-DreamSkinNoReparseComponents -Path $gothicImage
-    Assert-DreamSkinImageFile -Path $gothicImage
-    Assert-DreamSkinNoReparseComponents -Path $gothicTheme
-    Copy-Item -LiteralPath $gothicSourceTheme -Destination $gothicTheme -Force
-  }
   # Refresh the staged active copy of official presets too; otherwise metadata
   # staged by an older engine (e.g. pre-#183 appearance "auto") keeps steering
   # the appearanceTheme pin after upgrades.
@@ -507,8 +487,6 @@ function Initialize-DreamSkinThemeStore {
     } catch {}
     $refreshSource = $null
     if ($activeId -ceq $bundledPresetId) { $refreshSource = $assetRoot }
-    elseif ($activeId -ceq 'preset-gothic-void-crusade' -and
-      (Test-Path -LiteralPath $gothicSourceTheme -PathType Leaf)) { $refreshSource = $gothicSource }
     if ($null -ne $refreshSource) {
       $sourcePack = Read-DreamSkinTheme -ThemeDirectory $refreshSource
       $sourceJson = Read-DreamSkinUtf8File -Path $sourcePack.ThemePath
