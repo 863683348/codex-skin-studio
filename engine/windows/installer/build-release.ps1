@@ -31,7 +31,7 @@ $publicPresetRoot = Join-Path (Join-Path (Join-Path $repositoryRoot 'macos') 'pr
 $publicPresetImagePath = Join-Path $publicPresetRoot 'background.jpg'
 $publicPresetThemePath = Join-Path $publicPresetRoot 'theme.json'
 $publicPresetImageSha256 = 'df22230c83ad2fb2d8546ccd9f742c9f4b5c735e0133db7b9e50e4c20f446749'
-$publicPresetThemeSha256 = '37e623b0060a583e1cefd82c5564c86729ccde389c363b894f27c90a7bcfcd5a'
+$publicPresetThemeSha256 = 'b1f7bfb790f89e97ec06fa7dd0733c357971f7de5f39b61e57d0343a36962881'
 
 function Read-ReleaseTextFile {
   param([Parameter(Mandatory = $true)][string]$Path)
