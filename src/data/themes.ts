@@ -18,6 +18,8 @@ export interface ThemePreset {
   accentColor: string;
   /** 真实背景图 URL（public/themes/*.jpg）；无则用 gradient 渲染 */
   imageUrl?: string;
+  /** 合成预览图 URL（public/themes/preview-*.jpg）；真实效果，含 Codex UI+主题 */
+  previewUrl?: string;
   /** true = 引擎内置可用；false = 预览主题（即将上架） */
   available: boolean;
   /** free = 免费内置；pro = 付费解锁 */
@@ -97,6 +99,7 @@ export const themes: ThemePreset[] = [
     },
     available: true,
     imageUrl: "/themes/kungfu.jpg",
+    previewUrl: "/themes/preview-kungfu.jpg",
     tier: 'free',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -120,6 +123,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/judy.jpg",
+    previewUrl: "/themes/preview-judy.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -143,6 +147,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/doraemon.jpg",
+    previewUrl: "/themes/preview-doraemon.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'scifi',
@@ -166,6 +171,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/yang.jpg",
+    previewUrl: "/themes/preview-yang.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'pink',
@@ -189,6 +195,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/andy.jpg",
+    previewUrl: "/themes/preview-andy.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -212,6 +219,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/phoenix.jpg",
+    previewUrl: "/themes/preview-phoenix.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -235,6 +243,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/wealth.jpg",
+    previewUrl: "/themes/preview-wealth.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -258,6 +267,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/chicken.jpg",
+    previewUrl: "/themes/preview-chicken.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'scifi',
@@ -281,6 +291,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/dilraba.jpg",
+    previewUrl: "/themes/preview-dilraba.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'pink',
@@ -304,6 +315,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/nezha.jpg",
+    previewUrl: "/themes/preview-nezha.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -327,6 +339,7 @@ export const themes: ThemePreset[] = [
     },
     available: false,
     imageUrl: "/themes/taiyi.jpg",
+    previewUrl: "/themes/preview-taiyi.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'fresh',
