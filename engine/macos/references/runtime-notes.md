@@ -1,4 +1,4 @@
-﻿# Runtime notes
+# Runtime notes
 
 - Discover the official `com.openai.codex` bundle on every launch; do not assume an upgrade keeps the same executable internals.
 - Use `Contents/Resources/cua_node/bin/node` from that bundle. Require Node.js 20+, a valid strict code signature, matching architecture, and OpenAI Team ID `2DC432GLL2` on both app and runtime.

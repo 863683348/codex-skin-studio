@@ -1,4 +1,4 @@
-﻿# Windows Changelog
+# Windows Changelog
 
 ## Unreleased
 

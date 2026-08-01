@@ -1,4 +1,4 @@
-﻿# 预设主题 · Preset packs
+# 预设主题 · Preset packs
 
 这个目录放 **Codex Skin Studio 的内置预设主题**。安装时 `install-dream-skin-macos.sh` 会把每个 `preset-*/` 幂等地播种到用户主题库 `~/Library/Application Support/CodexSkinStudio/themes/`，装完即可在**菜单栏「已保存的主题」**或 `switch-theme-macos.sh --id <id>` 里直接切换。
 

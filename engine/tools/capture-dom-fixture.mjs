@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * Codex Skin Studio · DOM 结构快照工具（macOS / Windows 双端通用）
  * ================================================================

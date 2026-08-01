@@ -1,4 +1,4 @@
-﻿# Runtime notes
+# Runtime notes
 
 - The skin discovers the current `OpenAI.Codex` package on every run and requires a non-development `Store` signature kind. It prefers manifest-derived AUMID package activation with explicit `--remote-debugging-address=127.0.0.1` and the selected port. Only when a visible command line proves that owl encoded the debugging argument inside `codex://` does it preserve the pre-launch PID set, stop newly observed package processes, and make one direct raw-argument attempt against the exact validated `app\ChatGPT.exe`. An absent flag without that protocol evidence stays on the conservative package-activation path. Access denial or a second argument-forwarding failure is terminal; the caller rolls back to normal package activation without debugging flags.
 - Node.js 22 or newer is required for the built-in WebSocket client. The runtime's real `process.execPath` and version are recorded in state, even when PATH points at a shim.

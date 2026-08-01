@@ -1,4 +1,4 @@
-﻿# Codex Skin Studio
+# Codex Skin Studio
 
 <p align="center">
   <a href="./README.md">中文</a> · <strong>English</strong>

@@ -1,4 +1,4 @@
-﻿# Codex Skin Studio Studio
+# Codex Skin Studio Studio
 
 Unofficial macOS theme studio for the **official Codex Desktop** app.
 

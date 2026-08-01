@@ -1,4 +1,4 @@
-﻿# Codex Skin Studio for Windows
+# Codex Skin Studio for Windows
 
 <p align="center">
   <a href="./README.md">中文</a> · <strong>English</strong>

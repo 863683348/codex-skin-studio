@@ -1,4 +1,4 @@
-﻿#ifndef AppVersion
+#ifndef AppVersion
   #error AppVersion must be supplied by build-release.ps1
 #endif
 #ifndef StageRoot
