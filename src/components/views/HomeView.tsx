@@ -85,15 +85,6 @@ export function HomeView({ locale }: { locale: Locale }) {
             {dict.home.ctaQuickstart}
           </Link>
         </div>
-        <div className="mt-12 grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
-          {featured.slice(0, 2).map((t) => (
-            <div
-              key={t.id}
-              className="aspect-video overflow-hidden rounded-lg border border-border"
-              style={{ background: t.gradient }}
-            />
-          ))}
-        </div>
       </section>
 
       <AdDisplay format="horizontal" className="py-6" />
