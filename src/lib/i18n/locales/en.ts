@@ -229,6 +229,23 @@ export const en: Dict = {
       },
     ],
   },
+  paymentResult: {
+    loading: 'Loading...',
+    successTitle: 'Payment Successful!',
+    successDesc: 'Thank you for subscribing! Your Pro access is confirmed.',
+    keyTitle: 'How to unlock PRO themes',
+    keySteps: [
+      'Open the Codex Skin Studio tray menu',
+      'Choose "Theme Library" -> "Activate Pro..."',
+      'Enter your License Key — all 10 PRO themes unlock instantly',
+    ],
+    keyNote: 'Your License Key will be sent to your PayPal email within 24 hours. If it takes longer, contact us with your subscription ID.',
+    cancelTitle: 'Payment Cancelled',
+    cancelDesc: 'No charge was made. You can upgrade anytime.',
+    browseThemes: 'Browse Themes',
+    backHome: 'Back to Home',
+    contactUs: 'Contact Us',
+  },
   error: {
     notFoundTitle: '404',
     notFoundDesc: 'Page not found',

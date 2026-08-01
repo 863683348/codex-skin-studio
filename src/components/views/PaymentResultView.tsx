@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { CheckCircle2, XCircle } from 'lucide-react';
+import { CheckCircle2, XCircle, KeyRound, Mail } from 'lucide-react';
 import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 
@@ -24,7 +24,7 @@ export function PaymentResultView({ locale }: { locale: Locale }) {
   if (status === 'loading') {
     return (
       <section className="mx-auto max-w-container px-4 py-24 text-center">
-        <p className="text-text-secondary">加载中...</p>
+        <p className="text-text-secondary">{dict.paymentResult.loading}</p>
       </section>
     );
   }
@@ -41,28 +41,57 @@ export function PaymentResultView({ locale }: { locale: Locale }) {
         )}
 
         <h1 className="mt-6 text-2xl font-semibold text-text-primary">
-          {isSuccess ? '支付成功！' : '支付已取消'}
+          {isSuccess ? dict.paymentResult.successTitle : dict.paymentResult.cancelTitle}
         </h1>
 
         <p className="mt-2 text-text-secondary">
-          {isSuccess
-            ? '感谢你的订阅！你的 Pro/Team 权益已激活。'
-            : '支付未完成，订单未产生任何费用。随时可以回来升级。'}
+          {isSuccess ? dict.paymentResult.successDesc : dict.paymentResult.cancelDesc}
         </p>
+
+        {isSuccess && (
+          <div className="mt-8 rounded-xl border border-border bg-bg-secondary p-6 text-left">
+            <div className="flex items-center gap-2">
+              <KeyRound size={18} className="text-accent" />
+              <h2 className="text-sm font-medium text-text-primary">
+                {dict.paymentResult.keyTitle}
+              </h2>
+            </div>
+            <ol className="mt-4 space-y-2">
+              {dict.paymentResult.keySteps.map((step, i) => (
+                <li key={step} className="flex items-start gap-2 text-sm text-text-secondary">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-medium text-accent">
+                    {i + 1}
+                  </span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-4 rounded-lg bg-bg-tertiary p-3 text-xs leading-relaxed text-text-tertiary">
+              {dict.paymentResult.keyNote}
+            </p>
+          </div>
+        )}
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Link
             href={`/${locale}/gallery`}
             className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
           >
-            浏览主题
+            {dict.paymentResult.browseThemes}
           </Link>
           <Link
             href={`/${locale}`}
             className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-2.5 text-sm font-medium text-text-primary transition-colors hover:border-accent"
           >
-            返回首页
+            {dict.paymentResult.backHome}
           </Link>
+          <a
+            href={`mailto:${dict.contact.email}`}
+            className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-border px-6 py-2.5 text-sm font-medium text-text-primary transition-colors hover:border-accent"
+          >
+            <Mail size={15} />
+            {dict.paymentResult.contactUs}
+          </a>
         </div>
       </div>
     </section>

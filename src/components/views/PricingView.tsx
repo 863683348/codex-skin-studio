@@ -25,6 +25,7 @@ declare global {
       Buttons: (config: {
         createSubscription: (data: unknown, actions: PayPalActions) => Promise<string>;
         onApprove: (data: { subscriptionID: string }, actions: unknown) => Promise<void>;
+        onCancel?: (data: unknown) => void;
         onError: (err: Error) => void;
         style?: Record<string, string>;
       }) => {
@@ -99,6 +100,10 @@ export function PricingView({ locale }: { locale: Locale }) {
         onApprove: async (data) => {
           // 付款成功，跳转到结果页
           window.location.href = `/${locale}/pricing/result?subscription_id=${data.subscriptionID}`;
+        },
+        onCancel: () => {
+          // 用户取消订阅，跳回结果页（cancel 状态）
+          window.location.href = `/${locale}/pricing/result?canceled=true`;
         },
         onError: (err) => {
           console.error('PayPal error:', err);

@@ -228,6 +228,23 @@ export const zh = {
       },
     ],
   },
+  paymentResult: {
+    loading: '加载中...',
+    successTitle: '支付成功！',
+    successDesc: '感谢你的订阅！Pro 权益已确认。',
+    keyTitle: '如何解锁 PRO 主题',
+    keySteps: [
+      '打开 Codex Skin Studio 托盘菜单',
+      '选择「主题库」→「激活 Pro…」',
+      '输入 License Key，10 款 PRO 主题即刻解锁',
+    ],
+    keyNote: 'License Key 将在 24 小时内发送到你的 PayPal 邮箱。如果超过 24 小时未收到，请联系我们，附上订阅 ID。',
+    cancelTitle: '支付已取消',
+    cancelDesc: '支付未完成，订单未产生任何费用。随时可以回来升级。',
+    browseThemes: '浏览主题',
+    backHome: '返回首页',
+    contactUs: '联系我们',
+  },
   error: {
     notFoundTitle: '404',
     notFoundDesc: '页面不存在',
