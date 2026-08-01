@@ -105,7 +105,7 @@ export const en: Dict = {
     downloadWindows: 'Download for Windows',
     downloadMacos: 'Download for macOS',
     windowsDesc: 'Windows 10/11 x64. Run Setup.exe to install per-user (no admin needed). Three shortcuts appear: Launch / Tray / Restore official look.',
-    macosDesc: 'macOS (Apple Silicon / Intel). Drag into Applications. Note: the macOS package is currently built from the community engine; brand & signing migration in progress.',
+    macosDesc: 'macOS (Apple Silicon / Intel). Drag into Applications. First run: right-click → Open (unsigned build).',
     windowsInstallTitle: 'Windows Installation',
     macosInstallTitle: 'macOS Installation',
     windowsInstallSteps: [

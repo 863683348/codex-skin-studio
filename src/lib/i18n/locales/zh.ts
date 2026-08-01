@@ -104,7 +104,7 @@ export const zh = {
     downloadWindows: '下载 Windows 版',
     downloadMacos: '下载 macOS 版',
     windowsDesc: 'Windows 10/11 x64。双击运行 Setup.exe 安装，当前用户安装无需管理员权限。安装后桌面出现 3 个快捷方式：启动 / 托盘控制 / 恢复官方外观。',
-    macosDesc: 'macOS（Apple Silicon / Intel）。拖入应用程序文件夹即可。注意：macOS 安装包当前基于社区引擎构建，品牌与签名迁移中。',
+    macosDesc: 'macOS（Apple Silicon / Intel）。拖入应用程序文件夹即可。首次运行需右键 → 打开（未签名构建）。',
     windowsInstallTitle: 'Windows 安装步骤',
     macosInstallTitle: 'macOS 安装步骤',
     windowsInstallSteps: [
