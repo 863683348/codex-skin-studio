@@ -19,7 +19,18 @@ export function ThemePreview({
 
   return (
     <div className="relative aspect-video overflow-hidden rounded-lg border border-border">
-      <div className="absolute inset-0" style={{ background: theme.gradient }} />
+      <div
+        className="absolute inset-0"
+        style={
+          theme.imageUrl
+            ? {
+                backgroundImage: `url("${theme.imageUrl}")`,
+                backgroundSize: 'cover',
+                backgroundPosition: '72% 45%',
+              }
+            : { background: theme.gradient }
+        }
+      />
       <div
         className={`absolute inset-0 bg-bg-primary transition-opacity duration-crossfade ${
           dark ? 'opacity-55' : 'opacity-0'

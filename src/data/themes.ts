@@ -16,6 +16,8 @@ export interface ThemePreset {
   modes: ('light' | 'dark')[];
   gradient: string;
   accentColor: string;
+  /** 真实背景图 URL（public/themes/*.jpg）；无则用 gradient 渲染 */
+  imageUrl?: string;
   /** true = 引擎内置可用；false = 预览主题（即将上架） */
   available: boolean;
   /** free = 免费内置；pro = 付费解锁 */
@@ -304,6 +306,7 @@ export const themes: ThemePreset[] = [
       en: ['Default theme, ready out of the box', 'Red-gold martial palette', 'Immersive dark mode', 'Built into the installer'],
     },
     available: true,
+    imageUrl: "/themes/kungfu.jpg",
     tier: 'free',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -326,6 +329,7 @@ export const themes: ThemePreset[] = [
       en: ['Violet + teal palette', 'Zootopia night-city vibe', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/judy.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -348,6 +352,7 @@ export const themes: ThemePreset[] = [
       en: ['Deep blue + gold palette', 'Nostalgic childhood vibe', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/doraemon.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'scifi',
@@ -370,6 +375,7 @@ export const themes: ThemePreset[] = [
       en: ['Rose + blush palette', 'Elegant illustration', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/yang.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'pink',
@@ -392,6 +398,7 @@ export const themes: ThemePreset[] = [
       en: ['Black-gold stage palette', 'Concert atmosphere', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/andy.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -414,6 +421,7 @@ export const themes: ThemePreset[] = [
       en: ['Chinese red + gold palette', 'Phoenix guochao art', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/phoenix.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -436,6 +444,7 @@ export const themes: ThemePreset[] = [
       en: ['Festive red-gold palette', 'Coin-shower illustration', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/wealth.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -458,6 +467,7 @@ export const themes: ThemePreset[] = [
       en: ['Tactical orange-green palette', 'Airdrop battle art', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/chicken.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'scifi',
@@ -480,6 +490,7 @@ export const themes: ThemePreset[] = [
       en: ['Crimson + gold palette', 'Exotic elegant art', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/dilraba.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'pink',
@@ -502,6 +513,7 @@ export const themes: ThemePreset[] = [
       en: ['Flame red-gold palette', 'Mythological hero art', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/nezha.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'dark',
@@ -524,6 +536,7 @@ export const themes: ThemePreset[] = [
       en: ['Jade + gold palette', 'Immortal crane art', 'Dark mode', 'PRO theme'],
     },
     available: false,
+    imageUrl: "/themes/taiyi.jpg",
     tier: 'pro',
     relatedGuides: ['install-windows', 'install-macos'],
     category: 'fresh',

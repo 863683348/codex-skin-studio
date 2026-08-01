@@ -39,7 +39,15 @@ export function ThemeCard({
         <div className="relative aspect-video">
           <div
             className="absolute inset-0"
-            style={{ background: theme.gradient }}
+            style={
+              theme.imageUrl
+                ? {
+                    backgroundImage: `url("${theme.imageUrl}")`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: '72% 45%',
+                  }
+                : { background: theme.gradient }
+            }
           />
           {/* 状态徽标 */}
           <div className="absolute left-2 top-2 z-10">
