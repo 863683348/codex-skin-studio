@@ -29,7 +29,7 @@ declare global {
         onError: (err: Error) => void;
         style?: Record<string, string>;
       }) => {
-        render: (selector: string) => Promise<void>;
+        render: (target: string | HTMLElement) => Promise<void>;
       };
     };
   }
@@ -52,7 +52,7 @@ export function PricingView({ locale }: { locale: Locale }) {
   const [notice, setNotice] = useState<{ type: 'info' | 'error'; text: string } | null>(null);
   const [paypalLoading, setPaypalLoading] = useState<string | null>(null);
   const [sdkLoaded, setSdkLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const currentPlanRef = useRef<string | null>(null);
 
   // 动态加载 PayPal SDK
@@ -80,18 +80,20 @@ export function PricingView({ locale }: { locale: Locale }) {
     });
   }, [locale]);
 
-  // 渲染 PayPal 按钮到容器
+  // 渲染 PayPal 按钮到对应卡片内的容器
   const renderPayPalButton = useCallback(async (planKey: string) => {
     const planId = PAYPAL_CONFIG.plans[planKey];
     if (!planId || !window.paypal) return;
 
-    // 清空容器
-    if (containerRef.current) {
-      containerRef.current.innerHTML = '';
-    }
+    // 清空目标容器
+    const el = containerRefs.current[planKey];
+    if (el) el.innerHTML = '';
 
     // 稍等一帧等 DOM 更新
     await new Promise((r) => setTimeout(r, 50));
+
+    const target = containerRefs.current[planKey];
+    if (!target || !window.paypal) return;
 
     window.paypal
       .Buttons({
@@ -117,7 +119,7 @@ export function PricingView({ locale }: { locale: Locale }) {
           color: 'gold',
         },
       })
-      .render('#paypal-button-container');
+      .render(target);
   }, [locale]);
 
   const handleSubscribe = async (planKey: string) => {
@@ -166,8 +168,9 @@ export function PricingView({ locale }: { locale: Locale }) {
   // 清除 PayPal 按钮区域
   useEffect(() => {
     return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = '';
+      for (const key of Object.keys(containerRefs.current)) {
+        const el = containerRefs.current[key];
+        if (el) el.innerHTML = '';
       }
     };
   }, []);
@@ -201,17 +204,24 @@ export function PricingView({ locale }: { locale: Locale }) {
           const planKey = plan.name.toLowerCase();
           const isFree = Boolean(plan.free);
           const isLoading = paypalLoading === planKey;
+          // 高亮规则：推荐 OR 当前选中（点击的卡也亮起，避免视觉上像还在订阅 Pro）
+          const isHighlighted = isRecommended || isLoading;
+          const borderClass = isHighlighted ? 'border-accent' : 'border-border';
+          const ringClass = isLoading && !isRecommended ? 'ring-2 ring-accent/40' : '';
 
           return (
             <div
               key={plan.name}
-              className={`relative flex flex-col rounded-xl border bg-bg-secondary p-8 ${
-                isRecommended ? 'border-accent' : 'border-border'
-              }`}
+              className={`relative flex flex-col rounded-xl border bg-bg-secondary p-8 transition-all ${borderClass} ${ringClass}`}
             >
               {isRecommended && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-medium text-white">
                   {dict.pricing.recommended}
+                </span>
+              )}
+              {isLoading && !isRecommended && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-text-primary px-3 py-1 text-xs font-medium text-white">
+                  {locale === 'zh' ? '已选择' : 'Selected'}
                 </span>
               )}
               <h2 className="text-xl font-medium text-text-primary">{plan.name}</h2>
@@ -249,22 +259,19 @@ export function PricingView({ locale }: { locale: Locale }) {
                       : plan.ctaLabel}
                   </button>
                 )}
+                {/* PayPal 按钮内嵌到对应卡片内（点击谁，PayPal 按钮就出现在谁那里） */}
+                {!isFree && (
+                  <div
+                    ref={(el) => { containerRefs.current[planKey] = el; }}
+                    hidden={!isLoading}
+                    className="mt-4"
+                  />
+                )}
               </div>
             </div>
           );
         })}
       </div>
-
-      {/* PayPal 按钮渲染容器 */}
-      {paypalLoading && (
-        <div className="mt-8 flex justify-center">
-          <div
-            id="paypal-button-container"
-            ref={containerRef}
-            className="w-full max-w-sm"
-          />
-        </div>
-      )}
 
       <p className="mt-8 text-center text-sm text-text-tertiary">
         {dict.pricing.trust}
