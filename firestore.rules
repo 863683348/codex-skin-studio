@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 订阅记录：本人（邮箱匹配）可读自己的；仅服务端（admin SDK）可写
+    match /subscriptions/{email} {
+      allow read: if request.auth != null && request.auth.token.email == email;
+      allow write: if false; // 仅 Admin SDK（webhook）写入
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
