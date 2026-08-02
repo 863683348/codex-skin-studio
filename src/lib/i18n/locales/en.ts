@@ -215,7 +215,7 @@ export const en: Dict = {
       },
       {
         name: 'Team',
-        price: '$14.99',
+        price: '$12.99',
         period: '/ mo',
         ctaLabel: 'Upgrade to Team',
         free: false,

@@ -185,7 +185,7 @@ export const zh = {
     plans: [
       {
         name: 'Free',
-        price: '¥0',
+        price: '$0',
         period: '永久免费',
         ctaLabel: '开始使用',
         free: true,
@@ -199,8 +199,8 @@ export const zh = {
       },
       {
         name: 'Pro',
-        price: '¥39',
-        period: '/ 月',
+        price: '$5.99',
+        period: '/ month',
         ctaLabel: '升级 Pro',
         free: false,
         highlighted: true,
@@ -214,8 +214,8 @@ export const zh = {
       },
       {
         name: 'Team',
-        price: '¥99',
-        period: '/ 月',
+        price: '$12.99',
+        period: '/ month',
         ctaLabel: '升级 Team',
         free: false,
         highlighted: false,
