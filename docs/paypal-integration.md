@@ -51,7 +51,27 @@
 
 ## 二、发 License Key（收钱后的关键一步）
 
-### 手动签发（当前方案，5 秒一条）
+### 一键生成 + 自动邮件（推荐，1 条命令）
+> 需要先配置 Gmail 应用专用密码（见下"Gmail 配置"）
+
+```bash
+# 在本地项目目录（scripts/ 为本地工具，不提交 git）
+node scripts/issue-and-email-key.js buyer@example.com pro [订阅ID]
+#   → 自动生成 License Key + 用 GMAIL_USER 发中英双语 HTML 邮件（含 Key + 激活步骤）
+node scripts/issue-and-email-key.js --dry-run buyer@example.com pro   # 只生成不发送
+```
+
+### Gmail 配置（一次性）
+1. Google 账户 → **安全性** → 开启**两步验证**
+2. 安全性 → **应用专用密码** → 生成 16 位密码（应用选"其他"，如 Codex Skin Studio）
+3. 在 `website/.env.local` 写入（**勿提交 git**）：
+   ```
+   GMAIL_USER=ahmedlzany423@gmail.com
+   GMAIL_APP_PASSWORD=<16 位应用专用密码>
+   GMAIL_SMTP_HOST=smtp.gmail.com
+   ```
+
+### 纯手动签发（无 Gmail 时兜底）
 ```bash
 # 在本地项目目录
 node scripts/gen-license-key.js buyer@example.com pro
