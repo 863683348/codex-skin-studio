@@ -51,8 +51,43 @@
 
 ## 二、发 License Key（收钱后的关键一步）
 
-### 一键生成 + 自动邮件（推荐，1 条命令）
-> 需要先配置 Gmail 应用专用密码（见下"Gmail 配置"）
+### 全自动：PayPal Webhook → Firestore → 自动发 Key 邮件（已上线）
+> 代码已部署（Vercel 标准模式，`/api/paypal/webhook`）。启用需完成下方"全自动配置"。
+
+触发链：
+```
+PayPal 订阅激活(BILLING.SUBSCRIPTION.ACTIVATED)
+  → POST /api/paypal/webhook（RSA 签名验证 + 5min 时间窗）
+  → 生成 License Key（服务端 HMAC，与客户端一致）
+  → 写 Firestore subscriptions/{email}
+  → Gmail SMTP 自动发 Key 邮件给买家
+取消/暂停/过期 → 更新 Firestore status
+```
+
+#### 全自动配置（一次性，约 20 分钟）
+1. **Firebase Firestore 建库**：控制台 → Firestore Database → 创建数据库（生产模式）→ 部署 `firestore.rules`（仓库根目录）
+2. **Firebase 服务账号**：控制台 → 项目设置 → 服务账号 → 生成新私钥 → 取 3 个字段
+3. **PayPal Webhook**：开发者后台 → Webhooks → Create Webhook：
+   - URL：`https://codex-skin-studio.shop/api/paypal/webhook`
+   - 事件勾选：`BILLING.SUBSCRIPTION.ACTIVATED` / `CANCELLED` / `SUSPENDED` / `EXPIRED` / `APPROVED`
+   - 创建后复制 **Webhook ID**
+4. **Vercel 环境变量（服务端）**：
+   ```
+   FIREBASE_PROJECT_ID=       ← 服务账号 project_id
+   FIREBASE_CLIENT_EMAIL=     ← 服务账号 client_email
+   FIREBASE_PRIVATE_KEY=      ← 服务账号 private_key（Vercel 粘贴时换行保留）
+   PAYPAL_WEBHOOK_ID=         ← 第 3 步
+   PAYPAL_PLAN_PRO=           ← Pro 计划 ID（与前端 NEXT_PUBLIC_PAYPAL_PLAN_PRO 同值）
+   PAYPAL_PLAN_TEAM=          ← Team 计划 ID
+   GMAIL_USER=ahmedlzany423@gmail.com
+   GMAIL_APP_PASSWORD=        ← 16 位应用专用密码
+   ```
+5. 重新部署 → 沙箱下单测试 → 检查 Firestore `subscriptions/` 集合 + 买家邮箱
+
+> 会员状态查询接口：`GET /api/me`（Authorization: Bearer <Firebase ID Token>）→ 返回该邮箱的订阅记录与 License Key。
+
+### 一键生成 + 自动邮件（半自动兜底，1 条命令）
+> 全自动未启用时用这个（需 Gmail 配置）
 
 ```bash
 # 在本地项目目录（scripts/ 为本地工具，不提交 git）
