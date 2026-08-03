@@ -270,6 +270,11 @@ export const en: Dict = {
     copyright: 'Codex Skin Studio. Open source, MIT License.',
     madeWith: 'Built with CDP injection technology',
     brandNote: 'Windows installer uses the Codex Skin Studio brand; the macOS package still carries the community engine brand (migration in progress)',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Service',
+    faq: 'FAQ',
+    blog: 'Blog',
+    contact: 'Contact',
   },
   theme: {
     toggleToLight: 'Switch to Light Mode',

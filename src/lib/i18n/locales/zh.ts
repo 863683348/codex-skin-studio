@@ -269,6 +269,11 @@ export const zh = {
     copyright: 'Codex Skin Studio. 开源项目，MIT 许可证.',
     madeWith: '用 CDP 注入技术制作',
     brandNote: 'Windows 安装包已使用 Codex Skin Studio 品牌；macOS 安装包暂沿用社区引擎品牌（迁移中）',
+    privacy: '隐私政策',
+    terms: '服务条款',
+    faq: '常见问题',
+    blog: '博客',
+    contact: '联系我们',
   },
   theme: {
     toggleToLight: '切换到亮色模式',
