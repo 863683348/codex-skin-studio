@@ -1,10 +1,17 @@
 // 博客文章数据——中英双语（SEO 资产）
+export type PostBlock =
+  | string
+  | { type: 'h2'; text: string }
+  | { type: 'ul'; items: string[] }
+  | { type: 'faq'; items: { q: string; a: string }[] }
+  | { type: 'cta'; text: string; href: string };
+
 export type BlogPost = {
   slug: string;
   date: string;
   title: { zh: string; en: string };
   description: { zh: string; en: string };
-  content: { zh: string[]; en: string[] };
+  content: { zh: PostBlock[]; en: PostBlock[] };
 };
 
 export const POSTS: BlogPost[] = [
@@ -22,21 +29,83 @@ export const POSTS: BlogPost[] = [
     content: {
       zh: [
         'Codex Skin Studio 是一款面向 Codex 桌面端的换肤工具，它通过 Chrome DevTools Protocol（CDP）在本机运行时为 Codex 注入主题样式，全程不修改官方安装目录下的任何文件。',
+        { type: 'h2', text: '为什么用 CDP 注入而不是改文件？' },
         '传统换肤通常需要编辑 app.asar 或官方资源，每次 Codex 升级都会被覆盖，还可能触发签名校验失败。CDP 注入则是运行时操作，停止工具后界面立即恢复，安全边界更清晰。',
-        '它的工作原理很简单：Codex 桌面端基于 Electron，启动时会在本地开放一个调试端口。Codex Skin Studio 连接这个端口（仅绑定 127.0.0.1），通过 WebSocket 把主题 CSS 和背景图片注入到渲染进程，实现整体视觉变化。',
-        '对用户来说，使用流程只需三步：下载安装工具、选择一款主题（如「浪漫玫瑰」或「红白科幻」）点击应用，然后打开 Codex 即可看到效果。如果想换回官方界面，只需右键托盘图标选择「完全恢复 Codex」。',
-        'Codex Skin Studio 提供了 8 款精选免费主题，涵盖粉系、科幻、暗黑、清新等多种风格。免费版可以直接应用这些主题，Pro 版则允许无限自定义配色和背景图，适合想要打造专属视觉的用户。',
-        '安全性方面，主题包只包含 CSS 和图片资源，不允许 JavaScript；工具在注入前会走一遍安全校验，确保不会放入非法内容。这也是它与传统改文件方案最大的区别。',
-        '如果你刚接触 Codex 换肤，建议从主题库里的免费主题开始尝试，熟悉后再尝试 Pro 版的自定义功能。无论选哪种方案，都不需要担心官方更新后失效——因为根本没有改动官方文件。',
+        {
+          type: 'ul',
+          items: [
+            '不修改官方文件：升级后主题依然有效，无需重装',
+            '随时一键恢复：停止工具即回到官方界面',
+            '更安全：主题包只含 CSS 与图片，不允许 JavaScript',
+          ],
+        },
+        { type: 'h2', text: '工作原理：本地调试端口的妙用' },
+        'Codex 桌面端基于 Electron，启动时会在本地开放一个调试端口。Codex Skin Studio 连接这个端口（仅绑定 127.0.0.1），通过 WebSocket 把主题 CSS 和背景图片注入到渲染进程，实现整体视觉变化。',
+        { type: 'h2', text: '三步上手' },
+        {
+          type: 'ul',
+          items: [
+            '下载安装工具（Windows / macOS）',
+            '在主题库选一款主题（如「浪漫玫瑰」或「红白科幻」）点击应用',
+            '打开 Codex 即可看到效果；想恢复就右键托盘选择「完全恢复 Codex」',
+          ],
+        },
+        { type: 'h2', text: '主题与价格' },
+        '免费版内置 8 款精选主题，涵盖粉系、科幻、暗黑、清新等风格；Pro 版解锁无限自定义配色和背景图，适合打造专属视觉。',
+        { type: 'h2', text: '安全与合规' },
+        '主题包只包含 CSS 和图片资源，不允许 JavaScript；工具在注入前会走安全校验。这与传统改文件方案最大的区别在于：没有改动官方文件，也就不存在被官方更新破坏的问题。',
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Codex 升级后我的主题会失效吗？', a: '不会。Codex Skin Studio 不改动任何官方文件，升级后主题依然可以正常应用。' },
+            { q: '换肤会影响 Codex 的功能或性能吗？', a: '不会。注入的只有 CSS 和背景图片，不涉及逻辑代码，对模型能力、回答质量、任务执行均无影响。' },
+            { q: '如何完全恢复到官方界面？', a: '右键托盘图标，选择「完全恢复 Codex」，界面立即还原，无需卸载重装。' },
+          ],
+        },
+        { type: 'h2', text: '从今天开始给你的 Codex 换个皮肤' },
+        '无论你是追求效率的开发者，还是想让工作台更有个人风格的创作者，Codex Skin Studio 都能在几分钟内让你的 Codex 焕然一新。',
+        { type: 'cta', text: '查看主题库 →', href: '/zh/gallery' },
       ],
       en: [
         'Codex Skin Studio is a theming tool for the Codex desktop app. It uses Chrome DevTools Protocol (CDP) to inject theme styles locally at runtime, without changing any official installation files.',
+        { type: 'h2', text: 'Why CDP Injection Instead of Editing Files?' },
         'Traditional theming usually requires editing app.asar or official resources, which gets overwritten by every Codex update and can trigger signature checks. CDP injection is a runtime-only operation: stop the tool and the UI instantly reverts, with a clearer safety boundary.',
-        'The mechanism is simple. The Codex desktop app is Electron-based and opens a local debug port on launch. Codex Skin Studio connects to this port (bound to 127.0.0.1 only) and injects theme CSS and wallpaper images into the renderer process over WebSocket, changing the entire look.',
-        'For users, the flow is three steps: download and install the tool, pick a theme (like "Romantic Rose" or "Red Sci-Fi") and click apply, then open Codex to see the result. To revert, right-click the tray icon and choose "Fully Restore Codex".',
-        'Codex Skin Studio ships with 8 curated free themes covering pink, sci-fi, dark, and clean aesthetics. The free tier applies these themes directly; the Pro tier unlocks unlimited custom colors and wallpapers for users who want a signature visual.',
-        'On safety, theme packages contain only CSS and image assets—no JavaScript is allowed. The tool runs a safety validator before injection, ensuring no illegal content slips through. This is the biggest difference from file-based theming.',
-        'If you are new to Codex theming, start with the free themes in the theme gallery, then explore Pro customization once you are comfortable. Either way, you never have to worry about official updates breaking your skin, because no official files are ever modified.',
+        {
+          type: 'ul',
+          items: [
+            'No official files touched: themes survive Codex updates',
+            'One-click restore: stop the tool and the UI reverts instantly',
+            'Safer by design: theme packages contain only CSS and images, no JavaScript',
+          ],
+        },
+        { type: 'h2', text: 'How It Works: The Local Debug Port' },
+        'The Codex desktop app is Electron-based and opens a local debug port on launch. Codex Skin Studio connects to this port (bound to 127.0.0.1 only) and injects theme CSS and wallpaper images into the renderer process over WebSocket, changing the entire look.',
+        { type: 'h2', text: 'Get Started in Three Steps' },
+        {
+          type: 'ul',
+          items: [
+            'Download and install the tool (Windows / macOS)',
+            'Pick a theme from the gallery (like "Romantic Rose" or "Red Sci-Fi") and click apply',
+            'Open Codex to see the result; to revert, right-click the tray icon and choose "Fully Restore Codex"',
+          ],
+        },
+        { type: 'h2', text: 'Themes & Pricing' },
+        'The free tier ships with 8 curated themes covering pink, sci-fi, dark, and clean aesthetics. Pro unlocks unlimited custom colors and wallpapers for a signature visual.',
+        { type: 'h2', text: 'Safety & Compliance' },
+        'Theme packages contain only CSS and image assets — no JavaScript is allowed. The tool runs a safety validator before injection. Because no official files are ever modified, official updates can never break your skin.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Will my theme break after a Codex update?', a: 'No. Codex Skin Studio never touches official files, so themes keep working across updates.' },
+            { q: 'Does theming affect Codex functionality or performance?', a: 'No. Only CSS and wallpaper images are injected — no logic code — so model capability, answer quality, and task execution are unaffected.' },
+            { q: 'How do I fully restore the official UI?', a: 'Right-click the tray icon and choose "Fully Restore Codex". The UI reverts instantly — no uninstall or reinstall needed.' },
+          ],
+        },
+        { type: 'h2', text: 'Give Your Codex a Fresh Look Today' },
+        'Whether you are a productivity-focused developer or a creator who wants a personal touch, Codex Skin Studio can transform your Codex in minutes.',
+        { type: 'cta', text: 'Browse the Theme Gallery →', href: '/en/gallery' },
       ],
     },
   },
