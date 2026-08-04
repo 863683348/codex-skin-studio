@@ -37,3 +37,5 @@ next-env.d.ts
 # misc
 /scripts/
 .vercel
+
+# vercel auto-deploy test (2026-08-05)
