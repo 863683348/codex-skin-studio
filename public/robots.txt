@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://codex-skin-studio.shop
-
-# Sitemaps
-Sitemap: https://codex-skin-studio.shop/sitemap.xml
