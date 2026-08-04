@@ -197,4 +197,78 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'how-to-install-codex-skin-studio-macos',
+    date: '2026-08-05',
+    title: {
+      zh: 'macOS 安装 Codex Skin Studio 完整教程',
+      en: 'How to Install Codex Skin Studio on macOS',
+    },
+    description: {
+      zh: '在 macOS 上三步装好 Codex Skin Studio：下载 → 启动注入 → 选皮肤。含"无法打开"等常见问题解决。',
+      en: 'Three steps to install Codex Skin Studio on macOS: download, launch injection, pick a skin. Covers "cannot be opened" and other common issues.',
+    },
+    content: {
+      zh: [
+        '在 macOS 上安装 Codex Skin Studio，把 OpenAI Codex 桌面端换成你喜欢的皮肤——只需三步：下载安装包 → 启动注入 → 选皮肤。',
+        { type: 'h2', text: '安装前准备' },
+        {
+          type: 'ul',
+          items: [
+            'macOS（M 芯片或 Intel 均可）',
+            '已安装 OpenAI Codex 桌面端',
+            '磁盘空间约 200MB',
+          ],
+        },
+        { type: 'h2', text: '三步安装' },
+        { type: 'h2', text: '第 1 步：下载' },
+        '打开 codex-skin-studio.shop → 点「下载 macOS 版」→ 得到安装包（.dmg 或 .zip）。',
+        { type: 'h2', text: '第 2 步：安装' },
+        '双击打开 → 拖到 Applications 文件夹（或按提示运行安装脚本）。首次打开若提示"未识别的开发者"，到 系统设置 → 隐私与安全性 → 点「仍要打开」。',
+        { type: 'h2', text: '第 3 步：启动 + 选皮肤' },
+        '打开 Codex Skin Studio → 点「启动注入」→ 自动连接 Codex 桌面端 → 在皮肤库选一款（浪漫玫瑰 / 财神 / 红白科幻 / 清透定制…）→ 立即生效。',
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'ul',
+          items: [
+            '提示"无法打开"：到 系统设置 → 隐私与安全性 → 仍要打开。macOS 对未公证的应用会拦截，这是正常流程。',
+            '装完没效果：确认 Codex 桌面端已完全退出再启动注入；或重启 Codex。',
+            '会改 Codex 官方文件吗：不会——用 CDP 注入主题，不改官方文件，卸载即还原。',
+            'M 芯片有兼容问题吗：已适配 Apple Silicon；如有问题到官网反馈。',
+          ],
+        },
+        { type: 'cta', text: '免费下载 macOS 版', href: 'https://codex-skin-studio.shop' },
+      ],
+      en: [
+        'Installing Codex Skin Studio on macOS to theme your OpenAI Codex desktop app takes three steps: download, launch injection, pick a skin.',
+        { type: 'h2', text: 'Before you start' },
+        {
+          type: 'ul',
+          items: [
+            'macOS (Apple Silicon or Intel)',
+            'OpenAI Codex desktop app installed',
+            '~200MB free disk space',
+          ],
+        },
+        { type: 'h2', text: 'Three steps' },
+        { type: 'h2', text: 'Step 1: Download' },
+        'Open codex-skin-studio.shop → click "Download for macOS" → get the installer (.dmg or .zip).',
+        { type: 'h2', text: 'Step 2: Install' },
+        'Double-click → drag to Applications (or run the setup script). If macOS warns "unidentified developer", go to System Settings → Privacy & Security → "Open Anyway".',
+        { type: 'h2', text: 'Step 3: Launch + pick a skin' },
+        'Open Codex Skin Studio → click "Start injection" → it connects to the Codex desktop app → pick a skin (Romantic Rose / Fortune God / Red Sci-Fi / Clear Custom...) → applies instantly.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'ul',
+          items: [
+            '"Cannot be opened"? Go to System Settings → Privacy & Security → Open Anyway. macOS blocks unnotarized apps; this is normal.',
+            'No effect after install? Fully quit Codex before starting injection; or restart Codex.',
+            'Does it modify official Codex files? No — themes are injected via CDP; nothing official is changed. Uninstall restores the original.',
+            'Apple Silicon issues? Optimized for Apple Silicon; report issues on the site.',
+          ],
+        },
+        { type: 'cta', text: 'Download for macOS free', href: 'https://codex-skin-studio.shop' },
+      ],
+    },
+  },
 ];
