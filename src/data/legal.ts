@@ -45,9 +45,18 @@ export const PRIVACY: Record<'zh' | 'en', LegalDoc> = {
         ],
       },
       {
+        title: '第三方广告（Google AdSense）',
+        body: [
+          '本网站使用 Google AdSense 展示第三方广告。作为广告供应商，Google 会使用 Cookie（包括 DART Cookie）根据你在本站及互联网上其他网站的访问记录，向你投放与其兴趣相关的广告。',
+          'Google 的 DART Cookie 使其能够基于你的浏览行为投放广告。你可以通过访问 Google 广告与内容网络隐私政策（https://policies.google.com/technologies/ads）选择退出 DART Cookie。',
+          '你可以随时通过 Google 广告设置（https://www.google.com/settings/ads）或 Your Online Choices（http://www.aboutads.info/choices）管理并退出个性化广告。',
+          '关于 Google 如何收集与使用数据，请参阅 Google 的隐私与条款（https://policies.google.com/technologies/ads）。',
+        ],
+      },
+      {
         title: 'Cookie 与分析',
         body: [
-          '本网站不设置追踪类 Cookie，不使用第三方广告追踪。如未来引入分析服务，会在此更新说明。',
+          '除上方「第三方广告」所述的广告 Cookie 外，本网站不设置其他追踪类 Cookie，也不使用额外的第三方分析追踪。如未来引入分析服务，会在此更新说明。',
         ],
       },
       {
@@ -105,9 +114,18 @@ export const PRIVACY: Record<'zh' | 'en', LegalDoc> = {
         ],
       },
       {
+        title: 'Advertising (Google AdSense)',
+        body: [
+          'This website displays third-party advertisements served by Google AdSense. As a third-party vendor, Google uses cookies (including the DART cookie) to serve ads to you based on your visits to this and other websites on the Internet.',
+          'Google’s use of the DART cookie enables it to serve ads based on your browsing behavior. You may opt out of the DART cookie by visiting Google’s Advertising Privacy & Terms (https://policies.google.com/technologies/ads).',
+          'You can manage or opt out of personalized advertising at any time via Google Ads Settings (https://www.google.com/settings/ads) or Your Online Choices (http://www.aboutads.info/choices).',
+          'For more information about how Google collects and uses data, see Google’s Privacy & Terms (https://policies.google.com/technologies/ads).',
+        ],
+      },
+      {
         title: 'Cookies & analytics',
         body: [
-          'This site sets no tracking cookies and uses no third-party ad tracking. If analytics are introduced later, this page will be updated.',
+          'Except for the advertising cookies described in the "Advertising" section above, this site sets no other tracking cookies and uses no additional third-party analytics tracking. If analytics are introduced later, this page will be updated.',
         ],
       },
       {
