@@ -33,6 +33,16 @@ export const en: Dict = {
     heroDescription: 'A desktop skinning tool powered by local CDP loopback injection. No app.asar modification, no code signature alteration. Supports macOS & Windows with 8+ preset themes, custom backgrounds, and color schemes. Sidebar, suggestion cards, and input fields remain fully interactive native controls.',
     ctaBrowse: 'Browse Themes',
     ctaQuickstart: 'Quick Start',
+    introTitle: 'What is Codex Skin Studio?',
+    introLead: 'Codex Skin Studio is a safe, open-source skinning tool for the Codex desktop app. Using local CDP loopback injection, it changes the interface at runtime without ever touching any official on-disk files. Whether you want a more comfortable color scheme or a workspace that feels uniquely yours, it gets there without breaking signatures or interfering with official updates.',
+    introBody1: 'Unlike traditional "crack or repackage" approaches, this tool works by runtime injection: once launched, it connects to Codex\'s debug port over 127.0.0.1 loopback and injects CSS overrides. When you close the tool, every style reverts instantly and your official files stay untouched. That means a Codex update will never "brick" your setup because of a skin — and you can return to the official look with a single click at any time.',
+    introBody2: 'It ships with 8+ curated themes spanning pink, sci-fi, dark, and fresh styles, each with light / dark mode switching. The free plan applies every preset out of the box; Pro unlocks custom backgrounds and color tuning so you can set your favorite image as the theme wallpaper and save it as your own preset.',
+    introPoints: [
+      'Runtime CDP injection, zero official file modification',
+      '8+ preset themes with light / dark modes',
+      'Import custom backgrounds and color schemes',
+      'One-click restore to the official look, zero update risk',
+    ],
     featuresTitle: 'Core Features',
     features: {
       cdp: {
