@@ -271,4 +271,80 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'how-to-install-codex-skin-studio-windows',
+    date: '2026-08-06',
+    title: {
+      zh: 'Windows 安装 Codex Skin Studio 完整教程',
+      en: 'How to Install Codex Skin Studio on Windows',
+    },
+    description: {
+      zh: '在 Windows 上三步装好 Codex Skin Studio：下载 → 启动注入 → 选皮肤。含 SmartScreen 拦截、杀毒软件误报等 Windows 专属问题解决。',
+      en: 'Three steps to install Codex Skin Studio on Windows: download, launch injection, pick a skin. Covers SmartScreen warnings and antivirus false positives.',
+    },
+    content: {
+      zh: [
+        '在 Windows 上安装 Codex Skin Studio，给 OpenAI Codex 桌面端换皮肤——三步完成：下载安装包 → 启动注入 → 选皮肤。本教程覆盖 Windows 专属的 SmartScreen、杀软误报等问题。',
+        { type: 'h2', text: '安装前准备' },
+        {
+          type: 'ul',
+          items: [
+            'Windows 10 / 11（64 位）',
+            '已安装 OpenAI Codex 桌面端',
+            '磁盘空间约 200MB',
+          ],
+        },
+        { type: 'h2', text: '三步安装' },
+        { type: 'h2', text: '第 1 步：下载' },
+        '打开 codex-skin-studio.shop → 点「下载 Windows 版」→ 得到安装包（.exe 或 .zip）。',
+        { type: 'h2', text: '第 2 步：安装' },
+        '双击运行安装程序 → 按提示完成安装（默认安装在 Program Files）。若出现蓝色 SmartScreen 提示"Windows 已保护你的电脑"→ 点「更多信息」→「仍要运行」：这是因为安装包尚未获得微软代码签名证书，属正常流程。',
+        { type: 'h2', text: '第 3 步：启动 + 选皮肤' },
+        '打开 Codex Skin Studio → 点「启动注入」→ 自动连接 Codex 桌面端 → 在皮肤库选一款（浪漫玫瑰 / 财神 / 红白科幻 / 清透定制…）→ 立即生效。',
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'ul',
+          items: [
+            'SmartScreen 拦截：点「更多信息 → 仍要运行」。未签名安装包被拦截是 Windows 默认策略。',
+            '杀毒软件报毒/误报：主题注入只读本地进程，不联网不改官方文件；可在杀软中加白名单（教程见官网 FAQ）。',
+            '装完没效果：确认 Codex 桌面端已完全退出再启动注入；或重启 Codex。',
+            '会改 Codex 官方文件吗：不会——用 CDP 注入主题，不改官方文件，卸载即还原。',
+            'Windows 7 支持吗：不支持，需要 Windows 10/11 64 位。',
+          ],
+        },
+        { type: 'cta', text: '免费下载 Windows 版', href: 'https://codex-skin-studio.shop' },
+      ],
+      en: [
+        'Installing Codex Skin Studio on Windows to theme your OpenAI Codex desktop app takes three steps: download, launch injection, pick a skin. This guide also covers Windows-specific SmartScreen and antivirus issues.',
+        { type: 'h2', text: 'Before you start' },
+        {
+          type: 'ul',
+          items: [
+            'Windows 10 / 11 (64-bit)',
+            'OpenAI Codex desktop app installed',
+            '~200MB free disk space',
+          ],
+        },
+        { type: 'h2', text: 'Three steps' },
+        { type: 'h2', text: 'Step 1: Download' },
+        'Open codex-skin-studio.shop → click "Download for Windows" → get the installer (.exe or .zip).',
+        { type: 'h2', text: 'Step 2: Install' },
+        'Run the installer and follow the prompts (defaults to Program Files). If SmartScreen shows "Windows protected your PC" → click "More info" → "Run anyway". The installer is not yet Microsoft code-signed, so this is a normal step.',
+        { type: 'h2', text: 'Step 3: Launch + pick a skin' },
+        'Open Codex Skin Studio → click "Start injection" → it connects to the Codex desktop app → pick a skin (Romantic Rose / Fortune God / Red Sci-Fi / Clear Custom...) → applies instantly.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'ul',
+          items: [
+            'SmartScreen warning? Click "More info" → "Run anyway". Unsigned installers are blocked by default on Windows.',
+            'Antivirus false positive? Injection only reads the local process — no network, no official file changes. Add an exception if needed (see FAQ on the site).',
+            'No effect after install? Fully quit Codex before starting injection; or restart Codex.',
+            'Does it modify official Codex files? No — themes are injected via CDP; nothing official is changed. Uninstall restores the original.',
+            'Windows 7 support? No — requires Windows 10/11 64-bit.',
+          ],
+        },
+        { type: 'cta', text: 'Download for Windows free', href: 'https://codex-skin-studio.shop' },
+      ],
+    },
+  },
 ];
