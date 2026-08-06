@@ -4,6 +4,15 @@ import type { Locale } from '@/lib/i18n/config';
 
 // content 块类型：段落 / H2 标题 / 列表 / FAQ（details）/ CTA 链接
 export function PostView({ locale, post }: { locale: Locale; post: BlogPost }) {
+  // 相关文章：从当前文章之后开始环形取 3 篇（天然排除自身），让每篇详情页的内链各不相同
+  const currentIndex = Math.max(
+    0,
+    POSTS.findIndex((p) => p.slug === post.slug),
+  );
+  const relatedPosts = POSTS.slice(currentIndex + 1)
+    .concat(POSTS.slice(0, currentIndex))
+    .slice(0, 3);
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 md:px-8">
       <Link
@@ -73,19 +82,30 @@ export function PostView({ locale, post }: { locale: Locale; post: BlogPost }) {
           );
         })}
       </div>
-      <div className="mt-10 flex justify-center gap-4 border-t border-border pt-6">
-        {POSTS.filter((p) => p.slug !== post.slug)
-          .slice(0, 2)
-          .map((p) => (
-            <Link
-              key={p.slug}
-              href={`/${locale}/blog/${p.slug}`}
-              className="max-w-xs text-small text-accent hover:text-accent-hover hover:underline"
-            >
-              {p.title[locale]}
-            </Link>
-          ))}
-      </div>
+      {relatedPosts.length > 0 && (
+        <section className="mt-10 border-t border-border pt-8">
+          <h2 className="text-h3 text-text-primary">
+            {locale === 'zh' ? '相关文章' : 'Related Posts'}
+          </h2>
+          <ul className="mt-4 space-y-4">
+            {relatedPosts.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={`/${locale}/blog/${p.slug}`}
+                  className="block rounded-xl border border-border bg-bg-secondary p-4 transition-colors hover:border-border-hover"
+                >
+                  <span className="block text-body font-medium text-text-primary">
+                    {p.title[locale]}
+                  </span>
+                  <span className="mt-1 block text-small text-text-secondary">
+                    {p.description[locale]}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </article>
   );
 }
