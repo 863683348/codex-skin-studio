@@ -457,4 +457,98 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'romantic-rose-theme-guide',
+    date: '2026-08-07',
+    title: {
+      zh: '浪漫玫瑰主题详解：粉色美学指南',
+      en: 'Romantic Rose Theme Explained: A Pink Aesthetic Guide',
+    },
+    description: {
+      zh: '浪漫玫瑰是 Codex Skin Studio 最受欢迎的粉系主题：玫瑰粉、奶油白与柔和灰的配色逻辑，为什么粉色主题对暗色模式友好，以及它适合谁。',
+      en: 'The Romantic Rose theme is Codex Skin Studio\'s most-loved pink preset. This guide covers the rose-pink palette logic, why pink works in dark mode, and who it fits best.',
+    },
+    content: {
+      zh: [
+        '浪漫玫瑰是 Codex Skin Studio 主题库里人气最高的粉系主题，也是很多人第一次给 Codex 换肤时选的那一款。它不只是一层粉色皮肤，配色里其实有讲究：玫瑰粉负责氛围，奶油白负责留白，柔灰负责代码可读性。这篇把它的设计逻辑讲清楚，顺便聊聊粉色主题在暗色模式里为什么意外地好用。',
+        { type: 'h2', text: '浪漫玫瑰的配色逻辑' },
+        {
+          type: 'ul',
+          items: [
+            '背景：深酒红偏黑的底色，不是亮粉——长时间盯代码不刺眼',
+            '主色：玫瑰粉与豆沙粉，用于按钮、高亮和活动状态',
+            '文字：奶油白与浅灰，保证对比度足够读代码',
+            '代码语义色：柔和粉紫与暖黄，字符串和关键字一眼可分',
+          ],
+        },
+        '一句话总结：氛围交给粉色，可读性交给灰白。这也是它和"纯粉色壁纸"类主题最大的区别。',
+        { type: 'h2', text: '为什么粉色主题在暗色模式里好用' },
+        '很多人担心粉色伤眼，实际恰恰相反。浪漫玫瑰的底不是纯黑而是深酒红，比纯黑底的蓝光更少；粉色作为强调色出现在按钮和光标上，不会整屏铺满。对晚上写代码的人来说，这种"暖暗色"比冷黑底更容易入睡。',
+        { type: 'h2', text: '它适合谁' },
+        {
+          type: 'ul',
+          items: [
+            '想要工作区有个人风格、又不想影响可读性的开发者',
+            '喜欢粉色/温柔系审美的设计师与创作者',
+            '拍桌面分享、录屏时想让画面更有辨识度的人',
+            '重度暗色模式用户，想换个比纯黑更柔和的底色',
+          ],
+        },
+        { type: 'h2', text: 'Codex 主题推荐：按心情选' },
+        '如果你在几款主题之间犹豫，按场景选最省事：写代码求专注选浪漫玫瑰（暖暗色、低干扰）；喜欢科幻感选红白科幻；想要喜庆氛围选财神；追求极简通透选清透定制。所有主题都在主题库里一键套用，不满意随时换。',
+        { type: 'h2', text: '如何换上浪漫玫瑰' },
+        '打开 Codex Skin Studio → 启动注入 → 主题库 → 选「浪漫玫瑰」→ 立即生效。想恢复官方界面，右键托盘选「完全恢复 Codex」即可，不残留任何改动。',
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            { q: '浪漫玫瑰会改 Codex 官方文件吗？', a: '不会。它和其他主题一样通过 CDP 在运行时注入，停止工具即还原，官方安装目录零改动。' },
+            { q: '粉色主题看代码久了会累吗？', a: '浪漫玫瑰的底是深酒红而非亮粉，强调色只用在按钮和光标上，长时间阅读的负担比纯黑底更小。' },
+            { q: '主题库里的浪漫玫瑰免费吗？', a: '免费版包含浪漫玫瑰在内的 8 款精选主题；Pro 解锁自定义配色与背景图。' },
+          ],
+        },
+        { type: 'cta', text: '去主题库看看', href: 'https://codex-skin-studio.shop/zh/gallery' },
+      ],
+      en: [
+        'The Romantic Rose theme is the most-loved pink preset in the Codex Skin Studio library, and for many people it is the first skin they ever put on Codex. It is more than a pink coat of paint, though. The palette is doing quiet work: rose pink carries the mood, cream white handles the whitespace, and soft gray keeps the code readable. This guide explains the design logic, and why pink themes turn out to be surprisingly good in dark mode.',
+        { type: 'h2', text: 'The Romantic Rose palette, decoded' },
+        {
+          type: 'ul',
+          items: [
+            'Background: a deep wine-dark base, not bright pink — easy on the eyes for long sessions',
+            'Primary: rose and dusty pink for buttons, highlights, and active states',
+            'Text: cream white and light gray to keep contrast high enough for code',
+            'Syntax colors: soft pink-purple and warm yellow so strings and keywords read instantly',
+          ],
+        },
+        'One-line summary: pink sets the mood, gray keeps it readable. That is the difference between this theme and a "pink wallpaper" preset.',
+        { type: 'h2', text: 'Why pink works in dark mode' },
+        'People worry pink strains the eyes. In practice it is the opposite. The Romantic Rose base is deep wine, not pure black, so it emits less blue light; pink appears only as an accent on buttons and the cursor instead of covering the whole screen. For late-night coding, this kind of warm dark palette is easier to wind down from than a cold black one.',
+        { type: 'h2', text: 'Who it fits' },
+        {
+          type: 'ul',
+          items: [
+            'Developers who want a personal workspace without hurting readability',
+            'Designers and creators who like soft, feminine aesthetics',
+            'Anyone recording screenshots or clips who wants a recognizable look',
+            'Heavy dark-mode users who want something softer than pure black',
+          ],
+        },
+        { type: 'h2', text: 'Codex theme recommendation by mood' },
+        'If you are stuck between themes, pick by scenario: Romantic Rose for focused, low-distraction work; Red Sci-Fi for a futuristic feel; Wealth God for festive vibes; Clear Custom for a minimal look. Every theme applies in one click from the gallery, and you can switch any time.',
+        { type: 'h2', text: 'How to apply it' },
+        'Open Codex Skin Studio → Start injection → theme gallery → pick Romantic Rose → it applies instantly. To revert, right-click the tray icon and choose "Fully restore Codex". No residue, no changes to official files.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Does Romantic Rose modify official Codex files?', a: 'No. Like every theme here, it injects at runtime via CDP and reverts when you stop the tool. Nothing in the official install is touched.' },
+            { q: 'Is a pink theme tiring for long coding sessions?', a: 'The base is deep wine, not bright pink, and the accent color is limited to buttons and the cursor, so it is easier on the eyes than pure black.' },
+            { q: 'Is Romantic Rose free?', a: 'Yes. The free build includes 8 curated themes, Romantic Rose among them. Pro unlocks custom colors and background images.' },
+          ],
+        },
+        { type: 'cta', text: 'Browse the theme gallery', href: 'https://codex-skin-studio.shop/en/gallery' },
+      ],
+    },
+  },
 ];
