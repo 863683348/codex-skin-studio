@@ -51,11 +51,13 @@ export function GuideView({ guide, locale }: { guide: Guide; locale: Locale }) {
           '@type': 'Organization',
           name: 'Codex Skin Studio',
           url: SITE,
+          logo: { '@type': 'ImageObject', url: SITE + '/favicon.svg' },
         },
         publisher: {
           '@type': 'Organization',
           name: 'Codex Skin Studio',
           url: SITE,
+          logo: { '@type': 'ImageObject', url: SITE + '/favicon.svg' },
         },
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       },
