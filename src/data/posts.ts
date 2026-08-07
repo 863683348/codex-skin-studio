@@ -551,4 +551,98 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'fortune-god-theme-guide',
+    date: '2026-08-08',
+    title: {
+      zh: '财神打工版主题：红金配色的中式美学',
+      en: 'Fortune God Theme: Red and Gold Chinese New Year Aesthetic',
+    },
+    description: {
+      zh: '财神打工版是 Codex Skin Studio 主题库里最有辨识度的红金主题：传统中式配色如何融入暗色编辑器，为什么红色配金色看代码不刺眼，以及它适合谁。',
+      en: 'The Fortune God theme brings a red-and-gold Chinese New Year aesthetic to Codex. This guide explains how the traditional palette works in a dark editor, why it stays readable, and who it fits.',
+    },
+    content: {
+      zh: [
+        '财神打工版是 Codex Skin Studio 主题库里最有"年味"的一款：大面积的深红打底，金色做强调，按钮和活动状态带一点传统描金的味道。很多人第一眼觉得它太喜庆，装上之后才发现红金配色在暗色编辑器里意外的协调。这篇把财神主题的配色逻辑拆开讲，顺便聊聊它到底适合谁。',
+        { type: 'h2', text: '红金配色的设计逻辑' },
+        {
+          type: 'ul',
+          items: [
+            '背景：深红近黑的底，不是亮红——红色压暗之后反而耐看',
+            '强调色：金色与鎏金黄，用于按钮、高亮和光标',
+            '文字：米白与浅暖灰，在红底上保持足够对比度',
+            '代码语义色：保留了暖色系的区分度，关键字和字符串依然一眼可分',
+          ],
+        },
+        '一句话总结：红色负责氛围，金色负责聚焦，灰白负责可读。它和"把壁纸换成红底"的简单换肤最大的区别就在这里——整套配色是重新调过的。',
+        { type: 'h2', text: '财神主题在暗色模式里的表现' },
+        '有人担心红金太抢眼，伤眼。实际用下来正好相反：深红底的亮度比纯黑略高一点，但比亮红低得多；金色只出现在按钮、光标和活动标签上，不会整屏晃。长时间写代码时，这种暖色暗底比冷黑底更舒服，尤其适合晚上加班的人——顺带有点"开工大吉"的心理暗示。',
+        { type: 'h2', text: '它适合谁' },
+        {
+          type: 'ul',
+          items: [
+            '想要工作区有辨识度、又不想牺牲可读性的开发者',
+            '喜欢中式美学、春节氛围或国风设计的创作者',
+            '录屏、直播、发桌面截图时想让画面一眼难忘的人',
+            '暗色模式重度用户，想换换口味又怕太花哨的人',
+          ],
+        },
+        { type: 'h2', text: 'Codex 暗色主题推荐：财神 vs 其他' },
+        '如果你在几款暗色主题里纠结，按场景选：想要喜庆、有记忆点选财神；追求柔和专注选浪漫玫瑰；喜欢科幻感选红白科幻；想要极简通透选清透定制。所有主题都在主题库里一键套用，不满意随时换。',
+        { type: 'h2', text: '如何换上财神主题' },
+        '打开 Codex Skin Studio → 启动注入 → 主题库 → 选「财神打工版」→ 立即生效。想恢复官方界面，右键托盘选「完全恢复 Codex」即可，不残留任何改动。',
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            { q: '财神主题会改 Codex 官方文件吗？', a: '不会。它和其他主题一样通过 CDP 在运行时注入，停止工具即还原，官方安装目录零改动。' },
+            { q: '红金配色看代码久了会累吗？', a: '财神的底是压暗的深红而非亮红，金色只用于强调元素，长时间阅读的负担与普通暗色主题相当。' },
+            { q: '财神主题是免费的吗？', a: '免费版包含财神在内的 8 款精选主题；Pro 解锁自定义配色与背景图。' },
+          ],
+        },
+        { type: 'cta', text: '去主题库看看财神', href: 'https://codex-skin-studio.shop/zh/gallery/preset-fortune-god' },
+      ],
+      en: [
+        'The Fortune God theme is the most recognizable red-and-gold preset in the Codex Skin Studio library, and it is the one people screenshot first. At a glance it looks festive, almost loud. Then you actually code in it and realize the red is darkened down, the gold is used sparingly, and the whole thing settles into something calm. This guide explains the palette logic, why it works in a dark editor, and who it fits.',
+        { type: 'h2', text: 'The red-and-gold palette, decoded' },
+        {
+          type: 'ul',
+          items: [
+            'Background: deep red, almost black — not bright red. The darkness is what makes it wearable',
+            'Accent: gold and gilded yellow for buttons, highlights, and the cursor',
+            'Text: cream white and warm light gray, tuned for contrast on red',
+            'Syntax colors: warm-toned distinctions preserved, so keywords and strings still read instantly',
+          ],
+        },
+        'One-line summary: red sets the mood, gold directs the eye, gray keeps it readable. That is the difference between this theme and a simple red wallpaper swap.',
+        { type: 'h2', text: 'Why the Fortune God theme works in dark mode' },
+        'The concern is always the same: will red and gold be too much? In practice the opposite happens. The base is a darkened red, brighter than pure black but far calmer than bright red; gold appears only on buttons, the cursor, and active labels. For long sessions, this warm dark palette is gentler than a cold black one, and there is something quietly satisfying about a lucky-coin cursor at 2am.',
+        { type: 'h2', text: 'Who it fits' },
+        {
+          type: 'ul',
+          items: [
+            'Developers who want a distinctive workspace without hurting readability',
+            'Creators who like Chinese aesthetics, festive vibes, or guofeng design',
+            'Anyone recording screens or streaming who wants a memorable look',
+            'Dark-mode regulars who want a change that is not just another black theme',
+          ],
+        },
+        { type: 'h2', text: 'Dark codex theme picks: Fortune God vs the rest' },
+        'If you are stuck between dark themes, pick by scenario: Fortune God for festive, memorable vibes; Romantic Rose for soft, focused work; Red Sci-Fi for a futuristic feel; Clear Custom for minimal clarity. Every theme applies in one click from the gallery, and you can switch any time.',
+        { type: 'h2', text: 'How to apply it' },
+        'Open Codex Skin Studio → Start injection → theme gallery → pick Fortune God → it applies instantly. To revert, right-click the tray icon and choose "Fully restore Codex". No residue, no changes to official files.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Does Fortune God modify official Codex files?', a: 'No. Like every theme here, it injects at runtime via CDP and reverts when you stop the tool. Nothing in the official install is touched.' },
+            { q: 'Is red and gold tiring for long coding sessions?', a: 'The base is darkened red, not bright red, and gold is limited to accent elements, so the load is comparable to a regular dark theme.' },
+            { q: 'Is Fortune God free?', a: 'Yes. The free build includes 8 curated themes, Fortune God among them. Pro unlocks custom colors and background images.' },
+          ],
+        },
+        { type: 'cta', text: 'See Fortune God in the gallery', href: 'https://codex-skin-studio.shop/en/gallery/preset-fortune-god' },
+      ],
+    },
+  },
 ];
