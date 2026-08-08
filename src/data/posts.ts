@@ -645,4 +645,98 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'red-sci-fi-cyberpunk-theme-guide',
+    date: '2026-08-09',
+    title: {
+      zh: '红白科幻主题：赛博朋克风格完全指南',
+      en: 'Red Sci-Fi Theme: A Complete Cyberpunk Style Guide',
+    },
+    description: {
+      zh: '红白科幻主题怎么用最出效果？配色逻辑、适合人群、与其他暗色主题的对比，以及一键应用与还原的方法。',
+      en: 'How to get the most out of the Red Sci-Fi theme: the color logic, who it fits, how it compares with other dark themes, and how to apply and revert it in one click.',
+    },
+    content: {
+      zh: [
+        '红白科幻是 Codex Skin Studio 主题库里最有「未来感」的一款：暗红底、亮白高光、锐利的几何线条，一眼就能认出是赛博朋克风格。这篇把它拆开讲清楚，包括配色逻辑、适合谁、怎么和其他暗色主题做选择，以及应用与还原的完整步骤。',
+        { type: 'h2', text: '红白科幻主题的配色逻辑' },
+        '它的核心不是「红 + 白」两个颜色，而是「暗红底 + 亮白焦点 + 高对比边框」三件套。暗红底在深色模式下比纯黑更有层次，又不刺眼；亮白只出现在代码高亮、当前行、按钮和焦点框这些关键位置；边框和高亮线用高对比度把界面边界切得干净利落。这种设计模仿了科幻 HUD（抬头显示）的视觉语言，所以第一眼就有「飞船仪表盘」的感觉。',
+        {
+          type: 'ul',
+          items: [
+            '暗红底：比纯黑更有温度，长时间盯屏不疲劳',
+            '亮白高光：集中在代码与焦点元素，阅读效率不降',
+            '几何边框：高对比分隔，窗口层级一目了然',
+            '低饱和辅助色：变量名、字符串、注释仍有区分度',
+          ],
+        },
+        { type: 'h2', text: '适合谁用' },
+        {
+          type: 'ul',
+          items: [
+            '喜欢赛博朋克 / 科幻美学的开发者，想要桌面也有氛围感',
+            '录屏、直播的创作者，需要一眼辨识的独特界面',
+            '深色模式老用户，想要一个不是「又一个黑色主题」的选项',
+            '对红色不敏感、想要高能量工作环境的人',
+          ],
+        },
+        { type: 'h2', text: 'Codex 主题推荐怎么选' },
+        '如果你在几款暗色主题之间纠结，按场景选：红白科幻适合想要未来感、科技氛围的人；浪漫玫瑰偏柔和专注；财神主题走节日喜庆路线；极简清晰适合只想要干净界面的人。每一款都能在主题库一键应用、随时切换，不用卸载重装。',
+        { type: 'h2', text: '为什么它在深色模式下特别稳' },
+        '有人会担心红色伤眼，实际体验是反的。暗红底比亮红温和得多，白色高光保证了文本对比度，长时间编码和看文档都不会累。赛博朋克风格常被误以为「花哨」，但这套主题把装饰控制在边框和焦点上，代码本身始终是最清晰的区域。',
+        { type: 'h2', text: '怎么应用与还原' },
+        '打开 Codex Skin Studio → 开始注入 → 主题库 → 选红白科幻 → 立即生效。想恢复就右键托盘图标选「完全恢复 Codex」，不留任何残留，不修改官方文件。',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: '红白科幻主题会修改 Codex 官方文件吗？', a: '不会。它和其他主题一样通过 CDP 运行时注入，停止工具即恢复，官方安装目录不被触碰。' },
+            { q: '红色背景长时间编码会累吗？', a: '底是暗红不是亮红，白色高光保证对比度，疲劳程度和普通深色主题相当。' },
+            { q: '红白科幻主题免费吗？', a: '免费版包含 8 款精选主题，红白科幻在内。Pro 解锁自定义配色与背景图。' },
+          ],
+        },
+        { type: 'cta', text: '在主题库查看红白科幻', href: 'https://codex-skin-studio.shop/zh/gallery/preset-red-sci-fi' },
+      ],
+      en: [
+        'Red Sci-Fi is the most futuristic theme in the Codex Skin Studio gallery: dark red base, bright white highlights, sharp geometric borders, instantly recognizable as cyberpunk. This guide breaks it down, covering the color logic, who it fits, how to choose between dark themes, and how to apply and revert it.',
+        { type: 'h2', text: 'The color logic behind Red Sci-Fi' },
+        'It is not really "red plus white". It is three layers: a dark red base, bright white focal points, and high-contrast borders. The dark red base gives more depth than pure black without being harsh; white appears only on code highlights, the current line, buttons and focus rings; borders slice the interface into clean regions. It borrows the visual language of sci-fi HUDs, so it reads as a spaceship instrument panel at first glance.',
+        {
+          type: 'ul',
+          items: [
+            'Dark red base: warmer than pure black, easier on the eyes over long sessions',
+            'Bright white highlights: concentrated on code and focus elements, readability stays high',
+            'Geometric borders: high-contrast separation, window hierarchy at a glance',
+            'Low-saturation accents: variables, strings and comments stay distinguishable',
+          ],
+        },
+        { type: 'h2', text: 'Who it fits' },
+        {
+          type: 'ul',
+          items: [
+            'Developers who like cyberpunk or sci-fi aesthetics and want a workspace with atmosphere',
+            'Creators recording screens or streaming who want a memorable, distinctive interface',
+            'Dark-mode regulars looking for something that is not just another black theme',
+            'People who enjoy an energetic, high-contrast environment and are fine with red',
+          ],
+        },
+        { type: 'h2', text: 'How to pick between dark codex themes' },
+        'Choose by scenario: Red Sci-Fi for futuristic, tech vibes; Romantic Rose for soft, focused work; Fortune God for festive energy; Clear Custom for minimal clarity. Every theme applies in one click from the gallery, and you can switch any time.',
+        { type: 'h2', text: 'Why it holds up in dark mode' },
+        'The worry is always "will red hurt my eyes". In practice the opposite happens. The base is darkened red, far calmer than bright red, and the white highlights keep text contrast high, so long coding and reading sessions stay comfortable. Cyberpunk sounds flashy, but the decoration is limited to borders and focal points; the code itself is always the clearest part of the screen.',
+        { type: 'h2', text: 'How to apply it' },
+        'Open Codex Skin Studio → Start injection → theme gallery → pick Red Sci-Fi → it applies instantly. To revert, right-click the tray icon and choose "Fully restore Codex". No residue, no changes to official files.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Does Red Sci-Fi modify official Codex files?', a: 'No. Like every theme here, it injects at runtime via CDP and reverts when you stop the tool. Nothing in the official install is touched.' },
+            { q: 'Is a red background tiring for long coding sessions?', a: 'The base is darkened red, not bright red, and white highlights keep contrast high, so the load is comparable to a regular dark theme.' },
+            { q: 'Is Red Sci-Fi free?', a: 'Yes. The free build includes 8 curated themes, Red Sci-Fi among them. Pro unlocks custom colors and background images.' },
+          ],
+        },
+        { type: 'cta', text: 'See Red Sci-Fi in the gallery', href: 'https://codex-skin-studio.shop/en/gallery/preset-red-sci-fi' },
+      ],
+    },
+  },
 ];
