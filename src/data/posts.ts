@@ -739,4 +739,100 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'clear-custom-minimalist-theme-guide',
+    date: '2026-08-10',
+    title: {
+      zh: '清透定制主题：极简美学设计指南',
+      en: 'Clear Custom Theme: A Minimalist Design Guide',
+    },
+    description: {
+      zh: '清透定制是主题库里最安静的一款：柔和浅色底、克制的强调色、几乎没有装饰。设计逻辑、适合谁，以及和深色主题怎么选。',
+      en: 'Clear Custom is the quietest theme in the gallery: soft light base, restrained accents, almost no decoration. The design logic, who it fits, and how to choose between it and dark themes.',
+    },
+    content: {
+      zh: [
+        '如果你在找一款 clear custom codex theme，大概率是看腻了高饱和配色，想要一个不抢注意力、长时间编码不累的界面。清透定制就是 Codex Skin Studio 主题库里那款"最安静"的主题：浅色底、克制的强调色、几乎没有装饰。这篇讲它的设计逻辑、适合谁，以及怎么和深色主题做选择。',
+        { type: 'h2', text: '清透定制主题的设计逻辑' },
+        '它和"干净"的关系不是删掉颜色，而是把颜色用在刀刃上。核心三件套：柔和浅色底、低饱和强调色、极简分隔线。',
+        {
+          type: 'ul',
+          items: [
+            '柔和浅色底：不是纯白，带一点暖调，长时间看屏幕不刺眼',
+            '低饱和强调色：只有变量、字符串、关键字这些语义位置有颜色，其余保持中性',
+            '极简分隔线：用细线而不是色块区分区域，界面更透气',
+            '字体权重对比：标题、正文、代码用字重和字距区分，不靠颜色堆砌',
+          ],
+        },
+        '这种设计理念直接来自极简主义排版：信息层级靠留白和字重，而不是靠五彩斑斓。minimalist theme 爱好者第一眼看过去会觉得"什么都没有"，但用一小时后会发现，想找的东西都在它该在的位置。',
+        { type: 'h2', text: '适合谁用' },
+        {
+          type: 'ul',
+          items: [
+            '浅色模式老用户，想要一款不刺眼的亮色主题',
+            '长时间写代码、读文档的人，讨厌高对比界面带来的视觉疲劳',
+            '对屏幕录制、截图有要求的人，低饱和主题录出来的视频更耐看',
+            '想要"工作感"而不是"游戏感"桌面的人',
+          ],
+        },
+        '如果你在深色和浅色之间摇摆，一个实用建议：白天用清透定制，晚上切到任意暗色主题。Codex Skin Studio 切换主题不需要重启，随时换。',
+        { type: 'h2', text: '清新主题和其他亮色主题的区别' },
+        '主题库里同类的亮色主题不多，清透定制和它们的差异在"克制"两个字上。别的主题可能用渐变、阴影、高光来提升质感，清透定制几乎不用这些技巧，它相信内容本身的秩序感。这对极简主义者是加分项，对喜欢视觉丰富度的人则是减分项。选之前先问自己：你是想让界面消失，还是想让界面好看？前者选清透定制。',
+        { type: 'h2', text: '怎么应用与还原' },
+        '打开 Codex Skin Studio → 开始注入 → 主题库 → 选清透定制 → 立即生效。想还原就右键托盘图标选「完全恢复 Codex」，不留残留、不修改官方文件。主题库里的所有主题都支持一键切换，你可以在清透定制和暗色主题之间来回试，直到找到自己最舒服的组合。',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: '清透定制主题免费吗？', a: '免费。免费版包含 8 款精选主题，清透定制在内。Pro 解锁自定义配色与背景图。' },
+            { q: '浅色主题会不会更伤眼？', a: '关键在亮度而不在色温。清透定制的底是柔和暖白而不是纯白，配合低饱和强调色，长时间使用比高对比深色主题更放松，但这因人而异，建议白天浅色、晚上深色。' },
+            { q: '它能和深色主题随时切换吗？', a: '能。所有主题都通过运行时注入，切换即时生效，不需要重启 Codex，也没有残留。' },
+            { q: '清透定制会修改 Codex 官方文件吗？', a: '不会。它和其他主题一样通过 CDP 运行时注入，停止工具即恢复，官方安装目录不被触碰。' },
+          ],
+        },
+        { type: 'cta', text: '在主题库查看清透定制', href: 'https://codex-skin-studio.shop/zh/gallery/preset-clear-custom' },
+      ],
+      en: [
+        'If you are hunting for a clear custom codex theme, you are probably tired of saturated colors and want an interface that stays out of the way during long coding sessions. Clear Custom is the quietest theme in the Codex Skin Studio gallery: soft light background, restrained accents, almost no decoration. This guide covers its design logic, who it fits, and how to choose between it and a dark theme.',
+        { type: 'h2', text: 'The design logic behind Clear Custom' },
+        '"Clean" here does not mean removing color; it means spending color carefully. Three layers do the work: a soft light base, low-saturation accents, and minimal separators.',
+        {
+          type: 'ul',
+          items: [
+            'Soft light base: off-white with a warm tint, easier on the eyes than pure white',
+            'Low-saturation accents: color appears only on semantic positions like variables, strings and keywords; everything else stays neutral',
+            'Minimal separators: thin lines instead of color blocks, so the interface breathes',
+            'Weight-based hierarchy: headings, body and code are separated by weight and spacing, not by color noise',
+          ],
+        },
+        'The idea comes straight from minimalist typography: hierarchy via whitespace and weight, not via a rainbow. A minimalist theme fan will look at it and think "nothing is going on", then an hour later realize everything they need is exactly where they expect it.',
+        { type: 'h2', text: 'Who it fits' },
+        {
+          type: 'ul',
+          items: [
+            'Light-mode regulars who want a bright theme that does not glare',
+            'People who read code and docs for hours and hate the fatigue of high-contrast UIs',
+            'Anyone who records screens or takes screenshots, since low-saturation themes look calmer on video',
+            'People who want a work-feel desktop rather than a game-feel one',
+          ],
+        },
+        'If you keep flip-flopping between light and dark, try this: Clear Custom during the day, any dark theme at night. Switching themes in Codex Skin Studio takes no restart.',
+        { type: 'h2', text: 'How it differs from other light themes' },
+        'The gallery does not have many light themes, and the difference between Clear Custom and the rest is restraint. Other themes lean on gradients, shadows and glows for polish; Clear Custom uses almost none of that, trusting the natural order of the content. That is a plus for minimalists and a minus for people who want visual richness. Ask yourself one question before picking: do you want the interface to disappear, or do you want it to look impressive? If the former, Clear Custom is the pick.',
+        { type: 'h2', text: 'How to apply and revert' },
+        'Open Codex Skin Studio, start the injection, open the theme gallery, pick Clear Custom, done. To revert, right-click the tray icon and choose full restore: no residue, no modification of official files. Every theme in the gallery supports one-click switching, so you can go back and forth between Clear Custom and dark themes until you find the combination you like.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is Clear Custom free?', a: 'Yes. The free build includes 8 curated themes, Clear Custom among them. Pro unlocks custom colors and background images.' },
+            { q: 'Is a light theme harder on the eyes?', a: 'It depends on brightness, not color temperature. Clear Custom uses a warm off-white base with low-saturation accents, which many people find more relaxing than high-contrast dark themes over long sessions. Still, it varies; light during the day, dark at night is the safest split.' },
+            { q: 'Can I switch to a dark theme at any time?', a: 'Yes. All themes are injected at runtime, switching is instant, no restart, no residue.' },
+            { q: 'Does Clear Custom modify official Codex files?', a: 'No. Like every theme, it injects at runtime via CDP; stopping the tool restores everything, and the official install directory is never touched.' },
+          ],
+        },
+        { type: 'cta', text: 'See Clear Custom in the gallery', href: 'https://codex-skin-studio.shop/en/gallery/preset-clear-custom' },
+      ],
+    },
+  },
 ];
