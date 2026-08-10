@@ -835,4 +835,82 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'inspiration-universe-theme-guide',
+    date: '2026-08-11',
+    title: {
+      zh: '灵感小宇宙主题：星空背景创意空间',
+      en: 'Inspiration Universe Theme: Creative Space Backgrounds',
+    },
+    description: {
+      zh: '灵感小宇宙是主题库里最受创作者欢迎的星空主题：低饱和深蓝底、星云渐变、微光粒子。这篇讲它为什么适合编码、怎么搭配，以及画廊里的同族变体。',
+      en: 'Inspiration Universe is the most popular starfield theme in the gallery: low-saturation deep blue, nebula glow, faint particles. Why it works for coding, how to pair it, and which variants share the same look.',
+    },
+    content: {
+      zh: [
+        '灵感小宇宙是目前主题库里最受创作者欢迎的一款灵感小宇宙 Codex 主题，深蓝星空底、浮动的星云和微光粒子，把 Codex 桌面变成一片安静的创意空间。这篇讲讲它为什么适合写代码、怎么搭配，以及同一套星空视觉在画廊里还有哪些变体。',
+        { type: 'h2', text: '为什么星空背景适合 Coding' },
+        '写代码的时候，视觉噪音是最贵的干扰。灵感小宇宙用的是低饱和深蓝星空：大面积暗色底让代码高亮更突出，星云的渐变又不会抢走注意力。它属于 space theme 里"耐看型"的代表，第一眼惊艳，用两周也不腻。',
+        '对比纯黑主题，星空底的层次感好很多：编辑器区域有微弱的景深，窗口切换时不会觉得死板。对比花哨的动态壁纸，它又足够安静，不会在长会话里持续分散注意。',
+        { type: 'h2', text: '主题里的细节' },
+        {
+          type: 'ul',
+          items: [
+            '背景：深空蓝渐变 + 星云光晕，带轻微明暗流动',
+            '高亮：星云紫和暖金做代码高亮点缀，暗色下对比度充足',
+            '粒子：极轻的浮动微光，频率低到不会让人分心',
+            '配套：同色系窗口边框与滚动条，整体观感统一',
+          ],
+        },
+        '这套配色对深夜编码尤其友好：蓝紫光波长短，比白底和亮色主题更不容易刺激眼睛。',
+        { type: 'h2', text: '怎么搭配使用' },
+        '配合暗色代码主题：编辑器内用 Dark+ 或 One Dark 这类暗色主题，和星空底是同族色系，衔接自然。配合亮色代码主题：不建议，亮色编辑器在星空底上会显得突兀。窗口透明度：如果工具支持，把透明度调到 80% 左右，星空渐变透过来，效果最好。',
+        { type: 'h2', text: '画廊里的星空家族' },
+        '灵感小宇宙不是孤品。画廊的星空分类下还有几款同族变体：偏冷的「深空探索」、偏紫的「星云幻想」、偏暖的「暮色银河」。如果你喜欢星空氛围但觉得默认款太蓝，可以试试这几款。想先看效果再决定？画廊 preset-inspiration 有实时预览。',
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: '灵感小宇宙主题适合长时间编码吗？', a: '适合。低饱和深蓝底对眼睛刺激小，星云渐变不抢注意力，是高强度会话里少数能长期使用的创意主题。' },
+            { q: '它和纯黑主题比哪个好？', a: '看需求。纯黑对比度最高但层次少；星空底有景深和细节，长时间使用更耐看。写代码追求沉浸感选星空，追求极简选纯黑。' },
+            { q: '星空主题会不会很花哨？', a: '默认款很克制：粒子稀疏、渐变缓慢，只有在全屏壁纸场景才看得出动态。如果你还是嫌吵，画廊里还有静态星空变体。' },
+            { q: '这个主题要钱吗？', a: '免费版内置的主题就包含它，Pro 解锁的是自定义配色和背景图。' },
+          ],
+        },
+        { type: 'cta', text: '到画廊看灵感小宇宙的实时效果', href: '/zh/gallery/preset-inspiration' },
+      ],
+      en: [
+        'Inspiration Universe is the most popular pick among creators in the theme gallery: a deep blue starfield, drifting nebula glow, faint floating particles, turning the Codex desktop into a quiet creative space. This guide covers why it works for writing code, how to pair it, and which variants of the same starfield look live in the gallery.',
+        { type: 'h2', text: 'Why a starfield works for coding' },
+        'Visual noise is the most expensive distraction while coding. Inspiration Universe leans on a low-saturation deep blue starfield: the large dark base makes code highlighting pop, while the nebula gradient never fights for attention. It is the "easy on the eyes" end of the space theme spectrum. Impressive on day one, still pleasant after two weeks.',
+        'Compared to a pure black theme, the starfield has more depth: the editor area carries a faint sense of perspective, and window switching does not feel flat. Compared to flashy animated wallpapers, it is quiet enough to survive long sessions.',
+        { type: 'h2', text: 'What is inside the theme' },
+        {
+          type: 'ul',
+          items: [
+            'Background: deep-space blue gradient with nebula glow and subtle light drift',
+            'Highlights: nebula purple and warm gold accents for code, strong contrast on dark',
+            'Particles: very light floating glints, sparse enough to stay out of the way',
+            'Extras: matching window borders and scrollbar in the same palette',
+          ],
+        },
+        'The blue-purple palette is especially friendly for late-night coding. Shorter wavelengths are easier on the eyes than white backgrounds or bright themes.',
+        { type: 'h2', text: 'How to pair it' },
+        'With a dark code theme, use Dark+ or One Dark inside the editor. Same color family, seamless transition. With a light code theme, skip it, a bright editor on a starfield looks jarring. Window transparency: if your tool supports it, drop opacity to around 80% and let the nebula show through. That is the setup that looks best.',
+        { type: 'h2', text: 'The starfield family in the gallery' },
+        'Inspiration Universe is not a one-off. The space category in the gallery holds several siblings: the cooler "Deep Space Explorer", the purple-leaning "Nebula Fantasy", the warmer "Twilight Galaxy". If you like the vibe but find the default too blue, those are worth a look. Want to see it before installing? The gallery preset page has a live preview.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is Inspiration Universe good for long coding sessions?', a: 'Yes. The low-saturation blue is gentle on the eyes and the nebula does not steal focus. It is one of the few creative themes that survives heavy daily use.' },
+            { q: 'Starfield or pure black?', a: 'Depends. Pure black has the highest contrast but less depth; the starfield adds texture and stays pleasant over time. Immersion pick the starfield, minimalism pick pure black.' },
+            { q: 'Is it too flashy?', a: 'The default is restrained: sparse particles, slow gradients, motion only obvious in fullscreen wallpaper mode. If it is still too busy, the gallery has static starfield variants.' },
+            { q: 'Does it cost anything?', a: 'It ships with the free tier. Pro unlocks custom colors and backgrounds.' },
+          ],
+        },
+        { type: 'cta', text: 'See Inspiration Universe live in the gallery', href: '/en/gallery/preset-inspiration' },
+      ],
+    },
+  },
 ];
