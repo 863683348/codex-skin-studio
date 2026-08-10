@@ -14,7 +14,9 @@ export function BlogView({ locale }: { locale: Locale }) {
           : 'Theming tips, product updates, and Codex ecosystem notes'}
       </p>
       <div className="mt-8 space-y-6">
-        {POSTS.map((post) => (
+        {[...POSTS]
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((post) => (
           <article
             key={post.slug}
             className="rounded-xl border border-border bg-bg-secondary p-6 transition-colors hover:border-border-hover"
