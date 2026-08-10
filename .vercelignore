@@ -1,0 +1,10 @@
+# Desktop-app source and docs are not part of the Next.js build.
+# Keeping them out of the deployment shrinks the build context by ~8 MB
+# and keeps them out of origin storage.
+engine/
+docs/
+scripts/
+dist/
+CONTRIBUTING.md
+firestore.rules
+tsconfig.tsbuildinfo
