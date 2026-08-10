@@ -11,7 +11,6 @@ export function Footer({ locale }: { locale: Locale }) {
     { href: `/${locale}/privacy`, label: dict.footer.privacy },
     { href: `/${locale}/terms`, label: dict.footer.terms },
     { href: `/${locale}/faq`, label: dict.footer.faq },
-    { href: `/${locale}/blog`, label: dict.footer.blog },
     { href: `/${locale}/contact`, label: dict.footer.contact },
   ];
 

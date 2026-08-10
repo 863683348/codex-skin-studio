@@ -11,6 +11,7 @@ export const en: Dict = {
     about: 'About',
     github: 'GitHub',
     contact: 'Contact',
+    blog: 'Blog',
   },
   about: {
     title: 'About Codex Skin Studio',

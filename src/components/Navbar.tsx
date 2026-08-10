@@ -22,6 +22,7 @@ export function Navbar({ locale }: { locale: Locale }) {
     { href: `/${locale}/download`, label: dict.nav.download },
     { href: `/${locale}/docs`, label: dict.nav.docs },
     { href: `/${locale}/pricing`, label: dict.nav.pricing },
+    { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
   const isActive = (href: string) => pathname === href;

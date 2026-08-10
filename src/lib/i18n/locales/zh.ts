@@ -9,6 +9,7 @@ export const zh = {
     about: '关于',
     github: 'GitHub',
     contact: '联系我们',
+    blog: '博客',
   },
   about: {
     title: '关于 Codex Skin Studio',
