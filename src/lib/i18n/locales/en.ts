@@ -294,4 +294,15 @@ export const en: Dict = {
   lang: {
     switch: '中',
   },
+  community: {
+    title: 'Community Skins',
+    description: 'Codex themes from the GitHub community, click to visit the original repo',
+    filterAll: 'All',
+    filterCertified: 'Certified',
+    filterFeatured: 'Featured',
+    filterCommunity: 'Community',
+    filterBuiltIn: 'Built-in',
+    installs: 'installs',
+    backToGallery: '← Back to Gallery',
+  },
 };

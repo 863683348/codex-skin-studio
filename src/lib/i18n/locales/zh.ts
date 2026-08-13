@@ -293,19 +293,15 @@ export const zh = {
   lang: {
     switch: 'EN',
   },
+  community: {
+    title: '社区皮肤',
+    description: '来自 GitHub 社区的 Codex 主题，点击跳转到原始仓库',
+    filterAll: '全部',
+    filterCertified: '认证',
+    filterFeatured: '精选',
+    filterCommunity: '社区',
+    filterBuiltIn: '内置',
+    installs: '安装',
+    backToGallery: '← 返回画廊',
+  },
 } as const;
-
-// 把 zh 的字面量类型递归拓宽为 string（保留只读结构），让 en 等其它语言包可填任意文案
-type Widen<T> = T extends string
-  ? string
-  : T extends number
-    ? number
-    : T extends boolean
-      ? boolean
-      : T extends ReadonlyArray<infer U>
-        ? ReadonlyArray<Widen<U>>
-        : T extends object
-          ? { readonly [K in keyof T]: Widen<T[K]> }
-          : T;
-
-export type Dict = Widen<typeof zh>;
