@@ -23,7 +23,8 @@ export interface CommunitySkin {
   color: string | null
   /** 安装数（如有） */
   installs: number | null
-  /** 同步时间 */
+  /** 缩略图路径 */
+  imageUrl: string | null  /** 同步时间 */
   syncedAt: string
 }
 
@@ -38,7 +39,8 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:51:19.950Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z",
+    "imageUrl": "/images/community-skins/lan-meng-caiyun-trick.webp"
   },
   {
     "id": "gu-qinghan-frostbound",
@@ -50,6 +52,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/gu-qinghan-frostbound.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -62,6 +65,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/naraka-wanxiang-minghuo-abyssal-tide.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -74,6 +78,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/cyra-sacred-radiance.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -86,6 +91,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/ning-hongye-crimson-night.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -98,6 +104,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/marco-polo-clockwork-expedition.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -110,6 +117,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/jj-lin-soulwave-sanctuary.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -122,6 +130,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/naraka-wanxiang-yuyan-ember-prison.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -134,6 +143,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/tianhai-vajra-thunder-temple.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -146,6 +156,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/wuchen-twofold-transit.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -158,6 +169,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/ji-canghai-blazing-gallant.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -170,6 +182,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/yao-deer-spirit-grove.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -182,6 +195,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/luo-feng-domain.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -194,6 +208,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/yu-linglong-foxfire-enchant.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -206,6 +221,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/jay-chou-inkstone-rhapsody.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -218,6 +234,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/han-li-mortal-path.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -230,6 +247,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/kurumi-sunward-onmyoji.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -242,6 +260,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/naraka-wanxiang-cangdi-fourfold-axis.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -254,6 +273,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/shaosiyuan-fateweave.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -266,6 +286,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/naraka-wanxiang-shuojin-thunder-forge.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -278,6 +299,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/dasiming-soul-passage.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -290,6 +312,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/naraka-wanxiang-five-aspects.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -302,6 +325,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/yu-linglong-mistveil-sorceress.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -314,6 +338,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/zhang-qiling-bronze-gate.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -326,6 +351,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/naraka-wanxiang-kuishi-mountain-seal.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -338,6 +364,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/celestial-court.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -350,6 +377,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/luffy-onepiece.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -362,6 +390,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/elon-mars-protocol.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -374,6 +403,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/caishen-jubao.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -386,6 +416,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/jensen-infinite-compute.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -398,6 +429,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/journey-to-west.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -410,6 +442,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/hancock-onepiece.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -422,6 +455,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/kun-afterglow.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -434,6 +468,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/kakashi-naruto.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -446,6 +481,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/ming-imperial.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -458,6 +494,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/rei-eva00.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -470,6 +507,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/shinji-eva01.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -482,6 +520,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/asuka-eva02.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -494,6 +533,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/rem-rezero.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -506,6 +546,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/gundam-rx78.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -518,6 +559,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/san-tibo.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -530,6 +572,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/mai-shiranui.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -542,6 +585,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/kaworu-mark06.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -554,6 +598,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/emilia-rezero.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -566,6 +611,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/dilraba-starlight.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -578,6 +624,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/three-kingdoms.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -590,6 +637,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/guts-terminal.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -602,6 +650,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/trump-golden-order.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -614,6 +663,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/underworld-yama.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -626,6 +676,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "certified",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/western-pure-land.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -638,6 +689,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-1.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -650,6 +702,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-10.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -662,6 +715,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-2.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -674,6 +728,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-3.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -686,6 +741,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-4-supabase.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -698,6 +754,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-5-github-google.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -710,6 +767,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-6.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -722,6 +780,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-7-api-vercel.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -734,6 +793,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-8.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -746,6 +806,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-9.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -758,6 +819,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-blue-window.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -770,6 +832,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-potion-workshop.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -782,6 +845,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -794,6 +858,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-chatgpt.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -806,6 +871,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-starcap-teemo.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -818,6 +884,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/codex-theme-moonlit-immortal.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -830,6 +897,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#39C5BB",
     "installs": 2540,
+    "imageUrl": "/images/community-skins/hatsune-miku.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -842,6 +910,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1A1A2E",
     "installs": 2103,
+    "imageUrl": "/images/community-skins/gothic-void-expedition.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -854,6 +923,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E8EFF5",
     "installs": 1620,
+    "imageUrl": "/images/community-skins/clear-glass.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -866,6 +936,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#272822",
     "installs": 1500,
+    "imageUrl": "/images/community-skins/monokai-stone-cli.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -878,6 +949,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#FDF6E3",
     "installs": 1340,
+    "imageUrl": "/images/community-skins/solarized-cli.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -890,6 +962,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#FF2A6D",
     "installs": 1180,
+    "imageUrl": "/images/community-skins/cyber-neon.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -902,6 +975,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#F7C8D8",
     "installs": 1020,
+    "imageUrl": "/images/community-skins/sakura-pink-dawn.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -914,6 +988,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1A1B26",
     "installs": 980,
+    "imageUrl": "/images/community-skins/tokyo-night-cli.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -926,6 +1001,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E0A23B",
     "installs": 940,
+    "imageUrl": "/images/community-skins/inspiration.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -938,6 +1014,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#2D2D3A",
     "installs": 890,
+    "imageUrl": "/images/community-skins/codepilot-built-in-tui-skins.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -950,6 +1027,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#4A6B52",
     "installs": 880,
+    "imageUrl": "/images/community-skins/forest-mist.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -962,6 +1040,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E8B4C8",
     "installs": 870,
+    "imageUrl": "/images/community-skins/dilraba.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -974,6 +1053,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E5C0C8",
     "installs": 770,
+    "imageUrl": "/images/community-skins/hashimoto-arata.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -986,6 +1066,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#5B8FB0",
     "installs": 760,
+    "imageUrl": "/images/community-skins/cartethyia-wind-tide-sanctum.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -998,6 +1079,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1C1C28",
     "installs": 740,
+    "imageUrl": "/images/community-skins/mythic-guardian-noir.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1010,6 +1092,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#6B7A6E",
     "installs": 690,
+    "imageUrl": "/images/community-skins/jackson-yee.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1022,6 +1105,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#F2B8C6",
     "installs": 650,
+    "imageUrl": "/images/community-skins/pink-custom.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1034,6 +1118,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E63946",
     "installs": 640,
+    "imageUrl": "/images/community-skins/red-white-sci-fi.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1046,6 +1131,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#A020F0",
     "installs": 620,
+    "imageUrl": "/images/community-skins/vivid-purple-cli.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1058,6 +1144,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#5AA9E6",
     "installs": 560,
+    "imageUrl": "/images/community-skins/qq2007-retro.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1070,6 +1157,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#DCEEF2",
     "installs": 530,
+    "imageUrl": "/images/community-skins/berry-light-journal.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1082,6 +1170,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#2D7DF6",
     "installs": 510,
+    "imageUrl": "/images/community-skins/blue-enchantress.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1094,6 +1183,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1A1B26",
     "installs": 470,
+    "imageUrl": "/images/community-skins/tokyo-night-ychampion.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1106,6 +1196,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#C0392B",
     "installs": 430,
+    "imageUrl": "/images/community-skins/kung-fu-women-s-football.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1118,6 +1209,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#3B2F1E",
     "installs": 410,
+    "imageUrl": "/images/community-skins/amber-nocturne-cli.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1130,6 +1222,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#C8852B",
     "installs": 380,
+    "imageUrl": "/images/community-skins/amber-dusk.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1142,6 +1235,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-dalao-smoke.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1154,6 +1248,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-dragon-ball-nimbus.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1166,6 +1261,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-dragon-ball-super-saiyan.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1178,6 +1274,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-genshin-dawn.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1190,6 +1287,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-genshin-night.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1202,6 +1300,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-love-and-deepspace.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1214,6 +1313,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-miku-488137.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1226,6 +1326,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-miku-future.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1238,6 +1339,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-naruto.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1250,6 +1352,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-qq2007-retro.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1262,6 +1365,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-workbuddy-theme.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
@@ -1274,14 +1378,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
+    "imageUrl": "/images/community-skins/heige-wuthering-waves.webp",
     "syncedAt": "2026-08-13T05:51:19.950Z"
   }
-]
-
-export function getCommunitySkinById(id: string): CommunitySkin | undefined {
-  return communitySkins.find(s => s.id === id)
-}
-
-export function getCommunitySkinsByTier(tier: CommunitySkin['tier']): CommunitySkin[] {
-  return communitySkins.filter(s => s.tier === tier)
-}
+];

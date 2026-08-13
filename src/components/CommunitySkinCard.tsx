@@ -41,10 +41,18 @@ export function CommunitySkinCard({
     >
       <div className="overflow-hidden rounded-lg border border-border bg-bg-secondary transition-all duration-card hover:-translate-y-0.5 hover:border-border-hover hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]">
         <div className="relative aspect-video">
-          <div
-            className="absolute inset-0"
-            style={{ background: `linear-gradient(135deg, ${gradient} 0%, rgba(0,0,0,0.8) 100%)` }}
-          />
+          {skin.imageUrl ? (
+            <img
+              src={skin.imageUrl}
+              alt={`${skin.nameEn} preview`}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          ) : (
+            <div
+              className="absolute inset-0"
+              style={{ background: `linear-gradient(135deg, ${gradient} 0%, rgba(0,0,0,0.8) 100%)` }}
+            />
+          )}
           {/* Tier badge */}
           <div className="absolute left-2 top-2 z-10">
             <span className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-r ${tierColors[skin.tier]} px-2 py-0.5 text-[11px] font-bold text-white shadow-sm`}>
