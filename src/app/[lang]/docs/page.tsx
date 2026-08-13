@@ -4,10 +4,9 @@ import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import { localeAlternates } from '@/lib/seo';
 
-// Static params: pre-build docs page for all supported locales
-export function generateStaticParams() {
-  return [{ lang: 'zh' }, { lang: 'en' }];
-}
+// Dynamic page with ISR (DocsView has 'use client')
+// First hit triggers SSR, then cached for 1 hour
+export const revalidate = 3600;
 
 export async function generateMetadata({
   params,
