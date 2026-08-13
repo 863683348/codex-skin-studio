@@ -1,6 +1,6 @@
 /**
  * 社区皮肤数据 — 自动生成，勿手改
- * 生成时间: 2026-08-13T04:03:15.929Z
+ * 生成时间: 2026-08-13T04:13:03.405Z
  * 来源: Wangnov/awesome-codex-skins, awesomecodexskin.com, HeiGeAi/heige-codex-skin-studio, freestylefly/codex-themes
  */
 
@@ -38,7 +38,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#39C5BB",
     "installs": 2540,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "gothic-void-expedition",
@@ -50,7 +50,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1A1A2E",
     "installs": 2103,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "clear-glass",
@@ -62,7 +62,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E8EFF5",
     "installs": 1620,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "monokai-stone-cli",
@@ -74,7 +74,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#272822",
     "installs": 1500,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "solarized-cli",
@@ -86,7 +86,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#FDF6E3",
     "installs": 1340,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "cyber-neon",
@@ -98,7 +98,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#FF2A6D",
     "installs": 1180,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "sakura-pink-dawn",
@@ -110,7 +110,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#F7C8D8",
     "installs": 1020,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "tokyo-night-cli",
@@ -122,7 +122,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1A1B26",
     "installs": 980,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "inspiration",
@@ -134,7 +134,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E0A23B",
     "installs": 940,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codepilot-built-in-tui-skins",
@@ -146,7 +146,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#2D2D3A",
     "installs": 890,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "forest-mist",
@@ -158,7 +158,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#4A6B52",
     "installs": 880,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "dilraba",
@@ -170,7 +170,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E8B4C8",
     "installs": 870,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "hashimoto-arata",
@@ -182,7 +182,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E5C0C8",
     "installs": 770,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "cartethyia-wind-tide-sanctum",
@@ -194,7 +194,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#5B8FB0",
     "installs": 760,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "mythic-guardian-noir",
@@ -206,7 +206,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1C1C28",
     "installs": 740,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "jackson-yee",
@@ -218,7 +218,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#6B7A6E",
     "installs": 690,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "pink-custom",
@@ -230,7 +230,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#F2B8C6",
     "installs": 650,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "red-white-sci-fi",
@@ -242,7 +242,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#E63946",
     "installs": 640,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "vivid-purple-cli",
@@ -254,7 +254,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#A020F0",
     "installs": 620,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "qq2007-retro",
@@ -266,7 +266,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#5AA9E6",
     "installs": 560,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "berry-light-journal",
@@ -278,7 +278,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#DCEEF2",
     "installs": 530,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "blue-enchantress",
@@ -290,7 +290,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#2D7DF6",
     "installs": 510,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "tokyo-night-ychampion",
@@ -302,7 +302,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#1A1B26",
     "installs": 470,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "kung-fu-women-s-football",
@@ -314,7 +314,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#C0392B",
     "installs": 430,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "amber-nocturne-cli",
@@ -326,7 +326,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#3B2F1E",
     "installs": 410,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "amber-dusk",
@@ -338,7 +338,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "community",
     "color": "#C8852B",
     "installs": 380,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-1",
@@ -350,7 +350,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-10",
@@ -362,7 +362,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-2",
@@ -374,7 +374,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-3",
@@ -386,7 +386,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-4-supabase",
@@ -398,7 +398,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-5-github-google",
@@ -410,7 +410,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-6",
@@ -422,7 +422,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-7-api-vercel",
@@ -434,7 +434,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-8",
@@ -446,7 +446,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-9",
@@ -458,7 +458,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-blue-window",
@@ -470,7 +470,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-potion-workshop",
@@ -482,7 +482,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-",
@@ -494,7 +494,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-chatgpt",
@@ -506,7 +506,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-starcap-teemo",
@@ -518,7 +518,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "codex-theme-moonlit-immortal",
@@ -530,7 +530,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-dalao-smoke",
@@ -542,7 +542,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-dragon-ball-nimbus",
@@ -554,7 +554,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-dragon-ball-super-saiyan",
@@ -566,7 +566,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-genshin-dawn",
@@ -578,7 +578,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-genshin-night",
@@ -590,7 +590,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-love-and-deepspace",
@@ -602,7 +602,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-miku-488137",
@@ -614,7 +614,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-miku-future",
@@ -626,7 +626,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-naruto",
@@ -638,7 +638,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-qq2007-retro",
@@ -650,7 +650,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-workbuddy-theme",
@@ -662,7 +662,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   },
   {
     "id": "heige-wuthering-waves",
@@ -674,7 +674,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T04:03:15.931Z"
+    "syncedAt": "2026-08-13T04:13:03.408Z"
   }
 ]
 
