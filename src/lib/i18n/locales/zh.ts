@@ -305,3 +305,18 @@ export const zh = {
     backToGallery: '← 返回画廊',
   },
 } as const;
+
+// 把 zh 的字面量类型递归拓宽为 string（保留只读结构），让 en 等其它语言包可填任意文案
+type Widen<T> = T extends string
+  ? string
+  : T extends number
+    ? number
+    : T extends boolean
+      ? boolean
+      : T extends ReadonlyArray<infer U>
+        ? ReadonlyArray<Widen<U>>
+        : T extends object
+          ? { readonly [K in keyof T]: Widen<T[K]> }
+          : T;
+
+export type Dict = Widen<typeof zh>;
