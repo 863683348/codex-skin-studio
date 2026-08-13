@@ -14,6 +14,7 @@ type FilterTab = 'themes' | 'community'
 type ThemeFilter = ThemeCategory | 'all'
 type CommunityFilter = CommunitySkin['tier'] | 'all'
 
+// v2
 export function GalleryView({ locale }: { locale: Locale }) {
   const dict = getDict(locale)
   const [tab, setTab] = useState<FilterTab>('themes')
