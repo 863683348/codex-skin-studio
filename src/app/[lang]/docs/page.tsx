@@ -4,6 +4,11 @@ import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import { localeAlternates } from '@/lib/seo';
 
+// Static params: pre-build docs page for all supported locales
+export function generateStaticParams() {
+  return [{ lang: 'zh' }, { lang: 'en' }];
+}
+
 export async function generateMetadata({
   params,
 }: {
