@@ -1,6 +1,6 @@
 /**
  * 社区皮肤数据 — 自动生成，勿手改
- * 生成时间: 2026-08-13T05:50:27.079Z
+ * 生成时间: 2026-08-13T05:51:19.950Z
  * 来源: Wangnov/awesome-codex-skins, awesomecodexskin.com, HeiGeAi/heige-codex-skin-studio, freestylefly/codex-themes
  */
 
@@ -29,316 +29,604 @@ export interface CommunitySkin {
 
 export const communitySkins: CommunitySkin[] = [
   {
-    "id": "hatsune-miku",
-    "nameZh": "Hatsune Miku",
-    "nameEn": "Hatsune Miku",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/hatsune-miku",
-    "source": "index",
-    "tier": "community",
-    "color": "#39C5BB",
-    "installs": 2540,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "lan-meng-caiyun-trick",
+    "nameZh": "蓝梦",
+    "nameEn": "彩云戏法",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/lan-meng-caiyun-trick",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "gothic-void-expedition",
-    "nameZh": "Gothic Void Expedition",
-    "nameEn": "Gothic Void Expedition",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/gothic-void-expedition",
-    "source": "index",
-    "tier": "community",
-    "color": "#1A1A2E",
-    "installs": 2103,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "gu-qinghan-frostbound",
+    "nameZh": "冰雁顾清寒",
+    "nameEn": "藏雨冰镜",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/gu-qinghan-frostbound",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "clear-glass",
-    "nameZh": "Clear Glass",
-    "nameEn": "Clear Glass",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/clear-glass",
-    "source": "index",
-    "tier": "community",
-    "color": "#E8EFF5",
-    "installs": 1620,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "naraka-wanxiang-minghuo-abyssal-tide",
+    "nameZh": "溟祸",
+    "nameEn": "沉渊逆潮",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/naraka-wanxiang-minghuo-abyssal-tide",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "monokai-stone-cli",
-    "nameZh": "Monokai Stone (CLI)",
-    "nameEn": "Monokai Stone (CLI)",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/monokai-stone-cli",
-    "source": "index",
-    "tier": "community",
-    "color": "#272822",
-    "installs": 1500,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "cyra-sacred-radiance",
+    "nameZh": "席拉",
+    "nameEn": "晨曦神愈",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/cyra-sacred-radiance",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "solarized-cli",
-    "nameZh": "Solarized (CLI)",
-    "nameEn": "Solarized (CLI)",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/solarized-cli",
-    "source": "index",
-    "tier": "community",
-    "color": "#FDF6E3",
-    "installs": 1340,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "ning-hongye-crimson-night",
+    "nameZh": "宁红夜",
+    "nameEn": "赤练无明",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/ning-hongye-crimson-night",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "cyber-neon",
-    "nameZh": "Cyber Neon",
-    "nameEn": "Cyber Neon",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/cyber-neon",
-    "source": "index",
-    "tier": "community",
-    "color": "#FF2A6D",
-    "installs": 1180,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "marco-polo-clockwork-expedition",
+    "nameZh": "马可波罗",
+    "nameEn": "海都远征",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/marco-polo-clockwork-expedition",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "sakura-pink-dawn",
-    "nameZh": "Sakura Pink Dawn",
-    "nameEn": "Sakura Pink Dawn",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/sakura-pink-dawn",
-    "source": "index",
-    "tier": "community",
-    "color": "#F7C8D8",
-    "installs": 1020,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "jj-lin-soulwave-sanctuary",
+    "nameZh": "林俊杰",
+    "nameEn": "回响圣所",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/jj-lin-soulwave-sanctuary",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "tokyo-night-cli",
-    "nameZh": "Tokyo Night (CLI)",
-    "nameEn": "Tokyo Night (CLI)",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/tokyo-night-cli",
-    "source": "index",
-    "tier": "community",
-    "color": "#1A1B26",
-    "installs": 980,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "naraka-wanxiang-yuyan-ember-prison",
+    "nameZh": "狱炎",
+    "nameEn": "烬狱刀冢",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/naraka-wanxiang-yuyan-ember-prison",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "inspiration",
-    "nameZh": "Inspiration",
-    "nameEn": "Inspiration",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/inspiration",
-    "source": "index",
-    "tier": "community",
-    "color": "#E0A23B",
-    "installs": 940,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "tianhai-vajra-thunder-temple",
+    "nameZh": "天海",
+    "nameEn": "雷霆伏魔",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/tianhai-vajra-thunder-temple",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "codepilot-built-in-tui-skins",
-    "nameZh": "Codepilot built-in TUI skins",
-    "nameEn": "Codepilot built-in TUI skins",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/codepilot-built-in-tui-skins",
-    "source": "index",
-    "tier": "community",
-    "color": "#2D2D3A",
-    "installs": 890,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "wuchen-twofold-transit",
+    "nameZh": "无尘",
+    "nameEn": "两仪通玄",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/wuchen-twofold-transit",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "forest-mist",
-    "nameZh": "Forest Mist",
-    "nameEn": "Forest Mist",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/forest-mist",
-    "source": "index",
-    "tier": "community",
-    "color": "#4A6B52",
-    "installs": 880,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "ji-canghai-blazing-gallant",
+    "nameZh": "季沧海",
+    "nameEn": "烈豪焚夜",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/ji-canghai-blazing-gallant",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "dilraba",
-    "nameZh": "Dilraba",
-    "nameEn": "Dilraba",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/dilraba",
-    "source": "index",
-    "tier": "community",
-    "color": "#E8B4C8",
-    "installs": 870,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "yao-deer-spirit-grove",
+    "nameZh": "瑶",
+    "nameEn": "鹿灵梦境",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/yao-deer-spirit-grove",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "hashimoto-arata",
-    "nameZh": "Hashimoto Arata",
-    "nameEn": "Hashimoto Arata",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/hashimoto-arata",
-    "source": "index",
-    "tier": "community",
-    "color": "#E5C0C8",
-    "installs": 770,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "luo-feng-domain",
+    "nameZh": "银河领主",
+    "nameEn": "罗峰·陨墨星域",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/luo-feng-domain",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "cartethyia-wind-tide-sanctum",
-    "nameZh": "Cartethyia, Wind-Tide Sanctum",
-    "nameEn": "Cartethyia, Wind-Tide Sanctum",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/cartethyia-wind-tide-sanctum",
-    "source": "index",
-    "tier": "community",
-    "color": "#5B8FB0",
-    "installs": 760,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "yu-linglong-foxfire-enchant",
+    "nameZh": "玉玲珑",
+    "nameEn": "迷魂狐影",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/yu-linglong-foxfire-enchant",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "mythic-guardian-noir",
-    "nameZh": "Mythic Guardian Noir",
-    "nameEn": "Mythic Guardian Noir",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/mythic-guardian-noir",
-    "source": "index",
-    "tier": "community",
-    "color": "#1C1C28",
-    "installs": 740,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "jay-chou-inkstone-rhapsody",
+    "nameZh": "周杰伦",
+    "nameEn": "墨键夜航",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/jay-chou-inkstone-rhapsody",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "jackson-yee",
-    "nameZh": "Jackson Yee",
-    "nameEn": "Jackson Yee",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/jackson-yee",
-    "source": "index",
-    "tier": "community",
-    "color": "#6B7A6E",
-    "installs": 690,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "han-li-mortal-path",
+    "nameZh": "韩老魔",
+    "nameEn": "青竹问道",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/han-li-mortal-path",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "pink-custom",
-    "nameZh": "Pink Custom",
-    "nameEn": "Pink Custom",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/pink-custom",
-    "source": "index",
-    "tier": "community",
-    "color": "#F2B8C6",
-    "installs": 650,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "kurumi-sunward-onmyoji",
+    "nameZh": "土御门胡桃",
+    "nameEn": "日轮净域",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/kurumi-sunward-onmyoji",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "red-white-sci-fi",
-    "nameZh": "Red-White Sci-Fi",
-    "nameEn": "Red-White Sci-Fi",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/red-white-sci-fi",
-    "source": "index",
-    "tier": "community",
-    "color": "#E63946",
-    "installs": 640,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "naraka-wanxiang-cangdi-fourfold-axis",
+    "nameZh": "苍帝",
+    "nameEn": "森罗天枢",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/naraka-wanxiang-cangdi-fourfold-axis",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "vivid-purple-cli",
-    "nameZh": "Vivid Purple (CLI)",
-    "nameEn": "Vivid Purple (CLI)",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/vivid-purple-cli",
-    "source": "index",
-    "tier": "community",
-    "color": "#A020F0",
-    "installs": 620,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "shaosiyuan-fateweave",
+    "nameZh": "少司缘",
+    "nameEn": "司缘堂",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/shaosiyuan-fateweave",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "qq2007-retro",
-    "nameZh": "QQ2007 Retro",
-    "nameEn": "QQ2007 Retro",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/qq2007-retro",
-    "source": "index",
-    "tier": "community",
-    "color": "#5AA9E6",
-    "installs": 560,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "naraka-wanxiang-shuojin-thunder-forge",
+    "nameZh": "烁金",
+    "nameEn": "天人雷铸",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/naraka-wanxiang-shuojin-thunder-forge",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "berry-light-journal",
-    "nameZh": "Berry (light journal)",
-    "nameEn": "Berry (light journal)",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/berry-light-journal",
-    "source": "index",
-    "tier": "community",
-    "color": "#DCEEF2",
-    "installs": 530,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "dasiming-soul-passage",
+    "nameZh": "大司命",
+    "nameEn": "往生司殿",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/dasiming-soul-passage",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "blue-enchantress",
-    "nameZh": "Blue Enchantress",
-    "nameEn": "Blue Enchantress",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/blue-enchantress",
-    "source": "index",
-    "tier": "community",
-    "color": "#2D7DF6",
-    "installs": 510,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "naraka-wanxiang-five-aspects",
+    "nameZh": "万象",
+    "nameEn": "五相征神",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/naraka-wanxiang-five-aspects",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "tokyo-night-ychampion",
-    "nameZh": "Tokyo Night (ychampion)",
-    "nameEn": "Tokyo Night (ychampion)",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/tokyo-night-ychampion",
-    "source": "index",
-    "tier": "community",
-    "color": "#1A1B26",
-    "installs": 470,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "yu-linglong-mistveil-sorceress",
+    "nameZh": "玉玲珑",
+    "nameEn": "雾隐妖罗",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/yu-linglong-mistveil-sorceress",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "kung-fu-women-s-football",
-    "nameZh": "Kung Fu Women's Football",
-    "nameEn": "Kung Fu Women's Football",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/kung-fu-women-s-football",
-    "source": "index",
-    "tier": "community",
-    "color": "#C0392B",
-    "installs": 430,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "zhang-qiling-bronze-gate",
+    "nameZh": "张起灵",
+    "nameEn": "长白守门",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/zhang-qiling-bronze-gate",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "amber-nocturne-cli",
-    "nameZh": "amber-nocturne (CLI)",
-    "nameEn": "amber-nocturne (CLI)",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/amber-nocturne-cli",
-    "source": "index",
-    "tier": "community",
-    "color": "#3B2F1E",
-    "installs": 410,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "naraka-wanxiang-kuishi-mountain-seal",
+    "nameZh": "魁石",
+    "nameEn": "镇岳山门",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/naraka-wanxiang-kuishi-mountain-seal",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
-    "id": "amber-dusk",
-    "nameZh": "Amber Dusk",
-    "nameEn": "Amber Dusk",
-    "repo": "awesomecodexskin",
-    "url": "https://awesomecodexskin.com/skins/amber-dusk",
-    "source": "index",
-    "tier": "community",
-    "color": "#C8852B",
-    "installs": 380,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "id": "celestial-court",
+    "nameZh": "凌霄金阙",
+    "nameEn": "Celestial Court",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/celestial-court",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "luffy-onepiece",
+    "nameZh": "Thousand Sunny",
+    "nameEn": "Dawn Adventure",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/luffy-onepiece",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "elon-mars-protocol",
+    "nameZh": "Elon Mars Protocol",
+    "nameEn": "Elon Mars Protocol",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/elon-mars-protocol",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "caishen-jubao",
+    "nameZh": "财神聚宝阁",
+    "nameEn": "Fortune Pavilion",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/caishen-jubao",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "jensen-infinite-compute",
+    "nameZh": "Jensen Infinite Compute",
+    "nameEn": "Jensen Infinite Compute",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/jensen-infinite-compute",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "journey-to-west",
+    "nameZh": "大圣云途",
+    "nameEn": "Journey to the West",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/journey-to-west",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "hancock-onepiece",
+    "nameZh": "Amazon Lily",
+    "nameEn": "Kuja Empress",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/hancock-onepiece",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "kun-afterglow",
+    "nameZh": "KUN Afterglow Fan Studio",
+    "nameEn": "KUN Afterglow Fan Studio",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/kun-afterglow",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "kakashi-naruto",
+    "nameZh": "Konoha ANBU",
+    "nameEn": "Lightning Copy Ninja",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/kakashi-naruto",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "ming-imperial",
+    "nameZh": "大明金阙",
+    "nameEn": "Ming Imperial",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/ming-imperial",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "rei-eva00",
+    "nameZh": "NERV EVA-00 Rei Prototype Terminal",
+    "nameEn": "NERV EVA-00 Rei Prototype Terminal",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/rei-eva00",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "shinji-eva01",
+    "nameZh": "NERV EVA-01 Shinji Synchronization Terminal",
+    "nameEn": "NERV EVA-01 Shinji Synchronization Terminal",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/shinji-eva01",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "asuka-eva02",
+    "nameZh": "NERV EVA-02 Asuka Terminal",
+    "nameEn": "NERV EVA-02 Asuka Terminal",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/asuka-eva02",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "rem-rezero",
+    "nameZh": "Roswaal Mansion",
+    "nameEn": "Rem Companion",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/rem-rezero",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "gundam-rx78",
+    "nameZh": "White Base",
+    "nameEn": "RX-78-2 Launch Deck",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/gundam-rx78",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "san-tibo",
+    "nameZh": "San Tibo",
+    "nameEn": "San Tibo",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/san-tibo",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "mai-shiranui",
+    "nameZh": "Shiranui Dojo",
+    "nameEn": "Scarlet Flame",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/mai-shiranui",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "kaworu-mark06",
+    "nameZh": "SEELE Mark.06 Kaworu Terminal",
+    "nameEn": "SEELE Mark.06 Kaworu Terminal",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/kaworu-mark06",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "emilia-rezero",
+    "nameZh": "Elior Forest",
+    "nameEn": "Spirit Companion",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/emilia-rezero",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "dilraba-starlight",
+    "nameZh": "迪丽热巴",
+    "nameEn": "STARLIGHT 星蝶光廊",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/dilraba-starlight",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "three-kingdoms",
+    "nameZh": "赤壁风云",
+    "nameEn": "Three Kingdoms",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/three-kingdoms",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "guts-terminal",
+    "nameZh": "TPC GUTS Command Terminal",
+    "nameEn": "TPC GUTS Command Terminal",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/guts-terminal",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "trump-golden-order",
+    "nameZh": "Trump Golden Order",
+    "nameEn": "Trump Golden Order",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/trump-golden-order",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "underworld-yama",
+    "nameZh": "幽都判府",
+    "nameEn": "Underworld Tribunal",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/underworld-yama",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "western-pure-land",
+    "nameZh": "莲界琉光",
+    "nameEn": "Western Pure Land",
+    "repo": "Wangnov/awesome-codex-skins",
+    "url": "https://github.com/Wangnov/awesome-codex-skins/tree/main/skins/western-pure-land",
+    "source": "registry",
+    "tier": "certified",
+    "color": null,
+    "installs": null,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-1",
@@ -350,7 +638,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-10",
@@ -362,7 +650,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-2",
@@ -374,7 +662,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-3",
@@ -386,7 +674,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-4-supabase",
@@ -398,7 +686,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-5-github-google",
@@ -410,7 +698,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-6",
@@ -422,7 +710,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-7-api-vercel",
@@ -434,7 +722,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-8",
@@ -446,7 +734,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-9",
@@ -458,7 +746,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-blue-window",
@@ -470,7 +758,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-potion-workshop",
@@ -482,7 +770,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-",
@@ -494,7 +782,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-chatgpt",
@@ -506,7 +794,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-starcap-teemo",
@@ -518,7 +806,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "codex-theme-moonlit-immortal",
@@ -530,7 +818,319 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "featured",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "hatsune-miku",
+    "nameZh": "Hatsune Miku",
+    "nameEn": "Hatsune Miku",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/hatsune-miku",
+    "source": "index",
+    "tier": "community",
+    "color": "#39C5BB",
+    "installs": 2540,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "gothic-void-expedition",
+    "nameZh": "Gothic Void Expedition",
+    "nameEn": "Gothic Void Expedition",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/gothic-void-expedition",
+    "source": "index",
+    "tier": "community",
+    "color": "#1A1A2E",
+    "installs": 2103,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "clear-glass",
+    "nameZh": "Clear Glass",
+    "nameEn": "Clear Glass",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/clear-glass",
+    "source": "index",
+    "tier": "community",
+    "color": "#E8EFF5",
+    "installs": 1620,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "monokai-stone-cli",
+    "nameZh": "Monokai Stone (CLI)",
+    "nameEn": "Monokai Stone (CLI)",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/monokai-stone-cli",
+    "source": "index",
+    "tier": "community",
+    "color": "#272822",
+    "installs": 1500,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "solarized-cli",
+    "nameZh": "Solarized (CLI)",
+    "nameEn": "Solarized (CLI)",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/solarized-cli",
+    "source": "index",
+    "tier": "community",
+    "color": "#FDF6E3",
+    "installs": 1340,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "cyber-neon",
+    "nameZh": "Cyber Neon",
+    "nameEn": "Cyber Neon",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/cyber-neon",
+    "source": "index",
+    "tier": "community",
+    "color": "#FF2A6D",
+    "installs": 1180,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "sakura-pink-dawn",
+    "nameZh": "Sakura Pink Dawn",
+    "nameEn": "Sakura Pink Dawn",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/sakura-pink-dawn",
+    "source": "index",
+    "tier": "community",
+    "color": "#F7C8D8",
+    "installs": 1020,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "tokyo-night-cli",
+    "nameZh": "Tokyo Night (CLI)",
+    "nameEn": "Tokyo Night (CLI)",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/tokyo-night-cli",
+    "source": "index",
+    "tier": "community",
+    "color": "#1A1B26",
+    "installs": 980,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "inspiration",
+    "nameZh": "Inspiration",
+    "nameEn": "Inspiration",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/inspiration",
+    "source": "index",
+    "tier": "community",
+    "color": "#E0A23B",
+    "installs": 940,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "codepilot-built-in-tui-skins",
+    "nameZh": "Codepilot built-in TUI skins",
+    "nameEn": "Codepilot built-in TUI skins",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/codepilot-built-in-tui-skins",
+    "source": "index",
+    "tier": "community",
+    "color": "#2D2D3A",
+    "installs": 890,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "forest-mist",
+    "nameZh": "Forest Mist",
+    "nameEn": "Forest Mist",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/forest-mist",
+    "source": "index",
+    "tier": "community",
+    "color": "#4A6B52",
+    "installs": 880,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "dilraba",
+    "nameZh": "Dilraba",
+    "nameEn": "Dilraba",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/dilraba",
+    "source": "index",
+    "tier": "community",
+    "color": "#E8B4C8",
+    "installs": 870,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "hashimoto-arata",
+    "nameZh": "Hashimoto Arata",
+    "nameEn": "Hashimoto Arata",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/hashimoto-arata",
+    "source": "index",
+    "tier": "community",
+    "color": "#E5C0C8",
+    "installs": 770,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "cartethyia-wind-tide-sanctum",
+    "nameZh": "Cartethyia, Wind-Tide Sanctum",
+    "nameEn": "Cartethyia, Wind-Tide Sanctum",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/cartethyia-wind-tide-sanctum",
+    "source": "index",
+    "tier": "community",
+    "color": "#5B8FB0",
+    "installs": 760,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "mythic-guardian-noir",
+    "nameZh": "Mythic Guardian Noir",
+    "nameEn": "Mythic Guardian Noir",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/mythic-guardian-noir",
+    "source": "index",
+    "tier": "community",
+    "color": "#1C1C28",
+    "installs": 740,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "jackson-yee",
+    "nameZh": "Jackson Yee",
+    "nameEn": "Jackson Yee",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/jackson-yee",
+    "source": "index",
+    "tier": "community",
+    "color": "#6B7A6E",
+    "installs": 690,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "pink-custom",
+    "nameZh": "Pink Custom",
+    "nameEn": "Pink Custom",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/pink-custom",
+    "source": "index",
+    "tier": "community",
+    "color": "#F2B8C6",
+    "installs": 650,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "red-white-sci-fi",
+    "nameZh": "Red-White Sci-Fi",
+    "nameEn": "Red-White Sci-Fi",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/red-white-sci-fi",
+    "source": "index",
+    "tier": "community",
+    "color": "#E63946",
+    "installs": 640,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "vivid-purple-cli",
+    "nameZh": "Vivid Purple (CLI)",
+    "nameEn": "Vivid Purple (CLI)",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/vivid-purple-cli",
+    "source": "index",
+    "tier": "community",
+    "color": "#A020F0",
+    "installs": 620,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "qq2007-retro",
+    "nameZh": "QQ2007 Retro",
+    "nameEn": "QQ2007 Retro",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/qq2007-retro",
+    "source": "index",
+    "tier": "community",
+    "color": "#5AA9E6",
+    "installs": 560,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "berry-light-journal",
+    "nameZh": "Berry (light journal)",
+    "nameEn": "Berry (light journal)",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/berry-light-journal",
+    "source": "index",
+    "tier": "community",
+    "color": "#DCEEF2",
+    "installs": 530,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "blue-enchantress",
+    "nameZh": "Blue Enchantress",
+    "nameEn": "Blue Enchantress",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/blue-enchantress",
+    "source": "index",
+    "tier": "community",
+    "color": "#2D7DF6",
+    "installs": 510,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "tokyo-night-ychampion",
+    "nameZh": "Tokyo Night (ychampion)",
+    "nameEn": "Tokyo Night (ychampion)",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/tokyo-night-ychampion",
+    "source": "index",
+    "tier": "community",
+    "color": "#1A1B26",
+    "installs": 470,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "kung-fu-women-s-football",
+    "nameZh": "Kung Fu Women's Football",
+    "nameEn": "Kung Fu Women's Football",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/kung-fu-women-s-football",
+    "source": "index",
+    "tier": "community",
+    "color": "#C0392B",
+    "installs": 430,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "amber-nocturne-cli",
+    "nameZh": "amber-nocturne (CLI)",
+    "nameEn": "amber-nocturne (CLI)",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/amber-nocturne-cli",
+    "source": "index",
+    "tier": "community",
+    "color": "#3B2F1E",
+    "installs": 410,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
+  },
+  {
+    "id": "amber-dusk",
+    "nameZh": "Amber Dusk",
+    "nameEn": "Amber Dusk",
+    "repo": "awesomecodexskin.com",
+    "url": "https://awesomecodexskin.com/skins/amber-dusk",
+    "source": "index",
+    "tier": "community",
+    "color": "#C8852B",
+    "installs": 380,
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-dalao-smoke",
@@ -542,7 +1142,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-dragon-ball-nimbus",
@@ -554,7 +1154,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-dragon-ball-super-saiyan",
@@ -566,7 +1166,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-genshin-dawn",
@@ -578,7 +1178,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-genshin-night",
@@ -590,7 +1190,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-love-and-deepspace",
@@ -602,7 +1202,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-miku-488137",
@@ -614,7 +1214,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-miku-future",
@@ -626,7 +1226,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-naruto",
@@ -638,7 +1238,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-qq2007-retro",
@@ -650,7 +1250,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-workbuddy-theme",
@@ -662,7 +1262,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   },
   {
     "id": "heige-wuthering-waves",
@@ -674,7 +1274,7 @@ export const communitySkins: CommunitySkin[] = [
     "tier": "built-in",
     "color": null,
     "installs": null,
-    "syncedAt": "2026-08-13T05:50:27.081Z"
+    "syncedAt": "2026-08-13T05:51:19.950Z"
   }
 ]
 
