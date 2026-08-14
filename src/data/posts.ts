@@ -1283,4 +1283,187 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'codex-theme-light-dark-modes',
+    date: '2026-08-15',
+    title: {
+      zh: "Codex 主题的亮色暗色到底怎么适配？一篇讲透",
+      en: "Which Modes Do Codex Themes Support? A Light/Dark Guide",
+    },
+    description: {
+      zh: 'Codex 主题怎么适配亮色和暗色？这篇讲透亮色暗色模式的工作原理、哪些主题默认支持双模式、自定义主题为什么要两套配色都写，以及切换时怎么避免刺眼。',
+      en: 'How do Codex themes handle light and dark mode? This guide explains light/dark adaptation, which themes support both modes by default, why custom themes need two palettes, and how to switch without eye strain.',
+    },
+    content: {
+      zh: [
+        "后台收到最多的提问，不是\"哪个颜色好看\"，而是\"我的主题怎么不会自动跟着系统切换\"。今天把 Codex 主题亮色暗色（codex theme light dark mode）这件事从头讲透。",
+        {
+                "type": "h2",
+                "text": "一套主题，为什么非要配两套颜色"
+        },
+        "白天在亮色界面下看久了眼睛容易累，到了晚上暗色反而更舒服。这不是玄学，是大多数编辑器用户的真实使用节奏。light dark mode 适配，就是让同一套主题在两种环境下都成立，而不是让你每天手动去改设置。",
+        {
+                "type": "h2",
+                "text": "双模式是怎么定义出来的"
+        },
+        "每个主题文件里其实藏着两份配色表，一份叫 light，一份叫 dark，背景、前景、边框、语法高亮各管各的。",
+        "如果你打开自定义主题的设置页，看到两套色板，别嫌麻烦，它们各有各的用途。",
+        {
+                "type": "h2",
+                "text": "跟随系统：prefers-color-scheme 怎么声明"
+        },
+        "Codex 主题支持三种模式：强制亮色、强制暗色、自动。自动模式依赖 CSS 的 `prefers-color-scheme` 媒体查询，系统亮它就显示亮色，系统暗它就切暗色，不需要你点任何东西。主题文件里的声明大致长这样：",
+        "```",
+        "@media (prefers-color-scheme: dark) {",
+        "  :root { /* 暗色变量覆盖 */ }",
+        "}",
+        "```",
+        "一句话总结：只要主题声明了这个查询，你的编辑器就会跟着操作系统的深浅色走。",
+        {
+                "type": "h2",
+                "text": "哪些内置主题默认支持双模式"
+        },
+        "这一版内置主题里，下面这几款默认就带完整的 light/dark 双套配色：",
+        {
+                "type": "ul",
+                "items": [
+                        "Codex 官方默认主题",
+                        "石墨风（Graphite）",
+                        "晚霞（Dusk）",
+                        "纸墨（Ink Paper）",
+                        "森林（Forest）"
+                ]
+        },
+        "安装后在设置里把模式切到\"自动\"，马上就能看到效果。想看更多样式，可以逛逛",
+        {
+                "type": "cta",
+                "text": "/zh/gallery",
+                "href": "/zh/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "自定义主题时，两套配色都要写的真正原因"
+        },
+        "很多人自定义主题只写了一套颜色，结果切到另一模式后，界面要么发白要么发黑，文字直接看不见。原因不复杂：主题框架会在两种模式之间切换变量，你没定义的那套变量会回落到默认值，对比度当场崩掉。两套都写上，等于给两种环境都准备了合理参数，切换时不会翻车。",
+        {
+                "type": "h2",
+                "text": "切换时怎么避免刺眼过渡"
+        },
+        "从亮变暗只花一帧，整个屏幕闪一下，眼睛很难受。我常用的做法：",
+        {
+                "type": "ul",
+                "items": [
+                        "别用瞬时切换，让过渡动画控制在 150–300 毫秒",
+                        "暗色背景别用纯黑，带一点蓝灰的深色，能明显缓解眩光",
+                        "两个模式里保持高亮色同一色相，只调明度",
+                        "切换完先看语法高亮，确认没有跟背景撞色的文字"
+                ]
+        },
+        "**Codex 主题怎么跟随系统自动切换？**",
+        "在主题设置里把模式选成\"自动\"，主题会读取系统的 prefers-color-scheme，跟着深浅色走。",
+        "How do I make my Codex theme follow the system? Pick \"auto\" in the theme settings and it will listen to prefers-color-scheme.",
+        "**我自定义的主题切到暗色后文字看不清，怎么办？**",
+        "多半只写了亮色那套变量。去",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        "Text is unreadable in dark mode on my custom theme. You likely only defined the light variables. Head to /guides/customize and fill in the dark set.",
+        "**内置主题全都支持双模式吗？**",
+        "不是全部，上面列的五款默认支持，其余的在设置里确认一下就行。",
+        "Do all built-in themes support both modes? Not all. The five listed above do; check the settings for the rest.",
+        "想要更多配色灵感，回到",
+        {
+                "type": "cta",
+                "text": "Codex 主题站首页",
+                "href": "/"
+        }
+],
+      en: [
+        "The question I get most in the theme store inbox is not \"which colors look nice.\" It's \"why doesn't my theme follow my system automatically?\" Let me walk you through how codex theme light dark mode actually works, from the two color tables to the switch animation.",
+        {
+                "type": "h2",
+                "text": "Why one theme needs two color schemes"
+        },
+        "In the morning I want a bright workspace. At night, the same screen feels like it's screaming at me. That's not a preference thing, it's a rhythm most editor users share. A Codex theme with proper light dark mode support gives you two working setups, so you never have to dig into settings just to change the lighting.",
+        {
+                "type": "h2",
+                "text": "How a dual-mode theme is put together"
+        },
+        "Inside every theme file there are two color tables hiding. One is called light, the other dark. They handle background, foreground, borders and syntax highlight independently.",
+        "If you open the customizer and see two palettes, don't be annoyed. They each earn their keep.",
+        {
+                "type": "h2",
+                "text": "Following the system: prefers-color-scheme"
+        },
+        "Codex themes ship with three modes: force light, force dark, and auto. Auto relies on the CSS `prefers-color-scheme` media query. When your OS is light, the theme stays light; flip the OS to dark and the theme follows. No clicks needed.",
+        "```",
+        "@media (prefers-color-scheme: dark) {",
+        "  :root { /* dark variable overrides */ }",
+        "}",
+        "```",
+        "That's the whole trick. If the theme declares this query, your editor follows the system scheme.",
+        {
+                "type": "h2",
+                "text": "Which built-in themes support both modes by default"
+        },
+        "Five built-ins ship with a complete light/dark pair out of the box:",
+        {
+                "type": "ul",
+                "items": [
+                        "Codex default theme",
+                        "Graphite",
+                        "Dusk",
+                        "Ink Paper",
+                        "Forest"
+                ]
+        },
+        "Pick \"auto\" in the settings and you can see the effect immediately. For more styles, browse",
+        {
+                "type": "cta",
+                "text": "/zh/gallery",
+                "href": "/zh/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "The real reason to write both palettes when you customize"
+        },
+        "People often define one palette and call it done. Then they flip to the other mode and the interface turns into a whiteout or a black hole. The theme framework swaps variables between the two schemes, and anything you left undefined falls back to the default. That's when contrast falls apart. Writing both palettes is just giving both environments sane parameters so the switch never breaks.",
+        {
+                "type": "h2",
+                "text": "Avoiding the harsh flash on switch"
+        },
+        "Going from light to dark in one frame makes the whole screen blink. It stings. What works for me:",
+        {
+                "type": "ul",
+                "items": [
+                        "Skip instant switching. Let the transition run 150 to 300 milliseconds.",
+                        "Avoid pure black in dark mode. A deep blue-gray is much easier on the eyes.",
+                        "Keep the same hue for highlight colors in both modes, only adjust lightness.",
+                        "Check syntax highlights right after switching. Make sure no text collides with the background."
+                ]
+        },
+        "**How do I make my Codex theme follow the system?**",
+        "Pick \"auto\" in the theme settings. The theme reads prefers-color-scheme and follows the OS. 我的 Codex 主题怎么跟随系统？在设置里选\"自动\"即可。",
+        "**Text is unreadable in dark mode on my custom theme.**",
+        "You probably only wrote the light variables. Head to",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        "**Do all built-in themes support both modes?**",
+        "Not all of them. The five listed above do, and the rest can be checked in the settings. 内置主题都支持双模式吗？不是全部，上面列的五款默认支持。",
+        "If you want more color inspiration, head back to the",
+        {
+                "type": "cta",
+                "text": "Codex theme store homepage",
+                "href": "/"
+        }
+],
+    },
+  },
+
 ];
+;
