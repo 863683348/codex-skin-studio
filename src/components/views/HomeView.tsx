@@ -241,6 +241,18 @@ export function HomeView({ locale }: { locale: Locale }) {
         <div className="border-t border-border pt-6">
           <div className="flex flex-wrap gap-4 text-small">
             <Link
+              href={`/${locale}/blog/codex-skin-complete-guide`}
+              className="text-accent hover:text-accent-hover hover:underline"
+            >
+              {locale === 'zh' ? 'Codex 换肤完整指南 →' : 'The complete Codex skinning guide →'}
+            </Link>
+            <Link
+              href={`/${locale}/guides/best-codex-themes`}
+              className="text-accent hover:text-accent-hover hover:underline"
+            >
+              {locale === 'zh' ? '2026 最佳 Codex 主题合集 →' : 'Best Codex themes 2026 →'}
+            </Link>
+            <Link
               href={`/${locale}/guides`}
               className="text-accent hover:text-accent-hover hover:underline"
             >

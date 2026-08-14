@@ -15,9 +15,12 @@ export async function generateMetadata({
   return {
     title:
       locale === 'en'
-        ? { absolute: 'Codex Skin Studio' }
+        ? { absolute: 'Codex Skin Studio — Free & Premium Codex Themes for the Codex Desktop App' }
         : { absolute: 'Codex 桌面端换肤工具 | Codex Skin Studio' },
-    description: dict.home.heroDescription,
+    description:
+      locale === 'en'
+        ? 'Skin the Codex desktop app with 8+ free Codex themes. Local CDP loopback injection — no app.asar changes, no signature breakage. macOS & Windows, one-click restore. Pro from $5.99/mo.'
+        : dict.home.heroDescription,
     alternates: localeAlternates(`/${locale}`),
   };
 }
