@@ -10,13 +10,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale: Locale = lang === 'en' ? 'en' : 'zh';
+  const title = locale === 'zh' ? '博客 - Codex Skin Studio' : 'Blog - Codex Skin Studio';
+  const description =
+    locale === 'zh'
+      ? '换肤技巧、产品更新与 Codex 生态观察'
+      : 'Theming tips, product updates, and Codex ecosystem notes';
   return {
-    title: locale === 'zh' ? '博客 - Codex Skin Studio' : 'Blog - Codex Skin Studio',
-    description:
-      locale === 'zh'
-        ? '换肤技巧、产品更新与 Codex 生态观察'
-        : 'Theming tips, product updates, and Codex ecosystem notes',
+    title,
+    description,
     alternates: localeAlternates(`/${locale}/blog`),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: `${SITE_URL}/${locale}/blog/`,
+      siteName: 'Codex Skin Studio',
+      images: [{ url: `${SITE_URL}/favicon.svg`, width: 512, height: 512 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL}/favicon.svg`],
+    },
   };
 }
 
