@@ -1465,5 +1465,170 @@ export const POSTS: BlogPost[] = [
     },
   },
 
+  {
+    slug: 'pink-codex-theme-tour',
+    date: '2026-08-16',
+    title: {
+      zh: "Codex 粉系主题速览：温柔工作台怎么搭",
+      en: "Codex Pink Themes Quick Tour: Build a Soft, Focused Workspace",
+    },
+    description: {
+      zh: 'Codex 粉系主题（codex pink theme）盘点：粉色调为什么适合长时间编码、内置粉色 preset 有哪些、怎么把任意主题调成粉色系，以及粉色搭配暗色模式的小技巧。',
+      en: 'A codex pink theme quick tour: why pink palettes work for long coding sessions, which built-in pink presets exist, how to recolor any theme pink, and tips for pairing pink with dark mode.',
+    },
+    content: {
+      zh: [
+        "粉色常被当成\"不够极客\"的颜色，但真正把 codex pink theme 装过的人都知道：粉色工作台对长时间编码意外地友好。今天把内置粉系主题翻一遍，再教你怎么把任意主题调成粉色系。",
+        {
+                "type": "h2",
+                "text": "为什么粉色适合编码"
+        },
+        "编辑器天天看，配色选的不是\"好看\"，是\"不累\"。粉色的问题在于高饱和粉看久了刺眼，但低饱和的玫瑰粉、豆沙粉反而比纯白和纯黑更舒服：",
+        {
+                "type": "ul",
+                "items": [
+                        "低饱和粉背景降低对比刺激，眼睛不容易疲劳",
+                        "粉色与代码默认的蓝绿紫语法色不冲突，高亮依旧清晰",
+                        "长时间盯着写代码，暖色调比冷色调更容易让注意力停留"
+                ]
+        },
+        "一句话：粉色不是卖萌，是一种被低估的护眼方案。",
+        {
+                "type": "h2",
+                "text": "内置粉色 preset 盘点"
+        },
+        "主题库里分了一个专门的 pink 分类，下面这几款都是直接能装的：",
+        {
+                "type": "ul",
+                "items": [
+                        "preset-yang-simin（杨思敏主题）：玫红+浅粉渐变，配旗袍红裙插画，浪漫里带点复古",
+                        "preset-dilraba（迪丽热巴主题）：偏明亮的粉调，适合喜欢活泼一点工作台的开发者"
+                ]
+        },
+        "两款都做了暗色模式适配，晚上切暗色不会闪白。想看完整图库和效果预览，去",
+        {
+                "type": "cta",
+                "text": "/zh/gallery",
+                "href": "/zh/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "没有现成粉色？自己调一个"
+        },
+        "内置 preset 不够粉？自定义主题里改三组变量就够了：背景、前景、强调色。记住三个数值参考：",
+        {
+                "type": "ul",
+                "items": [
+                        "背景用低饱和粉：色相 330-350°，饱和度 15-25%，明度 90% 以上",
+                        "前景文字用深灰紫，别用纯黑，纯黑在粉底上对比太硬",
+                        "强调色（选中、光标、按钮）用玫红或珊瑚粉，饱和度 60-70%，一眼能找到"
+                ]
+        },
+        "改完保存，重启生效。想照着官方教程一步步来，翻",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        {
+                "type": "h2",
+                "text": "粉色 + 暗色模式的搭配技巧"
+        },
+        "很多人担心粉色只有亮色好看，其实暗色粉才是隐藏宝藏：",
+        {
+                "type": "ul",
+                "items": [
+                        "暗色背景用深紫粉（明度 15% 左右），不是纯黑，保持粉调",
+                        "语法高亮在暗粉底上选淡粉、淡黄、薄荷绿，对比柔和",
+                        "把强调色统一成亮玫红，夜间写代码找光标不费劲"
+                ]
+        },
+        "**粉色主题会不会影响专注力？** 高饱和粉色会，低饱和不会。选背景饱和度 20% 以内的粉，专注力和白底没有差别。",
+        "**Codex 内置粉色 preset 只有两款吗？** 目前 pink 分类下是这两款，但社区皮肤里还有更多粉色系，图库里都能翻到。",
+        "**粉色主题适合暗色模式吗？** 非常适合。暗粉底比纯黑底更暖，夜间长时间编码眼睛更放松。",
+        "想让整个工作台都换成粉色系，回",
+        {
+                "type": "cta",
+                "text": "Codex 主题库首页",
+                "href": "/"
+        }
+      ],
+      en: [
+        "Pink gets dismissed as not-nerdy-enough, but anyone who has actually run a codex pink theme knows: a pink workspace is surprisingly good for long sessions. Let's tour the built-in pink presets, then cover how to recolor any theme pink.",
+        {
+                "type": "h2",
+                "text": "Why pink works for coding"
+        },
+        "You pick an editor color scheme for comfort, not for looks. High-saturation pink is harsh, but low-saturation rose and dusty pink are easier on the eyes than pure white or pure black:",
+        {
+                "type": "ul",
+                "items": [
+                        "Low-saturation pink backgrounds lower contrast strain, eyes tire less",
+                        "Pink does not fight the default blue, green, purple syntax colors, highlighting stays readable",
+                        "Warm palettes hold attention better than cold ones over hours of staring at code"
+                ]
+        },
+        "In short: pink is not cute, it is an underrated eye-saver.",
+        {
+                "type": "h2",
+                "text": "Built-in pink presets"
+        },
+        "The theme library keeps a dedicated pink category. These two are install-ready:",
+        {
+                "type": "ul",
+                "items": [
+                        "preset-yang-simin: rose and blush gradient with a cheongsam illustration, romantic with a retro twist",
+                        "preset-dilraba: a brighter pink tone, for developers who want a livelier desk"
+                ]
+        },
+        "Both ship with dark-mode palettes, so switching at night will not flash white. Browse the full gallery and previews at",
+        {
+                "type": "cta",
+                "text": "/gallery",
+                "href": "/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "No pink preset? Recolor any theme"
+        },
+        "If the built-ins are not pink enough, edit three variable groups in any custom theme: background, foreground, accent. Three reference values:",
+        {
+                "type": "ul",
+                "items": [
+                        "Background: low-saturation pink, hue 330-350°, saturation 15-25%, lightness above 90%",
+                        "Foreground: dark gray-purple, not pure black, pure black is too hard against pink",
+                        "Accent (selection, cursor, buttons): rose or coral, saturation 60-70%, easy to spot"
+                ]
+        },
+        "Save and restart. For the official step-by-step, check",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        {
+                "type": "h2",
+                "text": "Pink meets dark mode"
+        },
+        "People assume pink only works in light mode. Dark pink is the hidden gem:",
+        {
+                "type": "ul",
+                "items": [
+                        "Dark background: deep purple-pink at around 15% lightness, not pure black, keep the pink tone",
+                        "Syntax colors: pale pink, pale yellow, mint green on dark pink, soft contrast",
+                        "Accent: a single bright rose, so the cursor is easy to find at night"
+                ]
+        },
+        "**Does a pink theme hurt focus?** High-saturation pink does. Low-saturation pink does not. Keep the background under 20% saturation and focus is identical to a white background.",
+        "**Are there only two built-in pink presets?** That is the pink category right now, but community skins include more pink options, all browsable in the gallery.",
+        "**Is pink good for dark mode?** Very. Dark pink is warmer than pure black, so eyes relax more during late-night sessions.",
+        "Ready to go full pink? Head back to",
+        {
+                "type": "cta",
+                "text": "the theme store homepage",
+                "href": "/"
+        }
+      ]
+    },
+  },
 ];
-;
