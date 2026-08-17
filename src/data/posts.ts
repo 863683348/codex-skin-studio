@@ -1647,4 +1647,90 @@ export const POSTS: BlogPost[] = [
           "en": ["Sci-fi themes are the most photogenic category in the Codex theme store, and also the easiest to get wrong. Neon overload, crushed contrast, sore eyes after an hour of work — all classic. This quick tour runs through the built-in futuristic presets and explains how to build a sci-fi palette that still reads well at hour six.",{"type":"h2","text":"Which built-in presets feel sci-fi"},"There is no dedicated sci-fi category, but several dark presets are natural sci-fi bases:",{"type":"ul","items":["gothic-void-expedition: deep purple-black with teal highlights, space-exploration energy","cyber-neon: black background with magenta and cyan double-neon, nightclub energy","monokai-stone: a dark variant of classic Monokai, low neon, the restrained sci-fi option","tokyo-night series: deep blue base with pink and purple highlights, the one many devs find most comfortable"]},"For the full gallery with previews, head to",{"type":"cta","text":"/en/gallery","href":"/en/gallery"},{"type":"h2","text":"Three rules for sci-fi palettes"},"Futuristic does not mean wall-to-wall neon. Workable sci-fi workspaces follow three rules:",{"type":"ul","items":["Dark but not pure black: deep blue or purple at 10-15% lightness is easier on the eyes than #000","Neon only for highlights and accents: syntax colors, cursor, selection; body text stays low-saturation gray","Pair warm and cool: cyan with magenta, blue with purple. A single neon color reads as cheap, a pair reads as sci-fi"]},"The sci-fi feel comes from the contrast between background and accent, not from the neon count.",{"type":"h2","text":"Readability traps in dark mode"},"The biggest trap in dark sci-fi themes is comments and secondary text vanishing. On a neon-tinted background, gray comments disappear. After installing any dark theme, check three spots:",{"type":"ul","items":["Comment color: at least 4.5:1 contrast against the background","Selection: semi-transparent neon highlight, not a solid bar over the text","Cursor: a neon different from the syntax colors so it never blends in"]},"Fix those three and a sci-fi theme stops being 'pretty but unusable' and becomes 'pretty and usable'.",{"type":"h2","text":"Recolor any theme sci-fi"},"Do not want to switch? The custom editor only needs three variables: background to deep blue or purple, foreground to low-saturation gray, accent to neon cyan or magenta. Less work than you would expect, and the effect is instant.","Run the contrast check when done: 4.5:1 for comments, 7:1 for body text. That is the WCAG floor and the floor for 'sci-fi without sore eyes'.",{"type":"h2","text":"FAQ"},"**Do sci-fi themes hurt your eyes?** High-saturation neon spread everywhere does. The fix is to confine neon to highlights and accents and keep the background dark blue or purple — stylish and easy on the eyes.","**Which sci-fi themes are built into Codex?** In the dark group: gothic-void-expedition, cyber-neon, monokai-stone, and the tokyo-night series. The community has more, all browsable in the gallery.","**How much neon is too much?** Less is more: neon on syntax highlights, cursor, and selection; low-saturation colors for everything else. More neon means more eye strain over time.","For the full gallery and previews, head back to",{"type":"cta","text":"the theme store homepage","href":"/"}]
       }
   },
+  {
+    slug: 'codex-dark-theme-tour',
+    date: '2026-08-18',
+    title: {
+      zh: "Codex 暗黑主题速览：沉稳工作台怎么搭",
+      en: "Codex Dark Themes Quick Tour: Build a Calm, Focused Workspace",
+    },
+    description: {
+      zh: "Codex 暗黑主题（codex dark theme）盘点：哪些内置 preset 适合长时间编码、暗色配色怎么搭不刺眼、暗色模式下的可读性陷阱，以及如何把任意主题调成暗黑风。",
+      en: "A codex dark theme quick tour: which built-in presets suit long coding sessions, how to build a dark palette that does not sting the eyes, the readability traps in dark mode, and how to recolor any theme dark.",
+    },
+    content: {
+      zh: [
+        "暗黑主题几乎是每个深夜编码者的默认选择，但「暗」也有讲究。纯黑背景在暗室里看久了眼睛发酸，配色没搭好还会让注释糊成一团。今天把内置暗黑系 preset 翻一遍，再讲清楚暗色配色到底怎么搭才不伤眼。",
+        { type: 'h2', text: '哪些内置 preset 属于暗黑风' },
+        { type: 'ul', items: [
+          'preset-purple-night（紫夜限定）：深紫底 + 微光，神秘但不刺眼，夜间编码很舒服',
+          'gothic-void-expedition（哥特虚空远征）：深紫黑底 + 青绿高亮，太空探索气质',
+          'cyber-neon（赛博霓虹）：黑底 + 品红/青双霓虹，喜欢高饱和的可以选',
+          'tokyo-night 系列：深蓝底 + 粉紫高亮，很多开发者觉得最耐看',
+          'monokai-stone（Monokai 石）：经典 Monokai 暗色变体，霓虹含量低，属于「克制暗黑」',
+        ] },
+        { type: 'cta', text: '看看紫夜限定效果 →', href: '/zh/gallery/preset-purple-night' },
+        { type: 'h2', text: '暗色配色怎么搭才不刺眼' },
+        { type: 'ul', items: [
+          '背景深但别纯黑：深蓝或深紫（10-15% 亮度）比 #000 更护眼',
+          '文字用低饱和灰，别用纯白，纯白在暗底上对比太硬',
+          '强调色只放一处高亮：选中、光标、按钮用同一个霓虹，别到处撒',
+        ] },
+        { type: 'h2', text: '暗色模式下的可读性陷阱' },
+        { type: 'ul', items: [
+          '注释色：至少 4.5:1 对比度，不能只比背景亮一点点',
+          '选中区：半透明高亮，别用整行实色挡住文字',
+          '光标：换一个和语法高亮不同色的霓虹，别混在一起',
+        ] },
+        { type: 'h2', text: '怎么把任意主题调成暗黑风' },
+        "不想换主题？自定义模式改三组变量就够了：背景改成深蓝或深紫，前景保持低饱和灰，强调色换成单一霓虹。改动量比想象中小，效果却立竿见影。调完记得做对比度检查：注释 4.5:1、正文 7:1，这是 WCAG 的底线。",
+        { type: 'cta', text: '跟着官方教程一步步调 →', href: '/guides/customize' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: '暗黑主题会比亮色更护眼吗？', a: '看怎么搭。纯黑底反而容易在暗室里刺眼；深蓝或深紫（10-15% 亮度）的背景更舒服。关键是降低对比刺激，而不是一味调暗。' },
+          { q: 'Codex 内置哪些暗黑主题？', a: '深色系里的 preset-purple-night、gothic-void-expedition、cyber-neon、tokyo-night 系列和 monokai-stone 都是暗黑底子。社区还有更多，全部能在图库翻到。' },
+          { q: '暗色模式最容易踩的坑是什么？', a: '注释和次要文本看不清。装完暗色主题先检查注释对比度、选中区透明度和光标颜色这三处，调好就能从「好看但没法干活」变成「好看又能干活」。' },
+        ] },
+        { type: 'h2', text: '回到主题库' },
+        "想要完整图库和效果预览，回到 Codex Skin Studio 主题库首页，几分钟就能让你的 Codex 换个沉稳的暗黑皮肤。",
+        { type: 'cta', text: 'Codex Skin Studio 主题库首页 →', href: '/' },
+      ],
+      en: [
+        "Dark themes are the default for almost everyone who codes late, but 'dark' is a spectrum. A pure-black background stings the eyes in a dark room, and a bad palette turns comments into mush. This quick tour runs through the built-in dark presets, then explains how to build a dark palette that stays readable at hour six.",
+        { type: 'h2', text: 'Which built-in presets are dark' },
+        { type: 'ul', items: [
+          'preset-purple-night: deep purple base with a faint glow, mysterious but easy on the eyes at night',
+          'gothic-void-expedition: deep purple-black with teal highlights, space-exploration energy',
+          'cyber-neon: black base with magenta and cyan double-neon, for high-saturation fans',
+          'tokyo-night series: deep blue base with pink and purple highlights, the one many devs find most comfortable',
+          'monokai-stone: a dark variant of classic Monokai, low neon, the restrained dark option',
+        ] },
+        { type: 'cta', text: 'See Purple Night in action →', href: '/en/gallery/preset-purple-night' },
+        { type: 'h2', text: 'How to build a dark palette that does not sting' },
+        { type: 'ul', items: [
+          'Dark but not pure black: deep blue or purple at 10-15% lightness beats #000',
+          'Text in low-saturation gray, not pure white; pure white is harsh against dark',
+          'One neon accent only: selection, cursor, buttons share one highlight, do not scatter it',
+        ] },
+        { type: 'h2', text: 'Readability traps in dark mode' },
+        { type: 'ul', items: [
+          'Comment color: at least 4.5:1 contrast, not just a hair brighter than the background',
+          'Selection: semi-transparent highlight, not a solid bar over the text',
+          'Cursor: pick a neon different from the syntax highlight, keep them apart',
+        ] },
+        { type: 'h2', text: 'How to recolor any theme dark' },
+        "Do not want to switch themes? Three variable groups in custom mode do it: background to deep blue or purple, foreground to low-saturation gray, accent to a single neon. The change is smaller than it sounds and the effect is immediate. After editing, run a contrast check: comments 4.5:1, body 7:1. That is the WCAG floor.",
+        { type: 'cta', text: 'Follow the official customization guide →', href: '/guides/customize' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Is a dark theme easier on the eyes than light?', a: 'It depends on the build. Pure black actually stings in a dark room; a deep blue or purple at 10-15% lightness is more comfortable. The goal is less contrast shock, not maximum darkness.' },
+          { q: 'Which dark themes are built into Codex Skin Studio?', a: 'The dark-family presets are preset-purple-night, gothic-void-expedition, cyber-neon, the tokyo-night series, and monokai-stone. The community gallery has more, all browsable in the theme store.' },
+          { q: 'What is the most common dark-mode mistake?', a: 'Comments and secondary text vanishing. After installing any dark theme, check comment contrast, selection transparency, and cursor color. Fix those three and a dark theme goes from pretty-but-unusable to pretty-and-productive.' },
+        ] },
+        { type: 'h2', text: 'Back to the theme store' },
+        "For the full gallery and live previews, head back to the Codex Skin Studio theme store homepage and give your Codex a calm dark skin in a few minutes.",
+        { type: 'cta', text: 'Codex Skin Studio theme store homepage →', href: '/' },
+      ],
+    },
+  }
 ];
