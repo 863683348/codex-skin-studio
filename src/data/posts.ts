@@ -1910,5 +1910,53 @@ export const POSTS: BlogPost[] = [
         { type: 'cta', text: 'Browse the Codex Skin Studio theme store →', href: '/' },
       ],
     },
-  }
+  },
+  {
+    slug: 'how-to-customize-codex-theme-wallpapers',
+    date: '2026-08-21',
+    title: {
+      zh: '如何自定义 Codex 主题背景图',
+      en: 'How to Customize Codex Theme Wallpapers',
+    },
+    description: {
+      zh: 'Codex 主题的视觉效果不仅来自颜色方案，更来自背景图片的选择。本文教你如何使用 Codex Skin Studio 自定义背景图，让编码环境更有个性。',
+      en: 'Codex theme visuals come not just from color schemes, but from background image selection. Learn how to customize wallpapers with Codex Skin Studio for a more personalized coding environment.',
+    },
+    content: {
+      zh: [
+        { type: 'h2', text: '为什么自定义背景很重要' },
+        { type: 'p', text: 'Codex 主题的视觉效果不仅来自颜色方案，更来自背景图片的选择。一张合适的壁纸能让你的编码环境更有个性，也能减少视觉疲劳。' },
+        { type: 'h2', text: '支持格式与要求' },
+        { type: 'p', text: 'Codex Skin Studio 支持以下背景格式：' },
+        { type: 'ul', items: ['**PNG**：无损质量，适合静态背景', '**WebP**：现代格式，文件更小且质量更高', '**JPG**：兼容性好，但可能有压缩伪影'] },
+        { type: 'p', text: '建议分辨率：1920x1080 或更高，以确保在不同屏幕上都能清晰显示。' },
+        { type: 'h2', text: '如何添加自定义背景' },
+        { type: 'ul', items: ['打开 Codex Skin Studio', '选择你喜欢的主题预设', '点击「自定义背景」按钮', '从本地选择你的图片文件', '调整透明度（可选）', '点击「应用」保存设置'] },
+        { type: 'h2', text: '背景透明度技巧' },
+        { type: 'ul', items: ['**低透明度（20-40%）**：背景若隐若现，代码内容更突出', '**中等透明度（50-60%）**：平衡视觉效果与可读性', '**高透明度（70-80%）**：背景几乎不可见，适合作为点缀'] },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '背景图片太大影响性能吗？', a: 'Codex Skin Studio 会自动压缩和调整背景图片，正常大小的图片（<10MB）不会影响性能。' },
+          { q: '可以保存多套背景方案吗？', a: '是的，Pro 用户可以保存多套自定义方案，快速切换。' },
+        ] },
+      ],
+      en: [
+        { type: 'h2', text: 'Why Custom Wallpapers Matter' },
+        { type: 'p', text: 'Codex theme visuals come not just from color schemes, but from background image selection. The right wallpaper makes your coding environment more personal and reduces eye strain.' },
+        { type: 'h2', text: 'Supported Formats & Requirements' },
+        { type: 'p', text: 'Codex Skin Studio supports these background formats:' },
+        { type: 'ul', items: ['**PNG**: Lossless quality, ideal for static backgrounds', '**WebP**: Modern format, smaller files with higher quality', '**JPG**: Good compatibility, but may have compression artifacts'] },
+        { type: 'p', text: 'Recommended resolution: 1920x1080 or higher for clear display on various screens.' },
+        { type: 'h2', text: 'How to Add Custom Backgrounds' },
+        { type: 'ul', items: ['Open Codex Skin Studio', 'Select your preferred theme preset', 'Click "Custom Background"', 'Choose your image file from local storage', 'Adjust opacity (optional)', 'Click "Apply" to save settings'] },
+        { type: 'h2', text: 'Background Opacity Tips' },
+        { type: 'ul', items: ['**Low opacity (20-40%)**: Background subtly visible, code content stands out', '**Medium opacity (50-60%)**: Balanced visual effect and readability', '**High opacity (70-80%)**: Background nearly invisible, suitable as accent'] },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Do large background images affect performance?', a: 'Codex Skin Studio automatically compresses and adjusts background images. Normal-sized images (<10MB) won\'t affect performance.' },
+          { q: 'Can I save multiple background schemes?', a: 'Yes, Pro users can save multiple custom schemes for quick switching.' },
+        ] },
+      ],
+    },
+  },
 ];
