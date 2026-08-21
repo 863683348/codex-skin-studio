@@ -45,6 +45,7 @@ export default async function Page({
     description: locale === 'en' ? theme.description.en : theme.description.zh,
     brand: { '@type': 'Brand', name: 'Codex Skin Studio' },
     category: theme.category,
+    image: theme.previewUrl ?? theme.imageUrl ?? undefined,
     offers: {
       '@type': 'Offer',
       price: '0',

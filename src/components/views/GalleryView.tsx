@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
+import { Plus } from 'lucide-react'
 import { ThemeCard } from '@/components/ThemeCard'
 import { CommunitySkinCard } from '@/components/CommunitySkinCard'
 import { AdDisplay } from '@/components/AdDisplay'
@@ -100,9 +102,18 @@ export function GalleryView({ locale }: { locale: Locale }) {
       {/* 社区皮肤内容 */}
       {tab === 'community' && (
         <>
-          <p className="mt-2 text-caption text-text-tertiary">
-            {dict.community.description}
-          </p>
+          <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
+            <p className="text-caption text-text-tertiary">
+              {dict.community.description}
+            </p>
+            <Link
+              href={`/${locale}/community/submit`}
+              className="inline-flex items-center gap-1.5 rounded-pill border border-accent px-4 py-1.5 text-small font-medium text-accent transition-colors hover:bg-accent/10"
+            >
+              <Plus size={14} />
+              {dict.community.submitCta}
+            </Link>
+          </div>
           <div className="my-6">
             <CommunityFilterTabs locale={locale} active={activeCommunity} onChange={setActiveCommunity} />
           </div>
