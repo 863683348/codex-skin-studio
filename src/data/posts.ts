@@ -2,6 +2,7 @@
 export type PostBlock =
   | string
   | { type: 'h2'; text: string }
+  | { type: 'p'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'faq'; items: { q: string; a: string }[] }
   | { type: 'cta'; text: string; href: string };
@@ -129,6 +130,32 @@ export const POSTS: BlogPost[] = [
         '第四步：自定义背景。托盘「更换背景图」支持导入 16:9 的 jpg/png/webp，工具会自动把焦点调到右侧、左侧留出安全区。',
         '第五步：恢复。任何时候想回到官方外观，双击「完全恢复 Codex」或托盘里的恢复项，界面立即还原。',
         '想更进一步？你可以用任意主题的 theme.json 作为模板，改配色和文案，打造自己的专属风格。',
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Codex 换肤会修改 Codex 官方文件吗？',
+              a: '不会。Codex Skin Studio 通过本机 CDP（Chrome DevTools Protocol）在运行时注入主题，不写入也不修改 app.asar 等官方文件，停止后立即恢复原貌。',
+            },
+            {
+              q: 'Codex Skin Studio 免费吗？',
+              a: '免费版即含 8 款精选主题与亮/暗切换，开箱即用。Pro 解锁无限自定义主题、背景图上传与去水印，Team 在 Pro 基础上增加团队主题共享。',
+            },
+            {
+              q: '支持 Windows 和 macOS 吗？',
+              a: '支持。Windows 双击 Setup.exe 即可安装（无需管理员）；macOS 拖入 Applications 后右键打开即可，Intel 与 Apple 芯片都兼容。',
+            },
+            {
+              q: '如何切换或恢复主题？',
+              a: '右键托盘图标打开主题菜单即可实时切换；想回到官方外观，点击「完全恢复 Codex」，界面立即还原，无需卸载重装。',
+            },
+            {
+              q: '主题包里能藏恶意代码吗？',
+              a: '不能。主题包只允许 CSS 与图片，明确禁止 JavaScript 等可执行内容，且注入内容会经过安全校验器检查。',
+            },
+          ],
+        },
       ],
       en: [
         'Codex Skin Studio themes Codex locally via Chrome DevTools Protocol, without touching official files. Here is the full walkthrough.',
@@ -138,6 +165,32 @@ export const POSTS: BlogPost[] = [
         'Step 4 — Custom wallpaper. "Change Background" imports 16:9 jpg/png/webp, automatically focusing right and keeping a safe area on the left.',
         'Step 5 — Restore. Return to the official look anytime via "Fully Restore Codex" in the tray.',
         'Go further: use any theme.json as a template, tweak colors and copy, and craft your own signature style.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Does theming modify Codex official files?',
+              a: 'No. Codex Skin Studio injects themes at runtime via local CDP (Chrome DevTools Protocol), never writing to or modifying official files like app.asar, and reverts instantly when stopped.',
+            },
+            {
+              q: 'Is Codex Skin Studio free?',
+              a: 'The free plan includes 8 curated themes plus light/dark switching, ready out of the box. Pro unlocks unlimited custom themes, wallpaper uploads, and removes the watermark; Team adds shared team themes.',
+            },
+            {
+              q: 'Does it support Windows and macOS?',
+              a: 'Yes. On Windows, run Setup.exe (no admin needed). On macOS, drag to Applications and right-click Open — compatible with both Intel and Apple Silicon.',
+            },
+            {
+              q: 'How do I switch or restore a theme?',
+              a: 'Right-click the tray icon to open the theme menu and switch live. To return to the official look, click "Fully Restore Codex" — the UI reverts instantly, no uninstall needed.',
+            },
+            {
+              q: 'Can a theme package hide malicious code?',
+              a: 'No. Theme packages allow only CSS and images and explicitly forbid JavaScript or other executable content, and injected content passes a safety validator.',
+            },
+          ],
+        },
       ],
     },
   },
@@ -1820,9 +1873,7 @@ export const POSTS: BlogPost[] = [
         { type: 'cta', text: 'Codex Skin Studio theme store homepage →', href: '/' },
       ],
     },
-  }
-];
-  ,
+  },
   {
     slug: 'how-often-should-you-switch-codex-themes',
     date: '2026-08-20',
