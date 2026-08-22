@@ -2266,3 +2266,53 @@ export const POSTS: BlogPost[] = [
     },
   },
 ];
+,
+  {
+    slug: 'advanced-css-variables-codex-themes',
+    date: '2026-08-23',
+    title: {
+      zh: '配色方案进阶：CSS 变量调色教程',
+      en: 'Advanced Colors: Tweak CSS Variables for Codex Themes',
+    },
+    description: {
+      zh: '掌握 Codex 主题的 CSS 变量，精准调整每种语法颜色的亮度和饱和度，打造个性化的编码环境。',
+      en: 'Master Codex theme CSS variables to precisely tune brightness and saturation of every syntax color — building a truly personalized coding environment.',
+    },
+    content: {
+      zh: [
+        '你已经会切换主题了，但总觉得某个蓝色太亮、某个绿色不够醒目？Codex 主题的真正的力量在于 CSS 变量——每个颜色都是可调节的旋钮，而不是固定的油漆。',
+        { type: 'h2', text: 'Codex 主题的 CSS 变量结构' },
+        { type: 'p', text: '每个 Codex 主题文件（.tmTheme 或 .codedrobe）本质上是一组 CSS 变量定义。核心变量包括：--background、--foreground、--caret、--selection、--gutter-background、--gutter-foreground、--line-number、--indent-guide、--bracket-matcher、--syntax-* 系列。' },
+        { type: 'p', text: 'Syntax 变量覆盖所有编程语言元素：--syntax-keyword、--syntax-string、--syntax-comment、--syntax-number、--syntax-function、--syntax-variable、--syntax-class、--syntax-type、--syntax-operator、--syntax-tag、--syntax-attribute、--syntax-regex、--syntax-property。' },
+        { type: 'h2', text: '实战：调整语法高亮' },
+        { type: 'p', text: '假设你觉得关键词太刺眼。找到主题文件中的 --syntax-keyword 变量，将 color 值从 #ff7b72（亮红）改为 #a371f7（柔和紫）。保存后热重载即可看到效果。' },
+        { type: 'ul', items: ['使用 Codex Skin Studio 的实时预览功能，边改边看', '一次只调整一个变量，便于定位问题', '记录你的改动，方便日后回溯'] },
+        { type: 'h2', text: '调色原则' },
+        { type: 'p', text: '好的调色遵循三个原则：对比度（确保可读）、和谐度（颜色之间不冲突）、一致性（同类元素使用相同颜色）。' },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: 'CSS 变量改动会影响性能吗？', a: '不会。CSS 变量在渲染时计算一次，不影响 Codex 运行速度。' },
+          { q: '如何恢复默认颜色？', a: '在 Codex Skin Studio 中点击"Restore Default"即可重置所有变量。' },
+          { q: '可以保存多套配色方案吗？', a: '可以。每套方案保存为一个 .codedrobe 文件，随时切换。' },
+        ] },
+      ],
+      en: [
+        'You can switch themes now, but something still feels off — that blue is too bright, that green isn\'t popping enough. The real power of Codex themes lies in CSS variables: every color is an adjustable knob, not a fixed coat of paint.',
+        { type: 'h2', text: 'CSS Variable Structure in Codex Themes' },
+        { type: 'p', text: 'Every Codex theme file (.tmTheme or .codedrobe) is essentially a set of CSS variable definitions. Core variables include: --background, --foreground, --caret, --selection, --gutter-background, --gutter-foreground, --line-number, --indent-guide, --bracket-matcher, and the --syntax-* family.' },
+        { type: 'p', text: 'Syntax variables cover all language elements: --syntax-keyword, --syntax-string, --syntax-comment, --syntax-number, --syntax-function, --syntax-variable, --syntax-class, --syntax-type, --syntax-operator, --syntax-tag, --syntax-attribute, --syntax-regex, --syntax-property.' },
+        { type: 'h2', text: 'In Practice: Tuning Syntax Highlights' },
+        { type: 'p', text: 'Say you find keywords too harsh. Find the --syntax-keyword variable in your theme file and change the color from #ff7b72 (bright red) to #a371f7 (soft purple). Save and hot-reload to see the effect immediately.' },
+        { type: 'ul', items: ['Use Codex Skin Studio\'s live preview — tweak and see results in real time', 'Adjust one variable at a time to isolate issues', 'Document your changes for future reference'] },
+        { type: 'h2', text: 'Color Tuning Principles' },
+        { type: 'p', text: 'Good color tuning follows three principles: contrast (ensure readability), harmony (colors don\'t clash), and consistency (same element types use the same color).' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Do CSS variable changes affect performance?', a: 'No. CSS variables are computed once during rendering and don\'t impact Codex\'s runtime speed.' },
+          { q: 'How do I restore default colors?', a: 'Click "Restore Default" in Codex Skin Studio to reset all variables.' },
+          { q: 'Can I save multiple color schemes?', a: 'Yes. Save each scheme as a .codedrobe file and switch between them anytime.' },
+        ] },
+      ],
+    },
+  },
+];
