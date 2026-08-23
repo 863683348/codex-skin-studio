@@ -2265,8 +2265,6 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
-];
-,
   {
     slug: 'advanced-css-variables-codex-themes',
     date: '2026-08-23',
