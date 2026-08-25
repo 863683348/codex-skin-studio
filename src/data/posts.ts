@@ -913,4 +913,76 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: 'is-codex-skin-studio-safe',
+    date: '2026-08-26',
+    title: {
+      zh: 'Codex Skin Studio 是否安全？CDP 注入安全性详解',
+      en: 'Is Codex Skin Studio Safe? CDP Injection Security Explained',
+    },
+    description: {
+      zh: 'Codex Skin Studio 使用 CDP 注入应用主题，不修改官方文件。这篇讲清楚 CDP 注入的工作原理、安全边界，以及你需要注意什么。',
+      en: 'Codex Skin Studio uses Chrome DevTools Protocol (CDP) injection to apply themes without modifying official files. Here is what that means for your safety.',
+    },
+    content: {
+      zh: [
+        '对于任何桌面工具，安全性都是一个合理关切。Codex Skin Studio 使用 Chrome DevTools Protocol (CDP) 注入来应用主题，而不修改官方文件。以下是这对您的安全的含义。',
+        { type: 'h2', text: 'CDP 注入如何工作' },
+        'CDP 注入不编辑应用程序文件。相反，它通过 DevTools 协议连接到正在运行的 Codex 进程，并实时应用 CSS 覆盖。官方文件保持原样。',
+        '这种方法有三个安全优势：①不修改文件，您的 Codex 安装保持 pristine；②可逆，移除主题后一切恢复默认；③审计追踪，您可以看到确切应用的 CSS 更改。',
+        { type: 'h2', text: 'CDP 注入不能做什么' },
+        'CDP 注入仅限于驱动 Codex 的浏览器引擎。它不能：访问您的个人文件、安装恶意软件、修改系统设置、读取您的密码或私人数据。',
+        '如果主题文件包含恶意 JavaScript，它将在浏览器沙箱中执行。现代浏览器将网站代码与操作系统隔离。受损的主题无法超越该沙箱。',
+        { type: 'h2', text: '安全使用主题的最佳实践' },
+        {
+          type: 'ul',
+          items: [
+            '只从受信任的来源安装主题',
+            '检查主题文件大小（异常大的文件可能包含隐藏载荷）',
+            '保持 Codex 更新以享受最新安全补丁',
+            '审查主题更新日志以发现可疑更改',
+          ],
+        },
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'CDP 注入对我的电脑安全吗？', a: '是的。CDP 注入仅修改 Codex 窗口中显示的内容。它无法访问您的文件或系统。' },
+            { q: '主题能包含病毒吗？', a: '技术上可以，但浏览器沙箱防止在应用程序外部执行。坚持使用受信任的主题来源。' },
+            { q: '如何确认主题是否安全？', a: '查看主题文件大小是否异常，检查来源是否可信，关注 Codex Skin Studio 的更新日志。' },
+          ],
+        },
+        { type: 'cta', text: '探索安全主题选项', href: 'https://codex-skin-studio.shop' },
+      ],
+      en: [
+        'Security is a legitimate concern for any desktop tool. Codex Skin Studio uses Chrome DevTools Protocol (CDP) injection to apply themes without modifying official files. Here is what that means for your safety.',
+        { type: 'h2', text: 'How CDP Injection Works' },
+        'CDP injection does not edit application files. Instead, it connects to the running Codex process through the DevTools protocol and applies CSS overrides in real time. The official files remain untouched.',
+        'This approach has three security advantages: ① No file modification — your Codex installation stays pristine; ② Reversible — remove the theme and everything returns to default; ③ Audit trail — you can see exactly what CSS changes are applied.',
+        { type: 'h2', text: 'What CDP Injection Cannot Do' },
+        'CDP injection is limited to the browser engine that powers Codex. It cannot: access your personal files, install malware, modify system settings, or read your passwords or private data.',
+        'If a theme file contains malicious JavaScript, it will execute in the browser sandbox. Modern browsers isolate website code from the operating system. A compromised theme cannot escalate beyond that sandbox.',
+        { type: 'h2', text: 'Best Practices for Safe Theme Use' },
+        {
+          type: 'ul',
+          items: [
+            'Only install themes from trusted sources',
+            'Check theme file sizes (suspiciously large files may contain hidden payloads)',
+            'Keep Codex updated to benefit from latest security patches',
+            'Review theme changelogs for suspicious changes',
+          ],
+        },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is CDP injection safe for my computer?', a: 'Yes. CDP injection only modifies what is displayed in the Codex window. It cannot access your files or system.' },
+            { q: 'Can themes contain viruses?', a: 'Technically yes, but browser sandboxing prevents execution outside the application. Stick to trusted theme sources.' },
+            { q: 'How do I verify a theme is safe?', a: 'Check file size for anomalies, verify the source is trustworthy, and monitor Codex Skin Studio changelogs.' },
+          ],
+        },
+        { type: 'cta', text: 'Explore safe theming options', href: 'https://codex-skin-studio.shop' },
+      ],
+    },
+  },
 ];
