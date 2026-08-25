@@ -2313,4 +2313,43 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+
+  {
+    slug: 'team-shared-themes-codex-skin-studio-team-plan',
+    date: '2026-08-25',
+    title: {
+      zh: '团队共享主题：Codex Skin Studio Team 方案指南',
+      en: 'Team Shared Themes: Codex Skin Studio Team Plan Guide',
+    },
+    description: {
+      zh: '几分钟内向 50+ 开发者部署统一主题，告别逐个配置的噩梦。',
+      en: 'Deploy uniform theming to 50+ developers in minutes.',
+    },
+    content: {
+      zh: [
+        'Setting up a consistent Codex theme across your development team doesn\'t have to be a manual nightmare. With Codex Skin Studio\'s Team Plan, you can deploy uniform theming to 50+ developers in minutes.',
+        { type: 'h2', text: '团队主题如何运作' },
+        '管理员先设计并保存一套主题为 .codedrobe 文件，然后通过 Team Plan 推送到团队成员。每个成员首次启动时自动应用团队主题，无需手动配置。',
+        { type: 'h2', text: '统一视觉的好处' },
+        '团队统一主题不只是好看。它让共享屏幕演示更专业、减少视觉干扰，也避免"谁的终端配色最乱"这种无谓的争论。',
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Can team members customize their own theme?', a: 'Yes. Team themes are typically set as the default, but individual developers can override.' },
+          { q: 'Does the Team Plan support 50+ developers?', a: 'Yes, the Team Plan is designed to scale to 50+ developers.' },
+        ] },
+      ],
+      en: [
+        'Setting up a consistent Codex theme across your development team doesn\'t have to be a manual nightmare. With Codex Skin Studio\'s Team Plan, you can deploy uniform theming to 50+ developers in minutes.',
+        { type: 'h2', text: 'How Team Themes Work' },
+        'An admin designs and saves a theme as a .codedrobe file, then pushes it to team members via the Team Plan. Each member gets the team theme applied automatically on first launch — no manual setup.',
+        { type: 'h2', text: 'Why Consistent Theming Matters' },
+        'A unified team theme is about more than looks. It makes shared-screen demos look more professional, reduces visual noise, and settles the "messiest terminal" debate for good.',
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Can team members customize their own theme?', a: 'Yes. Team themes are typically set as the default, but individual developers can override.' },
+          { q: 'Does the Team Plan support 50+ developers?', a: 'Yes, the Team Plan is designed to scale to 50+ developers.' },
+        ] },
+      ],
+    },
+  },
 ];
