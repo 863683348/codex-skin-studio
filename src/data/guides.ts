@@ -551,9 +551,9 @@ export const guides: Guide[] = [
     slug: 'best-codex-themes',
     category: 'collection',
     zh: {
-      metaTitle: '2026 最佳 Codex 主题推荐：8 款精选合集（附风格分类）',
+      metaTitle: '2026 最佳 Codex 主题推荐：8 款免费精选（附风格分类）',
       metaDescription:
-        '精选 8 款 Codex Skin Studio 主题：浪漫玫瑰、财神打工版、红白科幻、清透定制、灵感小宇宙、紫夜限定、青蓝虚拟歌姬、舞台黑金。按粉系/科幻/暗黑/清新分类，一键套用。',
+        '8 款免费 Codex 换肤主题：浪漫玫瑰、财神打工版、红白科幻、清透定制、灵感小宇宙、紫夜限定、青蓝虚拟歌姬、舞台黑金。按粉系/科幻/暗黑/清新分类，一键套用。',
       summary: '8 款官方精选主题按风格分类，含预览与一键套用入口。',
       intro:
         '不知道选哪款？这里按风格把 Codex Skin Studio 的 8 款精选主题整理成合集。每款都支持亮/暗模式（部分仅暗色），点击即可在主题画廊查看并一键套用。',
@@ -590,9 +590,9 @@ export const guides: Guide[] = [
       related: ['customize', 'install-windows', 'is-it-safe'],
     },
     en: {
-      metaTitle: 'Best Codex Themes 2026: 8 Curated Picks (by Style)',
+      metaTitle: 'Best Codex Themes 2026: 8 Free Picks for OpenAI Codex',
       metaDescription:
-        '8 curated Codex Skin Studio themes: Romantic Rose, Fortune God, Red Sci-Fi, Clear Custom, Inspiration Cosmos, Purple Night, Virtual Diva, Stage Gold. Sorted by Pink/Sci-Fi/Dark/Fresh with one-click apply.',
+        '8 free Codex themes for OpenAI Codex: Romantic Rose, Fortune God, Red Sci-Fi, Clear Custom, Inspiration Cosmos, Purple Night, Virtual Diva & Stage Gold. Sorted by style, apply in one click.',
       summary: 'All 8 official curated themes sorted by style, with preview and apply links.',
       intro:
         'Not sure which to pick? Here are Codex Skin Studio’s 8 curated themes grouped by style. Most support light/dark (some dark-only); open any theme to see the full preview and apply steps.',

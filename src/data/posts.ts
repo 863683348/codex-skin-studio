@@ -2,6 +2,10 @@
 export type PostBlock =
   | string
   | { type: 'h2'; text: string }
+<<<<<<< HEAD
+=======
+  | { type: 'p'; text: string }
+>>>>>>> origin/main
   | { type: 'ul'; items: string[] }
   | { type: 'faq'; items: { q: string; a: string }[] }
   | { type: 'cta'; text: string; href: string };
@@ -129,6 +133,35 @@ export const POSTS: BlogPost[] = [
         '第四步：自定义背景。托盘「更换背景图」支持导入 16:9 的 jpg/png/webp，工具会自动把焦点调到右侧、左侧留出安全区。',
         '第五步：恢复。任何时候想回到官方外观，双击「完全恢复 Codex」或托盘里的恢复项，界面立即还原。',
         '想更进一步？你可以用任意主题的 theme.json 作为模板，改配色和文案，打造自己的专属风格。',
+<<<<<<< HEAD
+=======
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Codex 换肤会修改 Codex 官方文件吗？',
+              a: '不会。Codex Skin Studio 通过本机 CDP（Chrome DevTools Protocol）在运行时注入主题，不写入也不修改 app.asar 等官方文件，停止后立即恢复原貌。',
+            },
+            {
+              q: 'Codex Skin Studio 免费吗？',
+              a: '免费版即含 8 款精选主题与亮/暗切换，开箱即用。Pro 解锁无限自定义主题、背景图上传与去水印，Team 在 Pro 基础上增加团队主题共享。',
+            },
+            {
+              q: '支持 Windows 和 macOS 吗？',
+              a: '支持。Windows 双击 Setup.exe 即可安装（无需管理员）；macOS 拖入 Applications 后右键打开即可，Intel 与 Apple 芯片都兼容。',
+            },
+            {
+              q: '如何切换或恢复主题？',
+              a: '右键托盘图标打开主题菜单即可实时切换；想回到官方外观，点击「完全恢复 Codex」，界面立即还原，无需卸载重装。',
+            },
+            {
+              q: '主题包里能藏恶意代码吗？',
+              a: '不能。主题包只允许 CSS 与图片，明确禁止 JavaScript 等可执行内容，且注入内容会经过安全校验器检查。',
+            },
+          ],
+        },
+>>>>>>> origin/main
       ],
       en: [
         'Codex Skin Studio themes Codex locally via Chrome DevTools Protocol, without touching official files. Here is the full walkthrough.',
@@ -138,6 +171,35 @@ export const POSTS: BlogPost[] = [
         'Step 4 — Custom wallpaper. "Change Background" imports 16:9 jpg/png/webp, automatically focusing right and keeping a safe area on the left.',
         'Step 5 — Restore. Return to the official look anytime via "Fully Restore Codex" in the tray.',
         'Go further: use any theme.json as a template, tweak colors and copy, and craft your own signature style.',
+<<<<<<< HEAD
+=======
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Does theming modify Codex official files?',
+              a: 'No. Codex Skin Studio injects themes at runtime via local CDP (Chrome DevTools Protocol), never writing to or modifying official files like app.asar, and reverts instantly when stopped.',
+            },
+            {
+              q: 'Is Codex Skin Studio free?',
+              a: 'The free plan includes 8 curated themes plus light/dark switching, ready out of the box. Pro unlocks unlimited custom themes, wallpaper uploads, and removes the watermark; Team adds shared team themes.',
+            },
+            {
+              q: 'Does it support Windows and macOS?',
+              a: 'Yes. On Windows, run Setup.exe (no admin needed). On macOS, drag to Applications and right-click Open — compatible with both Intel and Apple Silicon.',
+            },
+            {
+              q: 'How do I switch or restore a theme?',
+              a: 'Right-click the tray icon to open the theme menu and switch live. To return to the official look, click "Fully Restore Codex" — the UI reverts instantly, no uninstall needed.',
+            },
+            {
+              q: 'Can a theme package hide malicious code?',
+              a: 'No. Theme packages allow only CSS and images and explicitly forbid JavaScript or other executable content, and injected content passes a safety validator.',
+            },
+          ],
+        },
+>>>>>>> origin/main
       ],
     },
   },
@@ -912,8 +974,171 @@ export const POSTS: BlogPost[] = [
         { type: 'cta', text: 'See Inspiration Universe live in the gallery', href: '/en/gallery/preset-inspiration' },
       ],
     },
+  },  {
+    slug: 'purple-night-theme-guide',
+    date: '2026-08-12',
+    title: {
+      zh: '紫夜限定主题：紫色神秘氛围深度解析',
+      en: 'Purple Night Theme: A Deep Dive into the Purple Mystery',
+    },
+    description: {
+      zh: '紫夜限定是主题库里最能营造神秘氛围的一款 Codex 主题：深紫夜幕、霓虹点缀、暗色系里最出挑的紫色主题。这篇拆解它的配色逻辑、适合谁用、怎么和暗色代码主题搭配。',
+      en: 'Purple Night is the most atmospheric dark theme in the gallery: a deep violet night, neon accents, and the boldest purple theme in the dark lineup. This guide breaks down its palette logic, who it suits, and how to pair it with a dark code theme.',
+    },
+    content: {
+      zh: [
+        '紫夜限定是一款 Purple Night Codex 主题，主题库里神秘感拉满的那一个：深紫夜幕打底，紫罗兰和霓虹粉做点缀，把整个 Codex 桌面罩进一层夜色滤镜。这篇聊它的配色逻辑、它适合谁，以及为什么它在暗色主题里独一档。',
+        { type: 'h2', text: '紫色为什么是"暗色之王"' },
+        '暗色主题很多，但大多数是黑灰底。紫色是光谱里唯一既深又有情绪的颜色：压得住亮度，又比纯黑多一层氛围。紫夜限定用低明度的深紫做底，编辑器区接近蓝紫，窗口边框和滚动条是同色系的渐变，整体像一个安静的深夜房间，而不是一块纯黑面板。',
+        '对写代码来说，深紫底和大多数语法高亮的兼容性意外地好：绿色、金色、粉色在紫底上的对比度都够，不会像在纯黑上那样刺眼。这是 purple theme 和 dark theme 最大的区别，不是颜色偏好，是实际可读性。',
+        { type: 'h2', text: '主题里的细节' },
+        {
+          type: 'ul',
+          items: [
+            '背景：深紫夜幕渐变，带细微的星点纹理',
+            '高亮：紫罗兰主色 + 霓虹粉强调，代码区块层次分明',
+            '边框：窗口边缘带紫色光晕，切窗时有轻微呼吸感',
+            '配色：紫色主题里最耐看的低饱和方案，长时间不累眼',
+          ],
+        },
+        '紫夜限定在画廊里的定位是"氛围向暗色主题"。相比红白科幻的激进和清透定制的极简，它走的是沉浸路线：适合深夜写代码、直播、以及想要桌面有"场景感"的人。',
+        { type: 'h2', text: '怎么搭配才好看' },
+        '配暗色代码主题用 One Dark 或 Dark+，紫色系底色和它们兼容性最好。配浅色代码主题就跳过，亮色编辑器放在深紫桌面上会很突兀。窗口透明度如果你用的工具支持，可以降到 85% 左右，让紫夜底色透出来，这是它最出效果的状态。',
+        '桌面壁纸建议选深色系，深紫、深蓝、或者纯黑都行。亮色壁纸会把紫夜的氛围感冲掉。图标主题可以保持默认，紫夜的光晕已经足够撑起视觉。',
+        { type: 'h2', text: '谁适合用紫夜限定' },
+        '喜欢深夜写代码的人。直播或录屏想要一个让人记住的界面的人。以及那些觉得纯黑太无聊、但浅色又太亮的人。它不激进、不花哨，但一眼就能认出这不是默认主题。',
+        '如果你拿不定主意，去画廊的 preset-purple-night 预览页看一眼实时效果再装。主题不贵，装错也不心疼，但先看效果永远比装了再卸省事。',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: '紫夜限定适合长时间写代码吗？', a: '适合。低饱和深紫比纯黑多一点层次，又比亮色主题温和得多，长时间使用不容易累。它属于氛围向但可用的暗色主题。' },
+            { q: '紫夜和纯黑比怎么样？', a: '纯黑对比度最高但氛围感弱；紫夜多一层神秘感和深度，代价是理论对比度略低。追求极致对比选纯黑，追求氛围选紫夜。' },
+            { q: '这个主题太花哨吗？', a: '默认状态很克制：星点纹理是静态的，光晕只在窗口边框。和那些动态壁纸主题比，它安静得多。' },
+            { q: '紫夜限定要钱吗？', a: '免费版内置的主题就包含它，Pro 解锁的是自定义配色和背景图。' },
+          ],
+        },
+        { type: 'cta', text: '到画廊看紫夜限定的实时效果', href: '/zh/gallery/preset-purple-night' },
+      ],
+      en: [
+        'Purple Night is the Purple Night Codex theme with the most mystery in the gallery: a deep violet night, violet and neon pink accents, wrapping the whole Codex desktop in a layer of night. This guide covers its palette logic, who it suits, and why it stands alone among dark themes.',
+        { type: 'h2', text: 'Why purple owns the dark end' },
+        'Most dark themes are black and gray. Purple is the one color on the spectrum that is both deep and moody: it holds brightness down and adds atmosphere that pure black cannot. Purple Night uses a low-lightness deep violet base, editor area leaning blue-purple, window borders and scrollbar in the same gradient family. It reads as a quiet late-night room, not a flat black panel.',
+        'For coding, a deep violet base works with most syntax highlighting better than expected: greens, golds, pinks all keep enough contrast on purple, without the harshness of pure black. That is the real difference between a purple theme and a dark theme. Not taste, readability.',
+        { type: 'h2', text: 'What is inside the theme' },
+        {
+          type: 'ul',
+          items: [
+            'Background: deep violet night gradient with a faint star speckle texture',
+            'Highlights: violet primary with neon pink accents, clear code hierarchy',
+            'Borders: window edges carry a purple glow with a slight breathing effect',
+            'Palette: one of the most comfortable low-saturation purple schemes, easy on the eyes in long sessions',
+          ],
+        },
+        'In the gallery, Purple Night sits in the "moody dark" lane. Against Red Sci-Fi\'s aggression and Clear Custom\'s minimalism, it goes immersive: for late-night coding, streaming, and anyone who wants their desktop to feel like a scene.',
+        { type: 'h2', text: 'How to pair it' },
+        'Use One Dark or Dark+ inside the editor. Same color family, seamless transition. With a light code theme, skip it, a bright editor on a deep violet desktop looks jarring. If your tool supports window transparency, drop opacity to around 85% and let the purple base show through. That is the setup that shows it off best.',
+        'Desktop wallpapers should stay dark: deep purple, deep blue, or plain black. A bright wallpaper kills the whole mood. Keep the icon theme default, the purple glow carries the visuals on its own.',
+        { type: 'h2', text: 'Who it suits' },
+        'People who code late at night. People who stream or record and want an interface people remember. People who find pure black boring and light themes too bright. It is not aggressive or flashy, but nobody mistakes it for a default theme.',
+        'If you are on the fence, check the live preview on the preset-purple-night gallery page before installing. Themes are cheap and uninstalling is easy, but seeing it first beats install-then-remove.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is Purple Night good for long coding sessions?', a: 'Yes. The low-saturation violet adds depth over pure black without the harshness of bright themes. It is a moody dark theme that stays usable for hours.' },
+            { q: 'Purple Night or pure black?', a: 'Pure black has the highest contrast but zero atmosphere. Purple Night trades a little theoretical contrast for depth and mystery. Contrast purist, go black. Mood first, go purple.' },
+            { q: 'Is it too flashy?', a: 'The default is restrained: static star speckles, glow only on window borders. Compared to animated wallpaper themes, it is quiet.' },
+            { q: 'Does it cost anything?', a: 'It ships with the free tier. Pro unlocks custom colors and backgrounds.' },
+          ],
+        },
+        { type: 'cta', text: 'See Purple Night live in the gallery', href: '/en/gallery/preset-purple-night' },
+      ],
+    },
+  },  {
+    slug: 'azure-virtual-diva-theme-guide',
+    date: '2026-08-13',
+    title: {
+      zh: '青蓝虚拟歌姬主题：虚拟偶像风格解析',
+      en: 'Azure Virtual Diva Theme: Virtual Idol Style Breakdown',
+    },
+    description: {
+      zh: '青蓝虚拟歌姬是主题库里最"二次元"的一款 Codex 主题：天蓝发色、舞台灯光、偶像企划的氛围直接搬上桌面。这篇拆解它的配色逻辑、适合谁用、怎么搭配才不显中二。',
+      en: 'Azure Virtual Diva is the most anime-flavored theme in the gallery: sky-blue hair, stage lighting, and virtual idol energy on your desktop. This guide breaks down its palette logic, who it suits, and how to pair it without going full cosplay.',
+    },
+    content: {
+      zh: [
+        '青蓝虚拟歌姬是一款 Azure Virtual Diva Codex 主题，主题库里最接近虚拟偶像企划的一款：天蓝主色、舞台感高光、一点霓虹点缀，把 Codex 桌面装点成演唱会后台。这篇聊它的配色逻辑、适合谁、以及怎么搭配才不显中二。',
+        { type: 'h2', text: '天蓝为什么是偶像色' },
+        '虚拟偶像的视觉语言里，天蓝是"初代目"色：清澈、明亮、有距离感又不冷。青蓝虚拟歌姬用低饱和天蓝做底，窗口边框带舞台灯光感的浅色高光，滚动条和强调色走同色系。整体像一场还没开场的演唱会，干净、亮堂、带一点期待感。',
+        '和紫夜的深沉不同，青蓝走的是"透明感"路线：明度高、对比温和、色彩偏冷。它不是暗色主题，是那种白天看心情会变好的亮色二次元主题。',
+        { type: 'h2', text: '主题里的细节' },
+        {
+          type: 'ul',
+          items: [
+            '背景：天蓝渐变，带细小的星光纹理，像舞台追光',
+            '高亮：白色为主，天蓝和浅紫做辅助，代码区块清晰',
+            '边框：窗口边缘带舞台灯光感的光晕',
+            '配色：二次元主题里少见的低饱和方案，长时间看不腻',
+          ],
+        },
+        '在画廊里，青蓝虚拟歌姬的定位是"偶像企划主题"。相比红白科幻的激进、紫夜的沉浸，它走的是明亮可爱路线：适合喜欢二次元文化、虚拟偶像、以及想让桌面看起来"有点企划感"的人。',
+        { type: 'h2', text: '怎么搭配才好看' },
+        '配浅色代码主题最合适，GitHub Light 或 One Light 都行，亮色编辑器放在天蓝桌面上很和谐。配暗色代码主题会有点跳，但也不是不能看。桌面壁纸建议选浅色系，天蓝、白色、或者浅紫，深色壁纸会把透明感冲掉。',
+        '图标主题可以保持默认。青蓝的舞台光晕已经足够有辨识度，不需要再叠加视觉元素。窗口透明度降到 90% 左右，让天蓝底色透出来，这是它最出效果的状态。',
+        { type: 'h2', text: '谁适合用青蓝虚拟歌姬' },
+        '喜欢二次元和虚拟偶像的人。直播或录屏想要一个明亮、让人记住的界面的人。以及那些觉得默认主题太无聊、但暗色主题又太压抑的人。它不深沉、不炫技，但一眼就能认出这是"企划限定"。',
+        '如果你拿不定主意，去画廊的 preset-virtual-diva 预览页看一眼实时效果再装。先看效果永远比装了再卸省事。',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: '青蓝虚拟歌姬适合写代码吗？', a: '适合。它是亮色主题，代码可读性好，低饱和天蓝长时间看不累。比纯白柔和，比暗色轻快，是那种写累了抬头看一眼会开心的主题。' },
+            { q: '这是二次元主题吗？', a: '是。它就是为虚拟偶像风格设计的，天蓝主色加舞台灯光感，整个氛围就是偶像企划。不喜欢二次元的人可能get不到，但喜欢的人会觉得正中下怀。' },
+            { q: '太花哨吗？', a: '默认状态很克制：星光是静态的，光晕只在窗口边框。比动态壁纸主题安静得多，只是配色比较出挑。' },
+            { q: '青蓝虚拟歌姬要钱吗？', a: '免费版内置的主题就包含它，Pro 解锁的是自定义配色和背景图。' },
+          ],
+        },
+        { type: 'cta', text: '到画廊看青蓝虚拟歌姬的实时效果', href: '/zh/gallery/preset-virtual-diva' },
+      ],
+      en: [
+        'Azure Virtual Diva is the Azure Virtual Diva Codex theme with the most idol energy in the gallery: sky-blue primary, stage-light highlights, a touch of neon, turning your Codex desktop into a concert backstage. This guide covers its palette logic, who it suits, and how to pair it without going full cosplay.',
+        { type: 'h2', text: 'Why sky blue is an idol color' },
+        'In virtual idol visual language, sky blue is the first-gen color: clear, bright, approachable without being cold. Azure Virtual Diva uses a low-saturation sky-blue base, window borders with pale stage-light highlights, scrollbar and accents in the same family. It reads like a concert that has not started yet. Clean, bright, a little anticipation.',
+        'Where Purple Night goes deep, Azure goes translucent: higher lightness, gentler contrast, cooler tones. This is not a dark theme. It is the light anime theme that makes a daytime session feel better.',
+        { type: 'h2', text: 'What is inside the theme' },
+        {
+          type: 'ul',
+          items: [
+            'Background: sky-blue gradient with fine star speckles, like stage follow spots',
+            'Highlights: white primary with sky-blue and light purple accents, clear code hierarchy',
+            'Borders: window edges carry a stage-light glow',
+            'Palette: a rare low-saturation anime scheme, easy to live with for long sessions',
+          ],
+        },
+        'In the gallery, Azure Virtual Diva sits in the "idol project" lane. Against Red Sci-Fi\'s aggression and Purple Night\'s immersion, it goes bright and cute: for anime fans, virtual idol followers, and anyone who wants their desktop to feel like a project.',
+        { type: 'h2', text: 'How to pair it' },
+        'Use a light code theme, GitHub Light or One Light work best. A bright editor on a sky-blue desktop is harmonious. A dark code theme will look slightly off but still usable. Desktop wallpapers should stay light: sky blue, white, or pale purple. A dark wallpaper kills the transparency feel.',
+        'Keep the icon theme default. The stage glow carries the identity on its own. Window transparency around 90% lets the sky-blue base show through, which is the setup that shows it off best.',
+        { type: 'h2', text: 'Who it suits' },
+        'Anime and virtual idol fans. People who stream or record and want a bright, memorable interface. People who find default themes boring and dark themes too heavy. It is not deep or flashy, but nobody mistakes it for a stock theme.',
+        'If you are on the fence, check the live preview on the preset-virtual-diva gallery page before installing. Seeing it first beats install-then-remove.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is Azure Virtual Diva good for coding?', a: 'Yes. It is a light theme with solid readability, and the low-saturation sky blue is easy on the eyes for hours. Softer than pure white, lighter than dark themes. The kind of theme that makes you smile when you look up from a long session.' },
+            { q: 'Is this an anime theme?', a: 'Yes. It was designed for virtual idol style, sky-blue primary plus stage-light atmosphere, the whole vibe is an idol project. People who do not care about anime may not get it. People who do, will feel seen.' },
+            { q: 'Is it too flashy?', a: 'The default is restrained: static stars, glow only on window borders. Compared to animated wallpaper themes, it is quiet. The palette is what stands out.' },
+            { q: 'Does Azure Virtual Diva cost money?', a: 'The free tier includes it. Pro unlocks custom colors and background images.' },
+          ],
+        },
+        { type: 'cta', text: 'See Azure Virtual Diva live in the gallery', href: '/en/gallery/preset-virtual-diva' },
+      ],
+    },
   },
   {
+<<<<<<< HEAD
     slug: 'is-codex-skin-studio-safe',
     date: '2026-08-26',
     title: {
@@ -970,12 +1195,794 @@ export const POSTS: BlogPost[] = [
             'Check theme file sizes (suspiciously large files may contain hidden payloads)',
             'Keep Codex updated to benefit from latest security patches',
             'Review theme changelogs for suspicious changes',
+=======
+    slug: 'stage-black-gold-theme',
+    date: '2026-08-14',
+    title: {
+      zh: '舞台黑金主题：高级感配色完整指南',
+      en: 'Stage Black Gold Theme: Premium Color Guide',
+    },
+    description: {
+      zh: '舞台黑金是主题库里最讲克制的一款 Codex 暗色主题：纯黑打底、香槟金点缀。这篇把配色的每个 hex 拆开讲，聊黑金为什么难做、怎么搭配、以及什么情况下别用。',
+      en: 'The stage black gold codex theme, palette hex by hex: why black and gold is harder to get right than it looks, how to pair it, and when to skip it.',
+    },
+    content: {
+      zh: [
+        '舞台黑金是主题库里最显贵的一款 stage black gold codex theme：纯黑打底，香槟金点缀，光线像空舞台上的一束追光。没有霓虹，没有互相打架的渐变。这篇把配色的 hex 一个个拆开讲，说清黑金为什么比看起来难做，以及什么人不该用它。',
+        { type: 'h2', text: '黑金为什么比看起来难做' },
+        '金其实不是一个颜色，是一种反光行为。现实里的金靠高光和暗部的落差撑起来，屏幕上只有一个个平面色值，所以金必须用一段很窄的低饱和黄褐去假装，大致落在 #c8a45c 附近。饱和度往上一点变芥末，明度往下一点变土褐，可用区间窄得离谱。这也是网上大部分黑金配色看着廉价的原因。',
+        '另一半是克制。真金看起来贵，是因为量少。金色一旦覆盖超过屏幕的十分之一，它就从点缀变成主色，整体立刻往夜总会方向跑。舞台黑金把金限制在窗口边框、活动标签下划线和光标上，别的地方一点不给。',
+        { type: 'h2', text: '配色拆解：一个个 hex' },
+        {
+          type: 'ul',
+          items: [
+            '底色 #141414：不是纯黑，带一点暖，长时间看比 #000 舒服',
+            '面板 #2a2a2a：侧栏和标题栏用，不画边框也能分出层次',
+            '强调色 #c8a45c：香槟金，只出现在活动边框、光标、链接',
+            '暗金 #8a7038：hover 和按下状态，把金压回去，避免界面闪',
+            '文字 #ece7dd：暖白而不是纯白，色温和金色对得上',
+          ],
+        },
+        '值得单独说的是为什么用 #141414 而不是 #000000。纯黑配亮字在 OLED 和不少便宜 IPS 屏上会出现光晕，字的边缘发虚。近黑底能挡掉大部分。你眼睛看不出这点色差，但两小时之后身体知道。',
+        { type: 'h2', text: '怎么搭配 black gold theme 才不显土' },
+        '编辑器主题用 Dark+ 或者 GitHub Dark。它们偏中性冷调，听着像和暖金冲突，实际上基本不冲突，因为金从来不进代码区，只待在界面框架上。避开 Monokai 这类字符串是黄绿色的方案，一个窗口里两种黄，看着像配错了而不是配过。',
+        '壁纸就用纯 #141414，或者一张只有单一光源的深色照片。花哨壁纸会把追光那点意思冲掉，主题也就不成立了。图标主题保持默认，彩色文件夹图标是毁掉黑金最快的方式。',
+        '如果你的环境支持窗口透明，92% 到 95% 是合适区间。再低下去，细窄的金色边框跟窗后的东西对比度就不够了。',
+        { type: 'h2', text: '谁适合这款 Codex 暗色主题' },
+        '夜里干活的人。录屏或者直播、希望画面看起来是设计过的人。还有看腻了默认蓝灰的人。它首先是一款能长时间用的 dark codex theme，其次才是风格表达，这个顺序不能反。',
+        '不适合的情况也说清楚：房间很亮就别用。低调暗色主题需要可控光线，白天的光打在黑面板上，屏幕直接变镜子。另外如果你依赖界面里的颜色编码，git 状态色、语言图标色、彩色终端输出，这套主题会跟你反着来，它要的是界面安静。',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: '舞台黑金适合长时间写代码吗？', a: '适合，但有个前提。#141414 的近黑底配暖白字，比纯黑配纯白省眼睛。前提是环境光可控，房间太亮的时候，任何暗色主题都是赔本的。' },
+            { q: '黑金和纯黑该选哪个？', a: '纯黑更保险，金色给界面一个锚点。习惯了金色代表活动状态之后，你会少花时间找当前焦点在哪个面板。这是好看之外一个很小但真实的收益。' },
+            { q: '会和我的代码主题打架吗？', a: '只有你的代码主题偏黄才会。中性暗色方案都没问题，两种黄同屏就不行。' },
+            { q: '这款主题要钱吗？', a: '黑金舞台归在 Pro 档。免费版内置 8 款主题，覆盖粉系、科幻、暗黑、清新四个分类。' },
+          ],
+        },
+        '真正的建议是先看预览。在预览页跟一套配色待五分钟，比看任何文章都准，包括这篇。',
+        { type: 'cta', text: '到 codex-skin-studio.shop 画廊看黑金舞台主题', href: '/zh/gallery/preset-andy-lau' },
+        { type: 'cta', text: '浏览全部主题 →', href: '/zh/gallery' },
+      ],
+      en: [
+        'The stage black gold codex theme is the one preset in the gallery that reads as expensive. Pure black base, champagne gold accents, light behaving like a single spotlight on an empty stage. No neon, no gradients fighting each other. This guide walks the palette hex by hex, explains why black and gold is harder to get right than it looks, and says plainly who should skip it.',
+        { type: 'h2', text: 'Why black and gold is harder than it looks' },
+        'Gold is not really a color, it is a behavior. In the physical world it works because of the gap between highlight and shadow. On a screen you only have flat values, so gold has to be faked with a narrow band of desaturated yellow-brown, somewhere around #c8a45c. Raise the saturation and it turns to mustard. Drop the lightness and it goes to mud. The usable window is tiny, which is why most black-and-gold attempts online look cheap instead of premium.',
+        'The second half is restraint. Real gold reads as expensive because there is so little of it. Once gold covers more than a tenth of the screen it stops being an accent and becomes a theme color, and the whole thing drifts toward casino. This preset keeps gold on window borders, the active tab underline, and the caret. Nothing else gets any.',
+        { type: 'h2', text: 'The palette, hex by hex' },
+        {
+          type: 'ul',
+          items: [
+            'Base #141414: near-black with a trace of warmth, easier to sit with than #000',
+            'Panel #2a2a2a: sidebar and title bar, enough separation without drawing a border',
+            'Accent #c8a45c: champagne gold, only on active borders, caret, and links',
+            'Dim gold #8a7038: hover and pressed states, gold pulled back so the UI does not flicker',
+            'Text #ece7dd: warm off-white rather than pure white, matched to the gold temperature',
+          ],
+        },
+        'The choice worth explaining is #141414 instead of #000000. Pure black under bright text produces halation on OLED panels and on plenty of cheap IPS ones, where letter edges bloom slightly. A near-black base removes most of that. You will not consciously see the color difference. You will notice it after two hours.',
+        { type: 'h2', text: 'How to pair a black gold theme' },
+        'For the editor itself, Dark+ or GitHub Dark. Both lean neutral-cool, which sounds like a fight with warm gold and mostly is not, because the gold never enters the code area. Avoid Monokai and anything with a strong yellow-green string color. Two different yellows in one window look like a mistake rather than a decision.',
+        'Wallpaper: flat #141414, or a very dark photo with one light source. Busy wallpaper kills the spotlight idea and the theme stops meaning anything. Keep the icon theme default. Colored folder icons are the fastest way to ruin a black gold theme.',
+        'If your setup supports window transparency, 92 to 95 percent is the range. Go lower and the thin gold borders lose contrast against whatever sits behind the window.',
+        { type: 'h2', text: 'Who it suits, and when to skip it' },
+        'It suits people who work at night, people who record or stream and want a frame that looks deliberate, and anyone tired of blue-gray defaults. It is a usable dark codex theme first and a style statement second, and that order matters.',
+        'Skip it in a bright room. Low-key dark themes need controlled light, and daylight on a black panel turns the screen into a mirror. Skip it also if you rely on interface color coding: git status colors, per-language icon tints, colored terminal output. This theme wants the interface quiet and it will fight you on that.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is the stage black gold theme good for long coding sessions?', a: 'Yes, with one condition. The #141414 base with warm off-white text is easier on the eyes than pure black with pure white. The condition is ambient light. In a bright room, any dark theme costs you more than it gives.' },
+            { q: 'Black gold or plain black?', a: 'Plain black is the safer default. Gold gives the interface an anchor. Once you learn that gold means active, you spend less time hunting for which pane has focus. Small, real, separate from how it looks.' },
+            { q: 'Will it clash with my code theme?', a: 'Only if your code theme leans yellow. Neutral dark schemes are fine. Two yellows on one screen are not.' },
+            { q: 'Does this theme cost anything?', a: 'The black-gold stage preset sits in the Pro tier. The free tier ships eight themes across the pink, sci-fi, dark, and fresh categories.' },
+          ],
+        },
+        'The honest advice is to look before you commit. Five minutes with a palette on a preview page tells you more than any writeup, including this one.',
+        { type: 'cta', text: 'See the black-gold stage theme in the codex-skin-studio.shop gallery', href: '/en/gallery/preset-andy-lau' },
+        { type: 'cta', text: 'Browse all themes →', href: '/en/gallery' },
+      ],
+    },
+  },
+  {
+    slug: 'codex-vs-cursor-vs-trae-editor-themes',
+    date: '2026-08-14',
+    title: {
+      zh: 'Codex vs Cursor vs Trae：AI 编程工具界面颜值对比，谁的主题更好看',
+      en: 'Codex vs Cursor vs Trae: Which AI Code Editor Looks Best?',
+    },
+    description: {
+      zh: 'Codex、Cursor、Trae 三款 AI 编程工具都能写代码，但界面质感天差地别。这篇从主题生态、自定义能力、暗色模式三个维度对比，告诉你哪款最好看、怎么换肤最省事。',
+      en: 'Codex, Cursor and Trae all write code for you, but their interfaces feel very different. We compare theming ecosystems, customization depth, and dark-mode polish to answer which AI code editor looks best — and how to skin each one.',
+    },
+    content: {
+      zh: [
+        '选 AI 编程工具，大家比模型、比价格，很少有人先看界面。但你要在编辑器里坐八个小时，代码写得再聪明，一个辣眼睛的主题也能把你的耐心磨光。这篇把 Codex 桌面端、Cursor、Trae 三款主流 AI 编辑器放在一起，从主题生态、自定义能力、暗色模式三个维度对比，最后给换肤方案。',
+        { type: 'h2', text: '三款编辑器一眼看完' },
+        {
+          type: 'ul',
+          items: [
+            'Codex 桌面端：OpenAI 出品，界面克制干净，主打专注；主题全靠社区工具补位',
+            'Cursor：VS Code 血统，主题市场直接继承 VS Code 生态，选择最多',
+            'Trae：国内团队出品，IDE 级功能整合，主题相对封闭但自带几套质感不错的暗色',
+          ],
+        },
+        '三款都能写代码，但"看起来怎么样"是另一回事。Codex 桌面端没有官方主题商店，Cursor 靠 VS Code 生态躺赢，Trae 在封闭生态里自己做设计。下面逐个说。',
+        { type: 'h2', text: 'Codex 桌面端：为专注而生的克制界面' },
+        'Codex 桌面端的默认界面走的是"少即是多"路线：深色面板、克制的强调色、几乎没有装饰。它把注意力留给对话和代码，这是 OpenAI 一贯的设计哲学。但代价是——你想换个样子的时候，官方没有主题商店，设置里能改的只有字号和深浅模式。',
+        '这时候就需要第三方工具补位。Codex Skin Studio 通过 CDP（Chrome DevTools Protocol）向运行中的 Codex 桌面端注入主题样式，不改任何官方文件，关掉即还原，升级 Codex 也不会丢主题。内置 8 款精选主题，从粉系的浪漫玫瑰、暗黑系的舞台黑金，到科幻系的红白赛博朋克都有。',
+        { type: 'cta', text: '看看 8 款精选 Codex 主题 →', href: '/en/guides/best-codex-themes' },
+        { type: 'h2', text: 'Cursor：VS Code 血统，主题选择最多的赢家' },
+        'Cursor 本质上是 VS Code 的分支，所以它白捡了 VS Code 十几年积累的主题生态：VS Code 市场里上万款主题，装个扩展就能用。这是 Cursor 在"好不好看"这件事上的最大优势——选择多到挑花眼。',
+        '代价是它骨子里还是编辑器不是"AI 产品"：主题改的是语法高亮和 UI 配色，AI 面板（Chat、Composer）的样式和编辑器主体常常脱节，混搭感明显。而且 Cursor 的暗色模式是对 VS Code 默认暗色的微调，谈不上设计感。',
+        { type: 'h2', text: 'Trae：封闭生态里的设计课代表' },
+        'Trae 是国内团队的 AI IDE，整合了构建、调试、终端，想做成"全家桶"。主题方面它没接 VS Code 市场，走封闭路线，自带几套暗色主题，默认那套深蓝黑质感确实在线，适合不喜欢折腾的人。',
+        '短板也很明显：主题数量少、不能导入第三方主题、自定义只能改改强调色和字体。如果你对界面有自己的想法，Trae 给不了你太多空间。',
+        { type: 'h2', text: '直接对比：主题生态 / 自定义 / 暗色模式' },
+        {
+          type: 'ul',
+          items: [
+            '主题数量：Cursor（上万款）> Codex 桌面端（8 款官方 + 社区工具扩展）> Trae（个位数内置）',
+            '自定义深度：Cursor 改 JSON 配置，上限高；Codex 用 Codex Skin Studio 换肤，无需碰配置文件；Trae 只能改强调色',
+            '暗色模式质感：Trae 默认最佳，Codex 靠第三方主题反超，Cursor 中规中矩',
+            '换肤成本：Codex 最低（工具一键套用）；Cursor 需要装扩展；Trae 基本没有可换的',
+          ],
+        },
+        '结论：喜欢折腾选 Cursor，不想折腾又要质感选 Trae，想在"克制的底色上换一套喜欢的皮"选 Codex 桌面端 + 换肤工具。',
+        { type: 'h2', text: '如果还是拿不定主意' },
+        '说点实际的。为 AI 功能换编辑器的开发者，通常只关心三件事：模型好不好用、价格合不合适、每天坐着舒不舒服。前两件事网上评测一大把，第三件很少有人认真讲。Cursor 靠 VS Code 生态赢下主题选择，但 AI 面板和编辑器主体常常像两个软件；Trae 开箱即用最省心，但想改没得改；Codex 桌面端一开始就刻意做减法——这反而意味着你给它加的任何东西（包括用 Codex Skin Studio 换上的整套主题）都像是有意为之，而不是继承来的。',
+        { type: 'h2', text: 'Codex 桌面端怎么换主题' },
+        'Codex Skin Studio 目前支持 macOS 和 Windows：下载安装 → 点「启动注入」→ 在主题库挑一款（或上传自定义背景）→ 立即生效。全程不改官方文件，不满意一键还原。',
+        { type: 'cta', text: '免费下载，给 Codex 换身新衣服', href: '/en/download' },
+        { type: 'cta', text: '看 Codex 换肤完整教程 →', href: '/en/blog/codex-skin-complete-guide' },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: '哪款 AI 编辑器的主题最好看？', a: '看需求：想要最多选择选 Cursor（继承 VS Code 生态）；想要开箱即用的质感选 Trae；想要"克制底色 + 换皮自由"选 Codex 桌面端配换肤工具。' },
+            { q: 'Codex 桌面端能换主题吗？', a: '官方没有主题商店，但可以用 Codex Skin Studio 这类工具通过 CDP 注入主题，不改官方文件，支持 macOS 和 Windows。' },
+            { q: '换肤会不会影响 Codex 更新？', a: '不会。主题是运行时注入的，不修改任何官方文件，Codex 更新后主题依然可用，关掉工具即完全还原。' },
+            { q: 'Cursor 的主题能用到 Codex 上吗？', a: '不能直接复用，两者底层不同。不过 Codex Skin Studio 的主题风格（粉系、科幻、暗黑、清新）覆盖了 Cursor 市场里最热门的几类审美。' },
+          ],
+        },
+        '最后说一句：界面好不好看没有标准答案，但"能不能换"是硬指标。挑编辑器的时候，把主题生态也放进对比清单，别等到看腻了才发现没得换。',
+        { type: 'cta', text: '浏览全部 Codex 主题 →', href: '/en/gallery' },
+      ],
+      en: [
+        'When people pick an AI coding tool, they compare models, pricing, and context windows — rarely the interface. But you sit in the editor for eight hours a day, and a poorly designed theme will grind your patience down faster than any model limitation. This guide puts the three mainstream AI editors — Codex desktop, Cursor, and Trae — side by side on theming ecosystems, customization depth, and dark-mode polish, and ends with a concrete skinning playbook for each.',
+        { type: 'h2', text: 'The three editors at a glance' },
+        {
+          type: 'ul',
+          items: [
+            'Codex desktop (OpenAI): a restrained, focused interface with no official theme store — theming is handled by community tools',
+            'Cursor: a VS Code fork, which means it inherits the entire VS Code extension theme marketplace',
+            'Trae (ByteDance): an all-in-one AI IDE with a closed theming system and a handful of genuinely well-designed dark themes',
+          ],
+        },
+        'All three write code for you. How they look is a completely different question. Codex ships with a deliberately minimal look, Cursor wins on sheer choice by inheriting VS Code, and Trae does its own design inside a closed ecosystem. Let us go one by one.',
+        { type: 'h2', text: 'Codex desktop: a clean slate built for focus' },
+        'The Codex desktop app follows a "less is more" philosophy: dark panels, restrained accents, almost no decoration. It keeps your attention on the conversation and the code, which is classic OpenAI design thinking. The trade-off is that there is no official theme store — the settings panel lets you change font size and light/dark mode, and that is about it.',
+        'That gap is exactly where third-party tools step in. Codex Skin Studio themes the running Codex desktop app via CDP (Chrome DevTools Protocol) loopback injection. It does not modify any official files, everything reverts when you quit the tool, and your themes survive Codex updates. It ships with 8 curated presets spanning pink, sci-fi, dark, and fresh styles — from Romantic Rose and Stage Black Gold to Red Sci-Fi Cyberpunk.',
+        { type: 'cta', text: 'See the 8 curated Codex themes →', href: '/en/guides/best-codex-themes' },
+        { type: 'h2', text: 'Cursor: VS Code DNA and the biggest theme library' },
+        'Cursor is a VS Code fork, so it inherits one enormous advantage: the VS Code marketplace, with tens of thousands of themes you can install in one click. If choice is what you want, Cursor wins outright — the hard part becomes picking one and sticking with it.',
+        'The cost is that Cursor still feels like an editor, not an AI product. Themes change syntax highlighting and UI colors, but the AI surface — the chat and composer panels — often looks disconnected from the rest of the window. Its dark mode is a slight retune of VS Code default dark, and the whole experience rarely feels "designed".',
+        { type: 'h2', text: 'Trae: the design pick of a closed ecosystem' },
+        'Trae is ByteDance\'s AI IDE, bundling build, debug, and terminal into a single package. It deliberately does not plug into the VS Code marketplace; theming is closed, with a handful of built-in dark themes. The default deep blue-black scheme genuinely looks polished, and for people who never want to touch theme settings, it is the best out-of-the-box experience of the three.',
+        'The downside is equally clear: few themes, no third-party imports, and customization limited to accent color and font. If you have opinions about how your editor should look, Trae gives you almost no room to express them.',
+        { type: 'h2', text: 'Side by side: themes, customization, dark mode' },
+        {
+          type: 'ul',
+          items: [
+            'Theme count: Cursor (tens of thousands) > Codex desktop (8 official + community skinning tools) > Trae (single-digit built-ins)',
+            'Customization depth: Cursor edits JSON configs, high ceiling; Codex swaps skins through a tool without touching config files; Trae is accent-color only',
+            'Dark-mode polish: Trae ships best by default, Codex catches up via third-party themes, Cursor is competent but generic',
+            'Effort to reskin: Codex is lowest (one-click apply); Cursor needs extension browsing; Trae has almost nothing to swap',
+          ],
+        },
+        'The short version: pick Cursor if you love tweaking, pick Trae if you want polish with zero effort, and pick Codex desktop with a skinning tool if you want a focused base that you can dress up whenever you feel like it.',
+        { type: 'h2', text: 'If you are still undecided' },
+        'Here is the practical version. Developers who switch editors for AI features usually care about three things: model access, pricing, and daily comfort. The first two are covered by a thousand reviews; the third one rarely gets a serious mention. Cursor wins the theme lottery by inheriting VS Code, but pays for it with an AI surface that can feel like a different app bolted onto the editor. Trae looks great out of the box and costs nothing to maintain, but there is no room to make it yours. Codex desktop starts minimal, and deliberately so — which means whatever you add to it, including a full theme from Codex Skin Studio, reads as intentional rather than inherited.',
+        { type: 'h2', text: 'How to theme the Codex desktop app' },
+        'Codex Skin Studio supports macOS and Windows: download and install → click "Start injection" → pick a theme in the library (or upload your own background) → applied instantly. No official files are touched, and one click restores the official look.',
+        { type: 'cta', text: 'Download free and reskin Codex', href: '/en/download' },
+        { type: 'cta', text: 'Read the complete Codex skinning guide →', href: '/en/blog/codex-skin-complete-guide' },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Which AI editor has the best themes?', a: 'Depends on what you want: most choice goes to Cursor (it inherits the VS Code ecosystem); best out-of-the-box polish goes to Trae; and the "focused base with free skinning" pick goes to Codex desktop paired with a skinning tool.' },
+            { q: 'Can you theme the Codex desktop app?', a: 'There is no official theme store, but tools like Codex Skin Studio inject themes over CDP without modifying official files, on macOS and Windows.' },
+            { q: 'Does reskinning Codex break updates?', a: 'No. Themes are applied at runtime via injection and never touch official files, so themes survive Codex updates, and quitting the tool fully restores the original look.' },
+            { q: 'Can Cursor themes be used in Codex?', a: 'Not directly — they are built on different foundations. But Codex Skin Studio presets (pink, sci-fi, dark, fresh) cover the most popular aesthetic categories in the Cursor marketplace.' },
+          ],
+        },
+        'One last note: whether an interface looks good is subjective, but whether you can change it is not. Put the theming ecosystem on your comparison checklist before you commit — do not wait until you are bored of the default to find out there is no way out.',
+        { type: 'cta', text: 'Browse all Codex themes →', href: '/en/gallery' },
+      ],
+    },
+  },
+  {
+    slug: 'codex-theme-light-dark-modes',
+    date: '2026-08-15',
+    title: {
+      zh: "Codex 主题的亮色暗色到底怎么适配？一篇讲透",
+      en: "Which Modes Do Codex Themes Support? A Light/Dark Guide",
+    },
+    description: {
+      zh: 'Codex 主题怎么适配亮色和暗色？这篇讲透亮色暗色模式的工作原理、哪些主题默认支持双模式、自定义主题为什么要两套配色都写，以及切换时怎么避免刺眼。',
+      en: 'How do Codex themes handle light and dark mode? This guide explains light/dark adaptation, which themes support both modes by default, why custom themes need two palettes, and how to switch without eye strain.',
+    },
+    content: {
+      zh: [
+        "后台收到最多的提问，不是\"哪个颜色好看\"，而是\"我的主题怎么不会自动跟着系统切换\"。今天把 Codex 主题亮色暗色（codex theme light dark mode）这件事从头讲透。",
+        {
+                "type": "h2",
+                "text": "一套主题，为什么非要配两套颜色"
+        },
+        "白天在亮色界面下看久了眼睛容易累，到了晚上暗色反而更舒服。这不是玄学，是大多数编辑器用户的真实使用节奏。light dark mode 适配，就是让同一套主题在两种环境下都成立，而不是让你每天手动去改设置。",
+        {
+                "type": "h2",
+                "text": "双模式是怎么定义出来的"
+        },
+        "每个主题文件里其实藏着两份配色表，一份叫 light，一份叫 dark，背景、前景、边框、语法高亮各管各的。",
+        "如果你打开自定义主题的设置页，看到两套色板，别嫌麻烦，它们各有各的用途。",
+        {
+                "type": "h2",
+                "text": "跟随系统：prefers-color-scheme 怎么声明"
+        },
+        "Codex 主题支持三种模式：强制亮色、强制暗色、自动。自动模式依赖 CSS 的 `prefers-color-scheme` 媒体查询，系统亮它就显示亮色，系统暗它就切暗色，不需要你点任何东西。主题文件里的声明大致长这样：",
+        "```",
+        "@media (prefers-color-scheme: dark) {",
+        "  :root { /* 暗色变量覆盖 */ }",
+        "}",
+        "```",
+        "一句话总结：只要主题声明了这个查询，你的编辑器就会跟着操作系统的深浅色走。",
+        {
+                "type": "h2",
+                "text": "哪些内置主题默认支持双模式"
+        },
+        "这一版内置主题里，下面这几款默认就带完整的 light/dark 双套配色：",
+        {
+                "type": "ul",
+                "items": [
+                        "Codex 官方默认主题",
+                        "石墨风（Graphite）",
+                        "晚霞（Dusk）",
+                        "纸墨（Ink Paper）",
+                        "森林（Forest）"
+                ]
+        },
+        "安装后在设置里把模式切到\"自动\"，马上就能看到效果。想看更多样式，可以逛逛",
+        {
+                "type": "cta",
+                "text": "/zh/gallery",
+                "href": "/zh/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "自定义主题时，两套配色都要写的真正原因"
+        },
+        "很多人自定义主题只写了一套颜色，结果切到另一模式后，界面要么发白要么发黑，文字直接看不见。原因不复杂：主题框架会在两种模式之间切换变量，你没定义的那套变量会回落到默认值，对比度当场崩掉。两套都写上，等于给两种环境都准备了合理参数，切换时不会翻车。",
+        {
+                "type": "h2",
+                "text": "切换时怎么避免刺眼过渡"
+        },
+        "从亮变暗只花一帧，整个屏幕闪一下，眼睛很难受。我常用的做法：",
+        {
+                "type": "ul",
+                "items": [
+                        "别用瞬时切换，让过渡动画控制在 150–300 毫秒",
+                        "暗色背景别用纯黑，带一点蓝灰的深色，能明显缓解眩光",
+                        "两个模式里保持高亮色同一色相，只调明度",
+                        "切换完先看语法高亮，确认没有跟背景撞色的文字"
+                ]
+        },
+        "**Codex 主题怎么跟随系统自动切换？**",
+        "在主题设置里把模式选成\"自动\"，主题会读取系统的 prefers-color-scheme，跟着深浅色走。",
+        "How do I make my Codex theme follow the system? Pick \"auto\" in the theme settings and it will listen to prefers-color-scheme.",
+        "**我自定义的主题切到暗色后文字看不清，怎么办？**",
+        "多半只写了亮色那套变量。去",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        "Text is unreadable in dark mode on my custom theme. You likely only defined the light variables. Head to /guides/customize and fill in the dark set.",
+        "**内置主题全都支持双模式吗？**",
+        "不是全部，上面列的五款默认支持，其余的在设置里确认一下就行。",
+        "Do all built-in themes support both modes? Not all. The five listed above do; check the settings for the rest.",
+        "想要更多配色灵感，回到",
+        {
+                "type": "cta",
+                "text": "Codex 主题站首页",
+                "href": "/"
+        }
+],
+      en: [
+        "The question I get most in the theme store inbox is not \"which colors look nice.\" It's \"why doesn't my theme follow my system automatically?\" Let me walk you through how codex theme light dark mode actually works, from the two color tables to the switch animation.",
+        {
+                "type": "h2",
+                "text": "Why one theme needs two color schemes"
+        },
+        "In the morning I want a bright workspace. At night, the same screen feels like it's screaming at me. That's not a preference thing, it's a rhythm most editor users share. A Codex theme with proper light dark mode support gives you two working setups, so you never have to dig into settings just to change the lighting.",
+        {
+                "type": "h2",
+                "text": "How a dual-mode theme is put together"
+        },
+        "Inside every theme file there are two color tables hiding. One is called light, the other dark. They handle background, foreground, borders and syntax highlight independently.",
+        "If you open the customizer and see two palettes, don't be annoyed. They each earn their keep.",
+        {
+                "type": "h2",
+                "text": "Following the system: prefers-color-scheme"
+        },
+        "Codex themes ship with three modes: force light, force dark, and auto. Auto relies on the CSS `prefers-color-scheme` media query. When your OS is light, the theme stays light; flip the OS to dark and the theme follows. No clicks needed.",
+        "```",
+        "@media (prefers-color-scheme: dark) {",
+        "  :root { /* dark variable overrides */ }",
+        "}",
+        "```",
+        "That's the whole trick. If the theme declares this query, your editor follows the system scheme.",
+        {
+                "type": "h2",
+                "text": "Which built-in themes support both modes by default"
+        },
+        "Five built-ins ship with a complete light/dark pair out of the box:",
+        {
+                "type": "ul",
+                "items": [
+                        "Codex default theme",
+                        "Graphite",
+                        "Dusk",
+                        "Ink Paper",
+                        "Forest"
+                ]
+        },
+        "Pick \"auto\" in the settings and you can see the effect immediately. For more styles, browse",
+        {
+                "type": "cta",
+                "text": "/zh/gallery",
+                "href": "/zh/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "The real reason to write both palettes when you customize"
+        },
+        "People often define one palette and call it done. Then they flip to the other mode and the interface turns into a whiteout or a black hole. The theme framework swaps variables between the two schemes, and anything you left undefined falls back to the default. That's when contrast falls apart. Writing both palettes is just giving both environments sane parameters so the switch never breaks.",
+        {
+                "type": "h2",
+                "text": "Avoiding the harsh flash on switch"
+        },
+        "Going from light to dark in one frame makes the whole screen blink. It stings. What works for me:",
+        {
+                "type": "ul",
+                "items": [
+                        "Skip instant switching. Let the transition run 150 to 300 milliseconds.",
+                        "Avoid pure black in dark mode. A deep blue-gray is much easier on the eyes.",
+                        "Keep the same hue for highlight colors in both modes, only adjust lightness.",
+                        "Check syntax highlights right after switching. Make sure no text collides with the background."
+                ]
+        },
+        "**How do I make my Codex theme follow the system?**",
+        "Pick \"auto\" in the theme settings. The theme reads prefers-color-scheme and follows the OS. 我的 Codex 主题怎么跟随系统？在设置里选\"自动\"即可。",
+        "**Text is unreadable in dark mode on my custom theme.**",
+        "You probably only wrote the light variables. Head to",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        "**Do all built-in themes support both modes?**",
+        "Not all of them. The five listed above do, and the rest can be checked in the settings. 内置主题都支持双模式吗？不是全部，上面列的五款默认支持。",
+        "If you want more color inspiration, head back to the",
+        {
+                "type": "cta",
+                "text": "Codex theme store homepage",
+                "href": "/"
+        }
+],
+    },
+  },
+
+  {
+    slug: 'pink-codex-theme-tour',
+    date: '2026-08-16',
+    title: {
+      zh: "Codex 粉系主题速览：温柔工作台怎么搭",
+      en: "Codex Pink Themes Quick Tour: Build a Soft, Focused Workspace",
+    },
+    description: {
+      zh: 'Codex 粉系主题（codex pink theme）盘点：粉色调为什么适合长时间编码、内置粉色 preset 有哪些、怎么把任意主题调成粉色系，以及粉色搭配暗色模式的小技巧。',
+      en: 'A codex pink theme quick tour: why pink palettes work for long coding sessions, which built-in pink presets exist, how to recolor any theme pink, and tips for pairing pink with dark mode.',
+    },
+    content: {
+      zh: [
+        "粉色常被当成\"不够极客\"的颜色，但真正把 codex pink theme 装过的人都知道：粉色工作台对长时间编码意外地友好。今天把内置粉系主题翻一遍，再教你怎么把任意主题调成粉色系。",
+        {
+                "type": "h2",
+                "text": "为什么粉色适合编码"
+        },
+        "编辑器天天看，配色选的不是\"好看\"，是\"不累\"。粉色的问题在于高饱和粉看久了刺眼，但低饱和的玫瑰粉、豆沙粉反而比纯白和纯黑更舒服：",
+        {
+                "type": "ul",
+                "items": [
+                        "低饱和粉背景降低对比刺激，眼睛不容易疲劳",
+                        "粉色与代码默认的蓝绿紫语法色不冲突，高亮依旧清晰",
+                        "长时间盯着写代码，暖色调比冷色调更容易让注意力停留"
+                ]
+        },
+        "一句话：粉色不是卖萌，是一种被低估的护眼方案。",
+        {
+                "type": "h2",
+                "text": "内置粉色 preset 盘点"
+        },
+        "主题库里分了一个专门的 pink 分类，下面这几款都是直接能装的：",
+        {
+                "type": "ul",
+                "items": [
+                        "preset-yang-simin（杨思敏主题）：玫红+浅粉渐变，配旗袍红裙插画，浪漫里带点复古",
+                        "preset-dilraba（迪丽热巴主题）：偏明亮的粉调，适合喜欢活泼一点工作台的开发者"
+                ]
+        },
+        "两款都做了暗色模式适配，晚上切暗色不会闪白。想看完整图库和效果预览，去",
+        {
+                "type": "cta",
+                "text": "/zh/gallery",
+                "href": "/zh/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "没有现成粉色？自己调一个"
+        },
+        "内置 preset 不够粉？自定义主题里改三组变量就够了：背景、前景、强调色。记住三个数值参考：",
+        {
+                "type": "ul",
+                "items": [
+                        "背景用低饱和粉：色相 330-350°，饱和度 15-25%，明度 90% 以上",
+                        "前景文字用深灰紫，别用纯黑，纯黑在粉底上对比太硬",
+                        "强调色（选中、光标、按钮）用玫红或珊瑚粉，饱和度 60-70%，一眼能找到"
+                ]
+        },
+        "改完保存，重启生效。想照着官方教程一步步来，翻",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        {
+                "type": "h2",
+                "text": "粉色 + 暗色模式的搭配技巧"
+        },
+        "很多人担心粉色只有亮色好看，其实暗色粉才是隐藏宝藏：",
+        {
+                "type": "ul",
+                "items": [
+                        "暗色背景用深紫粉（明度 15% 左右），不是纯黑，保持粉调",
+                        "语法高亮在暗粉底上选淡粉、淡黄、薄荷绿，对比柔和",
+                        "把强调色统一成亮玫红，夜间写代码找光标不费劲"
+                ]
+        },
+        "**粉色主题会不会影响专注力？** 高饱和粉色会，低饱和不会。选背景饱和度 20% 以内的粉，专注力和白底没有差别。",
+        "**Codex 内置粉色 preset 只有两款吗？** 目前 pink 分类下是这两款，但社区皮肤里还有更多粉色系，图库里都能翻到。",
+        "**粉色主题适合暗色模式吗？** 非常适合。暗粉底比纯黑底更暖，夜间长时间编码眼睛更放松。",
+        "想让整个工作台都换成粉色系，回",
+        {
+                "type": "cta",
+                "text": "Codex 主题库首页",
+                "href": "/"
+        }
+      ],
+      en: [
+        "Pink gets dismissed as not-nerdy-enough, but anyone who has actually run a codex pink theme knows: a pink workspace is surprisingly good for long sessions. Let's tour the built-in pink presets, then cover how to recolor any theme pink.",
+        {
+                "type": "h2",
+                "text": "Why pink works for coding"
+        },
+        "You pick an editor color scheme for comfort, not for looks. High-saturation pink is harsh, but low-saturation rose and dusty pink are easier on the eyes than pure white or pure black:",
+        {
+                "type": "ul",
+                "items": [
+                        "Low-saturation pink backgrounds lower contrast strain, eyes tire less",
+                        "Pink does not fight the default blue, green, purple syntax colors, highlighting stays readable",
+                        "Warm palettes hold attention better than cold ones over hours of staring at code"
+                ]
+        },
+        "In short: pink is not cute, it is an underrated eye-saver.",
+        {
+                "type": "h2",
+                "text": "Built-in pink presets"
+        },
+        "The theme library keeps a dedicated pink category. These two are install-ready:",
+        {
+                "type": "ul",
+                "items": [
+                        "preset-yang-simin: rose and blush gradient with a cheongsam illustration, romantic with a retro twist",
+                        "preset-dilraba: a brighter pink tone, for developers who want a livelier desk"
+                ]
+        },
+        "Both ship with dark-mode palettes, so switching at night will not flash white. Browse the full gallery and previews at",
+        {
+                "type": "cta",
+                "text": "/gallery",
+                "href": "/gallery"
+        },
+        {
+                "type": "h2",
+                "text": "No pink preset? Recolor any theme"
+        },
+        "If the built-ins are not pink enough, edit three variable groups in any custom theme: background, foreground, accent. Three reference values:",
+        {
+                "type": "ul",
+                "items": [
+                        "Background: low-saturation pink, hue 330-350°, saturation 15-25%, lightness above 90%",
+                        "Foreground: dark gray-purple, not pure black, pure black is too hard against pink",
+                        "Accent (selection, cursor, buttons): rose or coral, saturation 60-70%, easy to spot"
+                ]
+        },
+        "Save and restart. For the official step-by-step, check",
+        {
+                "type": "cta",
+                "text": "/guides/customize",
+                "href": "/guides/customize"
+        },
+        {
+                "type": "h2",
+                "text": "Pink meets dark mode"
+        },
+        "People assume pink only works in light mode. Dark pink is the hidden gem:",
+        {
+                "type": "ul",
+                "items": [
+                        "Dark background: deep purple-pink at around 15% lightness, not pure black, keep the pink tone",
+                        "Syntax colors: pale pink, pale yellow, mint green on dark pink, soft contrast",
+                        "Accent: a single bright rose, so the cursor is easy to find at night"
+                ]
+        },
+        "**Does a pink theme hurt focus?** High-saturation pink does. Low-saturation pink does not. Keep the background under 20% saturation and focus is identical to a white background.",
+        "**Are there only two built-in pink presets?** That is the pink category right now, but community skins include more pink options, all browsable in the gallery.",
+        "**Is pink good for dark mode?** Very. Dark pink is warmer than pure black, so eyes relax more during late-night sessions.",
+        "Ready to go full pink? Head back to",
+        {
+                "type": "cta",
+                "text": "the theme store homepage",
+                "href": "/"
+        }
+      ]
+    },
+  },
+  {
+      "slug": "codex-sci-fi-theme-tour",
+      "date": "2026-08-17",
+      "title": {
+          "zh": "Codex 科幻主题速览：未来感工作台怎么搭",
+          "en": "Codex Sci-Fi Themes Quick Tour: Build a Futuristic Workspace"
+      },
+      "description": {
+          "zh": "Codex 科幻主题（codex sci-fi theme）盘点：哪些内置 preset 自带未来感、深色科幻配色怎么搭、霓虹强调色的正确用量，以及暗色模式下的可读性陷阱。",
+          "en": "A codex sci-fi theme quick tour: which built-in presets feel futuristic, how to build a dark sci-fi palette, the right amount of neon accent, and readability traps in dark mode."
+      },
+      "content": {
+          "zh": ["科幻主题是 Codex 主题里最“出片”的一类，但也是最容易翻车的一类。霓虹色滥用、对比度崩坏、长时间盯屏眼睛发酸，都是常见问题。今天把内置科幻 preset 翻一遍，再讲清楚未来感配色到底怎么搭才不伤眼。",{"type":"h2","text":"哪些内置 preset 自带科幻感"},"主题库里没有单独的 sci-fi 分类，但深色系里好几款都是天然科幻底子：",{"type":"ul","items":["gothic-void-expedition（哥特虚空远征）：深紫黑底 + 青绿高亮，太空探索气质，字符几乎全透明发光","cyber-neon（赛博霓虹）：黑底 + 品红/青色双霓虹，夜店感强，适合喜欢高饱和的用户","monokai-stone（Monokai 石）：经典 Monokai 的暗色变体，霓虹含量低，属于“克制科幻”","tokyo-night 系列：东京夜配色，深蓝底 + 粉紫高亮，很多开发者觉得这是最耐看的科幻风"]},"想直接看效果图，去",{"type":"cta","text":"/zh/gallery","href":"/zh/gallery"},{"type":"h2","text":"科幻配色三原则"},"未来感不等于满屏霓虹。真正耐看的科幻工作台，通常遵守三条原则：",{"type":"ul","items":["背景要暗但不要纯黑：纯黑在暗室里看久了眼睛发酸，深蓝或深紫（10-15% 亮度）更舒适","霓虹只做高亮和强调色：语法高亮、光标、选中区用霓虹，大面积文字保持低饱和灰","冷暖成对出现：青色配品红、蓝配紫，成对对比才像“科幻”，单一霓虹色会显得廉价"]},"一句话：科幻感来自背景和强调色的对比关系，不来自霓虹色数量。",{"type":"h2","text":"暗色模式下的可读性陷阱"},"深色科幻主题最大的坑是注释和次要文本看不清。霓虹色背景上，灰色注释几乎消失。装完主题先检查三处：",{"type":"ul","items":["注释色：至少 4.5:1 对比度，不能比背景只亮一点点","选中区：半透明霓虹高亮，避免整行实色挡住文字","光标：换一个与语法高亮不同色的霓虹，别混在一起"]},"这三处调好，科幻主题就能从“好看但没法干活”变成“好看又能干活”。",{"type":"h2","text":"怎么把任意主题调成科幻风"},"不想换主题？自定义模式改三组变量就够了：背景改成深蓝或深紫，前景保持低饱和灰，强调色换成霓虹青或品红。改动量比想象中小，效果却立竿见影。","调完记得对比度检查：注释 4.5:1、正文 7:1，这是 WCAG 的底线，也是“科幻不伤眼”的底线。",{"type":"h2","text":"FAQ"},"**科幻主题会伤眼睛吗？** 高饱和霓虹大面积铺开会。正确的做法是把霓虹限制在高亮和强调色，背景保持深蓝或深紫的暗色，这样既出效果又护眼。","**Codex 内置哪些科幻主题？** 深色系里的 gothic-void-expedition、cyber-neon、monokai-stone 和 tokyo-night 系列都是科幻底子，社区还有更多，全部能在图库浏览。","**霓虹色该用多少？** 原则是“少而精”：语法高亮、光标、选中区用霓虹，正文和背景保持低饱和。霓虹越多，长时间盯屏越累。","想要完整图库和效果预览，回到",{"type":"cta","text":"主题商店首页","href":"/"}],
+          "en": ["Sci-fi themes are the most photogenic category in the Codex theme store, and also the easiest to get wrong. Neon overload, crushed contrast, sore eyes after an hour of work — all classic. This quick tour runs through the built-in futuristic presets and explains how to build a sci-fi palette that still reads well at hour six.",{"type":"h2","text":"Which built-in presets feel sci-fi"},"There is no dedicated sci-fi category, but several dark presets are natural sci-fi bases:",{"type":"ul","items":["gothic-void-expedition: deep purple-black with teal highlights, space-exploration energy","cyber-neon: black background with magenta and cyan double-neon, nightclub energy","monokai-stone: a dark variant of classic Monokai, low neon, the restrained sci-fi option","tokyo-night series: deep blue base with pink and purple highlights, the one many devs find most comfortable"]},"For the full gallery with previews, head to",{"type":"cta","text":"/en/gallery","href":"/en/gallery"},{"type":"h2","text":"Three rules for sci-fi palettes"},"Futuristic does not mean wall-to-wall neon. Workable sci-fi workspaces follow three rules:",{"type":"ul","items":["Dark but not pure black: deep blue or purple at 10-15% lightness is easier on the eyes than #000","Neon only for highlights and accents: syntax colors, cursor, selection; body text stays low-saturation gray","Pair warm and cool: cyan with magenta, blue with purple. A single neon color reads as cheap, a pair reads as sci-fi"]},"The sci-fi feel comes from the contrast between background and accent, not from the neon count.",{"type":"h2","text":"Readability traps in dark mode"},"The biggest trap in dark sci-fi themes is comments and secondary text vanishing. On a neon-tinted background, gray comments disappear. After installing any dark theme, check three spots:",{"type":"ul","items":["Comment color: at least 4.5:1 contrast against the background","Selection: semi-transparent neon highlight, not a solid bar over the text","Cursor: a neon different from the syntax colors so it never blends in"]},"Fix those three and a sci-fi theme stops being 'pretty but unusable' and becomes 'pretty and usable'.",{"type":"h2","text":"Recolor any theme sci-fi"},"Do not want to switch? The custom editor only needs three variables: background to deep blue or purple, foreground to low-saturation gray, accent to neon cyan or magenta. Less work than you would expect, and the effect is instant.","Run the contrast check when done: 4.5:1 for comments, 7:1 for body text. That is the WCAG floor and the floor for 'sci-fi without sore eyes'.",{"type":"h2","text":"FAQ"},"**Do sci-fi themes hurt your eyes?** High-saturation neon spread everywhere does. The fix is to confine neon to highlights and accents and keep the background dark blue or purple — stylish and easy on the eyes.","**Which sci-fi themes are built into Codex?** In the dark group: gothic-void-expedition, cyber-neon, monokai-stone, and the tokyo-night series. The community has more, all browsable in the gallery.","**How much neon is too much?** Less is more: neon on syntax highlights, cursor, and selection; low-saturation colors for everything else. More neon means more eye strain over time.","For the full gallery and previews, head back to",{"type":"cta","text":"the theme store homepage","href":"/"}]
+      }
+  },
+  {
+    slug: 'codex-dark-theme-tour',
+    date: '2026-08-18',
+    title: {
+      zh: "Codex 暗黑主题速览：沉稳工作台怎么搭",
+      en: "Codex Dark Themes Quick Tour: Build a Calm, Focused Workspace",
+    },
+    description: {
+      zh: "Codex 暗黑主题（codex dark theme）盘点：哪些内置 preset 适合长时间编码、暗色配色怎么搭不刺眼、暗色模式下的可读性陷阱，以及如何把任意主题调成暗黑风。",
+      en: "A codex dark theme quick tour: which built-in presets suit long coding sessions, how to build a dark palette that does not sting the eyes, the readability traps in dark mode, and how to recolor any theme dark.",
+    },
+    content: {
+      zh: [
+        "暗黑主题几乎是每个深夜编码者的默认选择，但「暗」也有讲究。纯黑背景在暗室里看久了眼睛发酸，配色没搭好还会让注释糊成一团。今天把内置暗黑系 preset 翻一遍，再讲清楚暗色配色到底怎么搭才不伤眼。",
+        { type: 'h2', text: '哪些内置 preset 属于暗黑风' },
+        { type: 'ul', items: [
+          'preset-purple-night（紫夜限定）：深紫底 + 微光，神秘但不刺眼，夜间编码很舒服',
+          'gothic-void-expedition（哥特虚空远征）：深紫黑底 + 青绿高亮，太空探索气质',
+          'cyber-neon（赛博霓虹）：黑底 + 品红/青双霓虹，喜欢高饱和的可以选',
+          'tokyo-night 系列：深蓝底 + 粉紫高亮，很多开发者觉得最耐看',
+          'monokai-stone（Monokai 石）：经典 Monokai 暗色变体，霓虹含量低，属于「克制暗黑」',
+        ] },
+        { type: 'cta', text: '看看紫夜限定效果 →', href: '/zh/gallery/preset-purple-night' },
+        { type: 'h2', text: '暗色配色怎么搭才不刺眼' },
+        { type: 'ul', items: [
+          '背景深但别纯黑：深蓝或深紫（10-15% 亮度）比 #000 更护眼',
+          '文字用低饱和灰，别用纯白，纯白在暗底上对比太硬',
+          '强调色只放一处高亮：选中、光标、按钮用同一个霓虹，别到处撒',
+        ] },
+        { type: 'h2', text: '暗色模式下的可读性陷阱' },
+        { type: 'ul', items: [
+          '注释色：至少 4.5:1 对比度，不能只比背景亮一点点',
+          '选中区：半透明高亮，别用整行实色挡住文字',
+          '光标：换一个和语法高亮不同色的霓虹，别混在一起',
+        ] },
+        { type: 'h2', text: '怎么把任意主题调成暗黑风' },
+        "不想换主题？自定义模式改三组变量就够了：背景改成深蓝或深紫，前景保持低饱和灰，强调色换成单一霓虹。改动量比想象中小，效果却立竿见影。调完记得做对比度检查：注释 4.5:1、正文 7:1，这是 WCAG 的底线。",
+        { type: 'cta', text: '跟着官方教程一步步调 →', href: '/guides/customize' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: '暗黑主题会比亮色更护眼吗？', a: '看怎么搭。纯黑底反而容易在暗室里刺眼；深蓝或深紫（10-15% 亮度）的背景更舒服。关键是降低对比刺激，而不是一味调暗。' },
+          { q: 'Codex 内置哪些暗黑主题？', a: '深色系里的 preset-purple-night、gothic-void-expedition、cyber-neon、tokyo-night 系列和 monokai-stone 都是暗黑底子。社区还有更多，全部能在图库翻到。' },
+          { q: '暗色模式最容易踩的坑是什么？', a: '注释和次要文本看不清。装完暗色主题先检查注释对比度、选中区透明度和光标颜色这三处，调好就能从「好看但没法干活」变成「好看又能干活」。' },
+        ] },
+        { type: 'h2', text: '回到主题库' },
+        "想要完整图库和效果预览，回到 Codex Skin Studio 主题库首页，几分钟就能让你的 Codex 换个沉稳的暗黑皮肤。",
+        { type: 'cta', text: 'Codex Skin Studio 主题库首页 →', href: '/' },
+      ],
+      en: [
+        "Dark themes are the default for almost everyone who codes late, but 'dark' is a spectrum. A pure-black background stings the eyes in a dark room, and a bad palette turns comments into mush. This quick tour runs through the built-in dark presets, then explains how to build a dark palette that stays readable at hour six.",
+        { type: 'h2', text: 'Which built-in presets are dark' },
+        { type: 'ul', items: [
+          'preset-purple-night: deep purple base with a faint glow, mysterious but easy on the eyes at night',
+          'gothic-void-expedition: deep purple-black with teal highlights, space-exploration energy',
+          'cyber-neon: black base with magenta and cyan double-neon, for high-saturation fans',
+          'tokyo-night series: deep blue base with pink and purple highlights, the one many devs find most comfortable',
+          'monokai-stone: a dark variant of classic Monokai, low neon, the restrained dark option',
+        ] },
+        { type: 'cta', text: 'See Purple Night in action →', href: '/en/gallery/preset-purple-night' },
+        { type: 'h2', text: 'How to build a dark palette that does not sting' },
+        { type: 'ul', items: [
+          'Dark but not pure black: deep blue or purple at 10-15% lightness beats #000',
+          'Text in low-saturation gray, not pure white; pure white is harsh against dark',
+          'One neon accent only: selection, cursor, buttons share one highlight, do not scatter it',
+        ] },
+        { type: 'h2', text: 'Readability traps in dark mode' },
+        { type: 'ul', items: [
+          'Comment color: at least 4.5:1 contrast, not just a hair brighter than the background',
+          'Selection: semi-transparent highlight, not a solid bar over the text',
+          'Cursor: pick a neon different from the syntax highlight, keep them apart',
+        ] },
+        { type: 'h2', text: 'How to recolor any theme dark' },
+        "Do not want to switch themes? Three variable groups in custom mode do it: background to deep blue or purple, foreground to low-saturation gray, accent to a single neon. The change is smaller than it sounds and the effect is immediate. After editing, run a contrast check: comments 4.5:1, body 7:1. That is the WCAG floor.",
+        { type: 'cta', text: 'Follow the official customization guide →', href: '/guides/customize' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Is a dark theme easier on the eyes than light?', a: 'It depends on the build. Pure black actually stings in a dark room; a deep blue or purple at 10-15% lightness is more comfortable. The goal is less contrast shock, not maximum darkness.' },
+          { q: 'Which dark themes are built into Codex Skin Studio?', a: 'The dark-family presets are preset-purple-night, gothic-void-expedition, cyber-neon, the tokyo-night series, and monokai-stone. The community gallery has more, all browsable in the theme store.' },
+          { q: 'What is the most common dark-mode mistake?', a: 'Comments and secondary text vanishing. After installing any dark theme, check comment contrast, selection transparency, and cursor color. Fix those three and a dark theme goes from pretty-but-unusable to pretty-and-productive.' },
+        ] },
+        { type: 'h2', text: 'Back to the theme store' },
+        "For the full gallery and live previews, head back to the Codex Skin Studio theme store homepage and give your Codex a calm dark skin in a few minutes.",
+        { type: 'cta', text: 'Codex Skin Studio theme store homepage →', href: '/' },
+      ],
+    },
+  },
+  {
+    slug: 'codex-clean-theme-tour',
+    date: '2026-08-19',
+    title: {
+      zh: 'Codex 清新主题速览：干净工作台怎么搭',
+      en: 'Codex Clean Themes Quick Tour: Build a Fresh, Airy Workspace',
+    },
+    description: {
+      zh: 'Codex 清新主题（codex clean theme）盘点：哪些内置 preset 适合清爽视觉、清新配色怎么搭不廉价、亮色模式下的可读性与留白，以及如何把任意主题调成清新风。',
+      en: 'A codex clean theme quick tour: which built-in presets suit a fresh look, how to build a clean palette that does not look cheap, readability and whitespace in light mode, and how to recolor any theme clean.',
+    },
+    content: {
+      zh: [
+        '清新主题常被误会成「寡淡」，但一套搭得好的亮色主题，是盯八个小时最舒服的那一种。关键不在白，在克制。今天把内置的清新系 preset 翻一遍，再讲清楚清新配色怎么搭才显干净、不显廉价。',
+        { type: 'h2', text: '哪些内置 preset 属于清新风' },
+        { type: 'ul', items: [
+          'preset-clear-custom（清透定制）：近白底加柔和高亮，干净得像刚擦过的玻璃，是清新的基准款',
+          '米白/亚麻底系：偏暖的浅色，适合长时间文档阅读，眼睛不累',
+          '淡蓝白底系：冷调清新，清晨打开 Codex 很提神',
+          '纸感纯白系：细灰描边，适合专注写作和阅读',
+          '薄荷/浅绿点缀：白底加一点冷调高亮，喜欢干净里带点活力可以选',
+        ] },
+        { type: 'cta', text: '看看清透定制效果 →', href: '/zh/gallery/preset-clear-custom' },
+        { type: 'h2', text: '清新配色怎么搭才不廉价' },
+        { type: 'ul', items: [
+          '背景近白但带一点灰：纯白 #fff 容易显脏，加 2-3% 灰更稳',
+          '高亮用低饱和柔色：雾蓝、薄荷、浅粉，别用荧光',
+          '文字深灰而非纯黑：像 #1f2330 这类，长文不刺眼',
+          '留白即是设计：区块之间多留 16-24px，干净感来自呼吸',
+        ] },
+        { type: 'h2', text: '亮色模式下的可读性与留白' },
+        { type: 'ul', items: [
+          '注释色：至少 4.5:1，浅底上别用太浅的灰',
+          '选中区：淡色半透明高亮，别用实色挡字',
+          '边界与分隔：用细灰线而非色块，清新感靠线不靠面',
+        ] },
+        { type: 'h2', text: '怎么把任意主题调成清新风' },
+        '不想换主题？自定义模式改三组变量就够了：背景改成近白带灰，前景换成深灰，强调色挑一个低饱和柔色（雾蓝或薄荷）。改动量小，效果立竿见影。调完做一次对比度检查：注释 4.5:1、正文 7:1，这是 WCAG 的底线，也是清新不「飘」的保证。',
+        { type: 'cta', text: '跟着官方教程一步步调 →', href: '/guides/customize' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: '清新主题会不会显得太素？', a: '素和干净是两回事。清新风靠留白和柔色撑质感，配色克制反而显贵。想要一点个性，把强调色换成你喜欢的低饱和色就行。' },
+          { q: 'Codex 内置哪些清新主题？', a: '清新一脉以 preset-clear-custom（清透定制）为代表，图库里还有米白、淡蓝白、纸感、薄荷等浅色 preset，全部能在主题库翻到。' },
+          { q: '亮色主题最容易踩的坑是什么？', a: '显脏和刺眼。装完先检查背景是否带灰、文字是否深灰而非纯黑、注释对比度够不够。这三处调好，清新主题就从「惨白」变成「干净」。' },
+        ] },
+        { type: 'h2', text: '回到主题库' },
+        '想要完整图库和效果预览，回到 Codex Skin Studio 主题库首页，几分钟就能让你的 Codex 换个清新的皮肤。',
+        { type: 'cta', text: 'Codex Skin Studio 主题库首页 →', href: '/' },
+      ],
+      en: [
+        'Clean themes get a bad rap as boring, but a well-built light theme is the most comfortable thing to stare at for eight hours. The trick is not white, it is restraint. This quick tour walks through the built-in fresh presets, then shows how to build a clean palette that reads as calm, not cheap.',
+        { type: 'h2', text: 'Which built-in presets are clean' },
+        { type: 'ul', items: [
+          'preset-clear-custom: near-white base with a soft highlight, clean like glass just wiped, the baseline clean preset',
+          'warm linen base: a slightly warm off-white, easy on the eyes for long reading',
+          'pale blue-white base: a cool fresh tone, a nice jolt on a slow morning',
+          'paper pure-white: thin gray borders, good for focused writing and reading',
+          'mint soft accent: white base with a cool mint highlight, for clean with a little life',
+        ] },
+        { type: 'cta', text: 'See Clear Custom in action →', href: '/en/gallery/preset-clear-custom' },
+        { type: 'h2', text: 'How to build a clean palette that does not look cheap' },
+        { type: 'ul', items: [
+          'Background near-white with a touch of gray: pure #fff reads dirty fast, 2-3% gray is steadier',
+          'Highlight in low-saturation soft color: fog blue, mint, pale pink, never neon',
+          'Text in dark gray, not pure black: something like #1f2330 stays readable for long sessions',
+          'Whitespace is the design: 16-24px between blocks, the clean feel comes from breathing room',
+        ] },
+        { type: 'h2', text: 'Readability and whitespace in light mode' },
+        { type: 'ul', items: [
+          'Comment color: at least 4.5:1, do not go too light on a light base',
+          'Selection: a light translucent highlight, not a solid block over the text',
+          'Borders and dividers: thin gray lines, not color fills, the fresh look leans on lines not planes',
+        ] },
+        { type: 'h2', text: 'How to recolor any theme clean' },
+        'Do not want to switch themes? Three variable groups in custom mode do it: background to near-white with gray, foreground to dark gray, accent to one low-saturation soft color (fog blue or mint). The change is small, the effect is immediate. After editing, run a contrast check: comments 4.5:1, body 7:1. That is the WCAG floor and the guarantee your clean theme will not feel floaty.',
+        { type: 'cta', text: 'Follow the official customization guide →', href: '/guides/customize' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Will a clean theme look too plain?', a: 'Plain and clean are different things. A fresh theme earns its quality from whitespace and soft color; restraint reads as expensive. Want a bit of personality? Swap the accent to a low-saturation color you like.' },
+          { q: 'Which clean themes are built into Codex Skin Studio?', a: 'The clean family is led by preset-clear-custom, with off-white, pale blue-white, paper, and mint presets in the gallery. All of them are browsable in the theme store.' },
+          { q: 'What is the most common light-theme mistake?', a: 'Looking dirty or harsh. After installing, check that the background carries a little gray, the text is dark gray not pure black, and the comment contrast is enough. Fix those three and a clean theme moves from washed-out to genuinely clean.' },
+        ] },
+        { type: 'h2', text: 'Back to the theme store' },
+        'For the full gallery and live previews, head back to the Codex Skin Studio theme store homepage and give your Codex a fresh skin in a few minutes.',
+        { type: 'cta', text: 'Codex Skin Studio theme store homepage →', href: '/' },
+      ],
+    },
+  },
+  {
+    slug: 'how-often-should-you-switch-codex-themes',
+    date: '2026-08-20',
+    title: {
+      zh: 'Codex 主题切换频率：多久换一次主题合适',
+      en: 'How Often Should You Switch Codex Themes?',
+    },
+    description: {
+      zh: 'Codex 主题应该多久换一次？本文从视觉疲劳、专注度、审美疲劳角度分析切换频率，给出实用建议。',
+      en: 'How often should you switch your Codex theme? This post examines visual fatigue, focus, and aesthetic burnout to give you a practical switching cadence.',
+    },
+    content: {
+      zh: [
+        '很多人问：我是不是该换主题了？换得太勤会不会分散注意力？不换又会看腻。其实这个问题没有标准答案，但有一些信号可以帮你判断什么时候该换、什么时候该坚持。',
+        { type: 'h2', text: '什么时候该考虑换主题' },
+        {
+          type: 'ul',
+          items: [
+            '你开始注意不到主题了——它已经完全融入背景，说明它已经完成任务，换不换都行',
+            '你感到视觉疲劳——眼睛酸、注意力涣散，可能是当前主题对比度不够或太亮',
+            '你换了工作场景——从白天 coding 转到晚上 review，可能需要更暗的调色',
+            '你追求新鲜感——偶尔换主题可以重置注意力，但不要让它成为习惯',
+          ],
+        },
+        { type: 'h2', text: '推荐的切换频率' },
+        '大多数开发者不需要频繁换主题。一个适合你的主题可以稳定使用数月甚至数年。如果你现在用的主题让你舒适、专注、不累眼，就不需要换。',
+        '如果你觉得该换了，试试这个节奏：每季度评估一次视觉舒适度，每半年考虑换一个完全不同的调色方向（比如从深色转到浅色），每年做一次大换血（换一个全新风格）。',
+        { type: 'h2', text: '频繁换主题的副作用' },
+        {
+          type: 'ul',
+          items: [
+            '每次换主题都要重新适应配色，消耗认知资源',
+            '你可能永远找不到"完美主题"，因为完美是动态的',
+            '换主题的快感会取代实际工作的满足感',
+>>>>>>> origin/main
           ],
         },
         { type: 'h2', text: 'FAQ' },
         {
           type: 'faq',
           items: [
+<<<<<<< HEAD
             { q: 'Is CDP injection safe for my computer?', a: 'Yes. CDP injection only modifies what is displayed in the Codex window. It cannot access your files or system.' },
             { q: 'Can themes contain viruses?', a: 'Technically yes, but browser sandboxing prevents execution outside the application. Stick to trusted theme sources.' },
             { q: 'How do I verify a theme is safe?', a: 'Check file size for anomalies, verify the source is trustworthy, and monitor Codex Skin Studio changelogs.' },
@@ -986,3 +1993,444 @@ export const POSTS: BlogPost[] = [
     },
   },
 ];
+=======
+            { q: '我应该多久换一次 Codex 主题？', a: '没有固定频率。以视觉舒适度为准：不累眼、不影响专注、不让你分心，就是最好的主题。' },
+            { q: '换主题会让我更专注吗？', a: '偶尔换可以重置注意力，但频繁换会消耗认知资源。更好的做法是找到一个舒适的主题并保持它。' },
+            { q: '深色和浅色哪个更适合长时间 coding？', a: '这取决于环境光和个人偏好。关键是对比度足够、不刺眼。深色在暗光下更舒适，浅色在明亮环境下更清晰。' },
+          ],
+        },
+        { type: 'h2', text: '回到主题库' },
+        '想查看更多主题？前往 Codex Skin Studio 主题库，找到适合你当前状态的那一款。',
+        { type: 'cta', text: '浏览 Codex Skin Studio 主题库 →', href: '/' },
+      ],
+      en: [
+        'How often should you switch your Codex theme? This is one of the most common questions, and the honest answer is: it depends on your signals, not a calendar. Some developers stay on one theme for years. Others switch monthly. The key is learning to read your own visual fatigue.',
+        { type: 'h2', text: 'When to consider switching' },
+        {
+          type: 'ul',
+          items: [
+            'You stop noticing the theme — it has faded into the background, which means it is doing its job. Switching now is about novelty, not need.',
+            'You feel visual fatigue — tired eyes, wandering focus, the colors feel harsh. This is a sign your theme needs adjustment or replacement.',
+            'Your work context changed — moving from daytime coding to evening review may call for a darker palette.',
+            'You want novelty — occasional switches can reset attention, but make it a habit and you will never settle.',
+          ],
+        },
+        { type: 'h2', text: 'A practical switching cadence' },
+        'Most developers do not need to switch often. A good theme can last months or years. If your current theme is comfortable, focused, and easy on the eyes, keep it.',
+        'If you feel the urge to switch, try this rhythm: evaluate visual comfort quarterly, consider a full palette direction change every six months (dark to light or vice versa), and do a major refresh once a year.',
+        { type: 'h2', text: 'The cost of frequent switching' },
+        {
+          type: 'ul',
+          items: [
+            'Each switch requires cognitive adaptation to a new color scheme',
+            'You may never find the "perfect" theme because perfection is dynamic',
+            'The thrill of switching can replace the satisfaction of actual work',
+          ],
+        },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'How often should I switch my Codex theme?', a: 'There is no fixed frequency. Follow your visual comfort: if it is easy on the eyes, does not distract you, and lets you focus, it is the right theme.' },
+            { q: 'Will switching themes make me more focused?', a: 'Occasionally, yes — it can reset attention. But frequent switching consumes cognitive resources. Better to find one comfortable theme and stick with it.' },
+            { q: 'Which is better for long coding sessions: dark or light?', a: 'It depends on ambient light and personal preference. The key is sufficient contrast and no glare. Dark is more comfortable in low light; light is clearer in bright environments.' },
+          ],
+        },
+        { type: 'h2', text: 'Back to the theme store' },
+        'Want to explore more themes? Head to the Codex Skin Studio theme store and find the one that matches your current state.',
+        { type: 'cta', text: 'Browse the Codex Skin Studio theme store →', href: '/' },
+      ],
+    },
+  },
+  {
+    slug: 'how-to-customize-codex-theme-wallpapers',
+    date: '2026-08-21',
+    title: {
+      zh: '如何自定义 Codex 主题背景图',
+      en: 'How to Customize Codex Theme Wallpapers',
+    },
+    description: {
+      zh: 'Codex 主题的视觉效果不仅来自颜色方案，更来自背景图片的选择。本文教你如何使用 Codex Skin Studio 自定义背景图，让编码环境更有个性。',
+      en: 'Codex theme visuals come not just from color schemes, but from background image selection. Learn how to customize wallpapers with Codex Skin Studio for a more personalized coding environment.',
+    },
+    content: {
+      zh: [
+        { type: 'h2', text: '为什么自定义背景很重要' },
+        { type: 'p', text: 'Codex 主题的视觉效果不仅来自颜色方案，更来自背景图片的选择。一张合适的壁纸能让你的编码环境更有个性，也能减少视觉疲劳。' },
+        { type: 'h2', text: '支持格式与要求' },
+        { type: 'p', text: 'Codex Skin Studio 支持以下背景格式：' },
+        { type: 'ul', items: ['**PNG**：无损质量，适合静态背景', '**WebP**：现代格式，文件更小且质量更高', '**JPG**：兼容性好，但可能有压缩伪影'] },
+        { type: 'p', text: '建议分辨率：1920x1080 或更高，以确保在不同屏幕上都能清晰显示。' },
+        { type: 'h2', text: '如何添加自定义背景' },
+        { type: 'ul', items: ['打开 Codex Skin Studio', '选择你喜欢的主题预设', '点击「自定义背景」按钮', '从本地选择你的图片文件', '调整透明度（可选）', '点击「应用」保存设置'] },
+        { type: 'h2', text: '背景透明度技巧' },
+        { type: 'ul', items: ['**低透明度（20-40%）**：背景若隐若现，代码内容更突出', '**中等透明度（50-60%）**：平衡视觉效果与可读性', '**高透明度（70-80%）**：背景几乎不可见，适合作为点缀'] },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '背景图片太大影响性能吗？', a: 'Codex Skin Studio 会自动压缩和调整背景图片，正常大小的图片（<10MB）不会影响性能。' },
+          { q: '可以保存多套背景方案吗？', a: '是的，Pro 用户可以保存多套自定义方案，快速切换。' },
+        ] },
+      ],
+      en: [
+        { type: 'h2', text: 'Why Custom Wallpapers Matter' },
+        { type: 'p', text: 'Codex theme visuals come not just from color schemes, but from background image selection. The right wallpaper makes your coding environment more personal and reduces eye strain.' },
+        { type: 'h2', text: 'Supported Formats & Requirements' },
+        { type: 'p', text: 'Codex Skin Studio supports these background formats:' },
+        { type: 'ul', items: ['**PNG**: Lossless quality, ideal for static backgrounds', '**WebP**: Modern format, smaller files with higher quality', '**JPG**: Good compatibility, but may have compression artifacts'] },
+        { type: 'p', text: 'Recommended resolution: 1920x1080 or higher for clear display on various screens.' },
+        { type: 'h2', text: 'How to Add Custom Backgrounds' },
+        { type: 'ul', items: ['Open Codex Skin Studio', 'Select your preferred theme preset', 'Click "Custom Background"', 'Choose your image file from local storage', 'Adjust opacity (optional)', 'Click "Apply" to save settings'] },
+        { type: 'h2', text: 'Background Opacity Tips' },
+        { type: 'ul', items: ['**Low opacity (20-40%)**: Background subtly visible, code content stands out', '**Medium opacity (50-60%)**: Balanced visual effect and readability', '**High opacity (70-80%)**: Background nearly invisible, suitable as accent'] },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Do large background images affect performance?', a: 'Codex Skin Studio automatically compresses and adjusts background images. Normal-sized images (<10MB) won\'t affect performance.' },
+          { q: 'Can I save multiple background schemes?', a: 'Yes, Pro users can save multiple custom schemes for quick switching.' },
+        ] },
+      ],
+    },
+  },
+  {
+    slug: 'best-codex-themes-2026',
+    date: '2026-08-21',
+    title: {
+      zh: '2026 年最佳 Codex 主题推荐：暗色、亮色与极简精选',
+      en: 'Best Codex Themes 2026: Top Dark, Light & Minimalist Picks',
+    },
+    description: {
+      zh: '整理了 2026 年最值得安装的 Codex 主题：暗色系、亮色系与极简风一网打尽，附安装方法与适用场景。',
+      en: 'The best Codex themes worth installing in 2026: dark, light and minimalist picks with install tips and best-use scenarios.',
+    },
+    content: {
+      zh: [
+        'Codex 桌面端默认主题功能克制，但并不意味着你必须一直盯着那套灰白配色。借助 Codex Skin Studio，你可以一键切换风格迥异的主题。这里整理了 2026 年最值得收藏的一批。',
+        { type: 'h2', text: '暗色系主题' },
+        { type: 'p', text: '暗色主题是开发者的主流选择，长时间编码时对眼睛更友好。' },
+        { type: 'ul', items: ['**黑金舞台（Stage Black-Gold）**：舞台感黑金撞色，适合追求质感的夜间工作流', '**暗夜紫（Purple Night）**：深紫渐变，静谧且高级', '**灵感宇宙（Inspiration Universe）**：深邃星空质感，科幻氛围拉满'] },
+        { type: 'h2', text: '亮色系主题' },
+        { type: 'ul', items: ['**浪漫玫瑰（Romantic Rose）**：粉嫩配色，清爽又不刺眼', '**粉彩 Codex（Pink Codex）**：柔和粉色系，白天办公首选'] },
+        { type: 'h2', text: '极简与中性主题' },
+        { type: 'ul', items: ['**清透极简（Clear Minimalist）**：低干扰高可读性，专注写代码', '**干净主题（Clean）**：几乎零装饰，还原最纯粹的编码界面'] },
+        { type: 'h2', text: '如何选择适合自己的主题' },
+        { type: 'p', text: '建议按「使用场景」而非「颜值」来选：夜间/沉浸编码选暗色，白天/会议室演示选亮色，写文档/读代码选极简。选定后还能在 Codex Skin Studio 里微调背景与透明度。' },
+        { type: 'h2', text: '快速上手' },
+        { type: 'cta', text: '浏览全部主题并一键安装 →', href: '/en/gallery' },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '这些主题会覆盖官方更新吗？', a: '不会。Codex Skin Studio 通过 CDP 注入主题，不修改任何官方文件，Codex 升级后主题依然有效。' },
+          { q: '可以同时装多套主题吗？', a: '可以，主题保存在本地预设中，随时一键切换。' },
+        ] },
+      ],
+      en: [
+        'The Codex desktop app ships with a restrained default theme, but that doesn\'t mean you\'re stuck with the same gray palette. With Codex Skin Studio you can switch between dramatically different themes in one click. Here are the most worth-keeping picks for 2026.',
+        { type: 'h2', text: 'Dark Themes' },
+        { type: 'p', text: 'Dark themes are the mainstream choice for developers — easier on the eyes during long coding sessions.' },
+        { type: 'ul', items: ['**Stage Black-Gold**: stage-like black-and-gold contrast, great for a premium night workflow', '**Purple Night**: deep purple gradient, quiet and premium', '**Inspiration Universe**: deep starry-space texture with a sci-fi feel'] },
+        { type: 'h2', text: 'Light Themes' },
+        { type: 'ul', items: ['**Romantic Rose**: soft pink palette, fresh without being harsh', '**Pink Codex**: gentle pinks, a daytime favorite'] },
+        { type: 'h2', text: 'Minimalist & Neutral Themes' },
+        { type: 'ul', items: ['**Clear Minimalist**: low distraction, high readability', '**Clean**: nearly zero decoration, the purest coding surface'] },
+        { type: 'h2', text: 'How to Pick the Right Theme' },
+        { type: 'p', text: 'Choose by use case rather than looks: dark for night/immersive coding, light for daytime or on-stage demos, minimalist for docs and code review. Once selected, fine-tune backgrounds and opacity inside Codex Skin Studio.' },
+        { type: 'h2', text: 'Get Started' },
+        { type: 'cta', text: 'Browse all themes and install in one click →', href: '/en/gallery' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Do these themes override official updates?', a: 'No. Codex Skin Studio injects themes via CDP without modifying any official files, so themes keep working after Codex updates.' },
+          { q: 'Can I install multiple themes at once?', a: 'Yes. Themes are saved as local presets and you can switch between them anytime.' },
+        ] },
+      ],
+    },
+  },
+  {
+    slug: 'codex-theme-backup-and-restore',
+    date: '2026-08-21',
+    title: {
+      zh: 'Codex 主题如何备份与恢复：防止重装后丢失',
+      en: 'How to Backup & Restore Codex Themes (Never Lose Them Again)',
+    },
+    description: {
+      zh: '换电脑或重装 Codex 后主题全没了？本文教你用 Codex Skin Studio 导出、备份并恢复主题预设，一次搞定永不再丢。',
+      en: 'Losing all your themes after reinstalling? Learn how to export, back up and restore Codex theme presets with Codex Skin Studio — once and for all.',
+    },
+    content: {
+      zh: [
+        '很多用户重装系统或更换电脑后发现，辛辛苦苦调好的主题全没了。其实只要养成备份习惯，恢复只需几十秒。',
+        { type: 'h2', text: '为什么主题会丢失' },
+        { type: 'ul', items: ['重装 Codex 或系统', '清理缓存时误删配置目录', '多台设备之间没有同步'] },
+        { type: 'h2', text: '如何备份主题' },
+        { type: 'p', text: '在 Codex Skin Studio 中打开「预设管理」，选择要备份的主题，点击「导出」。导出的文件包含完整的配色与背景配置，可以保存到网盘或 GitHub 私有仓库。' },
+        { type: 'h2', text: '如何恢复主题' },
+        { type: 'ul', items: ['在新设备安装 Codex Skin Studio', '打开「预设管理」→「导入」', '选择之前导出的备份文件', '主题立即恢复，无需重新调参'] },
+        { type: 'h2', text: '多设备同步建议' },
+        { type: 'p', text: '推荐把导出的主题包放进一个私有 GitHub 仓库或网盘文件夹，每次微调后重新导出覆盖，保持多设备一致。' },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '备份文件是加密的吗？', a: '主题包只包含样式与图片配置，不包含代码或密钥，可以放心存放。' },
+          { q: '免费版支持导出吗？', a: '免费版支持导出内置主题，Pro 版支持导出全部自定义预设。' },
+        ] },
+      ],
+      en: [
+        'After reinstalling the OS or switching machines, many users find all their carefully-tuned themes gone. Build a backup habit and recovery takes just seconds.',
+        { type: 'h2', text: 'Why Themes Get Lost' },
+        { type: 'ul', items: ['Reinstalling Codex or the operating system', 'Accidentally deleting the config directory while clearing cache', 'No sync between multiple devices'] },
+        { type: 'h2', text: 'How to Backup Themes' },
+        { type: 'p', text: 'Open "Preset Manager" in Codex Skin Studio, select the theme to back up, and click "Export". The exported file contains full color and background configuration — store it in the cloud or a private GitHub repo.' },
+        { type: 'h2', text: 'How to Restore Themes' },
+        { type: 'ul', items: ['Install Codex Skin Studio on the new device', 'Open "Preset Manager" → "Import"', 'Choose the previously exported backup file', 'The theme is restored instantly — no re-tuning needed'] },
+        { type: 'h2', text: 'Multi-Device Sync Tips' },
+        { type: 'p', text: 'Keep exported theme packs in a private GitHub repo or a cloud folder. Re-export and overwrite after each tweak to keep all devices in sync.' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Are backup files encrypted?', a: 'Theme packs contain only style and image configuration — no code or secrets — so they are safe to store anywhere.' },
+          { q: 'Does the free plan support export?', a: 'The free plan supports exporting built-in themes; Pro supports exporting all custom presets.' },
+        ] },
+      ],
+    },
+  },
+  {
+    slug: 'community-codex-skins-collection',
+    date: '2026-08-21',
+    title: {
+      zh: '社区 Codex 皮肤合集：值得收藏的开源主题仓库',
+      en: 'Community Codex Skins Collection: Open-Source Theme Repos Worth Bookmarking',
+    },
+    description: {
+      zh: '除了官方内置主题，社区里还藏着大量高质量 Codex 皮肤。本文盘点最值得收藏的开源主题仓库，并教你如何直接安装使用。',
+      en: 'Beyond built-in presets, the community hosts tons of high-quality Codex skins. Here are the open-source theme repos worth bookmarking — and how to install them.',
+    },
+    content: {
+      zh: [
+        'Codex 皮肤生态最迷人的地方在于社区共创。无论你是想要某个人物/作品主题，还是想找一款冷门配色，都能在社区仓库里翻到惊喜。',
+        { type: 'h2', text: '值得关注的开源仓库' },
+        { type: 'ul', items: ['**awesome-codex-skins**：社区精选皮肤索引，按风格分类', '**codex-themes**：轻量主题集合，主打极简与性能', '**awesomecodexskin.com**：可视化浏览社区皮肤画廊'] },
+        { type: 'h2', text: '如何在 Codex Skin Studio 中安装社区皮肤' },
+        { type: 'ul', items: ['下载皮肤包（.json 或 .zip）', '打开 Codex Skin Studio 的「导入」', '选择下载的皮肤文件', '主题即刻出现在预设列表'] },
+        { type: 'h2', text: '值得一试的社区代表' },
+        { type: 'ul', items: ['**蓝梦 / 彩云戏法**：清新渐变，适合日常', '**冰雁顾清寒 / 藏雨冰镜**：冷色系国风', '**沉渊逆潮 / 溟祸**：暗黑深邃系'] },
+        { type: 'h2', text: '安装官方推荐皮肤' },
+        { type: 'cta', text: '去图库安装精选皮肤 →', href: '/en/gallery' },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '社区皮肤安全吗？', a: '皮肤包只包含样式与图片配置，不含可执行代码。但从非官方渠道下载时仍建议先扫描文件。' },
+          { q: '皮肤包格式有要求吗？', a: 'Codex Skin Studio 支持 JSON 与 ZIP 两种格式，社区仓库通常都已提供。' },
+        ] },
+      ],
+      en: [
+        'The most charming part of the Codex skin ecosystem is community collaboration. Whether you want a character/work-themed skin or a rare color combo, the community repos have surprises waiting.',
+        { type: 'h2', text: 'Open-Source Repos Worth Watching' },
+        { type: 'ul', items: ['**awesome-codex-skins**: curated community skin index, organized by style', '**codex-themes**: lightweight theme collection focused on minimalism and performance', '**awesomecodexskin.com**: a visual gallery for browsing community skins'] },
+        { type: 'h2', text: 'How to Install Community Skins in Codex Skin Studio' },
+        { type: 'ul', items: ['Download the skin pack (.json or .zip)', 'Open "Import" in Codex Skin Studio', 'Select the downloaded skin file', 'The theme appears in your preset list instantly'] },
+        { type: 'h2', text: 'Community Favorites Worth Trying' },
+        { type: 'ul', items: ['**Lan Meng / Cloud Trick**: fresh gradients, great for daily use', '**Gu Qinghan / Frostbound**: cool-toned Chinese aesthetics', '**Abyssal Tide / Mingshuo**: deep dark series'] },
+        { type: 'h2', text: 'Install Recommended Skins' },
+        { type: 'cta', text: 'Browse curated skins in the gallery →', href: '/en/gallery' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Are community skins safe?', a: 'Skin packs contain only style and image configuration — no executable code. Still, scan files downloaded from unofficial channels.' },
+          { q: 'Is there a required pack format?', a: 'Codex Skin Studio supports both JSON and ZIP formats, which most community repos provide.' },
+        ] },
+      ],
+    },
+  },
+  {
+    slug: 'codex-theme-macos-windows-platform-guide',
+    date: '2026-08-21',
+    title: {
+      zh: 'Codex 主题在 macOS 与 Windows 上的安装差异',
+      en: 'Codex Themes on macOS vs Windows: What\'s Different?',
+    },
+    description: {
+      zh: '同一套 Codex 主题在 macOS 与 Windows 上的表现和安装方式略有差异。本文对比两端差异，帮你快速适配。',
+      en: 'The same Codex theme behaves and installs slightly differently on macOS vs Windows. Here\'s the comparison to help you adapt fast.',
+    },
+    content: {
+      zh: [
+        'Codex Skin Studio 同时支持 macOS 与 Windows，但两个平台在安装路径、权限和渲染细节上有一些细微差别。搞懂这些差别，可以少踩不少坑。',
+        { type: 'h2', text: '安装方式对比' },
+        { type: 'ul', items: ['**macOS**：从 dmg 安装，首次需在「系统设置 → 隐私与安全性」中允许运行', '**Windows**：从安装包安装，首次启动可能触发 SmartScreen 提醒'] },
+        { type: 'h2', text: 'CDP 注入的表现差异' },
+        { type: 'p', text: '两个平台都通过本机 CDP 注入主题，不修改官方文件。差别主要在于 macOS 的沙盒权限更严格，首次连接 Codex 时需确认授权弹窗。' },
+        { type: 'h2', text: '主题渲染细节' },
+        { type: 'ul', items: ['**字体渲染**：macOS 的 ClearType 与 Windows 的亚像素渲染略有不同，深色主题在两者上观感稍有差异', '**窗口边框**：Windows 下窗口圆角与阴影跟随系统设置，可能影响主题观感'] },
+        { type: 'h2', text: '平台专属安装教程' },
+        { type: 'cta', text: '查看 macOS 安装教程 →', href: '/en/guides/install-macos' },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '主题在两端能无缝同步吗？', a: '可以。导出主题包后导入到另一平台即可，配置完全一致。' },
+          { q: '为什么 Windows 上主题颜色略深？', a: 'Windows 默认的窗口透明与对比度设置会影响观感，可在系统「个性化 → 颜色」中微调。' },
+        ] },
+      ],
+      en: [
+        'Codex Skin Studio supports both macOS and Windows, but the two platforms differ slightly in install paths, permissions and rendering details. Understanding these differences saves you a lot of trouble.',
+        { type: 'h2', text: 'Installation Comparison' },
+        { type: 'ul', items: ['**macOS**: install from the dmg; first launch requires allowing it in System Settings → Privacy & Security', '**Windows**: install from the setup package; SmartScreen may warn on first run'] },
+        { type: 'h2', text: 'CDP Injection Differences' },
+        { type: 'p', text: 'Both platforms inject themes via local CDP without modifying official files. The main difference: macOS sandbox permissions are stricter, so you\'ll need to confirm the authorization prompt on first connect to Codex.' },
+        { type: 'h2', text: 'Rendering Details' },
+        { type: 'ul', items: ['**Font rendering**: macOS ClearType and Windows subpixel rendering differ slightly, so dark themes look subtly different on each', '**Window chrome**: on Windows, rounded corners and shadows follow system settings and may affect the theme look'] },
+        { type: 'h2', text: 'Platform-Specific Guides' },
+        { type: 'cta', text: 'View the macOS install guide →', href: '/en/guides/install-macos' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Can themes sync seamlessly between platforms?', a: 'Yes. Export the theme pack and import it on the other platform — configuration is identical.' },
+          { q: 'Why do colors look slightly darker on Windows?', a: 'Windows default window transparency and contrast settings affect the look. Fine-tune under System → Personalization → Colors.' },
+        ] },
+      ],
+    },
+  },
+
+  {
+    slug: 'codex-color-scheme-basics',
+    date: '2026-08-22',
+    title: {
+      zh: '配色方案入门：为 Codex 主题选择配色',
+      en: 'Color Scheme Basics: Choose Colors for Codex Themes',
+    },
+    description: {
+      zh: '好的配色方案能改变你的编码体验。本文教你如何选择背景、前景、强调色和语法高亮，打造舒适的 Codex 主题。',
+      en: 'A good color scheme can transform your coding experience. Learn how to choose background, foreground, accent, and syntax colors for comfortable Codex themes.',
+    },
+    content: {
+      zh: [
+        '好的配色方案能改变你的编码体验。太亮，眼睛疲劳。太暗，错过细节。正确的调色板取得平衡——减少疲劳同时保持内容可读。',
+        { type: 'h2', text: '配色方案的结构' },
+        { type: 'p', text: '每个 Codex 主题使用核心调色板：' },
+        { type: 'ul', items: ['**背景**：代码后面的画布', '**前景**：文本和 UI 元素', '**强调色**：高亮、选择和交互状态', '**语法颜色**：关键字、字符串、注释、数字'] },
+        { type: 'p', text: '改变一个，你就能感受到变化。改变全部五个，你就得到一个完全不同的编码环境。' },
+        { type: 'h2', text: '选择背景' },
+        { type: 'p', text: '背景定下基调。常见选择：' },
+        { type: 'ul', items: ['**近黑 (#0d1117)**：高对比度，开发者流行。与亮强调色配合良好。低光下可能刺眼。', '**深灰 (#1e1e1e)**：VS Code 标准。平衡、中性，长时间使用对眼睛友好。', '**暖棕 (#2c1e1e)**：不常见，但有些人觉得比纯黑更护眼。适合夜间编码。', '**浅色选项 (#ffffff, #f5f5f5)**：适合白天或明亮房间。亮屏上可能产生眩光。'] },
+        { type: 'h2', text: '配合良好的强调色' },
+        { type: 'p', text: '强调色出现在选择、活动标签和关键 UI 元素中。它们应该：' },
+        { type: 'ul', items: ['可见但不压倒一切', '与语法高亮不同', '在整个界面中保持一致'] },
+        { type: 'p', text: '流行选择：蓝色 (#58a6ff)、青色 (#39c5cf) 或绿色 (#3fb950)。它们在深色和浅色背景上都适用。' },
+        { type: 'h2', text: '语法颜色和谐' },
+        { type: 'p', text: '语法颜色需要可区分但不冲突。一个好测试：眯眼看向屏幕。如果颜色融合在一起，增加对比度。如果它们相互冲突，降低饱和度。' },
+        { type: 'h2', text: '提交前试用' },
+        { type: 'p', text: 'Codex Skin Studio 允许你实时预览更改。测试你的调色板：' },
+        { type: 'ul', items: ['打开包含混合内容（代码、注释、字符串）的文件', '调整颜色并观察预览', '在不同亮度级别检查可读性', '感觉对了就保存'] },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '我能保存多个配色方案吗？', a: '可以。Codex Skin Studio 支持多个预设，你可以切换使用。' },
+          { q: '配色方案会影响性能吗？', a: '不会。主题通过 CDP 注入，不影响 Codex 运行时。' },
+          { q: '在哪里找预制的配色方案？', a: '在 codex-skin-studio.shop/en/gallery 浏览主题画廊。' },
+        ] },
+      ],
+      en: [
+        'A good color scheme can transform your coding experience. Too bright, and your eyes strain. Too dark, and you miss details. The right palette strikes a balance — reducing fatigue while keeping content readable.',
+        { type: 'h2', text: 'The anatomy of a color scheme' },
+        { type: 'p', text: 'Every Codex theme uses a core palette:' },
+        { type: 'ul', items: ['**Background**: The canvas behind your code', '**Foreground**: Text and UI elements', '**Accent**: Highlights, selections, and interactive states', '**Syntax colors**: Keywords, strings, comments, numbers'] },
+        { type: 'p', text: 'Change one, and you feel the shift. Change all five, and you get a completely different coding environment.' },
+        { type: 'h2', text: 'Choosing your background' },
+        { type: 'p', text: 'The background sets the tone. Common choices:' },
+        { type: 'ul', items: ['**Near-black (#0d1117)** — High contrast, popular among developers. Works well with bright accent colors. Can feel harsh in low light.', '**Dark gray (#1e1e1e)** — The VS Code standard. Balanced, neutral, easy on the eyes for long sessions.', '**Warm brown (#2c1e1e)** — Less common, but some find it easier on eyes than pure black. Good for evening coding.', '**Light options (#ffffff, #f5f5f5)** — Better for daytime or well-lit rooms. Can cause glare on bright screens.'] },
+        { type: 'h2', text: 'Accent colors that work' },
+        { type: 'p', text: 'Accent colors appear in selections, active tabs, and key UI elements. They should be:' },
+        { type: 'ul', items: ['Visible but not overwhelming', 'Distinct from syntax highlighting', 'Consistent across your interface'] },
+        { type: 'p', text: 'Popular choices: blue (#58a6ff), cyan (#39c5cf), or green (#3fb950). These work on dark and light backgrounds.' },
+        { type: 'h2', text: 'Syntax color harmony' },
+        { type: 'p', text: 'Syntax colors need to be distinguishable but not clashing. A good test: squint at your screen. If colors blend together, increase contrast. If they fight each other, reduce saturation.' },
+        { type: 'h2', text: 'Try before you commit' },
+        { type: 'p', text: 'Codex Skin Studio lets you preview changes in real-time. Test your palette:' },
+        { type: 'ul', items: ['Open a file with mixed content (code, comments, strings)', 'Adjust colors and watch the preview', 'Check readability at different brightness levels', 'Save when it feels right'] },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Can I save multiple color schemes?', a: 'Yes. Codex Skin Studio supports multiple presets you can switch between.' },
+          { q: 'Do color schemes affect performance?', a: 'No. Themes are injected via CDP and don\'t impact Codex\'s runtime.' },
+          { q: 'Where do I find pre-made schemes?', a: 'Browse the theme gallery at codex-skin-studio.shop/en/gallery.' },
+        ] },
+      ],
+    },
+  },
+  {
+    slug: 'advanced-css-variables-codex-themes',
+    date: '2026-08-23',
+    title: {
+      zh: '配色方案进阶：CSS 变量调色教程',
+      en: 'Advanced Colors: Tweak CSS Variables for Codex Themes',
+    },
+    description: {
+      zh: '掌握 Codex 主题的 CSS 变量，精准调整每种语法颜色的亮度和饱和度，打造个性化的编码环境。',
+      en: 'Master Codex theme CSS variables to precisely tune brightness and saturation of every syntax color — building a truly personalized coding environment.',
+    },
+    content: {
+      zh: [
+        '你已经会切换主题了，但总觉得某个蓝色太亮、某个绿色不够醒目？Codex 主题的真正的力量在于 CSS 变量——每个颜色都是可调节的旋钮，而不是固定的油漆。',
+        { type: 'h2', text: 'Codex 主题的 CSS 变量结构' },
+        { type: 'p', text: '每个 Codex 主题文件（.tmTheme 或 .codedrobe）本质上是一组 CSS 变量定义。核心变量包括：--background、--foreground、--caret、--selection、--gutter-background、--gutter-foreground、--line-number、--indent-guide、--bracket-matcher、--syntax-* 系列。' },
+        { type: 'p', text: 'Syntax 变量覆盖所有编程语言元素：--syntax-keyword、--syntax-string、--syntax-comment、--syntax-number、--syntax-function、--syntax-variable、--syntax-class、--syntax-type、--syntax-operator、--syntax-tag、--syntax-attribute、--syntax-regex、--syntax-property。' },
+        { type: 'h2', text: '实战：调整语法高亮' },
+        { type: 'p', text: '假设你觉得关键词太刺眼。找到主题文件中的 --syntax-keyword 变量，将 color 值从 #ff7b72（亮红）改为 #a371f7（柔和紫）。保存后热重载即可看到效果。' },
+        { type: 'ul', items: ['使用 Codex Skin Studio 的实时预览功能，边改边看', '一次只调整一个变量，便于定位问题', '记录你的改动，方便日后回溯'] },
+        { type: 'h2', text: '调色原则' },
+        { type: 'p', text: '好的调色遵循三个原则：对比度（确保可读）、和谐度（颜色之间不冲突）、一致性（同类元素使用相同颜色）。' },
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: 'CSS 变量改动会影响性能吗？', a: '不会。CSS 变量在渲染时计算一次，不影响 Codex 运行速度。' },
+          { q: '如何恢复默认颜色？', a: '在 Codex Skin Studio 中点击"Restore Default"即可重置所有变量。' },
+          { q: '可以保存多套配色方案吗？', a: '可以。每套方案保存为一个 .codedrobe 文件，随时切换。' },
+        ] },
+      ],
+      en: [
+        'You can switch themes now, but something still feels off — that blue is too bright, that green isn\'t popping enough. The real power of Codex themes lies in CSS variables: every color is an adjustable knob, not a fixed coat of paint.',
+        { type: 'h2', text: 'CSS Variable Structure in Codex Themes' },
+        { type: 'p', text: 'Every Codex theme file (.tmTheme or .codedrobe) is essentially a set of CSS variable definitions. Core variables include: --background, --foreground, --caret, --selection, --gutter-background, --gutter-foreground, --line-number, --indent-guide, --bracket-matcher, and the --syntax-* family.' },
+        { type: 'p', text: 'Syntax variables cover all language elements: --syntax-keyword, --syntax-string, --syntax-comment, --syntax-number, --syntax-function, --syntax-variable, --syntax-class, --syntax-type, --syntax-operator, --syntax-tag, --syntax-attribute, --syntax-regex, --syntax-property.' },
+        { type: 'h2', text: 'In Practice: Tuning Syntax Highlights' },
+        { type: 'p', text: 'Say you find keywords too harsh. Find the --syntax-keyword variable in your theme file and change the color from #ff7b72 (bright red) to #a371f7 (soft purple). Save and hot-reload to see the effect immediately.' },
+        { type: 'ul', items: ['Use Codex Skin Studio\'s live preview — tweak and see results in real time', 'Adjust one variable at a time to isolate issues', 'Document your changes for future reference'] },
+        { type: 'h2', text: 'Color Tuning Principles' },
+        { type: 'p', text: 'Good color tuning follows three principles: contrast (ensure readability), harmony (colors don\'t clash), and consistency (same element types use the same color).' },
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Do CSS variable changes affect performance?', a: 'No. CSS variables are computed once during rendering and don\'t impact Codex\'s runtime speed.' },
+          { q: 'How do I restore default colors?', a: 'Click "Restore Default" in Codex Skin Studio to reset all variables.' },
+          { q: 'Can I save multiple color schemes?', a: 'Yes. Save each scheme as a .codedrobe file and switch between them anytime.' },
+        ] },
+      ],
+    },
+  },
+
+  {
+    slug: 'team-shared-themes-codex-skin-studio-team-plan',
+    date: '2026-08-25',
+    title: {
+      zh: '团队共享主题：Codex Skin Studio Team 方案指南',
+      en: 'Team Shared Themes: Codex Skin Studio Team Plan Guide',
+    },
+    description: {
+      zh: '几分钟内向 50+ 开发者部署统一主题，告别逐个配置的噩梦。',
+      en: 'Deploy uniform theming to 50+ developers in minutes.',
+    },
+    content: {
+      zh: [
+        'Setting up a consistent Codex theme across your development team doesn\'t have to be a manual nightmare. With Codex Skin Studio\'s Team Plan, you can deploy uniform theming to 50+ developers in minutes.',
+        { type: 'h2', text: '团队主题如何运作' },
+        '管理员先设计并保存一套主题为 .codedrobe 文件，然后通过 Team Plan 推送到团队成员。每个成员首次启动时自动应用团队主题，无需手动配置。',
+        { type: 'h2', text: '统一视觉的好处' },
+        '团队统一主题不只是好看。它让共享屏幕演示更专业、减少视觉干扰，也避免"谁的终端配色最乱"这种无谓的争论。',
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Can team members customize their own theme?', a: 'Yes. Team themes are typically set as the default, but individual developers can override.' },
+          { q: 'Does the Team Plan support 50+ developers?', a: 'Yes, the Team Plan is designed to scale to 50+ developers.' },
+        ] },
+      ],
+      en: [
+        'Setting up a consistent Codex theme across your development team doesn\'t have to be a manual nightmare. With Codex Skin Studio\'s Team Plan, you can deploy uniform theming to 50+ developers in minutes.',
+        { type: 'h2', text: 'How Team Themes Work' },
+        'An admin designs and saves a theme as a .codedrobe file, then pushes it to team members via the Team Plan. Each member gets the team theme applied automatically on first launch — no manual setup.',
+        { type: 'h2', text: 'Why Consistent Theming Matters' },
+        'A unified team theme is about more than looks. It makes shared-screen demos look more professional, reduces visual noise, and settles the "messiest terminal" debate for good.',
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Can team members customize their own theme?', a: 'Yes. Team themes are typically set as the default, but individual developers can override.' },
+          { q: 'Does the Team Plan support 50+ developers?', a: 'Yes, the Team Plan is designed to scale to 50+ developers.' },
+        ] },
+      ],
+    },
+  },
+];
+>>>>>>> origin/main

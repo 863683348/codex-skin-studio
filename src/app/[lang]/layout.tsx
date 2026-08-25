@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { SiteChrome } from '@/components/SiteChrome';
 import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { localeAlternates } from '@/lib/seo';
 
 const GA_ID = 'G-0KJXS00XK1';
 const GSC_CODE = process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? '';
@@ -27,6 +28,7 @@ export async function generateMetadata({
       template: '%s | Codex Skin Studio',
     },
     description: dict.home.heroDescription,
+    alternates: localeAlternates(`/${locale}`),
     keywords: [
       'Codex换肤', 'Codex桌面端美化', 'Codex主题', 'Codex皮肤', 'CDP注入',
       'Codex Dream Skin', 'Codex自定义背景', '开源换肤工具', 'Codex美化',

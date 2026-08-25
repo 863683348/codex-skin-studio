@@ -13,6 +13,20 @@ export function PostView({ locale, post }: { locale: Locale; post: BlogPost }) {
     .concat(POSTS.slice(0, currentIndex))
     .slice(0, 3);
 
+  // 渲染行内文本：将 **加粗** 标记转换为 <strong>
+  const renderInline = (text: string) => {
+    const parts = text.split(/\*\*(.+?)\*\*/g);
+    return parts.map((part, i) =>
+      i % 2 === 1 ? (
+        <strong key={i} className="font-semibold text-text-primary">
+          {part}
+        </strong>
+      ) : (
+        <span key={i}>{part}</span>
+      ),
+    );
+  };
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 md:px-8">
       <Link
@@ -28,7 +42,7 @@ export function PostView({ locale, post }: { locale: Locale; post: BlogPost }) {
           if (typeof block === 'string') {
             return (
               <p key={i} className="text-body leading-relaxed text-text-secondary">
-                {block}
+                {renderInline(block)}
               </p>
             );
           }
@@ -40,11 +54,18 @@ export function PostView({ locale, post }: { locale: Locale; post: BlogPost }) {
               </h2>
             );
           }
+          if (type === 'p') {
+            return (
+              <p key={i} className="text-body leading-relaxed text-text-secondary">
+                {renderInline(block.text)}
+              </p>
+            );
+          }
           if (type === 'ul') {
             return (
               <ul key={i} className="list-disc space-y-1 pl-5 text-body leading-relaxed text-text-secondary">
                 {block.items.map((it, j) => (
-                  <li key={j}>{it}</li>
+                  <li key={j}>{renderInline(it)}</li>
                 ))}
               </ul>
             );

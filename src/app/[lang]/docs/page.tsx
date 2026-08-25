@@ -4,6 +4,11 @@ import { getDict } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import { localeAlternates } from '@/lib/seo';
 
+// Force dynamic rendering (DocsView uses 'use client')
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {
