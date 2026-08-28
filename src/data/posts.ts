@@ -2,10 +2,10 @@
 export type PostBlock =
   | string
   | { type: 'h2'; text: string }
-<<<<<<< HEAD
-=======
+
+
   | { type: 'p'; text: string }
->>>>>>> origin/main
+
   | { type: 'ul'; items: string[] }
   | { type: 'faq'; items: { q: string; a: string }[] }
   | { type: 'cta'; text: string; href: string };
@@ -133,8 +133,8 @@ export const POSTS: BlogPost[] = [
         '第四步：自定义背景。托盘「更换背景图」支持导入 16:9 的 jpg/png/webp，工具会自动把焦点调到右侧、左侧留出安全区。',
         '第五步：恢复。任何时候想回到官方外观，双击「完全恢复 Codex」或托盘里的恢复项，界面立即还原。',
         '想更进一步？你可以用任意主题的 theme.json 作为模板，改配色和文案，打造自己的专属风格。',
-<<<<<<< HEAD
-=======
+
+
         { type: 'h2', text: '常见问题' },
         {
           type: 'faq',
@@ -161,7 +161,7 @@ export const POSTS: BlogPost[] = [
             },
           ],
         },
->>>>>>> origin/main
+
       ],
       en: [
         'Codex Skin Studio themes Codex locally via Chrome DevTools Protocol, without touching official files. Here is the full walkthrough.',
@@ -171,8 +171,8 @@ export const POSTS: BlogPost[] = [
         'Step 4 — Custom wallpaper. "Change Background" imports 16:9 jpg/png/webp, automatically focusing right and keeping a safe area on the left.',
         'Step 5 — Restore. Return to the official look anytime via "Fully Restore Codex" in the tray.',
         'Go further: use any theme.json as a template, tweak colors and copy, and craft your own signature style.',
-<<<<<<< HEAD
-=======
+
+
         { type: 'h2', text: 'FAQ' },
         {
           type: 'faq',
@@ -199,7 +199,7 @@ export const POSTS: BlogPost[] = [
             },
           ],
         },
->>>>>>> origin/main
+
       ],
     },
   },
@@ -1138,7 +1138,7 @@ export const POSTS: BlogPost[] = [
     },
   },
   {
-<<<<<<< HEAD
+
     slug: 'is-codex-skin-studio-safe',
     date: '2026-08-26',
     title: {
@@ -1195,7 +1195,7 @@ export const POSTS: BlogPost[] = [
             'Check theme file sizes (suspiciously large files may contain hidden payloads)',
             'Keep Codex updated to benefit from latest security patches',
             'Review theme changelogs for suspicious changes',
-=======
+
     slug: 'stage-black-gold-theme',
     date: '2026-08-14',
     title: {
@@ -1975,14 +1975,14 @@ export const POSTS: BlogPost[] = [
             '每次换主题都要重新适应配色，消耗认知资源',
             '你可能永远找不到"完美主题"，因为完美是动态的',
             '换主题的快感会取代实际工作的满足感',
->>>>>>> origin/main
+
           ],
         },
         { type: 'h2', text: 'FAQ' },
         {
           type: 'faq',
           items: [
-<<<<<<< HEAD
+
             { q: 'Is CDP injection safe for my computer?', a: 'Yes. CDP injection only modifies what is displayed in the Codex window. It cannot access your files or system.' },
             { q: 'Can themes contain viruses?', a: 'Technically yes, but browser sandboxing prevents execution outside the application. Stick to trusted theme sources.' },
             { q: 'How do I verify a theme is safe?', a: 'Check file size for anomalies, verify the source is trustworthy, and monitor Codex Skin Studio changelogs.' },
@@ -1993,7 +1993,7 @@ export const POSTS: BlogPost[] = [
     },
   },
 ];
-=======
+
             { q: '我应该多久换一次 Codex 主题？', a: '没有固定频率。以视觉舒适度为准：不累眼、不影响专注、不让你分心，就是最好的主题。' },
             { q: '换主题会让我更专注吗？', a: '偶尔换可以重置注意力，但频繁换会消耗认知资源。更好的做法是找到一个舒适的主题并保持它。' },
             { q: '深色和浅色哪个更适合长时间 coding？', a: '这取决于环境光和个人偏好。关键是对比度足够、不刺眼。深色在暗光下更舒适，浅色在明亮环境下更清晰。' },
@@ -2432,5 +2432,65 @@ export const POSTS: BlogPost[] = [
       ],
     },
   },
+
+  {
+    slug: 'codex-theme-install-failed',
+    date: '2026-08-29',
+    title: {
+      zh: 'Codex 主题安装失败？7 个常见问题排查',
+      en: 'Codex Theme Not Installing? 7 Common Fixes',
+    },
+    description: {
+      zh: '主题装不上？90% 的问题是路径、格式或权限。逐一排查这 7 步，解决绝大多数安装失败。',
+      en: 'Theme won't install? 90% of failures come from path, format, or permission issues. Work through these 7 steps.',
+    },
+    content: {
+      zh: [
+        'Codex Skin Studio 让换肤变得简单，但有时候主题装不上。别急，这篇文章覆盖 7 个最常见的安装失败原因和解决方法。',
+        { type: 'h2', text: '1. 检查 .codedrobe 文件格式' },
+        'Codex 只接受 .codedrobe 或 .tmTheme 格式。如果你下载的是 .json 或 .xml 文件，直接改扩展名不会生效。需要用 Codex Skin Studio 导出为 .codedrobe。',
+        { type: 'h2', text: '2. 确认主题路径正确' },
+        'Mac: ~/.codex/themes/，Windows: %USERPROFILE%.codex	hemes。路径错了主题不会被加载。',
+        { type: 'h2', text: '3. 重启 Codex 而非只是关闭窗口' },
+        'Codex 启动时读取主题。如果只是点 X 关闭窗口，进程可能还在后台运行。完全退出（Cmd+Q 或 Task Manager 结束进程）再重新启动。',
+        { type: 'h2', text: '4. 检查文件权限' },
+        'Mac/Linux: chmod 644 your-theme.codedrobe。Windows: 右键文件 → 属性 → 确保没有勾选只读。',
+        { type: 'h2', text: '5. 确认 CSS 变量语法' },
+        '主题文件中的 CSS 变量名必须正确：--background, --foreground 等。拼写错误会导致主题加载失败。',
+        { type: 'h2', text: '6. 查看 Codex 控制台错误' },
+        '打开 Codex 开发者工具（Ctrl+Shift+I 或 Cmd+Option+I），查看 Console 标签页的错误信息。绝大多数安装失败会在这里留下线索。',
+        { type: 'h2', text: '7. 重新下载或重新导出' },
+        '如果以上都不行，可能是文件损坏。重新从 Codex Skin Studio 导出，或重新下载主题文件。',
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: '为什么我改了主题文件但 Codex 没有反应？', a: 'Codex 只在启动时读取主题。修改后需要完全退出再重新启动。' },
+          { q: '可以同时安装多个主题吗？', a: '可以。每个主题放在 themes/ 目录下，启动时在设置中选择。' },
+          { q: '.codedrobe 和 .tmTheme 有什么区别？', a: '.codedrobe 是 Codex Skin Studio 的专用格式，功能更丰富。.tmTheme 是通用 TextMate 格式。' },
+        ] },
+      ],
+      en: [
+        'Codex Skin Studio makes theming simple, but sometimes a theme just won't install. Don't panic — this post covers the 7 most common failure reasons and how to fix them.',
+        { type: 'h2', text: '1. Check the .codedrobe file format' },
+        'Codex only accepts .codedrobe or .tmTheme files. If you downloaded a .json or .xml file, renaming the extension won't help. You need to export as .codedrobe from Codex Skin Studio.',
+        { type: 'h2', text: '2. Verify the theme path' },
+        'Mac: ~/.codex/themes/, Windows: %USERPROFILE%.codex	hemes. Wrong path means the theme won't load.',
+        { type: 'h2', text: '3. Quit Codex fully, don't just close the window' },
+        'Codex reads themes on startup. If you just click X, the process may still run in the background. Quit completely (Cmd+Q or end process in Task Manager) then restart.',
+        { type: 'h2', text: '4. Check file permissions' },
+        'Mac/Linux: chmod 644 your-theme.codedrobe. Windows: right-click file → Properties → make sure Read-only is unchecked.',
+        { type: 'h2', text: '5. Verify CSS variable syntax' },
+        'CSS variable names in the theme file must be correct: --background, --foreground, etc. A typo will cause the theme to fail loading.',
+        { type: 'h2', text: '6. Check the Codex console for errors' },
+        'Open Codex DevTools (Ctrl+Shift+I or Cmd+Option+I), check the Console tab. Most installation failures leave a clue there.',
+        { type: 'h2', text: '7. Re-download or re-export' },
+        'If none of the above works, the file may be corrupted. Re-export from Codex Skin Studio or re-download the theme file.',
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Why doesn't Codex react after I edit the theme file?', a: 'Codex only reads themes on startup. You need to fully quit and restart after making changes.' },
+          { q: 'Can I install multiple themes at once?', a: 'Yes. Place each theme in the themes/ directory and select between them in settings on startup.' },
+          { q: 'What's the difference between .codedrobe and .tmTheme?', a: '.codedrobe is Codex Skin Studio's proprietary format with richer features. .tmTheme is the generic TextMate format.' },
+        ] },
+      ],
+    },
+  },
 ];
->>>>>>> origin/main
