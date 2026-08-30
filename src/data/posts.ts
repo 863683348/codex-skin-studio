@@ -226,4 +226,256 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   },
-];
+];  {
+    id: 'codex-theme-stopped-working',
+    slug: 'codex-theme-stopped-working',
+    title: 'Codex Theme Stopped Working? It Might Be an Update',
+    titleZh: 'Codex 主题失效了？可能是升级导致的',
+    date: '2026-08-30',
+    dateZh: '2026-08-30',
+    category: 'guide',
+    categoryZh: '指南',
+    tags: ['codex', 'theme', 'troubleshooting'],
+    tagsZh: ['codex', '主题', '故障排除'],
+    en: [
+      'Nothing\'s more frustrating than having your Codex theme suddenly stop working after an update. You spent time customizing everything, and now your editor looks plain or broken. Here\'s what\'s likely happening and how to fix it.',
+      { type: 'h2', text: 'Why Themes Break After Updates' },
+      'Codex updates often change how themes are configured. Your old settings might not be compatible with the new version, causing the theme to fail to load properly.',
+      { type: 'h2', text: 'How to Fix a Broken Theme' },
+      { type: 'h2', text: 'Step 1: Check the Update Notes' },
+      'Before doing anything, read the Codex update notes. They often mention breaking changes or new requirements for themes.',
+      { type: 'h2', text: 'Step 2: Reinstall the Theme' },
+      'Sometimes the simplest fix is to reinstall the theme: remove the current theme files, download the latest version, and install it following the updated instructions.',
+      { type: 'h2', text: 'Step 3: Clear Cache' },
+      'Codex caches theme files for faster loading. After an update, clear the cache by deleting the cache folder in your Codex directory and restarting.',
+      { type: 'h2', text: 'FAQ' },
+      { type: 'faq', items: [
+        { q: 'How do I know if my theme is compatible?', a: 'Check the theme\'s documentation or GitHub page for compatible versions.' },
+        { q: 'Can I downgrade Codex?', a: 'It\'s possible but not recommended. Better to wait for theme updates.' },
+        { q: 'How often does Codex update?', a: 'Regularly — every few weeks for minor updates, quarterly for major versions.' },
+      ] },
+      'Codex is a powerful terminal emulator and IDE that supports extensive theming. Visit [codex-skin-studio.shop](/) to explore thousands of community-created themes.',
+    ],
+    zh: [
+      'Codex 主题在升级后突然失效是最令人沮丧的事情。你花了很多时间自定义，现在编辑器看起来朴素或破损。以下是可能发生的情况和修复方法。',
+      { type: 'h2', text: '为什么主题在升级后会失效' },
+      'Codex 更新经常改变主题的配置方式。你旧的设置可能与新版本不兼容，导致主题无法正常加载。',
+      { type: 'h2', text: '如何修复失效的主题' },
+      { type: 'h2', text: '第一步：查看更新说明' },
+      '做任何事情之前，先阅读 Codex 的更新说明。它们通常会提到破坏性更改或主题的新要求。',
+      { type: 'h2', text: '第二步：重新安装主题' },
+      '最简单的修复方法有时是重新安装主题：移除当前主题文件，下载最新版本，按照更新说明安装。',
+      { type: 'h2', text: '第三步：清除缓存' },
+      'Codex 缓存主题文件以加快加载速度。升级后，通过删除 Codex 目录中的缓存文件夹并重启来清除缓存。',
+      { type: 'h2', text: '常见问题' },
+      { type: 'faq', items: [
+        { q: '我怎么知道我的主题是否兼容？', a: '查看主题的文档或 GitHub 页面以获取兼容版本。' },
+        { q: '我可以降级 Codex 吗？', a: '可以，但不推荐。最好等待主题更新。' },
+        { q: 'Codex 多久更新一次？', a: '经常更新——每几周一次小更新，每季度一次大版本。' },
+      ] },
+      'Codex 是一个功能强大的终端模拟器和 IDE，支持广泛的主题。访问 [codex-skin-studio.shop](/) 探索数千个社区创建的主题。',
+    ],
+  },
+
+  {
+    id: '1',
+    slug: 'best-practices-for-switching-codex-themes-without-breaking-flow',
+    title: 'Best Practices for Switching Codex Themes Without Breaking Flow',
+    titleZh: 'Codex 主题切换最佳实践：不破坏工作流程',
+    date: '2026-08-31',
+    dateZh: '2026-08-31',
+    category: 'guide',
+    categoryZh: '指南',
+    tags: ['codex', 'theme', 'best practices'],
+    tagsZh: ['codex', '主题', '最佳实践'],
+    en: [
+  "<strong>Main Keyword:</strong> codex theme switching best practices",
+  "<strong>Long-tail Keywords:</strong> theme switching, codex theme",
+  "<strong>Date:</strong> 2026-08-31",
+  "---",
+  "Switching Codex themes sounds simple — one command, one click — but getting it wrong can break your workflow, mess up your settings, or leave you staring at a broken UI. Here's how to switch themes smoothly, every time.",
+  {
+    "type": "h2",
+    "text": "Why Theme Switching Goes Wrong"
+  },
+  "Most problems come from one of these:",
+  "1. <strong>Theme incompatibility:</strong> A theme built for an older Codex version might not work with your current build",
+  "2. <strong>Conflicting settings:</strong> Two themes trying to control the same CSS variable",
+  "3. <strong>Cache issues:</strong> Your browser or Codex is serving stale theme files",
+  "4. <strong>Wrong installation path:</strong> Theme files in the wrong folder get ignored or overridden",
+  {
+    "type": "h2",
+    "text": "The Safe Switching Workflow"
+  },
+  "Step 1: Note Your Current Theme",
+  "Before switching, write down your current theme name and any customizations you've made. You can always return to it.",
+  "Step 2: Check Version Compatibility",
+  "Make sure the new theme supports your Codex version. Check the theme's README or release notes for version requirements.",
+  "Step 3: Backup Your Config",
+  "Copy your `.codex/config.json` (or equivalent) to a safe location. If the new theme breaks something, you can restore your settings.",
+  "Step 4: Install the Theme",
+  "Follow the theme's installation instructions. Most themes use one of these methods:",
+  {
+    "type": "ul",
+    "items": [
+      "Drag-and-drop into the themes folder",
+      "Command-line installation (`/theme install <path>`)",
+      "Download and extract to the correct directory"
+    ]
+  },
+  "Step 5: Apply and Verify",
+  "Activate the theme and check:",
+  {
+    "type": "ul",
+    "items": [
+      "Syntax highlighting works correctly",
+      "No missing colors or broken UI elements",
+      "Your custom keybindings still function",
+      "Terminal colors match the theme intent"
+    ]
+  },
+  "Step 6: Test in a Real Session",
+  "Open a real project and code for 10-15 minutes. Themes often look fine in a preview but reveal issues during actual use — especially around contrast, readability, and eye strain.",
+  {
+    "type": "h2",
+    "text": "Theme Conflict Resolution"
+  },
+  "If two themes are fighting each other:",
+  {
+    "type": "ul",
+    "items": [
+      "**Disable one completely** before enabling the other",
+      "**Check for overlapping CSS variables** — rename conflicting ones in your config",
+      "**Use a theme manager** if you switch frequently (some third-party tools help)",
+      "**Clear the cache** after switching — stale files cause phantom bugs"
+    ]
+  },
+  {
+    "type": "h2",
+    "text": "When to Keep Multiple Themes"
+  },
+  "Some developers maintain 2-3 themes for different contexts:",
+  {
+    "type": "ul",
+    "items": [
+      "A dark theme for late-night coding",
+      "A light theme for daytime work",
+      "A high-contrast theme for accessibility"
+    ]
+  },
+  "Switch between them intentionally — don't let theme-hopping become a procrastination habit. Set a rule: once you pick a theme for a project, stick with it for at least a week.",
+  {
+    "type": "h2",
+    "text": "FAQ"
+  },
+  "Q: Can I use two themes at once?",
+  "A: Not natively. Codex applies one theme per session. Some themes offer \"light/dark toggle\" features, but that's built into the theme itself, not a side-by-side setup.",
+  "Q: How do I know if a theme is breaking my workflow?",
+  "A: Watch for: syntax colors that make code hard to read, missing UI elements, keybindings that stop working, or increased eye strain after extended use.",
+  "Q: Can I customize a theme after installing it?",
+  "A: Yes — most themes allow CSS variable overrides in your config. Check the theme's documentation for customization options.",
+  "Q: What's the fastest way to revert to a previous theme?",
+  "A: If you backed up your config, restore it and reactivate the old theme. Without a backup, reinstall the old theme files and clear the cache.",
+  {
+    "type": "h2",
+    "text": "About Codex Skin Studio"
+  },
+  "Codex Skin Studio makes theme switching simple and safe. Browse curated themes, install with one click, and preview before applying. Visit [codex-skin-studio.shop](/) to explore themes.",
+  "---"
+],
+    zh: [
+  "Codex 主题切换最佳实践：不破坏工作流程",
+  "<strong>主关键词：</strong> codex theme switching best practices",
+  "<strong>长尾关键词：</strong> theme switching, codex theme",
+  "<strong>日期：</strong> 2026-08-31",
+  "---",
+  "切换 Codex 主题听起来很简单——一条命令、一次点击——但搞错了会打断你的工作流程、搞乱设置，或者让你盯着一个坏掉的界面发呆。以下是每次都能顺利切换主题的方法。",
+  {
+    "type": "h2",
+    "text": "为什么主题切换会出问题"
+  },
+  "大多数问题来自以下原因之一：",
+  "1. <strong>主题不兼容：</strong> 为旧版 Codex 创建的主题可能无法与你当前的构建配合",
+  "2. <strong>设置冲突：</strong> 两个主题试图控制同一个 CSS 变量",
+  "3. <strong>缓存问题：</strong> 你的浏览器或 Codex 正在提供旧的主题文件",
+  "4. <strong>安装路径错误：</strong> 错误文件夹中的主题文件被忽略或覆盖",
+  {
+    "type": "h2",
+    "text": "安全切换工作流程"
+  },
+  "第 1 步：记录当前主题",
+  "切换之前，记下当前主题名称和你所做的任何自定义。你随时可以返回。",
+  "第 2 步：检查版本兼容性",
+  "确保新主题支持你的 Codex 版本。查看主题的 README 或发布说明中的版本要求。",
+  "第 3 步：备份配置",
+  "将 `.codex/config.json`（或等效文件）复制到安全位置。如果新主题出了问题，你可以恢复设置。",
+  "第 4 步：安装主题",
+  "按照主题的安装说明操作。大多数主题使用以下方法之一：",
+  {
+    "type": "ul",
+    "items": [
+      "拖放到主题文件夹",
+      "命令行安装（`/theme install <path>`）",
+      "下载并解压到正确目录"
+    ]
+  },
+  "第 5 步：应用并验证",
+  "激活主题并检查：",
+  {
+    "type": "ul",
+    "items": [
+      "语法高亮正常工作",
+      "没有缺失的颜色或损坏的 UI 元素",
+      "你的自定义按键绑定仍然有效",
+      "终端颜色符合主题意图"
+    ]
+  },
+  "第 6 步：在实际会话中测试",
+  "打开一个真实项目，编码 10-15 分钟。主题在预览中看起来不错，但在实际使用中可能会暴露问题——特别是对比度、可读性和眼部疲劳方面。",
+  {
+    "type": "h2",
+    "text": "主题冲突解决"
+  },
+  "如果两个主题互相冲突：",
+  {
+    "type": "ul",
+    "items": [
+      "**在启用另一个之前完全禁用一个**",
+      "**检查重叠的 CSS 变量**——在配置中重命名冲突的变量",
+      "**如果你经常切换，使用主题管理器**（一些第三方工具有帮助）",
+      "**切换后清除缓存**——旧文件会导致幽灵 bug"
+    ]
+  },
+  {
+    "type": "h2",
+    "text": "何时保留多个主题"
+  },
+  "一些开发者为不同场景维护 2-3 个主题：",
+  {
+    "type": "ul",
+    "items": [
+      "深夜编码用的暗色主题",
+      "白天工作用的亮色主题",
+      "无障碍用的高对比度主题"
+    ]
+  },
+  "有意地在它们之间切换——不要让主题跳跃成为拖延习惯。设定一个规则：一旦为一个项目选择了主题，至少坚持一周。",
+  {
+    "type": "h2",
+    "text": "常见问题"
+  },
+  "Q: 我能同时使用两个主题吗？",
+  "A: 不能原生使用。Codex 每个会话应用一个主题。一些主题提供\"亮/暗切换\"功能，但那是主题内置的，不是并排设置。",
+  "Q: 我怎么知道主题是否破坏了工作流程？",
+  "A: 注意：让代码难以阅读的语法颜色、缺失的 UI 元素、按键绑定停止工作、或长时间使用后眼部疲劳增加。",
+  "Q: 安装主题后可以自定义吗？",
+  "A: 可以——大多数主题允许在配置中覆盖 CSS 变量。查看主题的文档了解自定义选项。",
+  "Q: 恢复到之前主题的最快方法是什么？",
+  "A: 如果你备份了配置，恢复它并重新激活旧主题。没有备份的话，重新安装旧主题文件并清除缓存。",
+  {
+    "type": "h2",
+    "text": "关于 Codex Skin Studio"
+  },
+  "Codex Skin Studio 让主题切换简单安全。浏览精选主题、一键安装、应用前预览。访问 [codex-skin-studio.shop](/) 探索主题。"
+],
+  },];
