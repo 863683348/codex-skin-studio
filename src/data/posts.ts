@@ -733,4 +733,100 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   },
+  {
+    slug: 'high-contrast-codex-themes-reduce-eye-strain',
+    date: '2026-09-06',
+    title: {
+      zh: `高对比度主题：减少眼疲劳的 3 个选择`,
+      en: `High Contrast Codex Themes: 3 Picks to Reduce Eye Strain`,
+    },
+    description: {
+      zh: `Codex 高对比度主题如何帮你在长时间写代码时减少眼疲劳？这篇给出 3 款适合深色、高对比的 Codex 主题选择，以及挑选时该看的参数。`,
+      en: `How do high contrast Codex themes cut eye strain during long coding sessions? Three dark, high-contrast picks, plus the numbers to check when you choose.`,
+    },
+    content: {
+      zh: [
+        'Codex 高对比度主题，是长时间对着编辑器的人最该挑对的一类。你常常说不清从哪一刻起眼睛开始发酸，多半不是你累了，而是界面的对比和亮度在悄悄拖你后腿。这篇直接给 3 款能减少眼疲劳的 Codex 主题选择，再讲清楚挑主题时到底看哪几个参数。',
+        { type: 'h2', text: '为什么对比度比颜色更影响眼疲劳' },
+        '很多人挑主题先挑颜色，暗色还是亮色，粉还是蓝。但研究阅读舒适度的结论一直很一致：对比度比色相重要。文字和背景拉开足够的反差，瞳孔不用频繁调节，眼疲劳就来得慢。一个偏灰的暗色主题看着高级，写两小时可能比纯黑底白字更累。',
+        { type: 'h2', text: '3 款适合护眼的 Codex 高对比度主题' },
+        '下面三款都走「深底、亮字、克制动效」的路线，在主题库里都能直接应用。',
+        {
+          type: 'ul',
+          items: [
+            '暗夜限定（Purple Night）：近黑底配冷白字，对比够高，紫色只用在强调处，不抢视线。',
+            '舞台黑金（Stage Black Gold）：黑底配高亮金，关键元素一眼可见，适合需要快速扫代码的场景。',
+            '清透定制（Clear Custom）：底色干净、文字接近纯白，自定义时把对比压到最大最稳。',
+          ],
+        },
+        { type: 'h2', text: '怎么判断一个主题真的护眼' },
+        '别只看截图。三个参数比颜值更实在：',
+        {
+          type: 'ul',
+          items: [
+            '正文对比度：文字与背景的明度差越大越好，目标对比比至少 7:1。',
+            '强调色饱和度：装饰色别太高饱和，否则长时间看会刺眼。',
+            '背景纯净度：避免渐变和噪点纹理，纯色底最不费眼。',
+          ],
+        },
+        { type: 'h2', text: '把护眼主题接回你的真实作息' },
+        '护眼主题也不是全天候万能。夜里写代码用高对比暗色，白天在窗边或开视频会议时，一套对比清晰的亮色主题反而更舒服。Codex Skin Studio 的预设切换是运行时的，开会前点一下就能换，不碰官方文件。',
+        {
+          type: 'faq',
+          items: [
+            { q: '高对比主题会不会让亮色界面太刺眼？', a: '会，如果对比拉到极端。护眼的关键是「够用就好」：暗底亮字控制在 7:1 上下，而不是盲目追求纯黑纯白。' },
+            { q: 'Codex 高对比度主题在哪里找？', a: '都在主题库里，像暗夜限定、舞台黑金、清透定制都能直接应用；想更狠的对比，用清透定制自己调。' },
+            { q: '换主题能真的减少眼疲劳吗？', a: '能减轻一部分。它不改变你用眼的总时长，但更稳的对比让瞳孔少调节，下午的酸涩会推迟。' },
+            { q: '主题会改官方文件吗？', a: '不会。Codex Skin Studio 通过本机 CDP 注入换肤，停止即还原，Codex 升级也不会把你调好的样子冲掉。' },
+          ],
+        },
+        { type: 'h2', text: '挑一套真正护眼的高对比度主题' },
+        '别再用一张截图决定。按对比度、饱和度、背景纯净度三件事去挑，再跑一个下午的真实文件看看酸不酸。Codex Skin Studio 让你挑好的预设在每次升级后都还在。',
+        { type: 'cta', text: '浏览主题库 →', href: '/zh/gallery' },
+        { type: 'cta', text: '看 2026 主题榜单 →', href: '/zh/guides/best-codex-themes' },
+        { type: 'cta', text: '查看定价与 Pro →', href: '/zh/pricing' },
+      ],
+      en: [
+        'High contrast Codex themes are the category most people who stare at an editor all day should get right. You usually can\'t name the moment your eyes start to burn — it\'s rarely that you\'re tired, more that the interface\'s contrast and brightness are quietly working against you. This post gives three high contrast Codex themes that cut eye strain, then explains exactly which numbers to check when picking.',
+        { type: 'h2', text: 'Why contrast beats color for eye strain' },
+        'Most people pick a theme by color first: dark or light, pink or blue. But the research on reading comfort is consistent — contrast matters more than hue. When text and background sit far apart in luminance, your pupils stop adjusting constantly, and eye strain arrives later. A muted dark theme looks classy but can tire you faster than plain black-on-white after two hours.',
+        { type: 'h2', text: '3 high contrast Codex themes that are easy on the eyes' },
+        'All three below run a deep base, bright text, and calm motion. Each applies straight from the gallery.',
+        {
+          type: 'ul',
+          items: [
+            'Purple Night: near-black base with cool white text. High contrast, purple only as an accent so it never steals focus.',
+            'Stage Black Gold: black base with bright gold. Key elements pop, good for quickly scanning code.',
+            'Clear Custom: clean base, near-pure-white text. Push the contrast to its max and steadiest when you customize.',
+          ],
+        },
+        { type: 'h2', text: 'How to tell a theme is actually easy on the eyes' },
+        'Don\'t judge by the screenshot. Three numbers matter more than looks:',
+        {
+          type: 'ul',
+          items: [
+            'Body contrast: the bigger the luminance gap between text and background, the better. Aim for at least a 7:1 ratio.',
+            'Accent saturation: keep decorative colors low-saturation, or they sting over long sessions.',
+            'Background cleanliness: avoid gradients and noisy textures. A flat base is the least tiring.',
+          ],
+        },
+        { type: 'h2', text: 'Match the theme to your real schedule' },
+        'An eye-friendly theme isn\'t a round-the-clock fix either. Use a high-contrast dark theme for late-night coding; during the day by a window or on a screen-share call, a clean light theme with solid contrast actually feels better. Codex Skin Studio switches presets at runtime, so one click before a meeting changes the look without touching official files.',
+        {
+          type: 'faq',
+          items: [
+            { q: 'Won\'t a high-contrast theme make a light UI too harsh?', a: 'Only if you push it to the extreme. The point is enough, not maximum: keep dark-base bright-text around 7:1 rather than chasing pure black and pure white.' },
+            { q: 'Where do I find high contrast Codex themes?', a: 'They\'re all in the gallery. Purple Night, Stage Black Gold, and Clear Custom apply in a click; for even harder contrast, tune Clear Custom yourself.' },
+            { q: 'Can a theme really reduce eye strain?', a: 'It cuts a real part of it. It doesn\'t shorten your total screen time, but steadier contrast means your pupils adjust less, so the afternoon burn comes later.' },
+            { q: 'Does theming edit official files?', a: 'No. Codex Skin Studio injects themes through local CDP at runtime and reverts on stop, so a Codex update never wipes your setup.' },
+          ],
+        },
+        { type: 'h2', text: 'Pick a high contrast theme that actually protects your eyes' },
+        'Stop deciding from a screenshot. Check contrast, saturation, and background cleanliness, then run a real file for one afternoon and see when you squint. Codex Skin Studio keeps your presets safe across updates.',
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'See the 2026 theme list →', href: '/en/guides/best-codex-themes' },
+        { type: 'cta', text: 'Pricing and Pro →', href: '/en/pricing' },
+      ],
+    },
+  },
 ];
