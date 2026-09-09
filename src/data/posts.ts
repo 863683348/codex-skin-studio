@@ -860,5 +860,4 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ]}
     ]
   },
-  },
 ];
