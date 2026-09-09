@@ -829,35 +829,57 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
 
+  },
   {
     slug: "5-dark-codex-themes-developers-love",
     title: { en: "5 Dark Codex Themes Developers Love in 2026", zh: "2026 年开发者最爱的 5 款深色 Codex 主题" },
     date: "2026-09-08",
-    category: "theme-review",
-    readTime: 6,
-    image: "/images/blog/dark-codex-themes-2026.jpg",
-    excerpt: { en: "Discover the best dark-themed Codex skins that boost productivity and reduce eye strain during long coding sessions.", zh: "探索 2026 年最佳深色 Codex 皮肤，提升编码效率并减少长时间工作的眼部疲劳。" },
-    content: [
-      { type: "h2", text: "Why Dark Themes Matter" },
-      { type: "p", text: "Dark themes have become essential for developers who spend hours in front of screens. They reduce eye strain, save battery on OLED displays, and provide a sleek, professional look to your development environment." },
-      { type: "h2", text: "1. Tokyo Night Codex Theme" },
-      { type: "p", text: "Tokyo Night remains one of the most popular dark themes in 2026. Its deep blue-purple palette with carefully chosen accent colors creates a perfect balance between readability and aesthetics." },
-      { type: "h2", text: "2. Dracula Official Theme" },
-      { type: "p", text: "The Dracula theme brings its signature vampire-inspired color scheme to Codex. Known for its high contrast and vibrant syntax highlighting, it's perfect for developers who want their code to pop." },
-      { type: "h2", text: "3. Catppuccin Mocha" },
-      { type: "p", text: "Catppuccin's Mocha variant offers a warm, cozy dark theme with soft pastels. It's gentle on the eyes during long sessions while maintaining excellent readability." },
-      { type: "h2", text: "4. One Dark Pro" },
-      { type: "p", text: "Originally from Atom editor, One Dark Pro brings its clean, minimal aesthetic to Codex. The balanced contrast makes it suitable for both day and night coding." },
-      { type: "h2", text: "5. Nord Theme" },
-      { type: "p", text: "Nord's arctic-inspired palette offers a cool, muted dark theme. Its systematic approach to color selection ensures visual harmony across your entire interface." },
-      { type: "h2", text: "Choosing Your Dark Theme" },
-      { type: "p", text: "Consider factors like contrast ratio, color accessibility, and personal preference. Test each theme for at least a week before committing." },
-      { type: "h2", text: "FAQ" },
-      { type: "faq", items: [
-        { q: "Do dark themes really reduce eye strain?", a: "Yes, especially in low-light environments. They reduce blue light exposure and glare." },
-        { q: "Can I switch themes without losing my settings?", a: "Most Codex themes preserve your configuration when switching." },
-        { q: "Which theme is best for night coding?", a: "Tokyo Night and Nord are popular choices for late-night sessions." }
-      ]}
-    ]
+    description: { en: "Discover the best dark-themed Codex skins that boost productivity and reduce eye strain during long coding sessions.", zh: "探索 2026 年最佳深色 Codex 皮肤，提升编码效率并减少长时间工作的眼部疲劳。" },
+    content: {
+      zh: [
+        { type: "h2", text: "为什么深色主题很重要" },
+        { type: "p", text: "深色主题已经成为长时间面对屏幕的开发者的必需品。它们能减轻眼部疲劳、在 OLED 屏幕上更省电，并让你的开发环境看起来更专业、更简洁。" },
+        { type: "h2", text: "1. Tokyo Night Codex 主题" },
+        { type: "p", text: "Tokyo Night 在 2026 年仍是最受欢迎的深色主题之一。它深蓝紫的配色搭配精心挑选的强调色，在可读性和美观之间取得了完美的平衡。" },
+        { type: "h2", text: "2. Dracula 官方主题" },
+        { type: "p", text: "Dracula 主题把它标志性的吸血鬼配色带到了 Codex。凭借高对比度和鲜艳的语法高亮，它非常适合想让代码更醒目的开发者。" },
+        { type: "h2", text: "3. Catppuccin Mocha" },
+        { type: "p", text: "Catppuccin 的 Mocha 变体提供温暖、舒适的深色主题和柔和的粉彩。它在长时间使用时对眼睛很温和，同时保持出色的可读性。" },
+        { type: "h2", text: "4. One Dark Pro" },
+        { type: "p", text: "One Dark Pro 源自 Atom 编辑器，为 Codex 带来干净、极简的美感。均衡的对比度让它既适合白天也适合夜晚编码。" },
+        { type: "h2", text: "5. Nord 主题" },
+        { type: "p", text: "Nord 的极地灵感配色提供冷静、柔和的深色主题。它系统化的选色方法确保整个界面的视觉和谐。" },
+        { type: "h2", text: "挑选你的深色主题" },
+        { type: "p", text: "考虑对比度、颜色可访问性和个人偏好等因素。在最终确定之前，每个主题至少试用一周。" },
+        { type: "h2", text: "常见问题" },
+        { type: "faq", items: [
+          { q: "深色主题真的能减轻眼疲劳吗？", a: "能，尤其是在低光环境下。它们减少了蓝光暴露和眩光。" },
+          { q: "切换主题会丢失我的设置吗？", a: "大多数 Codex 主题在切换时会保留你的配置。" },
+          { q: "哪个主题最适合夜间编码？", a: "Tokyo Night 和 Nord 是深夜时段的热门选择。" }
+        ]}
+      ],
+      en: [
+        { type: "h2", text: "Why Dark Themes Matter" },
+        { type: "p", text: "Dark themes have become essential for developers who spend hours in front of screens. They reduce eye strain, save battery on OLED displays, and provide a sleek, professional look to your development environment." },
+        { type: "h2", text: "1. Tokyo Night Codex Theme" },
+        { type: "p", text: "Tokyo Night remains one of the most popular dark themes in 2026. Its deep blue-purple palette with carefully chosen accent colors creates a perfect balance between readability and aesthetics." },
+        { type: "h2", text: "2. Dracula Official Theme" },
+        { type: "p", text: "The Dracula theme brings its signature vampire-inspired color scheme to Codex. Known for its high contrast and vibrant syntax highlighting, it's perfect for developers who want their code to pop." },
+        { type: "h2", text: "3. Catppuccin Mocha" },
+        { type: "p", text: "Catppuccin's Mocha variant offers a warm, cozy dark theme with soft pastels. It's gentle on the eyes during long sessions while maintaining excellent readability." },
+        { type: "h2", text: "4. One Dark Pro" },
+        { type: "p", text: "Originally from Atom editor, One Dark Pro brings its clean, minimal aesthetic to Codex. The balanced contrast makes it suitable for both day and night coding." },
+        { type: "h2", text: "5. Nord Theme" },
+        { type: "p", text: "Nord's arctic-inspired palette offers a cool, muted dark theme. Its systematic approach to color selection ensures visual harmony across your entire interface." },
+        { type: "h2", text: "Choosing Your Dark Theme" },
+        { type: "p", text: "Consider factors like contrast ratio, color accessibility, and personal preference. Test each theme for at least a week before committing." },
+        { type: "h2", text: "FAQ" },
+        { type: "faq", items: [
+          { q: "Do dark themes really reduce eye strain?", a: "Yes, especially in low-light environments. They reduce blue light exposure and glare." },
+          { q: "Can I switch themes without losing my settings?", a: "Most Codex themes preserve your configuration when switching." },
+          { q: "Which theme is best for night coding?", a: "Tokyo Night and Nord are popular choices for late-night sessions." }
+        ]}
+      ],
+    }
   },
 ];
