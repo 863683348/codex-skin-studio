@@ -882,4 +882,166 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     }
   },
+  {
+    slug: "focus-mode-codex-theme-setups",
+    date: "2026-09-11",
+    title: { en: "Developer Essentials: Codex Theme Setups for Focus Mode", zh: "开发者必备：专注模式下的 Codex 主题搭配" },
+    description: { en: "Focus is an environment problem, not a willpower problem. Here is how to build a Codex theme that keeps your eyes on the code.", zh: "专注是环境问题，不是意志力问题。本文讲怎么搭一套让视线留在代码上的 Codex 主题。" },
+    content: {
+      zh: [
+        {
+          "type": "p",
+          "text": "专注不是靠意志力硬撑，而是靠环境。对天天泡在 Codex 里的开发者来说，主题就是最容易调、见效最快的那一环。这篇讲的是怎么按「专注模式」来搭主题，而不是按好看程度挑。"
+        },
+        {
+          "type": "h2",
+          "text": "为什么主题能影响专注"
+        },
+        {
+          "type": "p",
+          "text": "每一次视觉切换，大脑都要重新定位一次。高饱和的背景、跳动的强调色、和代码同色系的侧边栏，都会不断地把你从代码里拽出来。专注型主题的目标只有一个：让视线永远落回正文。"
+        },
+        {
+          "type": "h2",
+          "text": "专注型主题的三条规则"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**低饱和背景**：背景用近黑或深灰，不用彩色渐变",
+            "**强调色克制**：整个界面只保留一种强调色，且只在光标和选中态出现",
+            "**语法色分层清晰**：关键字、字符串、注释三者的亮度差至少两档"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "推荐的三套搭配"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**深夜写作**：近黑背景 + 低饱和蓝强调 + 暖色注释，适合长时间读代码",
+            "**白天会议**：浅灰背景 + 深蓝强调 + 高对比语法色，投屏也看得清",
+            "**通宵调试**：纯黑背景 + 青绿强调，降低整体亮度，减少夜间眩光"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "怎么在 Codex Skin Studio 里落地"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "在主题库选一个接近目标的底子，别从零开始",
+            "进入自定义，把背景饱和度降到 10% 以下",
+            "把强调色统一成一个，其余 UI 元素改成灰阶",
+            "用实时预览检查语法色是否分得开，再保存"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "常见问题"
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "专注模式主题需要额外插件吗？",
+              "a": "不需要。Codex Skin Studio 通过 CDP 注入，选中主题后直接生效。"
+            },
+            {
+              "q": "低饱和主题会不会看不清？",
+              "a": "只要语法色之间的亮度差够大就不会。关键是对比度，不是饱和度。"
+            },
+            {
+              "q": "可以给不同项目配不同主题吗？",
+              "a": "可以，把预设分别导出，按项目切换即可。"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "text": "去主题库挑一套专注配置 →",
+          "href": "/zh/gallery"
+        }
+      ],
+      en: [
+        {
+          "type": "p",
+          "text": "Focus is not a willpower problem. It is an environment problem. For developers who live inside Codex all day, the theme is the cheapest and fastest lever you can pull. This piece is about building a theme for focus mode, not for looks."
+        },
+        {
+          "type": "h2",
+          "text": "Why a theme affects focus at all"
+        },
+        {
+          "type": "p",
+          "text": "Every visual switch costs you a re-orientation. Saturated backgrounds, blinking accent colors, and a sidebar that shares the same hue as your code all pull your attention away. A focus theme has one job: keep the eye returning to the text."
+        },
+        {
+          "type": "h2",
+          "text": "Three rules for a focus theme"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**Low-saturation background**: near-black or dark gray, never a colored gradient",
+            "**Restrained accent**: one accent color for the whole UI, used only on the caret and selection",
+            "**Clear syntax tiers**: keywords, strings, and comments should differ by at least two brightness steps"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Three setups worth stealing"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**Late-night reading**: near-black + muted blue accent + warm comments, built for long code review",
+            "**Daytime meetings**: light gray + deep blue accent + high-contrast syntax, legible even on a projector",
+            "**Overnight debugging**: pure black + teal accent, lower overall luminance to cut glare"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "How to build it in Codex Skin Studio"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Pick a gallery theme close to your target, do not start from scratch",
+            "Open customization and drop background saturation below 10%",
+            "Collapse every accent to a single color and push the rest of the UI to grayscale",
+            "Check with live preview that syntax colors stay distinguishable, then save"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "FAQ"
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "Do focus-mode themes need an extra plugin?",
+              "a": "No. Codex Skin Studio injects via CDP, so a theme takes effect as soon as you apply it."
+            },
+            {
+              "q": "Will a low-saturation theme be hard to read?",
+              "a": "Not if the brightness gap between syntax colors is large enough. Contrast is what matters, not saturation."
+            },
+            {
+              "q": "Can I use different themes per project?",
+              "a": "Yes. Export your presets separately and switch per project."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "text": "Find a focus setup in the gallery →",
+          "href": "/en/gallery"
+        }
+      ],
+    },
+  },
 ];
