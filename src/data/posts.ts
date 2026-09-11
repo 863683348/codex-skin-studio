@@ -889,18 +889,12 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
     description: { en: "Focus is an environment problem, not a willpower problem. Here is how to build a Codex theme that keeps your eyes on the code.", zh: "专注是环境问题，不是意志力问题。本文讲怎么搭一套让视线留在代码上的 Codex 主题。" },
     content: {
       zh: [
-        {
-          "type": "p",
-          "text": "专注不是靠意志力硬撑，而是靠环境。对天天泡在 Codex 里的开发者来说，主题就是最容易调、见效最快的那一环。这篇讲的是怎么按「专注模式」来搭主题，而不是按好看程度挑。"
-        },
+        "专注不是靠意志力硬撑，而是靠环境。对天天泡在 Codex 里的开发者来说，主题就是最容易调、见效最快的那一环。这篇讲的是怎么按「专注模式」来搭主题，而不是按好看程度挑。",
         {
           "type": "h2",
           "text": "为什么主题能影响专注"
         },
-        {
-          "type": "p",
-          "text": "每一次视觉切换，大脑都要重新定位一次。高饱和的背景、跳动的强调色、和代码同色系的侧边栏，都会不断地把你从代码里拽出来。专注型主题的目标只有一个：让视线永远落回正文。"
-        },
+        "每一次视觉切换，大脑都要重新定位一次。高饱和的背景、跳动的强调色、和代码同色系的侧边栏，都会不断地把你从代码里拽出来。专注型主题的目标只有一个：让视线永远落回正文。",
         {
           "type": "h2",
           "text": "专注型主题的三条规则"
@@ -966,18 +960,12 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         }
       ],
       en: [
-        {
-          "type": "p",
-          "text": "Focus is not a willpower problem. It is an environment problem. For developers who live inside Codex all day, the theme is the cheapest and fastest lever you can pull. This piece is about building a theme for focus mode, not for looks."
-        },
+        "Focus is not a willpower problem. It is an environment problem. For developers who live inside Codex all day, the theme is the cheapest and fastest lever you can pull. This piece is about building a theme for focus mode, not for looks.",
         {
           "type": "h2",
           "text": "Why a theme affects focus at all"
         },
-        {
-          "type": "p",
-          "text": "Every visual switch costs you a re-orientation. Saturated backgrounds, blinking accent colors, and a sidebar that shares the same hue as your code all pull your attention away. A focus theme has one job: keep the eye returning to the text."
-        },
+        "Every visual switch costs you a re-orientation. Saturated backgrounds, blinking accent colors, and a sidebar that shares the same hue as your code all pull your attention away. A focus theme has one job: keep the eye returning to the text.",
         {
           "type": "h2",
           "text": "Three rules for a focus theme"
