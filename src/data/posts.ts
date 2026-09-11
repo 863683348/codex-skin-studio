@@ -1032,4 +1032,156 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   },
+  {
+    slug: "night-owl-codex-themes",
+    date: "2026-09-12",
+    title: { en: "Night Owl Special: Best Codex Themes for Late-Night Coding", zh: "夜猫子专属：最适合夜间编码的 Codex 主题" },
+    description: { en: "A practical look at the best codex themes for night coding, with contrast numbers, six presets that hold up after midnight, and a five-minute test.", zh: "从对比度数据出发，梳理最适合夜间编码的 Codex 主题，给出六套凌晨还扛得住的预设和一套五分钟验证方法。" },
+    content: {
+      zh: [
+        "深夜写代码对主题的要求，和早上开例会时完全不同。如果你正在找最适合夜间编码的 Codex 主题，也就是 best codex themes night coding 这个需求，重点会从「截图上好不好看」转向「关灯之后还能不能看清」。房间变暗，瞳孔放大，中午看着清爽的配色，到了凌晨可能就变成刺眼的光源。这篇讲清楚夜间到底变了什么、哪几类主题能扛住、以及上手前该怎么验证。",
+        {
+          "type": "h2",
+          "text": "夜间编码的 Codex 主题为什么会不一样"
+        },
+        "夜里有两件事会变。显示器成了房间里最亮的物体，绝对亮度比规格表上的对比度数值更重要。色彩感知也在漂移，冷蓝色看起来比实测更亮，暖色则会被压平。一套为明亮办公室调好的主题，在顶灯关掉之后两头都不讨好。",
+        "所以夜间主题不等于深色主题。深色背景配上 #ffffff 的纯白正文，凌晨两点照样刺眼。背景只是其中一半。",
+        {
+          "type": "h2",
+          "text": "低对比度深色主题值不值得选"
+        },
+        "降低文字与背景的对比度，能减少进入眼睛的总光量，这正是 low contrast dark theme coding 这套做法的出发点。道理成立，但有下限。正文对比度低于 4.5:1 之后，阅读就变成了体力活，熬夜时的阅读成本会转化成眯眼和头痛。",
+        "目标不是把对比度压到最低，而是在不费力的前提下压到尽可能低。夜间常用的区间大致在 7:1 到 10:1 之间，背景保持在 #0d1117 或更深。",
+        {
+          "type": "h2",
+          "text": "凌晨还扛得住的六套主题"
+        },
+        "以下数据取自各主题的默认预设，测试条件是屏幕亮度 60%、房间不开灯。",
+        {
+          "type": "ul",
+          "items": [
+            "**黑金舞台**：背景 #0b0b0d，正文对比度约 13:1，金色强调偏暖，不会产生蓝光刺眼感",
+            "**暗夜紫**：背景 #14101f，正文约 11:1，深紫渐变能压住大屏边缘的泛光",
+            "**灵感宇宙**：背景 #05060a，正文约 15:1，星空纹理可以遮掉轻微的屏幕泛白",
+            "**Nord Night**：背景 #2e3440，正文约 8:1，本列表里最柔和的一套，眼睛累了优先选它",
+            "**Tokyo Night**：背景 #1a1b26，正文约 10:1，蓝紫语法色把字符串和注释分得很清楚",
+            "**清透极简深色**：背景 #101013，正文约 12:1，几乎零装饰，只想看代码时用"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "五分钟验证一套夜间主题"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "先把屏幕亮度调到你夜里真正会用的档位，再开始判断",
+            "打开一个混合内容的文件：注释、字符串、关键字、以及一段较长的函数体",
+            "连续读两分钟，中途不要动显示器，记下视线容易停在哪里",
+            "关掉房间的灯再读一遍，重点看光标和选中态是否还看得清",
+            "只有两个亮度下语法色都还能分开，才保存这套预设"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "常见问题"
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "夜间用纯黑背景是不是比近黑更好？",
+              "a": "不一定。OLED 面板上纯黑能彻底消除泛光，但 LCD 面板上纯黑容易暴露背光漏光。像 #0d1117 这样的近黑在两种面板上都更稳。"
+            },
+            {
+              "q": "调低屏幕亮度是不是就不用换主题了？",
+              "a": "两件事解决的是不同问题，配合使用效果最好。主题管的是文字和背景之间的比例，亮度管的是总出光量。"
+            },
+            {
+              "q": "能不能让夜间主题到点自动切换？",
+              "a": "可以。把夜间预设和白天预设分别导出，光线变化时一键切换即可。"
+            }
+          ]
+        },
+        "上面这些预设都在 codex-skin-studio.shop 的主题库里，免费版就已经覆盖了大部分夜间友好的选项。想先看完整横评，可以翻 /guides/best-codex-themes 里的对比度数据，也可以直接去 /zh/gallery 逐个预览再安装。今晚先挑一套，用满一周，再按感受微调。",
+        {
+          "type": "cta",
+          "text": "去主题库挑一套夜间配置 →",
+          "href": "/zh/gallery"
+        }
+      ],
+      en: [
+        "Late nights ask different things of a theme than a Tuesday morning does. If you are hunting for the best codex themes night coding can offer, the priority moves away from how sharp it looks in a screenshot and toward how it holds up at 2 a.m. with the lights off. Room brightness falls, your pupils open up, and a palette that felt crisp at noon turns into a glare source. This guide covers what actually changes after dark, which theme families survive the test, and how to check a theme before you commit to it.",
+        {
+          "type": "h2",
+          "text": "Why a night coding codex theme behaves differently"
+        },
+        "Two things shift after dark. Your monitor becomes the brightest object in the room, so absolute luminance matters more than the contrast ratio printed on a spec sheet. Color perception drifts as well, and cool blues read brighter than they measure while warm tones flatten out. A theme tuned for a lit office can feel wrong in both directions once the overhead light goes off.",
+        "The practical result: night themes are not just dark themes. A dark background paired with a pure white foreground at #ffffff still delivers a hard punch at 2 a.m. The background is only half of the equation. None of this shows up in a theme preview, which is why the same preset can win a screenshot contest and then lose a 1 a.m. debugging session.",
+        {
+          "type": "h2",
+          "text": "The case for a low contrast dark theme coding setup"
+        },
+        "Lower text-to-background contrast reduces the total amount of light reaching your eyes, which is the whole point of a low contrast dark theme coding setup. The reasoning holds until you cross a floor. Body text below roughly 4.5:1 turns reading into effort, and reading effort at 1 a.m. becomes squinting and a headache within a page.",
+        "So the goal is not minimum contrast. It is the lowest contrast that still lets you read without effort. Somewhere between 7:1 and 10:1 sits the useful band for late sessions, with the background held near #0d1117 or darker.",
+        {
+          "type": "h2",
+          "text": "Six themes that hold up after midnight"
+        },
+        "Presets below are measured at their default settings, with the editor at 60% screen brightness in an unlit room.",
+        {
+          "type": "ul",
+          "items": [
+            "**Stage Black-Gold**: background #0b0b0d, body text around 13:1, the gold accent stays warm enough to avoid blue glare",
+            "**Purple Night**: background #14101f, text around 11:1, a deep gradient that keeps the edges of a large monitor from glowing",
+            "**Inspiration Universe**: background #05060a, text around 15:1, starfield texture that hides slight panel bloom",
+            "**Nord Night**: background #2e3440, text around 8:1, the softest option in this list and the easiest on tired eyes",
+            "**Tokyo Night**: background #1a1b26, text around 10:1, blue-violet syntax colors that separate strings from comments cleanly",
+            "**Clear Minimalist Dark**: background #101013, text around 12:1, near-zero decoration when you only want the code"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "How to test a night theme in five minutes"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Lower your monitor to the brightness you actually use at night before judging anything",
+            "Open a file with mixed content: comments, strings, keywords, and a longer function body",
+            "Read for two minutes without touching the display, then note where your eyes keep landing",
+            "Dim the room, read it again, and check whether the cursor and selection still stand out",
+            "Save the preset only if the syntax tiers stay apart at both brightness levels"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "FAQ"
+        },
+        {
+          "type": "faq",
+          "items": [
+            {
+              "q": "Is pure black better than near-black at night?",
+              "a": "Not always. On OLED panels pure black removes glow entirely, but on LCD panels it can expose backlight bleed. Near-black like #0d1117 is the safer default across both."
+            },
+            {
+              "q": "Should I lower monitor brightness instead of changing the theme?",
+              "a": "Both help, and they work best together. A theme handles the ratio between text and background, while brightness controls total light output."
+            },
+            {
+              "q": "Can I schedule a night theme to switch automatically?",
+              "a": "Yes. Export your night preset and your day preset separately, then swap between them with a single click when the light changes."
+            }
+          ]
+        },
+        "Every preset above sits in the gallery at codex-skin-studio.shop, and the free tier already covers most of the night-friendly options. If you want the full comparison first, the roundup at /guides/best-codex-themes lists contrast numbers for the whole catalog, and /en/gallery lets you preview each theme before installing. Pick one tonight, keep it for a week, and tune from there.",
+        {
+          "type": "cta",
+          "text": "Browse night-friendly themes in the gallery →",
+          "href": "/en/gallery"
+        }
+      ],
+    },
+  },
 ];
