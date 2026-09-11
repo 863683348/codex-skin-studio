@@ -883,6 +883,310 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
     }
   },
   {
+    slug: "pink-vs-dark-codex-themes",
+    date: "2026-09-09",
+    title: { en: "Pink vs Dark Codex Themes: How to Choose by Scenario", zh: "粉系 vs 暗黑系：不同场景下怎么选 Codex 主题" },
+    description: { en: "Pink or dark Codex themes is a question about your room, your hours, and your work. Here is how to pick by scenario instead of by mood.", zh: "选粉系还是暗黑系 Codex 主题，取决于工作环境、编码时段和任务类型。本文按场景给出判断依据。" },
+    content: {
+      zh: [
+        "在粉色和暗黑 Codex 主题之间做选择，看的是你的工作环境、编码时段和任务类型，而不是单纯哪个好看。这篇按场景把两边都讲清楚。",
+        { type: "h2", text: "什么时候选粉色主题" },
+        "粉色主题在几种具体情况下最合适。",
+        {
+          type: "ul",
+          items: [
+            "**创意与设计**：做 UI/UX、插画或任何偏视觉的工作时，粉色氛围更松弛，长时间盯着也不容易紧绷。",
+            "**白天编码**：房间有自然光时，浅粉主题不会像深色主题那样和环境的亮度较劲。",
+            "**情绪状态**：柔和的粉调读起来偏平静，项目压得紧的时候会比高对比配色舒服。",
+            "**单纯喜欢**：有些开发者就是觉得粉色好看。它比又一套深色主题更有辨识度，也更少见。"
+          ]
+        },
+        { type: "h2", text: "什么时候选暗黑主题" },
+        "另外半天的场景，暗黑主题更有优势。",
+        {
+          type: "ul",
+          items: [
+            "**夜间编码**：房间光线暗时，进入眼睛的总光量更小，深夜写代码没那么累。",
+            "**OLED 续航**：深色像素耗电更低，在 OLED 屏幕上这个差别是实打实的。",
+            "**专注与沉浸**：深色背景把桌面其余部分压下去，视线更容易收在代码上。",
+            "**熟悉的默认值**：大多数 IDE 和终端本来就是深色，界面看起来更像一个 coding 环境。"
+          ]
+        },
+        { type: "h2", text: "混合用法：按时间段切换" },
+        "不必只认一套。常见的做法是按时间轮换：",
+        {
+          type: "ul",
+          items: [
+            "**上午到下午**：粉系或其他浅色主题，适合创意类工作",
+            "**傍晚到夜间**：暗黑主题，适合专注写代码",
+            "**周末**：看项目类型随意切"
+          ]
+        },
+        { type: "h2", text: "值得一试的粉色主题" },
+        {
+          type: "ul",
+          items: [
+            "**Sakura Pink Dawn**：柔和粉彩，适合创意工作和白天",
+            "**Romantic Rose**：暖粉，适合 UI 设计和插画",
+            "**Berry Light Journal**：干净粉，适合写文档和阅读"
+          ]
+        },
+        { type: "h2", text: "值得一试的暗黑主题" },
+        {
+          type: "ul",
+          items: [
+            "**Gothic Void Expedition**：深黑，适合夜间编码和专注",
+            "**Cyber Neon**：深色配亮色点缀，适合游戏和创意编码",
+            "**Amber Nocturne**：暖深色，适合深夜工作"
+          ]
+        },
+        { type: "h2", text: "决定之前怎么试" },
+        {
+          type: "ul",
+          items: [
+            "先用一到两天，不要看完截图就下结论。",
+            "留意眼睛在哪里容易累，专注能维持多久。",
+            "对照你实际工作房间的光线，而不是晚上关灯时的感受。",
+            "不合适就换，主题随时可以切。"
+          ]
+        },
+        { type: "h2", text: "常见问题" },
+        {
+          type: "faq",
+          items: [
+            { q: "换主题会丢掉我的设置吗？", a: "多数 Codex 主题在切换时会保留你的配置，字号、快捷键这些自定义项都不受影响。" },
+            { q: "粉色主题比暗黑主题更护眼吗？", a: "取决于环境。光线亮时粉色更舒服，光线暗时暗黑更舒服。比起主题本身，进入眼睛的总光量影响更大。" },
+            { q: "长时间编码选哪一套？", a: "超过几个小时的连续编码，不少开发者会选暗黑。偏好因人而异，建议各用一两天再定。" }
+          ]
+        },
+        { type: "cta", text: "去主题库挑一套 →", href: "/zh/gallery" }
+      ],
+      en: [
+        "Choosing between pink and dark Codex themes comes down to your room, your hours, and the kind of coding you do. This guide walks through both and helps you pick.",
+        { type: "h2", text: "When to choose pink themes" },
+        "Pink themes work best in a few specific situations.",
+        {
+          type: "ul",
+          items: [
+            "**Creative work and design**: for UI/UX, illustration, or any visual task, pink sets a warm and open mood that holds up over a long session.",
+            "**Daytime coding**: in a room with natural light, a light pink theme keeps your monitor from fighting the ambient brightness the way a dark theme does.",
+            "**Mood**: soft pink tones read as calm rather than urgent, which helps when a project has you tense.",
+            "**Aesthetic preference**: some developers simply like how pink looks. It is more distinctive and less common than yet another dark theme."
+          ]
+        },
+        { type: "h2", text: "When to choose dark themes" },
+        "Dark themes earn their place in the other half of the day.",
+        {
+          type: "ul",
+          items: [
+            "**Night coding**: less light reaches your eyes in a dim room, so late sessions feel less tiring.",
+            "**OLED battery**: dark pixels draw less power, and on an OLED panel the gain is real.",
+            "**Focus and immersion**: a dark background hides the rest of the desktop and narrows attention to the code.",
+            "**A familiar default**: most IDEs and terminals ship dark, so the layout already feels like a coding environment."
+          ]
+        },
+        { type: "h2", text: "Hybrid: switch by time of day" },
+        "You do not have to commit to one. Many developers rotate by time of day:",
+        {
+          type: "ul",
+          items: [
+            "**Morning and afternoon**: pink or another light theme for creative work",
+            "**Evening and night**: a dark theme for focused coding",
+            "**Weekends**: whichever matches the project"
+          ]
+        },
+        { type: "h2", text: "Popular pink Codex themes" },
+        {
+          type: "ul",
+          items: [
+            "**Sakura Pink Dawn**: soft pastel, good for creative work and daytime",
+            "**Romantic Rose**: warm pink, good for UI design and illustration",
+            "**Berry Light Journal**: clean pink, good for documentation and reading"
+          ]
+        },
+        { type: "h2", text: "Popular dark Codex themes" },
+        {
+          type: "ul",
+          items: [
+            "**Gothic Void Expedition**: deep black, good for night coding and focus",
+            "**Cyber Neon**: dark with bright accents, good for gaming and creative coding",
+            "**Amber Nocturne**: warm dark, good for late night work"
+          ]
+        },
+        { type: "h2", text: "How to test before committing" },
+        {
+          type: "ul",
+          items: [
+            "Apply the theme for one or two days.",
+            "Note where your eyes strain and how long you stay focused.",
+            "Check whether it matches the light in the room you actually work in.",
+            "Switch if it does not. Nothing is locked in."
+          ]
+        },
+        { type: "h2", text: "FAQ" },
+        {
+          type: "faq",
+          items: [
+            { q: "Can I switch themes without losing my settings?", a: "Most Codex themes keep your configuration when you switch. Font size, keybindings, and other customizations stay as they are." },
+            { q: "Are pink themes easier on the eyes than dark ones?", a: "It depends on the room. Pink wins in bright light, dark wins in low light. The theme matters less than the total light reaching your eyes." },
+            { q: "Which is better for a long coding session?", a: "Many developers pick dark for sessions that stretch past a few hours. Preference still varies, so test both for a day." }
+          ]
+        },
+        { type: "cta", text: "Browse pink, dark, and everything between in the gallery →", href: "/en/gallery" }
+      ],
+    },
+  },
+  {
+    slug: "sci-fi-vs-clean-codex-themes",
+    date: "2026-09-10",
+    title: { en: "Sci-Fi vs Clean Codex Themes: Which Fits You?", zh: "科幻风 vs 清新风：哪种 Codex 主题更适合你" },
+    description: { en: "Sci-fi and clean Codex themes solve different problems. Compare eye strain, readability, and OLED battery, then pick by how and when you code.", zh: "科幻风和清新风 Codex 主题解决的是不同问题。从眼疲劳、可读性、OLED 续航几个维度对比，按编码习惯来选。" },
+    content: {
+      zh: [
+        "选 Codex 主题不只是好看不好看的问题，它会影响你读代码的速度。最常被拿来对比的两派是科幻（暗色、霓虹、赛博朋克）和清新（极简、浅色、透气）。你适合哪一派？",
+        { type: "h2", text: "科幻主题：赛博朋克味" },
+        "热门选择：Cyber Neon、Gothic Void、Neon Cyberpunk。",
+        {
+          type: "ul",
+          items: [
+            "**外观**：接近纯黑的背景，配青色、品红或电光蓝的霓虹点缀",
+            "**可读性**：对比度高，语法色之间分得清楚",
+            "**额外装饰**：常见边框和发光效果",
+            "**适合**：深夜写代码、追求沉浸感、常用终端或命令行，以及觉得浅色主题容易分心的人",
+            "**要注意**：有些科幻配色把对比度推得太高，几小时之后，发光效果本身就开始让眼睛累"
+          ]
+        },
+        { type: "h2", text: "清新主题：极简的克制" },
+        "热门选择：Clear Glass、Mono Terminal、Light Airy。",
+        {
+          type: "ul",
+          items: [
+            "**外观**：浅色或中性背景，点缀色克制",
+            "**可读性**：以最大可读性为目标",
+            "**额外装饰**：几乎没有，这本身就是特点",
+            "**适合**：全天编码、需要共享屏幕的协作场景、想要清晰界面的新手，以及文档密集的工作",
+            "**要注意**：有些开发者觉得清新主题太素，少了深色主题给编辑器的那种个性"
+          ]
+        },
+        { type: "h2", text: "逐项对比" },
+        "同样的几个维度，两边放在一起看。",
+        {
+          type: "ul",
+          items: [
+            "**连续 8 小时以上的眼疲劳**：科幻偏高，清新偏低",
+            "**可读性**：科幻靠对比度做到良好，清新是优秀",
+            "**观感吸引力**：科幻高，清新中等",
+            "**上手成本**：科幻中等，清新低",
+            "**OLED 续航**：科幻更好，清新更差",
+            "**和别人一起看屏幕**：科幻较差，清新更好"
+          ]
+        },
+        { type: "h2", text: "混合方案" },
+        "不必永远只选一边。常见的轮换是这样：",
+        {
+          type: "ul",
+          items: [
+            "**早上**：清新主题，保证清晰",
+            "**晚上**：科幻主题，追求沉浸",
+            "**周末**：换套实验性的主题换个心情"
+          ]
+        },
+        { type: "h2", text: "怎么选" },
+        {
+          type: "ul",
+          items: [
+            "你什么时候写代码最多？白天偏清新，夜里偏科幻。",
+            "你经常和别人一起看代码吗？清新更适合共享屏幕。",
+            "你在意编辑器的观感吗？在意的话科幻更对味。",
+            "眼睛容易累吗？清新是更稳的默认选项。"
+          ]
+        },
+        { type: "h2", text: "常见问题" },
+        {
+          type: "faq",
+          items: [
+            { q: "科幻主题会伤眼吗？", a: "主题本身不会。真正让眼睛累的是过高的对比度和过重的发光效果，可以选背景更深、点缀色只用一种的科幻主题。" },
+            { q: "清新主题只适合新手吗？", a: "不是。很多有经验的开发者整天用浅色主题，因为房间光线亮时它读起来更轻松。" },
+            { q: "两套都想留、随时切换可以吗？", a: "可以。把清新和科幻各存一套预设，光线变了就切过去。" }
+          ]
+        },
+        "两派都可以自己调配色和背景。具体怎么做可以看自定义指南 /guides/customize，完整主题库在画廊里。",
+        { type: "cta", text: "去画廊挑科幻和清新主题 →", href: "/zh/gallery" }
+      ],
+      en: [
+        "Choosing a Codex theme is not only about looks. It changes how fast you can read your own code. The two camps that come up most are sci-fi, meaning dark and neon, and clean, meaning minimal and light. Which one fits you?",
+        { type: "h2", text: "Sci-fi themes: the cyberpunk look" },
+        "Popular picks: Cyber Neon, Gothic Void, Neon Cyberpunk.",
+        {
+          type: "ul",
+          items: [
+            "**Look**: near-black backgrounds with neon accents in cyan, magenta, or electric blue",
+            "**Readability**: high contrast, so syntax colors separate cleanly",
+            "**Extras**: decorative borders and glow effects are common",
+            "**Best for**: late-night sessions, developers who want immersion, terminal users, and anyone who finds light themes distracting",
+            "**The catch**: some sci-fi palettes push contrast so high that after a few hours the glow becomes the part tiring your eyes"
+          ]
+        },
+        { type: "h2", text: "Clean themes: minimalist elegance" },
+        "Popular picks: Clear Glass, Mono Terminal, Light Airy.",
+        {
+          type: "ul",
+          items: [
+            "**Look**: light or neutral backgrounds with subtle accents",
+            "**Readability**: built for maximum legibility",
+            "**Extras**: almost none, which is the point",
+            "**Best for**: all-day coding, shared setups, beginners who want clarity, and documentation-heavy work",
+            "**The catch**: some developers find clean themes plain and miss the personality a dark theme gives the editor"
+          ]
+        },
+        { type: "h2", text: "Side-by-side comparison" },
+        "The same factors, read across both camps.",
+        {
+          type: "ul",
+          items: [
+            "**Eye strain past 8 hours**: higher on sci-fi, lower on clean",
+            "**Readability**: good on sci-fi thanks to contrast, excellent on clean",
+            "**Aesthetic appeal**: high on sci-fi, moderate on clean",
+            "**Learning curve**: moderate on sci-fi, low on clean",
+            "**OLED battery life**: better on sci-fi, worse on clean",
+            "**Working alongside others**: less on sci-fi, more on clean"
+          ]
+        },
+        { type: "h2", text: "The hybrid approach" },
+        "You do not have to pick one forever. A common rotation looks like this:",
+        {
+          type: "ul",
+          items: [
+            "**Morning**: a clean theme for clarity",
+            "**Evening**: a sci-fi theme for immersion",
+            "**Weekends**: an experimental theme for fun"
+          ]
+        },
+        { type: "h2", text: "How to choose" },
+        {
+          type: "ul",
+          items: [
+            "When do you code most? Day points to clean, night points to sci-fi.",
+            "Do you review code with others often? Clean is easier to share on a call.",
+            "Does the look of the editor matter to you? Sci-fi rewards that.",
+            "Do your eyes tire quickly? Clean is the safer default."
+          ]
+        },
+        { type: "h2", text: "FAQ" },
+        {
+          type: "faq",
+          items: [
+            { q: "Do sci-fi themes hurt your eyes?", a: "Not on their own. High contrast and heavy glow are the parts that tire eyes, so choose a sci-fi theme with a darker background and one restrained accent color." },
+            { q: "Are clean themes only for beginners?", a: "No. Plenty of experienced developers use a light theme all day because it stays readable in a bright room." },
+            { q: "Can I keep both and switch?", a: "Yes. Save a clean preset and a sci-fi preset, then swap whenever the light changes." }
+          ]
+        },
+        "Either way, you can tune colors and backgrounds yourself. The customization guide at /guides/customize walks through it, and the full catalog sits in the gallery.",
+        { type: "cta", text: "Browse sci-fi and clean themes →", href: "/en/gallery" }
+      ],
+    },
+  },
+  {
     slug: "focus-mode-codex-theme-setups",
     date: "2026-09-11",
     title: { en: "Developer Essentials: Codex Theme Setups for Focus Mode", zh: "开发者必备：专注模式下的 Codex 主题搭配" },
