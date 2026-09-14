@@ -1488,4 +1488,154 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   },
+{
+  "slug": "why-i-code-faster-after-switching-my-codex-theme",
+  "date": "2026-09-14",
+  "title": {
+    "zh": "换了 Codex 主题之后，我读代码变快了",
+    "en": "Why I Read Code Faster After Switching My Codex Theme"
+  },
+  "description": {
+    "zh": "一次换主题的实测记录：问题不在代码而在\"读\"，提高语法层级之间的对比度之后，重读次数明显下降。附五分钟自测法。",
+    "en": "A week after switching themes I was reading diffs faster. The mechanism was not the colors themselves but the separation between syntax tiers, plus a five-minute test you can run before committing."
+  },
+  "content": {
+    "zh": [
+      "我在一个周二换了 Codex 主题，当时没多想。一周后我发现一件让我有点意外的事：我读 diff 变快了。不是夸张的那种快，可能每个文件快一两秒。但它足够稳定，让我开始琢磨原因。",
+      {
+        "type": "h2",
+        "text": "问题从来不在代码，在读"
+      },
+      "一个工作日里大部分时间不是在敲键盘，而是在读：diff、报错栈、长函数体、一小时前打开的那个文件。主题真正起作用的地方就是\"读\"，而这恰恰是大多数人挑主题时最忽略的部分。",
+      "我原来用的是一套低对比度暗色主题，纯粹因为习惯，用了好几年。它\"舒服\"的意思是：什么都不跳出来。结果这本身就是问题——什么都不跳出来，包括我正在找的那一行。",
+      {
+        "type": "h2",
+        "text": "提高对比度之后变了三件事"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "关键字和字符串从注释里一眼分开了，不用再重读一遍去判断哪句是说明、哪句是代码。",
+          "光标和当前行高亮一眼就能找到。听起来是小事，直到你算一下自己一天丢几次位置。",
+          "报错和警告不再糊在面板背景里。有一个下午我抓到了两个以前肯定会划过去的错误。"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "我一开始做错的地方"
+      },
+      "我第一次换的是霓虹风。截图里很好看，到了下午四点就累得不行。高饱和的强调色铺满全屏，等于什么都在强调，也就是什么都没强调。撑了三天。",
+      "最后留下来的一版比我预想的安静：深色底、克制的强调色，但语法层级之间分得很清。文字和背景的对比其实没那么关键，关键的是不同 token 之间的对比。",
+      {
+        "type": "h2",
+        "text": "定下来之前，花五分钟测一下"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "打开一个内容混杂的文件：注释、字符串、关键字，加一段长函数。",
+          "按你实际用的亮度读两分钟，而不是按你觉得自己该用的亮度。",
+          "把房间光线调暗，再读一遍。多数主题是在这一步暴露问题。",
+          "只有在不用凑近也能分清字符串和注释时，才把它留下。"
+        ]
+      },
+      "如果你想要对比度数字而不是感觉，我们那份最佳 Codex 主题横评里列了整套主题的实测比值，比一个个装了试要快得多。",
+      {
+        "type": "h2",
+        "text": "常见问题"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "q": "主题真的会影响读代码的速度吗？",
+            "a": "它影响的是你重读的次数。单个文件上的收益很小，但它会累积，主要是减少了丢位置、把注释看错成代码这类时刻。"
+          },
+          {
+            "q": "高对比度一定更好吗？",
+            "a": "不一定。纯黑配纯白长时间看会很累。有用的目标是：在你实际工作的亮度下，语法层级之间分得清。"
+          },
+          {
+            "q": "一个新主题该用多久再判断？",
+            "a": "用一周真实工作来判断。第一印象测的是新鲜感；这一周的后半段才看得出它在一个疲惫的下午还站不站得住。"
+          }
+        ]
+      },
+      "上面提到的主题都在 codex-skin-studio.shop 的主题库里，免费档已经覆盖了大部分高区分度的选项。想从实测清单入手，先读 /guides/best-codex-themes，再去 /zh/gallery 挑一套装上。",
+      {
+        "type": "cta",
+        "text": "浏览主题库 →",
+        "href": "/zh/gallery"
+      }
+    ],
+    "en": [
+      "I switched my Codex theme on a Tuesday and did not think much about it. A week later I noticed something that surprised me: I was reading diffs faster. Not dramatically. Maybe a second or two per file. But it was consistent enough that I started paying attention to why.",
+      {
+        "type": "h2",
+        "text": "The problem was never the code. It was the reading."
+      },
+      "Most of a working day is not typing. It is reading: diffs, stack traces, long function bodies, the file you opened an hour ago. Reading is where a theme actually does work, and it is the part most people ignore when they pick one.",
+      "My old setup was a low-contrast dark theme I had used for years out of habit. It was comfortable in the sense that nothing jumped out. That turned out to be the problem. Nothing jumped out, including the thing I was looking for.",
+      {
+        "type": "h2",
+        "text": "Three things changed when I raised contrast"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Keywords and strings separated from comments at a glance, so I stopped re-reading lines to work out what was a note and what was code.",
+          "The cursor and the current-line highlight became findable without hunting. That sounds small until you count how often you lose your place.",
+          "Errors and warnings stopped blending into the panel background. I caught two mistakes in one afternoon that I would previously have scrolled past."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What I got wrong at first"
+      },
+      "My first replacement was a neon theme. It looked great in a screenshot and was exhausting by 4pm. Bright saturated accents everywhere means everything is emphasising, which is the same as nothing emphasising. I lasted three days.",
+      "The version that stuck was quieter than I expected: dark background, moderate accent, but with real separation between the syntax tiers. Contrast between text and background matters less than contrast between one kind of token and another.",
+      {
+        "type": "h2",
+        "text": "A five-minute test before you commit"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Open a file with mixed content: comments, strings, keywords, and one long function.",
+          "Read for two minutes at the brightness you actually use, not the brightness you think you should use.",
+          "Dim the room and read it again. Most themes that fail, fail here.",
+          "Keep it only if you can still tell a string from a comment without leaning in."
+        ]
+      },
+      "If you want contrast numbers rather than vibes, our roundup of the best Codex themes lists measured ratios for the whole catalog, which is a faster way to shortlist than installing ten of them.",
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "q": "Does a theme really change how fast you read code?",
+            "a": "It changes how often you have to re-read. The gains are small per file and they add up over a day, mostly by reducing the moments where you lose your place or misread a comment for code."
+          },
+          {
+            "q": "Is a high-contrast theme always better?",
+            "a": "No. Pure black text on pure white is tiring for long sessions. The useful target is clear separation between syntax tiers at the brightness you actually work at."
+          },
+          {
+            "q": "How long should I give a new theme before judging it?",
+            "a": "A week of real work. First impressions measure novelty; the second half of the week is where you find out whether it holds up on a tired afternoon."
+          }
+        ]
+      },
+      "Every theme in that roundup is in the gallery at codex-skin-studio.shop, and the free tier covers most of the high-separation options. If you would rather start from the measured list, read /guides/best-codex-themes first, then browse /en/gallery and install from there.",
+      {
+        "type": "cta",
+        "text": "Browse the theme gallery →",
+        "href": "/en/gallery"
+      }
+    ]
+  }
+},
 ];
