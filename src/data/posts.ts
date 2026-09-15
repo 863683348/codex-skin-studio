@@ -1638,4 +1638,52 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
     ]
   }
 },
+  {
+    slug: 'vscode-to-codex-theme-port',
+    date: '2026-09-15',
+    title: { zh: '从 VS Code 主题到 Codex 主题：如何移植你的美学', en: 'From VS Code Theme to Codex Theme: How to Port Your Aesthetic' },
+    description: { zh: '你在 VS Code 里调了很久的配色，不必在 Codex 里从零再来一遍。这篇讲清两种格式的对应关系、哪些字段能直接搬、哪些必须重做。', en: 'The palette you tuned in VS Code does not have to be rebuilt from scratch in Codex. Here is what maps cleanly, what breaks, and the fastest path to a faithful port.' },
+    content: {
+      zh: [
+        { type: 'h2', text: '两种格式本来就不是一回事' },
+        'VS Code 主题是一长串 JSON，把界面和语法标记分开描述。Codex 主题表达的是同一批概念，但键少得多，因为 Codex 需要上色的界面区域本来就少。',
+        '所以移植是翻译，不是复制。保留配色和意图，重新做映射。',
+        { type: 'h2', text: '能直接搬的部分' },
+        { type: 'ul', items: ['背景色和前景色。这两个几乎原样迁移，而且决定了整体的调子。', '选区色和当前行高亮。两边角色一样，你调过的颜色还能用。', '主要语法色：关键字、字符串、注释、数字、函数。Codex 会把其中几类合起来，你原本就分不太清的直接合并。'] },
+        { type: 'h2', text: '必须重做的部分' },
+        { type: 'ul', items: ['侧边栏和面板色阶。Codex 的界面层次更少，五级灰阶要压成两三级。', '边框和分隔线。VS Code 允许单独上色，Codex 一般从背景色推导。', '语义高亮。如果你的主题依赖语言服务器，这一层根本导不出来。'] },
+        { type: 'h2', text: '四步完成移植' },
+        { type: 'ul', items: ['先把主题导出成 .tmTheme。多数主题包同时提供这个格式。', '导入 Codex Skin Studio，让映射器填好公共键。', '修被合并的键。移植在这里开始从「像旧主题」变成「像新主题」。', '在你最常用的界面上检查对比度，而不是在预览页高亮的那几个。'] },
+        { type: 'h2', text: '什么情况下不值得移植' },
+        '如果你的 VS Code 主题是围绕某个插件搭起来的，移植之后会显得空。配色留下了，体验没留下。这种情况直接从 Codex 原生主题起步，只借你真正舍不得的那几个颜色。',
+        { type: 'h2', text: '常见问题' },
+        { type: 'faq', items: [
+          { q: '能直接把 .tmTheme 导入 Codex 吗？', a: '可以。Codex Skin Studio 支持 .tmTheme，所以先从 VS Code 导出是最快的路。' },
+          { q: '移植后会和原来一模一样吗？', a: '不会。界面层次不同决定了它会接近但不全等。多数人不再对比之后反而更喜欢 Codex 版本。' },
+          { q: '会不会影响我原来的 VS Code 配置？', a: '不会。导出只是复制一份，原主题不受影响。' },
+        ] },
+        { type: 'cta', text: '导入你的主题，看看哪些能留下来', href: 'https://codex-skin-studio.shop' },
+      ],
+      en: [
+        { type: 'h2', text: 'Why the two formats are not the same' },
+        'VS Code themes are JSON with a long list of workbench and token colors. Codex themes describe the same ideas with a much smaller key set, because Codex has fewer distinct surfaces to style.',
+        'That means a port is a translation, not a copy. You keep the palette and the intent, and you rebuild the mapping.',
+        { type: 'h2', text: 'What maps cleanly' },
+        { type: 'ul', items: ['Background and foreground. These transfer almost directly and set the tone for everything else.', 'Editor selection and current-line highlight. Same role in both, so the color you tuned still works.', 'The main syntax hues: keyword, string, comment, number, function. Codex groups some of these, so collapse the ones you barely distinguished.'] },
+        { type: 'h2', text: 'What you have to redo' },
+        { type: 'ul', items: ['Sidebar and panel tones. Codex uses fewer chrome surfaces, so a five-step grey ramp becomes two or three.', 'Borders and dividers. VS Code lets you style them separately; Codex usually derives them from the background.', 'Semantic highlighting. If your VS Code theme depends on a language server, that layer cannot be exported at all.'] },
+        { type: 'h2', text: 'The four-step port' },
+        { type: 'ul', items: ['Export the VS Code theme to .tmTheme if it is not already in that format. Most theme packages ship both.', 'Import it into Codex Skin Studio and let the mapper fill the shared keys.', 'Fix the collapsed keys. This is where the port stops looking like your old theme and starts looking like a new one.', 'Check contrast on the surfaces you use most, not on the ones the preview highlights.'] },
+        { type: 'h2', text: 'When a port is not worth it' },
+        'If your VS Code theme was built around an extension you rely on, the port will feel hollow. The palette survives, the experience does not. Start from a Codex-native theme instead and borrow only the color choices you actually miss.',
+        { type: 'h2', text: 'FAQ' },
+        { type: 'faq', items: [
+          { q: 'Can I import a .tmTheme into Codex directly?', a: 'Yes. Codex Skin Studio accepts .tmTheme, which is why exporting from VS Code first is the fastest route.' },
+          { q: 'Will my port look identical?', a: 'No. Differences in chrome surfaces mean it will be close but not identical. Most people find they prefer the Codex version once they stop comparing.' },
+          { q: 'Does porting break my VS Code setup?', a: 'No. Exporting creates a copy. Your VS Code theme is untouched.' },
+        ] },
+        { type: 'cta', text: 'Import your theme and see what survives', href: 'https://codex-skin-studio.shop' },
+      ],
+    },
+  },
 ];
