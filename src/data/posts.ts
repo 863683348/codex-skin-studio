@@ -1728,4 +1728,94 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   },
+  {
+    slug: 'cdp-injection-vs-file-editing',
+    date: '2026-09-17',
+    title: {
+      zh: '为什么 CDP 注入比改文件更可靠',
+      en: 'Why CDP Injection Beats File Editing for Theming',
+    },
+    description: {
+      zh: '改官方文件换肤，Codex 一升级就失效，还可能触发签名校验失败。CDP 注入在运行时改界面，不碰任何官方文件，这是更省心的路子。',
+      en: 'Editing official files to theme Codex breaks on every update and can trip signature checks. CDP injection changes the UI at runtime without touching any official file. That is the more reliable route.',
+    },
+    content: {
+      zh: [
+        '给 Codex 换肤有两条路：直接改安装目录里的官方文件，或者用 Chrome DevTools Protocol（CDP）在运行时注入样式。多数人一开始走改文件的路，踩过几次升级后主题失效的坑之后，才换到 CDP 注入。这篇讲清楚两者差别，以及为什么 CDP 注入更适合长期使用。',
+        { type: 'h2', text: '改文件的问题在哪' },
+        'Codex 桌面端基于 Electron，主题相关资源打包在 app.asar 之类的归档里。改文件意味着解包、编辑、再打包，每一步都可能出错。',
+        {
+          type: 'ul',
+          items: [
+            '每次 Codex 升级都可能覆盖你的修改，需要重新打一遍补丁',
+            '修改官方文件可能触发签名校验或完整性检查失败',
+            '想恢复原样只能重装，没有干净的开关',
+            '不同版本的内部结构不同，改法不通用',
+          ],
+        },
+        { type: 'h2', text: 'CDP 注入是怎么工作的' },
+        'Codex 启动时会在本机开放一个调试端口，只绑定 127.0.0.1。换肤工具连接这个端口，通过 WebSocket 把主题 CSS 和背景图注入到渲染进程。界面立刻变化，但磁盘上的官方文件一个字节都没动。',
+        { type: 'h2', text: 'CDP 注入的四个优势' },
+        {
+          type: 'ul',
+          items: [
+            '不碰官方文件：升级后主题依然有效，不用重装',
+            '一键恢复：关掉工具或点一下恢复，界面回到官方原样',
+            '无签名问题：不存在校验失败的触发条件',
+            '主题包更安全：只含 CSS 与图片，不含可执行代码',
+          ],
+        },
+        { type: 'h2', text: '什么场景下仍考虑改文件' },
+        '如果你只在本机开发、不常升级 Codex、并且熟悉 Electron 内部结构，改文件也能用。但只要是给多台机器用、要长期维护，CDP 注入省下的时间明显更多。',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'CDP 注入会拖慢 Codex 吗？', a: '基本不会。注入发生在启动阶段，运行时开销很小，多数用户感知不到差异。' },
+            { q: '卸载工具后主题会残留吗？', a: '不会。工具停止后，注入的样式随进程释放，界面自动恢复官方样式。' },
+            { q: 'CDP 注入安全吗？', a: '连接只绑定 127.0.0.1 本机端口，不对外暴露。选择只含 CSS 和图片的主题包，风险更低。' },
+          ],
+        },
+        { type: 'cta', text: '试试不碰官方文件的换肤方式', href: 'https://codex-skin-studio.shop' },
+      ],
+      en: [
+        'There are two ways to theme Codex: edit the official files in the install directory, or inject styles at runtime with the Chrome DevTools Protocol (CDP). Most people start with file editing, then switch to CDP injection after watching their theme die on the first update. This post compares the two and explains why CDP injection holds up better over time.',
+        { type: 'h2', text: 'Where file editing falls apart' },
+        'Codex desktop is built on Electron, and theme resources live inside archives like app.asar. Editing means unpacking, changing, and repacking, with a failure point at every step.',
+        {
+          type: 'ul',
+          items: [
+            'Every Codex update can overwrite your changes, so the patch has to be redone',
+            'Modified official files can fail signature or integrity checks',
+            'There is no clean on/off switch; reverting means reinstalling',
+            'Internal structure changes between versions, so the edit is not portable',
+          ],
+        },
+        { type: 'h2', text: 'How CDP injection works' },
+        'Codex opens a local debugging port at startup, bound to 127.0.0.1 only. The theming tool connects to that port and pushes theme CSS and background images into the renderer over WebSocket. The UI changes instantly, but nothing on disk is modified.',
+        { type: 'h2', text: 'Four reasons CDP injection wins' },
+        {
+          type: 'ul',
+          items: [
+            'Official files stay untouched: themes survive updates without reinstallation',
+            'One-click revert: stop the tool or hit restore and the UI returns to stock',
+            'No signature issues: there is nothing to trip a checksum check',
+            'Safer themes: packages contain only CSS and images, no executable code',
+          ],
+        },
+        { type: 'h2', text: 'When file editing still makes sense' },
+        'If you develop on a single machine, rarely update Codex, and know your way around Electron internals, file editing works. For anything multi-machine or long-lived, CDP injection saves noticeably more time.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Does CDP injection slow down Codex?', a: 'Barely. The injection happens at startup and runtime overhead is small; most users notice no difference.' },
+            { q: 'Does the theme linger after uninstalling the tool?', a: 'No. Once the tool stops, the injected styles are released with the process and the UI returns to the official look.' },
+            { q: 'Is CDP injection safe?', a: 'The connection binds only to the local 127.0.0.1 port and is not exposed. Sticking to CSS-and-image-only themes lowers the risk further.' },
+          ],
+        },
+        { type: 'cta', text: 'Try theming without touching official files', href: 'https://codex-skin-studio.shop' },
+      ],
+    },
+  },
 ];
