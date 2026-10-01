@@ -1932,6 +1932,7 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
           '壁纸：限定亮度区间，保证上面的文字始终可读',
         ] },
         '把这几个值写进 theme.json 一次。之后加载这套主题的每个人拿到的都是同一组数值，设计师评审的是一个文件，而不是几十张截图。',
+        '如果设计组和后端组确实需要不同的两个值，就复制一份文件，而不是往里加开关。带开关的主题会变成没人能一句话说清的主题，而「说得清」正是它能被共享的前提。',
         { type: 'h2', text: 'Codex 主题在团队里怎么落地' },
         '落地失败的团队，问题通常不在主题本身，而在没人负责。共享主题没有维护者，一个月就会飘。',
         { type: 'ul', items: [
@@ -1982,6 +1983,7 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
           'Wallpaper: constrained to a brightness range so text stays readable on top',
         ] },
         'Write these into theme.json once. Everyone who loads the theme gets the same six values, and a designer reviews a file instead of forty screenshots.',
+        'If two of the six genuinely need to differ between a design group and a backend group, fork the file rather than adding switches. A theme with options becomes a theme nobody can describe in one sentence, and being describable is what makes it shareable.',
         { type: 'h2', text: 'Rolling out a codex theme across a team' },
         'When a rollout fails, the cause is rarely the theme. It is that nobody owns it. A shared theme without a maintainer drifts within a month.',
         { type: 'ul', items: [
