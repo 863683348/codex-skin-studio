@@ -2556,7 +2556,7 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'p', text: '配色面板在 /zh/guides/customize，现成方案在 /zh/gallery，挑选思路见 /zh/guides/best-codex-themes。想直接上手就去 codex-skin-studio.shop 下载，装好后在托盘里随时切换。' },
       ],
       en: [
-        'Same code, different palette, and four in the afternoon feels a notch worse. Codex theme color is not only a taste question, since color keeps nudging your arousal level and your patience, which is why a theme you love on day one is often the one you want gone by week two.',
+        'Same code, different palette, and four in the afternoon feels a notch worse. Color keeps nudging your arousal level and your patience, and Codex theme color is where that lands hardest: a palette you love on day one is often the one you want gone by week two.',
         { type: 'h2', text: 'What color psychology can actually say about an editor' },
         { type: 'p', text: 'The honest version of color psychology is narrower than the "blue makes you calm" version. What holds up is mostly two things: short wavelength cool colors make a surface recede and long wavelength warm colors make it advance, and saturated color grabs attention at the cost of tiring you out faster. The rest, including purple boosting creativity, has little repeatable evidence behind it.' },
         { type: 'p', text: 'That is enough for a code editor. Whether the background runs cool or warm sets how much the interface presses on you, and whichever syntax color is most saturated sets where your eye lands first.' },
