@@ -2905,7 +2905,7 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
       en: [
         'The free plan already hands you eight built-in themes, so the real question isn\'t whether codex skin studio pro is good. It is which one of its three additions you are actually missing. Most people buy it wanting one thing and end up leaning on another, usually the colors they mixed themselves rather than someone else\'s presets.',
-        { type: 'h2', text: 'The three things Pro unlocks' },
+        { type: 'h2', text: 'The three things Pro adds' },
         { type: 'p', text: 'Reading them separately works better than reading them as a bundle, since almost nobody uses all three.' },
         { type: 'ul', items: [
           'Unlimited custom palettes: pick any color off the canvas and change it, free of whatever value the preset shipped with',
@@ -2944,7 +2944,7 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'h2', text: 'Frequently asked questions' },
         { type: 'faq', items: [
           { q: 'Is codex skin studio pro a subscription or a one-time payment?', a: 'Pricing and seats are listed on /en/pricing, with team seats counted separately from individual ones.' },
-          { q: 'Can I still use the built-in themes after upgrading?', a: 'Yes. Pro unlocks customization on top of what the free plan already gives you, and nothing you had gets taken away.' },
+          { q: 'Can I still use the built-in themes after upgrading?', a: 'Yes. Pro adds customization on top of what the free plan already gives you, and nothing you had gets taken away.' },
           { q: 'Do custom colors affect how Codex runs?', a: 'No. We inject CSS and images, nothing that touches runtime logic. The mechanism is written up at /en/blog/codex-skin-studio-no-file-edit.' },
           { q: 'Can I give an exported theme to someone else?', a: 'You can. Exported files hold only palette and image settings, and whoever imports one can keep tuning it on their side.' },
         ] },
