@@ -3326,4 +3326,140 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   },
+  {
+    slug: 'is-codex-pro-worth-it',
+    date: '2026-10-15',
+    title: {
+      zh: 'Pro 版值得买吗？无限自定义与团队功能对比',
+      en: 'Is Pro Worth It? Unlimited Custom vs Team Features',
+    },
+    description: {
+      zh: 'Pro 版值不值，取决于你有没有想把某个颜色挪一挪。本文列出 Pro 相对免费版多出来的东西、没变的东西，以及 Team 版从哪里开始跟 Pro 分岔。',
+      en: 'Whether Codex Pro is worth it depends on whether you have ever wanted to move a colour. Here is what Pro adds over the free tier, what stays the same, and where Team splits away from Pro.',
+    },
+    content: {
+      zh: [
+        { type: 'p', text: 'Pro 版值不值，其实只看一件事：你有没有过「想把这个颜色挪一挪」的念头。内置的八款主题够大多数人用，Pro 加的是后半段：你不再从别人调好的清单里挑，而是自己上手改。下面写清楚多了什么、没变什么，以及 Team 版从哪里开始跟 Pro 分岔。' },
+        { type: 'h2', text: 'Pro 相对免费版多了什么' },
+        {
+          type: 'ul',
+          items: [
+            '自定义配色：背景、前景、强调色自己定，不用在八套预设里挑',
+            '自定义背景图，带透明度滑块',
+            '预设保存无上限，可导出为主题包',
+            '导出的主题包不带水印',
+            '改颜色时有实时预览',
+          ],
+        },
+        { type: 'h2', text: '哪些东西 Pro 没有变' },
+        { type: 'p', text: '主题仍然走本机的 CDP 调试端口注入，所以你的 Codex 安装目录没有任何变化。切换还是即时，恢复还是一键，主题照旧能扛过 Codex 的版本更新。Pro 不是另一套机制，它只是在同一套机制上多给了几个旋钮。' },
+        {
+          type: 'ul',
+          items: [
+            '官方文件照样一个都不碰，机制写在 /zh/blog/codex-skin-studio-no-file-edit',
+            '模型行为、回答质量、任务执行在两个档位上都不受影响',
+            '升级之后那八款内置主题仍然都在',
+          ],
+        },
+        { type: 'h2', text: '真正让人掏钱的两个功能' },
+        { type: 'p', text: '自定义配色和自定义背景图撑起了这次升级，清单里的其它条目要么是省事，要么是量多一点。' },
+        { type: 'p', text: '配色的意义在于：你有没有盯着某个主题想过它的强调色亮了那么一点。内置主题是别人调的，没法微调。Pro 把背景、前景、强调色都放开，而且改的时候有预览，存之前就能看到结果。背景图的意义在于你的桌面本来就有风格，你想让 Codex 融进去，而不是跟它对着干。' },
+        {
+          type: 'ul',
+          items: [
+            '挑一套预设然后收手：免费版够用',
+            '只想挪一个颜色：Pro 一个下午就回本',
+            '要对齐品牌色或者某张壁纸：Pro',
+            '好几个人得看到同一个界面：Team',
+          ],
+        },
+        { type: 'h2', text: 'Pro 与 Team 的差别' },
+        { type: 'p', text: 'Team 等于 Pro 加上席位和分发。换肤功能两边一样，变的是一个人配好配色之后能一键推给一整组人，计费按席位走，而不是每人各自去找激活码。只给自己买的话，Team 没有比 Pro 多出任何东西。' },
+        {
+          type: 'ul',
+          items: [
+            'Pro：一台机器，自定义无上限，一个激活码',
+            'Team：同样的自定义能力，加上统一分发和席位管理',
+          ],
+        },
+        { type: 'h2', text: '十分钟之内做出决定' },
+        { type: 'p', text: '别照着功能表做决定。先装免费版，应用八款里最接近你想要的那款，然后试着改它的强调色。改不动的那一刻，答案就出来了。八款免费主题在 /zh/blog/codex-free-themes-review 有一篇评测，两个付费档位都在 /zh/pricing。' },
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            { q: '我只用一款主题，Pro 值得买吗？', a: '多半不值。如果八款内置主题里有哪款已经接近到你不再想它，付费功能就会一直闲置。等到你发现想改某个改不了的东西时再升。' },
+            { q: 'Pro 到期不续费，我的主题会怎样？', a: '自定义配色和背景图不再生效，八款内置主题照常用。磁盘上不会删任何东西，一键恢复官方界面的功能也照旧。' },
+            { q: '三个人用，需要 Team 吗？', a: '只有当你希望由一个人配好再推给其他人时才需要。三个人各自买 Pro 也完全行，前提是大家都乐意自己调。' },
+            { q: 'Pro 会改变主题的应用方式吗？', a: '不会。两个档位都是通过本机 CDP 调试端口注入，都不碰 Codex 的官方文件。Pro 只是在同一套机制上叠加了配色、背景图和无限预设。' },
+          ],
+        },
+        { type: 'h2', text: '接下来去哪儿' },
+        { type: 'cta', text: '对比 Free / Pro / Team →', href: '/zh/pricing' },
+        { type: 'cta', text: '了解工具的工作方式 →', href: '/zh/about' },
+        { type: 'p', text: '在 codex-skin-studio.shop 从免费版开始，去 /zh/gallery 把八款里的一款应用上，等你发现想改某个改不了的东西时再看 /zh/pricing。' },
+      ],
+      en: [
+        { type: 'p', text: 'Whether Codex Pro is worth it comes down to one question: have you ever wanted to move a colour? The eight built-in themes cover most people, and Pro adds the second half, where you stop choosing from a list somebody else tuned and start editing it yourself. Below is what you gain, what stays put, and where Team splits away from Pro.' },
+        { type: 'h2', text: 'What Pro adds to the free tier' },
+        {
+          type: 'ul',
+          items: [
+            'Custom palettes: set your own background, foreground and accent instead of choosing from eight presets',
+            'Custom wallpaper with an opacity slider',
+            'Unlimited saved presets, exportable as theme packs',
+            'No watermark on exported theme packs',
+            'Live preview while you change a colour',
+          ],
+        },
+        { type: 'h2', text: 'What Pro does not change' },
+        { type: 'p', text: 'Themes still go in through the local CDP debug port, so nothing about your Codex installation changes. Switching stays instant, restore stays one click, and themes keep surviving Codex updates. Pro is not a different mechanism, just more knobs bolted onto the same one.' },
+        {
+          type: 'ul',
+          items: [
+            'No official files are touched, same as free; the mechanism is written up at /en/blog/codex-skin-studio-no-file-edit',
+            'Model behaviour, answer quality and task execution are unaffected on either tier',
+            'The eight built-in themes stay available after you upgrade',
+          ],
+        },
+        { type: 'h2', text: 'The two features people actually pay for' },
+        { type: 'p', text: 'Custom palettes and custom wallpaper carry the upgrade. Everything else on the list is convenience or a larger allowance.' },
+        { type: 'p', text: 'Palettes matter if you have looked at a theme and thought its accent was a shade too bright. Built-in themes were tuned by somebody else and cannot be nudged. Pro opens background, foreground and accent, and the preview shows the result before you save. Wallpaper matters when your desktop already has a look and you want Codex to sit inside it rather than argue with it.' },
+        {
+          type: 'ul',
+          items: [
+            'Pick a preset and stop: free is enough',
+            'Move one colour and stop: Pro pays for itself in an afternoon',
+            'Match a brand colour or a wallpaper: Pro',
+            'Several people who should see the same interface: Team',
+          ],
+        },
+        { type: 'h2', text: 'Pro vs Team' },
+        { type: 'p', text: 'Team is Pro plus seats and distribution. The theming features are identical; what changes is that one person can set a palette and push it out to a group in one action, and billing runs per seat instead of each person going off to find a licence key. Buying for yourself, Team adds nothing on top of Pro.' },
+        {
+          type: 'ul',
+          items: [
+            'Pro: one machine, unlimited customisation, one licence key',
+            'Team: the same customisation plus central distribution and seat management',
+          ],
+        },
+        { type: 'h2', text: 'How to decide in ten minutes' },
+        { type: 'p', text: 'Do not decide from a feature table. Install the free build, apply whichever of the eight themes comes closest to what you want, then try to change its accent colour. The moment you cannot, you have your answer. The eight free themes are reviewed at /en/blog/codex-free-themes-review, and both paid tiers sit on /en/pricing.' },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is Codex Pro worth it if I only ever use one theme?', a: 'Probably not. If one of the eight built-in themes is close enough that you stopped thinking about it, the paid features stay unused. Upgrade when you catch yourself wanting to change something you cannot.' },
+            { q: 'What happens to my themes if I stop paying for Pro?', a: 'Custom palettes and wallpapers stop applying and the eight built-in themes carry on. Nothing on disk is deleted, and the one-click restore to the official interface still works.' },
+            { q: 'Do I need Team for three people?', a: 'Only if you want one person to set the palette and push it out. Three separate Pro licences work fine when everyone is happy tuning their own.' },
+            { q: 'Does Pro change the way themes are applied?', a: 'No. Both tiers inject through the local CDP debug port and never touch official Codex files. Pro layers palettes, wallpaper and unlimited presets on top of the same mechanism.' },
+          ],
+        },
+        { type: 'h2', text: 'Where to go from here' },
+        { type: 'cta', text: 'Compare Free, Pro and Team →', href: '/en/pricing' },
+        { type: 'cta', text: 'Read how the tool works →', href: '/en/about' },
+        { type: 'p', text: 'Start on codex-skin-studio.shop with the free tier, apply one of the eight themes from /en/gallery, then look at /en/pricing the moment you want to change something you cannot.' },
+      ],
+    },
+  },
 ];
