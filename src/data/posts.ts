@@ -3462,4 +3462,116 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   },
+  {
+    slug: 'codex-team-plan-50-users',
+    date: '2026-10-20',
+    title: {
+      zh: 'Team 版如何管理 50+ 人的 Codex 主题',
+      en: 'How Team Plan Manages Codex Themes for 50+ Users',
+    },
+    description: {
+      zh: '50 台机器上的同一套主题，难点不在配色而在分发。本文讲 Team 版在 50 人规模上真正改变了什么、三种推行方式，以及团队最容易踩的四个坑。',
+      en: 'One theme across 50 machines is a distribution problem, not a colour problem. What the Team plan actually changes at 50 seats, three ways to roll it out, and the four mistakes teams keep making.',
+    },
+    content: {
+      zh: [
+        { type: 'p', text: '把同一套 Codex 主题装到 50 台机器上，难点从来不是配色，而是分发。主题本身就是一个 theme.json 加几张图，一个下午能做完。真正吃掉一周的是它周围的东西：50 份各自独立的 Codex 安装、50 套更新节奏，还有 50 个人对强调色的意见。Team 版就是为后半段准备的。' },
+        { type: 'h2', text: '到 50 个席位时，什么变了' },
+        { type: 'p', text: '主题本身一点没变。每台机器照样通过自己的本机 CDP 调试端口注入，官方文件照样一个都不碰。变的是谁来干活：一个人管配色，其余人接收结果。' },
+        {
+          type: 'ul',
+          items: [
+            '配色只有一个人负责，不再有 50 个人各自去挪同一个强调色',
+            '席位成块购买和计费，没人需要自己去找激活码',
+            '分发变成工具里的一个动作，不再是聊天群里传一个 ZIP',
+            '恢复仍然是每台机器自己的事：任何人一键就能回到官方界面',
+          ],
+        },
+        { type: 'h2', text: '50 人推行的三种方式' },
+        { type: 'p', text: '团队最后基本会落在下面三种里，而选哪一种跟工具关系不大，更多取决于你们对审美的共识有多少。' },
+        {
+          type: 'ul',
+          items: [
+            '严格：一套主题，锁死。截图必须对得上的支持和运维团队常用这种',
+            '基础加变体：一套共享配色，各小组两三个强调色。超过 30 人后最常见的答案',
+            '放开：共享壁纸，强调色各人自己定。只有在没人真的在意时才成立，而不在乎的人比团队以为的少',
+          ],
+        },
+        { type: 'p', text: '在严格和基础加变体之间拿不定主意时，先选严格。后面放开只要一次沟通，反过来收紧则意味着要请 50 个人交回一个已经用惯的颜色。' },
+        { type: 'h2', text: '团队管理主题时最容易踩的坑' },
+        {
+          type: 'ul',
+          items: [
+            '用某个人的名字给主题命名。这个人一走，没人愿意去改那个文件名',
+            '发了一张没人在 13 寸笔记本上打开过的壁纸，焦点正好被侧栏挡住。摆位细节在 /zh/blog/how-to-customize-codex-theme-wallpapers',
+            '跳过对比度检查。/zh/blog/codex-theme-accessibility 五分钟就能过一遍，而 50 个席位时这件事比 5 个席位更重要，因为你没法亲自看每一块屏幕',
+            '把 Codex 升级当成故障处理。主题是运行时注入的，升级后重新点一次应用就行，机制写在 /zh/blog/codex-skin-studio-no-file-edit',
+          ],
+        },
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Team 版会改变主题的应用方式吗？', a: '不会。每个席位拿到的都是和免费版一样的 CDP 注入，官方文件照样不碰。Team 只是在这之上加了共享配色和统一分发。' },
+            { q: '一套主题能覆盖多少个席位？', a: '席位是成块买的，所以 50 人的推行就是一次采购加一套配色。之后加人是在同一块上追加，不用重做一遍配置。' },
+            { q: '个人还能自己调颜色吗？', a: '技术上可以，但多数团队在共享配色定下来之后会把这个关掉。每个席位各调各的，等于把买 Team 的理由取消了。' },
+            { q: '有人离职后那个席位怎么办？', a: '席位回到池子里，可以再分配。机器上没有任何东西绑在这个人身上，授权一收回界面就回到官方样子。' },
+          ],
+        },
+        { type: 'h2', text: '接下来去哪儿' },
+        { type: 'cta', text: '对比 Team 与 Pro →', href: '/zh/pricing' },
+        { type: 'cta', text: '看共享主题怎么运作 →', href: '/zh/blog/codex-theme-community-team-sharing' },
+        { type: 'p', text: '先在 codex-skin-studio.shop 用免费版在两台机器上试，把配色定下来，等第三个人开口要同一套观感时再打开 /zh/pricing。品牌那条线写在 /zh/blog/enterprise-codex-brand-themes，两档付费的逐项对比在 /zh/blog/codex-skin-studio-team-vs-personal。' },
+      ],
+      en: [
+        { type: 'p', text: 'Getting one Codex theme onto 50 machines is not a theming problem, it is a distribution problem. The theme itself is a theme.json plus a few images and takes an afternoon. The part that eats a week sits around it: 50 separate Codex installs, 50 update schedules, and 50 opinions about what the accent colour should be. The Codex Team plan exists for that second half.' },
+        { type: 'h2', text: 'What changes at 50 seats' },
+        { type: 'p', text: 'Nothing about the theme changes. Every machine still gets the theme injected over its own local CDP debug port, and official files still go untouched. What changes is who does the work: one person owns the palette, everybody else receives it.' },
+        {
+          type: 'ul',
+          items: [
+            'One palette owner instead of 50 people nudging the same accent colour',
+            'Seats bought and billed as a block, so nobody goes hunting for a licence key',
+            'Distribution becomes an action inside the tool rather than a ZIP in a chat thread',
+            'Restore stays per machine: anyone can go back to the official interface in one click',
+          ],
+        },
+        { type: 'h2', text: 'Three ways to roll out a theme to 50 people' },
+        { type: 'p', text: 'Groups settle on one of three patterns, and the choice has less to do with tooling than with how much your team agrees about aesthetics.' },
+        {
+          type: 'ul',
+          items: [
+            'Strict: one theme, locked. Common on support and ops floors where screenshots have to match.',
+            'Base plus variants: one shared palette with two or three accents by sub-team. The usual answer past 30 people.',
+            'Loose: shared wallpaper, personal accents. Works only when nobody cares, which is rarer than teams expect.',
+          ],
+        },
+        { type: 'p', text: 'If you cannot pick between strict and base plus variants, start strict. Loosening later costs one conversation. Tightening later means asking 50 people to hand back a colour they have settled into.' },
+        { type: 'h2', text: 'Where team theme management goes wrong' },
+        {
+          type: 'ul',
+          items: [
+            'Naming the theme after a person. That person leaves, and nobody wants to be the one who renames it.',
+            'Shipping a wallpaper nobody opened on a 13-inch laptop, where the focal point hides behind the sidebar. Placement notes at /en/blog/how-to-customize-codex-theme-wallpapers.',
+            'Skipping the contrast pass. /en/blog/codex-theme-accessibility covers it in five minutes, and it matters more at 50 seats than at five because you cannot look at every screen yourself.',
+            'Treating a Codex update as an outage. Themes are injected at runtime, so reapplying after an update is one click. The mechanism is written up at /en/blog/codex-skin-studio-no-file-edit.',
+          ],
+        },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Does the Team plan change how themes are applied?', a: 'No. Each seat gets the same CDP injection as the free tier and no official file is touched. Team adds a shared palette and central distribution on top of it.' },
+            { q: 'How many seats can one theme cover?', a: 'Seats are bought as a block, so a 50 user rollout is one purchase and one palette. Adding people later is an increment on the same block rather than a fresh setup.' },
+            { q: 'Can individuals still tweak their own colours?', a: 'They can, though most teams switch that off once the shared palette is settled. Per-seat custom colours cancel out the reason for buying Team in the first place.' },
+            { q: 'What happens to a seat when someone leaves?', a: 'The seat goes back into the pool and gets reassigned. Nothing on the machine is tied to the person, and the interface returns to the official look as soon as the licence is pulled.' },
+          ],
+        },
+        { type: 'h2', text: 'Where to go from here' },
+        { type: 'cta', text: 'Compare Team and Pro →', href: '/en/pricing' },
+        { type: 'cta', text: 'See how shared themes work →', href: '/en/blog/codex-theme-community-team-sharing' },
+        { type: 'p', text: 'Start on codex-skin-studio.shop with the free tier on two machines, agree on a palette, then open /en/pricing once the third person asks for the same look. The brand angle is covered at /en/blog/enterprise-codex-brand-themes, and the plan-by-plan comparison sits at /en/blog/codex-skin-studio-team-vs-personal.' },
+      ],
+    },
+  }
 ];
