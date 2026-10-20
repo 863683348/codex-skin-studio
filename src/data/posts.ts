@@ -3574,4 +3574,123 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       ],
     },
   }
+,
+  {
+    slug: 'codex-skin-studio-education-discount',
+    date: '2026-10-21',
+    title: {
+      zh: 'Codex Skin Studio 教育折扣：学生能拿到什么',
+      en: 'Codex Skin Studio Education Discount: What Students Get',
+    },
+    description: {
+      zh: '在找 Codex Skin Studio 教育折扣？免费版已覆盖八款主题，教育价格走邮件申请。这篇讲该问什么、学生什么时候不值得付费。',
+      en: 'Looking for a codex skin studio education discount? The free tier covers eight themes, and education pricing goes through support. What to ask for, and when students should not pay.',
+    },
+    content: {
+      zh: [
+        { type: 'p', text: '在找 Codex Skin Studio 教育折扣的话，先说结论：免费版自带八款主题，学生日常基本够用；付费是按席位算的；教育相关的价格没有自助按钮，是走邮件跟客服单独谈。这篇讲清楚该问什么、不问也能拿到什么。' },
+        { type: 'h2', text: '免费版已经覆盖了什么' },
+        { type: 'p', text: '八款精选主题、亮色暗色切换、无限次重新应用。对一台在教室里或图书馆桌上开着的笔记本来说，这就是全部。主题通过本机 CDP 在运行时注入，所以 Codex 升级不会永久弄坏什么，重新点一次应用就行。' },
+        {
+          type: 'ul',
+          items: [
+            '八款主题，覆盖粉系、科幻、暗黑、清新四类风格',
+            '每款主题都支持亮色和暗色切换',
+            '一键恢复到官方界面',
+            '没有去水印、没有自定义壁纸上传、没有共享主题库',
+          ],
+        },
+        { type: 'p', text: '最后那条才是要紧的。Pro 加的所有东西，都落在「想换个样子」和「想有自己的样子」之间那道缝里。' },
+        { type: 'h2', text: '学生折扣实际上是怎么走的' },
+        { type: 'p', text: '结账页没有优惠券输入框。教育价格是邮件里谈的：你用一个能验证的邮箱写信给客服，说明用途，折扣就打在你的授权上。准备好能证明你和学校关系的东西，通常是学生证或者 .edu 邮箱。' },
+        {
+          type: 'ul',
+          items: [
+            '用你真能收信的邮箱，因为授权码会发回那里',
+            '说清楚要几个席位。一个实验室或学习小组，和一台笔记本，是两回事',
+            '付钱之前先问清时长。只做一个学期的项目不需要买一年',
+            '两天没回复就换联系页那条路',
+          ],
+        },
+        { type: 'p', text: '我不会把采购计划押在这上面。先问，再决定，等的时候用免费版。' },
+        { type: 'h2', text: '哪些情况下学生付钱不值' },
+        {
+          type: 'ul',
+          items: [
+            '你只是想换个配色。八款免费主题覆盖的范围比想象中广',
+            '你是一个人一台机器。团队功能是给跨席位共享配色用的',
+            '你用 Codex 只是一门课。买一个月再取消，比买一年便宜',
+            '你想把自己的照片当壁纸。这一条确实需要 Pro，也是学生升级最常见的原因',
+          ],
+        },
+        { type: 'p', text: 'Pro 的细节在 /zh/blog/codex-skin-studio-pro-features，八款免费主题逐一点评在 /zh/blog/codex-free-themes-review。' },
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Codex Skin Studio 有教育折扣吗？', a: '教育价格是跟客服谈的，不是结账时自动打折。用学校邮箱写信说明用途，折扣会打在你的授权上。问之前先在 /zh/pricing 看一眼当前的方案价格。' },
+            { q: '学生免费能拿到什么？', a: '八款主题、亮色暗色切换、无限次重新应用。自定义壁纸和自定义配色是 Pro 的功能。' },
+            { q: '一个班或者一个实验室能用一份授权吗？', a: '席位是数人头的，实验室要每人一个席位。整组推行应该谈 Team 方案，对比写在 /zh/blog/codex-skin-studio-team-vs-personal。' },
+            { q: '折扣对续费也有效吗？', a: '申请的时候就问清楚。教育方案通常挂在一次身份验证上，所以续费时大概率要重新确认一次，不会自己顺延。' },
+          ],
+        },
+        { type: 'h2', text: '接下来去哪儿' },
+        { type: 'p', text: '先在 codex-skin-studio.shop 装上免费版，看看八款主题是不是已经解决问题。多数学生到这一步就停了。各方案的差别逐条列在 /zh/blog/codex-skin-studio-pricing，Pro 到底值不值在 /zh/blog/is-codex-pro-worth-it 里有争论。' },
+        { type: 'cta', text: '看当前的方案价格 →', href: '/zh/pricing' },
+        { type: 'cta', text: '询问教育价格 →', href: '/zh/contact' },
+      ],
+      en: [
+        { type: 'p', text: 'If you are looking for a codex skin studio education discount, here is the short version: the free tier covers eight themes and most of what a student needs, paid plans are per seat, and education pricing is arranged over email with support rather than applied by a checkout field. This page covers what to ask for and what you get without paying.' },
+        { type: 'h2', text: 'What the free tier already covers' },
+        { type: 'p', text: 'Eight curated themes with light and dark switching on each of them, plus unlimited reapplications. For a laptop in a lecture hall or on a library desk, that is the whole product. Themes are injected at runtime through local CDP, so a Codex update does not permanently break anything; you click apply again.' },
+        {
+          type: 'ul',
+          items: [
+            'Eight themes across pink, sci-fi, dark and clean styles',
+            'Light and dark mode switching on every theme',
+            'One-click restore to the official interface',
+            'No watermark removal, no custom wallpaper upload, no shared team library',
+          ],
+        },
+        { type: 'p', text: 'That last line is the one that matters. Everything Pro adds sits in the gap between wanting a different look and wanting your own look.' },
+        { type: 'h2', text: 'How a student discount request actually works' },
+        { type: 'p', text: 'There is no coupon field at checkout. Education pricing is agreed over email: you write to support from an address they can verify, say what you need it for, and the discount is applied to your licence. Have something ready that ties you to an institution, usually a student ID or an .edu address.' },
+        {
+          type: 'ul',
+          items: [
+            'Use the address you actually read mail at, since the licence key comes back there',
+            'Say how many seats you need. A lab or a study group is a different conversation from one laptop',
+            'Ask about the term length before paying. A single-semester project does not need an annual seat',
+            'If nobody replies within a couple of days, the contact page is the backup route',
+          ],
+        },
+        { type: 'p', text: 'I would not plan a purchase around it. Ask first, then decide, and use the free tier while you wait.' },
+        { type: 'h2', text: 'When paying is not worth it for a student' },
+        {
+          type: 'ul',
+          items: [
+            'You only want a different colour scheme. Eight free themes cover more ground than people expect',
+            'You are one person on one machine. Team features exist for shared palettes across seats',
+            'Your Codex use is one course. A monthly seat you cancel afterwards costs less than a year',
+            'You want your own photo as the wallpaper. That one does need Pro, and it is the most common reason students upgrade',
+          ],
+        },
+        { type: 'p', text: 'Pro is covered in detail at /en/blog/codex-skin-studio-pro-features, and the eight free themes are reviewed one by one at /en/blog/codex-free-themes-review.' },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            { q: 'Is there a Codex Skin Studio education discount?', a: 'Education pricing is arranged through support rather than applied automatically at checkout. Write in from an address tied to your institution with what you need it for, and the discount is applied to the licence. Check /en/pricing for the current plan rates before you ask.' },
+            { q: 'What do students get for free?', a: 'Eight themes, light and dark switching, and unlimited reapplications. Custom wallpapers and custom colour palettes are Pro features.' },
+            { q: 'Can a whole class or lab share one licence?', a: 'Seats are counted per person, so a lab needs one each. For group rollouts the Team plan is the right conversation, covered at /en/blog/codex-skin-studio-team-vs-personal.' },
+            { q: 'Does the discount apply to renewals?', a: 'Ask when you apply. Education arrangements are usually tied to one verification, so expect to confirm your status again rather than have it roll over silently.' },
+          ],
+        },
+        { type: 'h2', text: 'Where to go from here' },
+        { type: 'p', text: 'Start on codex-skin-studio.shop with the free install and see whether eight themes already solve it. Most students stop there. Plan-by-plan differences are laid out at /en/blog/codex-skin-studio-pricing, and whether Pro is worth it at all is argued at /en/blog/is-codex-pro-worth-it.' },
+        { type: 'cta', text: 'See current plan rates →', href: '/en/pricing' },
+        { type: 'cta', text: 'Ask about education pricing →', href: '/en/contact' },
+      ],
+    },
+  }
 ];
