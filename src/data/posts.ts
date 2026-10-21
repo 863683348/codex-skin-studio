@@ -3692,5 +3692,275 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Ask about education pricing →', href: '/en/contact' },
       ],
     },
+  },
+  {
+    slug: 'archiving-and-retiring-old-codex-themes',
+    date: '2026-10-22',
+    title: {
+      zh: '归档与下线旧 Codex 主题：什么时候该清理主题库',
+      en: 'Archiving and Retiring Old Codex Themes: When to Clean House'
+    },
+    description: {
+      zh: '归档 Codex 主题是换肤里没人提前规划的那一步。这篇讲哪些主题该下线、归档和删除的区别，以及一套十五分钟能跑完的主题清理流程。',
+      en: 'Archiving Codex themes is the part of theming nobody plans for. Which themes to retire, how retiring differs from deleting, and a codex theme cleanup workflow that fits in fifteen minutes.'
+    },
+    content: {
+      zh: [
+        {
+          type: 'p',
+          text: '归档 Codex 主题是换肤里没人提前规划的那一步。你先攒了八款，再攒到二十款，然后多出一堆只做了一半的实验品，最后主题菜单读一遍的时间比构建跑一遍还长。这篇讲我怎么下线不再用的主题，以及删除之前会先做哪些检查。'
+        },
+        {
+          type: 'p',
+          text: '有两件事让这件事值得做。菜单是线性的，所以每一条死掉的记录都会让你多扫一遍整份列表；而曾经喜欢过的主题并不是中性的，你会因为怀旧重新应用一次，然后觉得不对，再花四分钟回到原点。'
+        },
+        {
+          type: 'h2',
+          text: '哪些主题已经可以归档'
+        },
+        {
+          type: 'p',
+          text: '判断标准不是这个主题好不好。我有几款相当不错，最后还是归档了，因为「不错」和「会选它」不是一回事。我实际问的是：上一次我主动应用它是什么时候。'
+        },
+        {
+          type: 'ul',
+          items: [
+            '两个月没有主动应用过，只有翻菜单时的误触',
+            '同一个思路存了三款几乎一样的变体，你分不清哪个是哪个',
+            '它是为某台显示器或者某张壁纸做的，而那些东西已经不在了',
+            '留着它只是因为做它花了一整个晚上'
+          ]
+        },
+        {
+          type: 'h2',
+          text: '十五分钟的主题清理流程'
+        },
+        {
+          type: 'p',
+          text: '十五分钟够用，拖久了它会变成一件你一直往后推的事。四轮，按顺序，走完第四轮就停。'
+        },
+        {
+          type: 'ul',
+          items: [
+            '第一轮：打开菜单，把凭记忆描述不出来的都标上。先别删',
+            '第二轮：给标出来的主题截图。一张 200KB 的 png 比重新调一套配色便宜得多',
+            '第三轮：把标记过的主题移出当前主题目录，放进归档文件夹',
+            '第四轮：重启 Codex Skin Studio，确认菜单读起来是你想要的样子'
+          ]
+        },
+        {
+          type: 'p',
+          text: '第三轮是大家最容易跳过的，而它恰恰是重点。把主题移出当前目录，五秒钟就能撤回；删掉就撤不回了。'
+        },
+        {
+          type: 'h2',
+          text: '下线旧主题和删除：不是一回事'
+        },
+        {
+          type: 'p',
+          text: '这两个动作常被当成同一个，其实完全不同。下线是把文件放到你还能拿到的地方，同时从菜单里移除；删除就是真的没了，除非你先导出过，否则那套配色也一起没了。'
+        },
+        {
+          type: 'ul',
+          items: [
+            '下线：文件夹移到归档目录，菜单变干净，拖回来就能恢复',
+            '删除：文件移除。导出过的主题这么处理没问题，手工调过的处理起来会很疼',
+            '先导出：一个 theme.json 加一张壁纸就是主题的全部，备份的就是这两样',
+            '团队共享主题：下线一款会影响方案上的所有人，动手前先说一声'
+          ]
+        },
+        {
+          type: 'h2',
+          text: '多久清理一次'
+        },
+        {
+          type: 'p',
+          text: '一年两次对大多数人是合适的，把它绑在一件你本来就要做的事上，才不会一直往后滑。我是在换机器和 Codex 大版本更新时各做一次。'
+        },
+        {
+          type: 'ul',
+          items: [
+            '换机器之后，因为跟着过来的东西里有一半是你早就不用的',
+            'Codex 大版本更新之后，反正那会儿你也要重新应用主题',
+            '赶工的那周绝对别做。清理欲会吃掉你没有的那个小时'
+          ]
+        },
+        {
+          type: 'p',
+          text: '有一件事我错了很久：以前我总是先删，导出留到以后。代价是一套紫底黑字的配色，我调了两个晚上，之后一直没能复现出来。'
+        },
+        {
+          type: 'h2',
+          text: '常见问题'
+        },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '归档主题会影响我保留的那些吗？',
+              a: '不会。把主题文件夹移出当前目录只是把它从菜单里拿掉，留在目录里的主题照常应用。如果你保留的某款突然不出现了，那是被误移了，把文件夹放回去就好。'
+            },
+            {
+              q: '怎么安全地删掉一个不用的 Codex 皮肤？',
+              a: '先导出。把主题文件夹（一个 theme.json 加壁纸）复制到归档目录，再从当前主题目录里移除，重启 Codex Skin Studio 检查菜单。如果导出少了一张你喜欢的壁纸，那是唯一没法从 json 重建的部分。'
+            },
+            {
+              q: '归档之后还能恢复吗？',
+              a: '能。把文件夹拖回当前主题目录，重启工具就行。半年前归档的主题现在照样能干净应用，格式没变过。theme.json 里的壁纸路径是相对路径，所以保持文件夹结构别拆。'
+            },
+            {
+              q: '团队方案上的主题也该归档吗？',
+              a: '先问一声。共享主题对方案上的每个人都可见，下线一款会改变同事菜单里看到的内容。个人主题什么时候归档都随你。'
+            }
+          ]
+        },
+        {
+          type: 'h2',
+          text: '接下来'
+        },
+        {
+          type: 'p',
+          text: '打开 codex-skin-studio.shop 的主题菜单，数一数有多少条你凭记忆描述不出来，把那些移走。删之前先导出，完整的导出与恢复步骤在 /zh/blog/codex-theme-backup-and-restore；换肤频率该怎么定写在 /zh/blog/how-often-should-you-switch-codex-themes。其余内容从 /zh/blog 进去。'
+        },
+        {
+          type: 'cta',
+          text: '浏览主题库 →',
+          href: '/zh/gallery'
+        },
+        {
+          type: 'cta',
+          text: '备份与恢复完整步骤 →',
+          href: '/zh/blog/codex-theme-backup-and-restore'
+        }
+      ],
+      en: [
+        {
+          type: 'p',
+          text: 'Archiving Codex themes is the part of theming nobody plans for. You collect eight, then twenty, then a folder of half-finished experiments, and eventually reading the theme menu takes longer than a build takes to run. This is how I retire themes I no longer reach for, and what I check before deleting anything.'
+        },
+        {
+          type: 'p',
+          text: 'Two things make it worth doing. The menu is linear, so every dead entry costs you a scan of the whole list. And themes you liked once are not neutral: you reapply one out of nostalgia, decide it looks wrong, then spend four minutes getting back to where you were.'
+        },
+        {
+          type: 'h2',
+          text: 'Which themes are ready to archive'
+        },
+        {
+          type: 'p',
+          text: 'The test is not whether a theme is good. Some of mine are perfectly fine and still got archived, because fine is not the same as chosen. What I actually ask is when I last applied it on purpose.'
+        },
+        {
+          type: 'ul',
+          items: [
+            'No deliberate apply in two months, only accidental ones while scrolling the menu',
+            'Three near-identical variants of one idea, and you cannot tell which is which',
+            'Built for a monitor or a wallpaper you no longer have',
+            'Kept only because making it cost you an evening'
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'A codex theme cleanup workflow that fits in fifteen minutes'
+        },
+        {
+          type: 'p',
+          text: 'Fifteen minutes is enough. Going longer turns this into a project you keep postponing. Four passes, in order, and stop after the fourth.'
+        },
+        {
+          type: 'ul',
+          items: [
+            'Pass 1: open the menu, mark anything you cannot describe from memory. Do not delete yet',
+            'Pass 2: screenshot the ones you marked. A 200 KB png is cheaper than rebuilding a palette',
+            'Pass 3: move marked themes out of the active themes directory into an archive folder',
+            'Pass 4: restart Codex Skin Studio and check that the menu reads the way you expect'
+          ]
+        },
+        {
+          type: 'p',
+          text: 'Pass 3 is the one people skip, and it is the whole point. Moving a theme out of the active folder is reversible in five seconds. Deleting it is not.'
+        },
+        {
+          type: 'h2',
+          text: 'Retire an old codex theme or delete it: the difference'
+        },
+        {
+          type: 'p',
+          text: 'These get treated as one action and they are not the same. Retiring keeps the files somewhere you can reach and takes them out of the menu. Deleting removes them, and unless you exported first, the palette goes with them.'
+        },
+        {
+          type: 'ul',
+          items: [
+            'Retire: folder moves to an archive directory, menu gets shorter, restore is a drag and drop',
+            'Delete: files removed. Fine for themes you exported, painful for anything tuned by hand',
+            'Export first: a theme.json plus the wallpaper is the whole theme, and that is what you back up',
+            'Shared team themes: retiring one changes what everyone on the plan sees, so say so first'
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'How often to run a cleanup'
+        },
+        {
+          type: 'p',
+          text: 'Twice a year suits most people, and tying it to something you already do stops it from sliding. I run mine when I change machines and when Codex ships a major update.'
+        },
+        {
+          type: 'ul',
+          items: [
+            'After a machine migration, because half of what comes across is stuff you stopped using',
+            'After a major Codex update, since you are reapplying themes anyway',
+            'Never during a deadline week. Cleanup curiosity eats an hour you do not have'
+          ]
+        },
+        {
+          type: 'p',
+          text: 'One thing I got wrong for a long time: I used to delete first and export later. It cost me a purple-on-black palette I had tuned over two evenings, and I have never reproduced it since.'
+        },
+        {
+          type: 'h2',
+          text: 'FAQ'
+        },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Does archiving a theme break the ones I keep?',
+              a: 'No. Moving a theme folder out of the active directory only removes it from the menu. Anything still in the folder applies exactly as before. If a theme you kept stops appearing, it was moved by mistake and putting the folder back fixes it.'
+            },
+            {
+              q: 'How do I delete an unused codex skin safely?',
+              a: 'Export it first. Copy the theme folder, which is a theme.json plus any wallpaper, into your archive directory, then remove it from the active themes folder. Restart Codex Skin Studio and check the menu. A missing wallpaper is the only piece you cannot rebuild from the json.'
+            },
+            {
+              q: 'Can I restore an archived theme later?',
+              a: 'Yes. Drag the folder back into the active themes directory and restart the tool. Themes archived six months ago still apply cleanly, since nothing about the format changed. Wallpaper paths in theme.json are relative, so keep the folder structure intact.'
+            },
+            {
+              q: 'Should I archive themes on a Team plan?',
+              a: 'Ask first. Shared themes are visible to everyone on the plan, so retiring one changes what your teammates see in their menu. Personal themes can be archived whenever you like.'
+            }
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'Where to go from here'
+        },
+        {
+          type: 'p',
+          text: 'Open the theme menu on codex-skin-studio.shop, count the entries you cannot describe from memory, and move those. Export before you delete anything, and the full export and restore steps sit at /en/blog/codex-theme-backup-and-restore. How often to switch at all is argued at /en/blog/how-often-should-you-switch-codex-themes. Everything else is at /en/blog.'
+        },
+        {
+          type: 'cta',
+          text: 'Browse the theme gallery →',
+          href: '/en/gallery'
+        },
+        {
+          type: 'cta',
+          text: 'Full backup and restore steps →',
+          href: '/en/blog/codex-theme-backup-and-restore'
+        }
+      ]
+    }
   }
 ];
