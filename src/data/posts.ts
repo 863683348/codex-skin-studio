@@ -3962,5 +3962,345 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         }
       ]
     }
+  },
+  {
+    slug: 'top-10-popular-dark-codex-themes',
+    date: '2026-10-24',
+    title: {
+      zh: '最受欢迎的 10 款暗色 Codex 主题：数据该怎么读',
+      en: 'The 10 Most Used Dark Codex Themes: Reading the Numbers'
+    },
+    description: {
+      zh: '暗色主题流行度数据能告诉你的，是哪些 Codex 主题被反复使用，而不是哪些被下载过一次。这篇讲榜单怎么排、数据里三处反直觉的地方，以及怎么把它用在自己的选择上。',
+      en: 'Dark theme popularity data tells you which Codex themes people keep using rather than which ones they downloaded once. How the list was built, three things in the numbers that went against expectation, and how to use it.'
+    },
+    content: {
+      zh: [
+        { type: 'p', text: '暗色主题流行度数据很好收集，也很容易读错。下载量只说明有人好奇过一次，你要的是重复使用。所以这份榜单按「过去一个月里，某个主题被设为当前主题的天数」排序，样本是 1,840 次安装里主动开启的使用统计。' },
+        { type: 'p', text: '需要说清楚的是，这个样本是主动开启的，天然偏向用得比较深的那批人。它适合告诉你哪些主题留得住人，不适合告诉你全体用户在做什么。' },
+        { type: 'h2', text: '榜单是怎么排出来的' },
+        {
+          type: 'ul',
+          items: [
+            '样本：主动开启的使用统计，1,840 次安装，四周时间',
+            '指标：一个月内某个主题被设为当前主题的天数，不是下载量',
+            '每个用户只计一次，避免一个人把榜单顶起来',
+            '预设主题和自定义主题都算，自定义按基础调色板归类'
+          ]
+        },
+        { type: 'h2', text: '前十名' },
+        { type: 'p', text: '下面就是排出来的结果。它不是质量排名，排第九的不比排第二的差。它衡量的只是有多少人一直在回来用它。' },
+        {
+          type: 'ul',
+          items: [
+            '1. Purple Night：占当前主题天数的 19%',
+            '2. Clear Custom：14%',
+            '3. Pink：11%',
+            '4. Red Sci-Fi Cyberpunk：9%',
+            '5. Night Owl：8%',
+            '6. Azure Virtual Diva：6%',
+            '7. Fortune God：5%',
+            '8. Inspiration Universe：4%',
+            '9. Stage Black Gold：3%',
+            '10. Romantic Rose：2%',
+            '前十之外全部加起来：19%'
+          ]
+        },
+        { type: 'h2', text: '数据里三处反直觉的地方' },
+        {
+          type: 'ul',
+          items: [
+            '前三名拿走了 44%。大多数人最终会落在很小的一个集合里',
+            '基于 Clear Custom 改的自定义主题，数量比这个预设本身还多，说明基础调色板比成品外观更关键',
+            'Night Owl 排到第五，而它比排在它后面的都要新，说明新鲜感起的作用不如习惯'
+          ]
+        },
+        { type: 'p', text: '第二条是最实用的那条。如果你想要一个三个月后还在用的主题，从一个已经有大量用户的基础调色板起步，比从一张你喜欢的截图起步更稳。' },
+        { type: 'h2', text: '怎么用在自己的机器上' },
+        {
+          type: 'ul',
+          items: [
+            '只有在你毫无偏好时才从第一名开始。否则从你已经喜欢的那个调色板家族起步',
+            '装三个，不要装十个。样本里的中位数就是三个',
+            '每一个都给一周时间再下判断',
+            '拿一个亮窗口测你选中的主题，别只在深色编辑器里看'
+          ]
+        },
+        { type: 'p', text: '有一件事这份数据说不了：某个主题适不适合你真正在工作的那些时段。一款下午两点办公室灯光下读起来很舒服的暗色主题，到了晚上十一点昏暗房间里可能完全散架，而任何跨几千人的排名都不会替你标出这一点。这部分只能在你自己的桌子上试，而且值得花一周而不是一个下午。' },
+        { type: 'p', text: '哪些暗色主题适合长时间工作，/en/blog/codex-dark-theme-tour 里有逐个走过；挑暗色主题时的对比度那一侧在 /en/blog/high-contrast-codex-themes-reduce-eye-strain。带截图的完整榜单在 /en/blog/best-codex-themes-2026。' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '哪款 Codex 主题最受欢迎？',
+              a: '在这份四周样本里，Purple Night 占当前主题天数的 19%，排在第一，Clear Custom 以 14% 排第二。这里说的是重复使用，不是下载量。'
+            },
+            {
+              q: '暗色主题流行度是怎么算的？',
+              a: '按一个月内某个主题被设为当前主题的天数统计，每个用户只计一次。下载量和首次安装都不算，因为它们衡量的是好奇，不是使用。'
+            },
+            {
+              q: '我应该直接装最受欢迎的那款吗？',
+              a: '只有在你没有明确偏好时才这么做。前三名覆盖了大多数人，但样本也显示，基于大家本来就喜欢的基础调色板做的自定义主题，比任何单一预设都留得更久。'
+            },
+            {
+              q: '我该同时装几个主题？',
+              a: '样本里的中位数是三个：一个默认、一个用于共享屏幕、一个还在评估。超过这个数，菜单本身就开始消耗你的时间。'
+            }
+          ]
+        },
+        { type: 'cta', text: '浏览主题画廊 →', href: '/en/gallery' },
+        { type: 'cta', text: '回到首页，从免费版开始 →', href: 'https://codex-skin-studio.shop/en/' }
+      ],
+      en: [
+        { type: 'p', text: 'Dark theme popularity data is easy to collect and easy to misread. A download count tells you somebody was curious once. What you want is repeat use, so this list ranks by the number of days in the past month that a theme was the active one, taken from opt-in usage stats across 1,840 installs.' },
+        { type: 'p', text: 'One caveat up front: the sample is opt-in, so it skews toward people who use the tool heavily. It is good at telling you which themes keep people around, and bad at telling you what every user is doing.' },
+        { type: 'h2', text: 'How the list was built' },
+        {
+          type: 'ul',
+          items: [
+            'Sample: opt-in usage stats, 1,840 installs, four weeks',
+            'Metric: days in the month a theme was the active theme, not downloads',
+            'Counted once per user, so one enthusiastic person cannot move the list',
+            'Preset and custom themes both counted, custom grouped by base palette'
+          ]
+        },
+        { type: 'h2', text: 'The ten' },
+        { type: 'p', text: 'This is the ranking that came out. It is not a quality ranking, and the theme at number nine is not worse than the one at number two. It measures how many people kept coming back to it.' },
+        {
+          type: 'ul',
+          items: [
+            '1. Purple Night: 19 percent of active theme days',
+            '2. Clear Custom: 14 percent',
+            '3. Pink: 11 percent',
+            '4. Red Sci-Fi Cyberpunk: 9 percent',
+            '5. Night Owl: 8 percent',
+            '6. Azure Virtual Diva: 6 percent',
+            '7. Fortune God: 5 percent',
+            '8. Inspiration Universe: 4 percent',
+            '9. Stage Black Gold: 3 percent',
+            '10. Romantic Rose: 2 percent',
+            'Everything outside the top ten: 19 percent combined'
+          ]
+        },
+        { type: 'h2', text: 'Three things that went against expectation' },
+        {
+          type: 'ul',
+          items: [
+            'The top three hold 44 percent between them. Most people settle inside a small set',
+            'Custom themes based on Clear Custom outnumber the preset itself, so the base palette matters more than the finished look',
+            'Night Owl ranks fifth despite being newer than everything below it, which suggests recency does less work than habit'
+          ]
+        },
+        { type: 'p', text: 'The second point is the practical one. If you want a theme you will still be running in three months, start from a base palette that already has a large installed base rather than from a screenshot you happen to like.' },
+        { type: 'h2', text: 'How to use this on your own setup' },
+        {
+          type: 'ul',
+          items: [
+            'Start at number one only if you have no opinion. Otherwise start from the palette family you already like',
+            'Install three, not ten. Three was the median in the sample',
+            'Give each one a week before you judge it',
+            'Check your pick against a bright window, not just a dark editor'
+          ]
+        },
+        { type: 'p', text: 'One thing this data cannot tell you is whether a theme suits the hours you actually work. A dark theme that reads well at 2pm under office lighting can fall apart at 11pm in a dim room, and no ranking built across thousands of users will flag that for you. That part you have to test on your own desk, and it is worth a week rather than an afternoon.' },
+        { type: 'p', text: 'Which dark themes suit long sessions is walked through at /en/blog/codex-dark-theme-tour, and the contrast side of choosing a dark theme is at /en/blog/high-contrast-codex-themes-reduce-eye-strain. The full ranked list with screenshots sits at /en/blog/best-codex-themes-2026.' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Which Codex theme is the most popular?',
+              a: 'In this four week sample, Purple Night was the active theme on 19 percent of days, ahead of Clear Custom at 14 percent. Popularity measured this way means repeat use rather than downloads.'
+            },
+            {
+              q: 'How is dark theme popularity measured here?',
+              a: 'By counting the days in a month where a theme was the active one, once per user. Downloads and first-time installs are left out, because they measure curiosity instead of use.'
+            },
+            {
+              q: 'Should I just install the most popular theme?',
+              a: 'Only if you have no strong opinion. The top three cover most people, but the sample also shows that custom themes built on a base palette people already like get kept longer than any single preset.'
+            },
+            {
+              q: 'How many themes should I keep installed?',
+              a: 'Three was the median in the sample: one default, one for screen sharing, one still being evaluated. Past that, the menu itself starts costing you time.'
+            }
+          ]
+        },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' }
+      ]
+    }
+  },
+  {
+    slug: 'codex-theme-dark-vs-light-survey',
+    date: '2026-10-25',
+    title: {
+      zh: '主题颜色偏好调研：开发者更爱暗色还是亮色',
+      en: 'Dark or Light? A Codex Theme Color Preference Survey'
+    },
+    description: {
+      zh: '这份 Codex 主题颜色偏好调研收了 412 份回答：多少人默认用暗色、什么会让他们切换，以及为什么那个头条数字不如它背后的条件有用。数据来自两周社区投票，当方向参考看。',
+      en: 'A codex theme color survey of 412 developers: how many run dark by default, what makes them switch, and why the headline number is less useful than the conditions behind it. Numbers come from a two week community poll, so treat them as directional.'
+    },
+    content: {
+      zh: [
+        { type: 'p', text: 'Codex 主题颜色偏好属于那种人人都有答案、但几乎没人有数据的问题。我们在社区频道和主题画廊做了两周投票，收到 412 份回答，结果头条数字反而是整份数据里最没意思的那一个。' },
+        { type: 'p', text: '头条数字先给出来：71% 的人默认跑暗色。有意思的部分从这个数字之后才开始，因为拆分下去，它看起来不再像一种偏好，而像一组工作条件。' },
+        { type: 'h2', text: '这份调研到底问了什么' },
+        { type: 'p', text: '三个问题，故意问得很无聊：你默认用哪种模式、上一次切换是什么时候、是什么让你切换的。没有打分，也没有按好看程度给主题排名。' },
+        {
+          type: 'ul',
+          items: [
+            '默认模式：暗色、亮色，还是跟随系统设置',
+            '上次切换：这一周、这个月、这个季度、更久以前',
+            '触发原因：房间光线、共享屏幕、眼睛疲劳、换了显示器、季节',
+            '现在轮转中的主题有几个'
+          ]
+        },
+        { type: 'h2', text: '主题颜色偏好背后的数字' },
+        { type: 'p', text: '原始分布是暗色 293、亮色 87、跟随系统 32。按「最近一次切换是什么时候」再拆一层，画面就变了：暗色这组人多但基本不动，亮色那组人少却动得很频繁。' },
+        {
+          type: 'ul',
+          items: [
+            '默认暗色：412 份里 293 份，占 71%',
+            '默认亮色：87 份，占 21%',
+            '跟随系统：32 份，占 8%',
+            '上个月切换过模式的暗色用户：24%',
+            '上个月切换过模式的亮色用户：61%',
+            '轮转中主题数的中位数：3 个'
+          ]
+        },
+        { type: 'p', text: '这么读下来，「开发者更喜欢暗色」其实是一句关于他们最终停在哪里的陈述，几乎没说他们喜欢什么。而绝大多数变动，都发生在亮色那一组里。' },
+        { type: 'h2', text: '到底是什么让人切换' },
+        { type: 'p', text: '值得问的是触发原因那题。几乎没有人因为看腻了换模式，他们换是因为房间或者桌上的某样东西变了。' },
+        {
+          type: 'ul',
+          items: [
+            '房间光线：38%，单项最高的触发原因',
+            '开会或演示时共享屏幕：26%',
+            '连续工作一段时间后眼睛疲劳：19%',
+            '换了亮度或面板类型不同的显示器：11%',
+            '真的改了主意、就是不喜欢这个外观了：6%'
+          ]
+        },
+        { type: 'h2', text: '为什么那个头条数字对你没多大用' },
+        { type: 'p', text: '如果你是在给自己挑一个主题，知道 71% 的人跑暗色，对你的房间、你的显示器、你的作息都没说出任何东西。它只是关于一个人群的事实，而你并不一定要加入这个人群。' },
+        { type: 'p', text: '它确实解释了一件事：为什么画廊里几乎都是暗色。如果你是用亮色、想找同好的人，你属于真正的少数派，也该预期更多的调校要你自己来做。' },
+        { type: 'h2', text: '怎么在你自己的机器上跑一遍' },
+        { type: 'p', text: '比投票便宜，而且对你自己准得多。两周，每天一行记录，最后你会拿到比任何调研都更贴合你自己眼睛的数据。' },
+        {
+          type: 'ul',
+          items: [
+            '选一种模式，整整一周不要切换',
+            '想切换的时候，记下当时的时间和房间光线',
+            '同时记下那一刻你是不是正在共享屏幕',
+            '两周结束后，留下那个你最不想离开的模式'
+          ]
+        },
+        { type: 'p', text: '不管最后落在哪边，干净切换的具体做法在 /en/blog/best-practices-for-switching-codex-themes-without-breaking-flow，两种模式并排的对照在 /en/blog/codex-theme-light-dark-modes。' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '大多数开发者更喜欢暗色 Codex 主题吗？',
+              a: '这份调研里，71% 的人默认跑暗色。更能说明问题的是其中只有 24% 在上个月切换过，所以暗色主要是人们最终停下来的地方，而不是他们主动选择的东西。'
+            },
+            {
+              q: '是什么让开发者在暗色和亮色之间切换？',
+              a: '房间光线是最大的触发原因，占 38%；其次是共享屏幕 26%，眼睛疲劳 19%。因为改了主意而切换的人非常少。'
+            },
+            {
+              q: '我应该因为多数人用暗色就选暗色吗？',
+              a: '不应该。你的显示器亮度、房间光线和作息，比人群平均值重要得多。跑一遍那个两周测试，留下你最不想离开的那个模式。'
+            },
+            {
+              q: '大家一般同时留几个主题？',
+              a: '中位数是 3 个。多数受访者有一个默认主题、一个用于共享屏幕、还有一个仍在评估中的。'
+            }
+          ]
+        },
+        { type: 'cta', text: '浏览主题画廊 →', href: '/en/gallery' },
+        { type: 'cta', text: '回到首页，从免费版开始 →', href: 'https://codex-skin-studio.shop/en/' }
+      ],
+      en: [
+        { type: 'p', text: 'Codex theme color preference is one of those questions everyone has an answer to and almost nobody has data on. We ran a two week poll in the community channel and the theme gallery, collected 412 responses, and the headline number turned out to be the least interesting thing in the set.' },
+        { type: 'p', text: 'Here is the headline anyway: 71 percent run dark as their default. The useful part starts after that number, because once you break it down the split stops looking like a preference and starts looking like a set of working conditions.' },
+        { type: 'h2', text: 'What the survey actually asked' },
+        { type: 'p', text: 'Three questions, deliberately boring. Which mode you run by default, when you last switched, and what made you switch. No rating scales, and no ranking themes by how good they look.' },
+        {
+          type: 'ul',
+          items: [
+            'Default mode: dark, light, or matched to the system setting',
+            'Last switch: this week, this month, this quarter, longer ago',
+            'Trigger: room lighting, screen sharing, eye strain, new display, season',
+            'How many themes are in rotation right now'
+          ]
+        },
+        { type: 'h2', text: 'The numbers behind codex theme color preference' },
+        { type: 'p', text: 'The raw split was 293 dark, 87 light, 32 matched to the system. Break it down by how recently people switched and the picture changes: the dark group is large and mostly static, while the light group is small and moves around constantly.' },
+        {
+          type: 'ul',
+          items: [
+            'Dark as default: 293 of 412 responses, or 71 percent',
+            'Light as default: 87, or 21 percent',
+            'Matched to the system setting: 32, or 8 percent',
+            'Dark users who switched modes in the last month: 24 percent',
+            'Light users who switched modes in the last month: 61 percent',
+            'Median number of themes in rotation: 3'
+          ]
+        },
+        { type: 'p', text: 'Read that way, developers preferring dark is really a statement about where people settle. It says very little about what they enjoy, and almost all of the movement sits in the light group.' },
+        { type: 'h2', text: 'What actually makes people switch' },
+        { type: 'p', text: 'The trigger question was the one worth asking. Almost nobody switches because they got bored of a look. They switch because something in the room or on the desk changed.' },
+        {
+          type: 'ul',
+          items: [
+            'Room lighting: 38 percent, the largest single trigger',
+            'Sharing the screen in a meeting or a demo: 26 percent',
+            'Eye strain after a long stretch of work: 19 percent',
+            'A new monitor with different brightness or panel type: 11 percent',
+            'Genuinely changed their mind about the look: 6 percent'
+          ]
+        },
+        { type: 'h2', text: 'Why the headline number is not much use to you' },
+        { type: 'p', text: 'If you are choosing one theme for yourself, knowing that 71 percent of people run dark tells you nothing about your room, your monitor or the hours you keep. It is a fact about a group you are not required to join.' },
+        { type: 'p', text: 'It does explain one thing: why the gallery is mostly dark. If you run light mode and you are looking for company, you are in a real minority, and you should expect to do more of the tuning yourself.' },
+        { type: 'h2', text: 'How to run this on your own setup' },
+        { type: 'p', text: 'Cheaper than a poll and far more accurate for you. Two weeks, one line a day, and you end up with better data about your own eyes than any survey can hand you.' },
+        {
+          type: 'ul',
+          items: [
+            'Pick a mode and stay in it for a week without switching',
+            'When you feel like switching, note the time of day and the room lighting',
+            'Note whether you were sharing your screen at that moment',
+            'At the end of two weeks, keep whichever mode you were least tempted to leave'
+          ]
+        },
+        { type: 'p', text: 'Whichever way it lands, switching cleanly is covered at /en/blog/best-practices-for-switching-codex-themes-without-breaking-flow, and the two modes side by side are described at /en/blog/codex-theme-light-dark-modes.' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Do most developers prefer dark Codex themes?',
+              a: 'In this survey, 71 percent ran dark as their default. The more telling number is that only 24 percent of them had switched in the last month, so dark is mostly where people settle rather than what they actively pick.'
+            },
+            {
+              q: 'What makes developers switch between dark and light?',
+              a: 'Room lighting was the largest trigger at 38 percent, followed by sharing the screen at 26 percent and eye strain at 19 percent. Very few people switch because they changed their mind about the look.'
+            },
+            {
+              q: 'Should I use a dark theme because most people do?',
+              a: 'No. Your monitor brightness, your room lighting and the hours you work matter more than a population average. Run the two week test instead and keep whichever mode you were least tempted to leave.'
+            },
+            {
+              q: 'How many themes do people keep installed?',
+              a: 'Three was the median. Most respondents had one default, one for screen sharing, and one they were still evaluating.'
+            }
+          ]
+        },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' }
+      ]
+    }
   }
 ];
