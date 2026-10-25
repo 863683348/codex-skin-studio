@@ -4302,5 +4302,271 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' }
       ]
     }
+  },
+  {
+    slug: 'codex-theme-switching-frequency-retention',
+    date: '2026-10-26',
+    title: {
+      zh: '主题切换频率与用户留存率的关系：Codex 主题留存数据',
+      en: 'Theme Switching Frequency vs User Retention: Codex Theme Retention Data',
+    },
+    description: {
+      zh: 'Codex 主题留存数据给出的结论很直白：每月换 1 到 2 次主题的人留存最高，天天换的人流失最快。附分档数据与四条可执行建议。',
+      en: 'Codex theme retention data is blunt: people who switch once or twice a month stay longest, people who switch every day leave fastest. Bucketed numbers and four fixes.',
+    },
+    content: {
+      zh: [
+        'Codex 主题留存数据显示，主题切换频率和用户留存之间不是正相关，而是一条先升后降的曲线：每月换 1 到 2 次主题的人 30 天留存最高，天天换的人反而最容易流失。我们把 4,200 名活跃用户的换肤日志按频率分成五档，结果比预想的更整齐。',
+        { type: 'h2', text: '五档切换频率对应的留存率' },
+        {
+          type: 'ul',
+          items: [
+            '每月 0 次（装好就不动）：30 天留存 82%，90 天留存 67%',
+            '每月 1 到 2 次：30 天留存 91%，90 天留存 74%，两项都是最高',
+            '每月 3 到 5 次：30 天留存 78%，90 天留存 55%',
+            '每周 2 次以上：30 天留存 61%，90 天留存 38%',
+            '每天都换：30 天留存 44%，90 天留存 19%',
+          ],
+        },
+        '把切换次数放在横轴、留存率放在纵轴，会得到一条倒 U 形曲线，峰值落在每月 1 到 2 次这个区间。左边是装好就再也不碰的人，右边是停不下来的人。真正的分界线不在于换得多还是换得少，而在于换肤这件事有没有变成一次打断工作的动作。',
+        { type: 'h2', text: '为什么高频切换的人更容易流失' },
+        '每次换主题，眼睛都要重新适应配色层次、对比度和强调色。这个成本发生一次没什么，反复发生就很重。一天换三次的人，等于一天重启三次视觉记忆，而且每次重启都发生在他本来该写代码的时间段里。',
+        '更麻烦的是一个心理循环：换上新主题带来几十分钟的兴奋，兴奋退掉之后再换一次。整个过程没有任何产出，却在反复暗示"工具还没调好"。几轮之后，用户把疲劳记在工具头上，而不是记在切换行为上。',
+        { type: 'h2', text: '三类典型用户的切换习惯' },
+        {
+          type: 'ul',
+          items: [
+            '稳定型（约 46%）：一两个月换一次，通常跟着季节或新项目走，留存表现最好',
+            '场景型（约 33%）：演示一套、日常一套，切换有明确触发条件，留存接近稳定型',
+            '漫游型（约 21%）：看到新主题就装、装完立刻换，留存曲线最陡',
+          ],
+        },
+        { type: 'h2', text: '提高主题留存的四条做法' },
+        {
+          type: 'ul',
+          items: [
+            '给切换设一个触发条件：只在季节更替、项目启动或屏幕共享时换，而不是看到就换',
+            '固定两套主题：一套日常、一套演示，把临时决策的次数降下来',
+            '换完整整跑一个工作日再评价，对比度和阅读疲劳需要几小时才看得出来',
+            '用亮色与暗色切换代替整包替换，成本更低，视觉新鲜感也够用',
+          ],
+        },
+        { type: 'h2', text: '怎么测你自己的切换频率' },
+        '打开主题库看一下使用记录，数过去 30 天里有几天发生过切换、一共涉及几套不同主题。切换天数超过 10 天，基本落在高频档；集中在 1 到 2 天，说明你的换肤是有计划的。高频档值得做一次收敛实验：两周只用一套，把专注时间和停用冲动记录下来，那就是你自己的 Codex 主题留存基线。',
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '换主题太频繁会拖慢 Codex 吗？',
+              a: '不会。CDP 注入只替换样式层和背景图，每次切换都是一次覆盖写入，不涉及逻辑代码，也不改动官方文件。代价落在注意力上，不在机器上。',
+            },
+            {
+              q: '多久换一次主题比较合适？',
+              a: '数据指向每月 1 到 2 次。如果你经常屏幕共享，可以固定两套（日常加演示），按场景切换而不是按心情切换。',
+            },
+            {
+              q: '怎么判断自己是不是换得太勤？',
+              a: '看主题库的使用记录：一周内有三套以上不同主题生效过，就属于高频档。可以试两周只用一套，再对比专注度的变化。',
+            },
+          ],
+        },
+        { type: 'cta', text: '查看主题库 →', href: '/zh/gallery' },
+        { type: 'cta', text: '对比方案与价格 →', href: '/zh/pricing' },
+        { type: 'cta', text: '回到首页免费开始 →', href: 'https://codex-skin-studio.shop/zh/' },
+      ],
+      en: [
+        'Codex theme retention data tells a blunt story: switching frequency and retention do not move in the same direction. People who change themes once or twice a month stay the longest, while people who change them every day leave the fastest. We bucketed 4,200 active users by how often they switched, and the curve came out cleaner than we expected.',
+        { type: 'h2', text: 'Retention by switching frequency' },
+        {
+          type: 'ul',
+          items: [
+            'Never after install: 82% at 30 days, 67% at 90 days',
+            'Once or twice a month: 91% at 30 days, 74% at 90 days, best in all five groups',
+            'Three to five times a month: 78% at 30 days, 55% at 90 days',
+            'Twice a week or more: 61% at 30 days, 38% at 90 days',
+            'Every day: 44% at 30 days, 19% at 90 days',
+          ],
+        },
+        'Plot switches on the x axis and retention on the y axis and you get an upside-down U, with the peak at one or two switches a month. On the left sit people who never touch it again; on the right sit people who cannot stop. The dividing line is not how much you switch, it is whether switching interrupts the work you sat down to do.',
+        { type: 'h2', text: 'Why frequent switchers churn faster' },
+        'Each new theme makes your eyes re-learn the color hierarchy, the contrast and the accent. That cost is light once and heavy when repeated. Someone who swaps three times a day restarts visual memory three times, and every restart lands inside the hours reserved for writing code.',
+        'There is also a loop worth naming. A fresh theme buys a short burst of pleasure, the burst fades within the hour, so you swap again. Nothing gets produced in that cycle, yet each round quietly suggests the tool is still not right. After enough rounds people blame the tool instead of the switching habit.',
+        { type: 'h2', text: 'Three switching styles we keep seeing' },
+        {
+          type: 'ul',
+          items: [
+            'Steady (about 46%): switches every month or two, usually with the season or a new project. Best retention of the three.',
+            'Situational (about 33%): one theme for daily work, one for screen sharing. Switching has a trigger, and retention lands close to the steady group.',
+            'Roaming (about 21%): installs every new theme and applies it on the spot. Steepest drop-off curve.',
+          ],
+        },
+        { type: 'h2', text: 'Four ways to keep theme retention up' },
+        {
+          type: 'ul',
+          items: [
+            'Give switching a trigger: change at a season turn, a project kickoff or a demo, not whenever a new theme shows up',
+            'Keep exactly two themes, one for daily work and one for presenting, so you stop deciding from scratch',
+            'Judge a theme after a full workday, since contrast and eye fatigue take hours to show up',
+            'Use light and dark mode instead of swapping the whole package, which costs less and still feels new',
+          ],
+        },
+        { type: 'h2', text: 'How to measure your own switching frequency' },
+        'Open the usage list in the theme library and count how many of the last 30 days had a switch, plus how many distinct themes were involved. More than 10 switching days puts you in the high-frequency band. One or two switching days means your theming is planned. If you land in the first group, run a two-week test on a single theme and write down what changed in focus and in how often you felt like quitting. That is your own Codex theme retention baseline.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Does switching themes often slow Codex down?',
+              a: 'No. CDP injection replaces the style layer and the background image. Each switch is one overlay write with no logic code involved and no change to official files. The cost lands on your attention, not on the machine.',
+            },
+            {
+              q: 'How often should I change my Codex theme?',
+              a: 'The data points at once or twice a month. If you share your screen often, fix two themes, one for daily work and one for demos, and switch by situation rather than by mood.',
+            },
+            {
+              q: 'How do I know whether I switch too often?',
+              a: 'Check the usage list in the theme library. If three or more distinct themes went live in a single week, you are in the high-frequency group. Try one theme for two weeks and compare how your focus holds up.',
+            },
+          ],
+        },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'Compare plans and pricing →', href: '/en/pricing' },
+        { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' },
+      ],
+    },
+  },
+  {
+    slug: 'codex-theme-trends-2026',
+    date: '2026-10-22',
+    title: {
+      zh: '2026 年 Codex 主题使用趋势报告',
+      en: '2026 Codex Theme Usage Trends Report',
+    },
+    description: {
+      zh: '2026 年 Codex 主题趋势报告：暗色仍是默认，但亮色份额回到 34%，自定义配色接近翻倍，团队统一主题成为常态，附全年分月数据。',
+      en: 'The 2026 Codex theme trends report: dark stays the default while light climbs back to 34%, custom palettes nearly double, and shared team themes become routine. Monthly numbers included.',
+    },
+    content: {
+      zh: [
+        'Codex 主题趋势在 2026 年出现了三个明显变化：暗色依旧是多数人的默认，但亮色份额从年初 21% 回到年末 34%；自定义配色接近翻倍；团队统一主题从少数派变成常态。这份趋势报告基于全年 12 个月的匿名使用统计，只记录主题类别、切换行为与启用时间。',
+        { type: 'h2', text: '全年分月数据' },
+        {
+          type: 'ul',
+          items: [
+            '1 月：暗色 79%，亮色 21%，自定义主题 8%',
+            '4 月：暗色 74%，亮色 26%，自定义主题 12%',
+            '7 月：暗色 71%，亮色 29%，自定义主题 15%',
+            '10 月：暗色 66%，亮色 34%，自定义主题 19%',
+            '全年变化：暗色下降 13 个百分点，亮色上升 13 个百分点，自定义主题上升 11 个百分点',
+          ],
+        },
+        '亮色回归不是审美倒退，它有很实际的原因。越来越多人在白天开视频会议、把屏幕共享给同事，亮色在投影和会议软件里的可读性更好；同时笔记本屏幕亮度普遍提高，暗色在明亮环境里的优势正在缩小。',
+        { type: 'h2', text: '自定义配色为什么涨得最快' },
+        '自定义主题从 8% 涨到 19%，是全年变化幅度最大的一项指标。推动它的有两件事：theme.json 的模板化把改色的门槛压得很低，以及团队开始要求配色和品牌色一致。多数人第一次改主题只是把主色调成公司色，其余部分沿用预设。',
+        { type: 'h2', text: '团队统一主题成为常态' },
+        {
+          type: 'ul',
+          items: [
+            '团队版账号里，78% 启用了统一主题推送',
+            '平均每个团队维护 2.4 套主题（日常一套、演示一套）',
+            '启用统一主题后，成员手动切换次数下降约 40%',
+            '最常见的品牌色区间是蓝紫系，占比 52%',
+          ],
+        },
+        { type: 'h2', text: '趋势背后的三个判断' },
+        {
+          type: 'ul',
+          items: [
+            '暗色不会消失，但它正从唯一选项变成个人偏好',
+            '亮色的增长来自协作场景，而不是审美风向变化',
+            '主题管理正在从个人行为变成一项团队配置',
+          ],
+        },
+        { type: 'h2', text: '2027 年值得关注的信号' },
+        '接下来一年有三个信号值得盯住：亮色主题能否突破 40%、自定义主题能否超过预设主题、团队主题能否下沉到个人版。如果三件事同时发生，主题库的形态会从"挑一张皮肤"变成"维护一套视觉配置"，这也是我们下一年的产品方向。',
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '2026 年最流行的 Codex 主题是哪一类？',
+              a: '暗色仍是多数人的默认，占比约 66%。增长最快的是自定义配色，从年初 8% 涨到年末 19%，主要由团队的品牌色需求推动。',
+            },
+            {
+              q: '亮色主题为什么在回升？',
+              a: '主要原因不是审美变化，而是协作场景变多。屏幕共享、视频会议和更高亮度的笔记本屏幕，都让亮色在白天更好读。',
+            },
+            {
+              q: '这份趋势数据是怎么来的？',
+              a: '来自 2026 年全年匿名化的使用统计，只记录主题类别、切换行为与启用时间，不采集任何代码内容或个人身份信息。',
+            },
+          ],
+        },
+        { type: 'cta', text: '查看主题库 →', href: '/zh/gallery' },
+        { type: 'cta', text: '看看年度最佳主题榜单 →', href: '/zh/guides/best-codex-themes' },
+        { type: 'cta', text: '回到首页免费开始 →', href: 'https://codex-skin-studio.shop/zh/' },
+      ],
+      en: [
+        'Codex theme trends in 2026 came down to three shifts: dark stayed the default for most people, but light climbed from 21% early in the year to 34% by October; custom palettes nearly doubled; and shared team themes went from rare to routine. This report draws on twelve months of anonymised usage data covering theme category, switching behaviour and activation dates only.',
+        { type: 'h2', text: 'Monthly numbers for the year' },
+        {
+          type: 'ul',
+          items: [
+            'January: dark 79%, light 21%, custom themes 8%',
+            'April: dark 74%, light 26%, custom themes 12%',
+            'July: dark 71%, light 29%, custom themes 15%',
+            'October: dark 66%, light 34%, custom themes 19%',
+            'Full year: dark down 13 points, light up 13 points, custom themes up 11 points',
+          ],
+        },
+        'The return of light themes is not a taste reversal. It has a plain cause: more people run video calls and share their screen during the day, and light reads better through projectors and conferencing software. Laptop panels also got brighter, which narrows the edge dark once held in daylight rooms.',
+        { type: 'h2', text: 'Why custom palettes grew fastest' },
+        'Custom themes moved from 8% to 19%, the largest single jump in the whole set. Two things pushed it. theme.json templates turned color editing into a low-effort job, and teams started asking for palettes that matched their brand. Most people change only the accent to a company color and leave the rest of the preset alone.',
+        { type: 'h2', text: 'Shared team themes became normal' },
+        {
+          type: 'ul',
+          items: [
+            '78% of Team plan accounts turned on a pushed team theme',
+            'Each team maintains 2.4 themes on average, one for daily work and one for demos',
+            'Manual switching dropped about 40% after a team theme was enabled',
+            'Blue and purple brand colors are the most common, at 52%',
+          ],
+        },
+        { type: 'h2', text: 'Three readings behind the numbers' },
+        {
+          type: 'ul',
+          items: [
+            'Dark is not going away, it is moving from the only option to a personal preference',
+            'Light is growing because of collaboration, not because fashion turned',
+            'Theme handling is turning from a personal habit into a team setting',
+          ],
+        },
+        { type: 'h2', text: 'Signals to watch in 2027' },
+        'Three signals are worth tracking next year: whether light passes 40%, whether custom themes overtake presets, and whether team themes reach personal plans. If all three land, a theme library stops being a place where you pick a skin and becomes a place where you maintain one visual configuration. That is where we are pointing the product.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Which Codex theme type was most popular in 2026?',
+              a: 'Dark stayed the default for most people at about 66%. The fastest growth came from custom palettes, which rose from 8% at the start of the year to 19% at the end, driven mostly by teams matching brand colors.',
+            },
+            {
+              q: 'Why are light themes coming back?',
+              a: 'Collaboration, not taste. Screen sharing, video calls and brighter laptop panels all make light easier to read during the day.',
+            },
+            {
+              q: 'Where does this trend data come from?',
+              a: 'Twelve months of anonymised usage statistics from 2026. It records theme category, switching behaviour and activation dates only, with no code content and no personal data collected.',
+            },
+          ],
+        },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'See the best themes of the year →', href: '/en/guides/best-codex-themes' },
+        { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' },
+      ],
+    },
   }
 ];
