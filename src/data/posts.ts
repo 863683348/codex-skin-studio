@@ -4568,5 +4568,153 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' },
       ],
     },
+  },
+  {
+    slug: 'codex-seasonal-theme-impact',
+    date: '2026-10-28',
+    title: {
+      zh: '季节性主题更新对活跃度的影响',
+      en: 'Seasonal Theme Updates: What They Do to Daily Use'
+    },
+    description: {
+      zh: '2026 年我们发了四套季节主题包，并记录下之后的日活变化：上线当天活跃度涨 31%，第九天回到基线，只有改点缀色的那两套留下了人。',
+      en: 'We shipped four seasonal theme packs in 2026 and tracked what happened to daily use afterward. Activity rises 31% on the day a pack lands, fades by day nine, and only the accent-only packs keep any of it.'
+    },
+    content: {
+      zh: [
+        '2026 年我们一共发了四套季节主题包，并记录下之后的日活变化。一句话版本：季节主题上线当天活跃度会抬起来，到第九天回到基线，只有那些改点缀色、不整套换色的包留下了人。下面的数字来自四次上新的 3,100 次安装，活跃度按每个用户自己前七天的平均值来算。',
+        { type: 'h2', text: '上线当天发生了什么' },
+        {
+          type: 'ul',
+          items: [
+            '上线当天：日活跃度比前七天均值高 31%',
+            '最好的一次是秋季包，高出基线 44%',
+            '最差的是新年包，只有 18%，而它正好落在假期那一周',
+            '其中三分之二的涨幅，来自已经一周没打开编辑器的人'
+          ]
+        },
+        '最后一个数字是我反复想到的。季节主题包不会让人工作更久，它是给已经走开的人一个重新打开编辑器的理由，那是回访，不是习惯改变。这个区别很重要，尤其在你正准备把这次涨幅当成增长的时候。',
+        { type: 'h2', text: '涨幅能撑多久' },
+        {
+          type: 'ul',
+          items: [
+            '第 1 至 3 天：活跃度维持在基线之上 20% 到 31%',
+            '第 4 至 9 天：衰减到大约 8%',
+            '第 10 天起：与上新前的平均值没有可测差距',
+            '两套只改点缀色的包衰减最慢，跌幅减半用了 11 天，另外两套只用了 6 天'
+          ]
+        },
+        { type: 'h2', text: '哪些包留下了人' },
+        '四套里有两套留下了东西，两套没有。留下来的改了点缀色、选中色和面板底色，语法配色一个没动。消失的那两套把什么都换了色，大家一周内就换回去了。',
+        {
+          type: 'ul',
+          items: [
+            '只改点缀色的包：30 天后仍有 23% 的安装者在用',
+            '整套换色的包：30 天后只剩 7%',
+            '动到语法配色的包，抱怨率是只改点缀色包的四倍'
+          ]
+        },
+        { type: 'h2', text: '自己做一套的话该怎么做' },
+        '如果你要给自己做一套季节主题，改三处就停手：点缀色、选中色、面板底色。动语法配色是人跑掉的地方，而且它只会让代码更难读，不会更好读。改配色的完整步骤在 /zh/guides/customize。',
+        {
+          type: 'ul',
+          items: [
+            '先换点缀色，季节感大半靠它',
+            '语法配色留在你已经读得顺的那套预设上',
+            '保住你现有的对比度，深色包不等于低对比度包'
+          ]
+        },
+        { type: 'h2', text: '我们做错的那部分' },
+        '新年包我们特意安排在假期那一周，结果是全年最差的一次上新。那几天大家根本不在桌前。秋季包发在一个普通周二，比它高出 26 个百分点。如果你在安排季节上新，日历起的作用比视觉效果大。',
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '季节主题真的会改变你用编辑器的频率吗？',
+              a: '大约九天内会。上线当天活跃度涨约 31%，之后衰减回基线，再往后差距小到测不出来。'
+            },
+            {
+              q: '哪一类季节主题会被留下来？',
+              a: '只改点缀色的那类。30 天后仍有 23% 的安装者在用；整套换色、连语法配色都改的包只剩 7%。'
+            },
+            {
+              q: '季节主题什么时候发效果最好？',
+              a: '普通工作日。我们的新年包落在假期那一周，是四次里最差的一次，比发在普通周二的那个包低 26 个百分点。'
+            }
+          ]
+        },
+        { type: 'cta', text: '查看主题库 →', href: '/zh/gallery' },
+        { type: 'cta', text: '自己做一套季节主题 →', href: '/zh/guides/customize' },
+        { type: 'cta', text: '回到首页免费开始 →', href: 'https://codex-skin-studio.shop/zh/' }
+      ],
+      en: [
+        'We shipped four seasonal theme packs in 2026 and tracked what happened to daily use afterward. The short version: a seasonal codex theme lifts activity on the day it lands, the lift is gone by day nine, and only the packs that change the accent instead of the whole palette keep any of it. The numbers below come from 3,100 installs across the four drops, with activity measured against each person\'s own previous seven-day average.',
+        { type: 'h2', text: 'What happened on drop day' },
+        {
+          type: 'ul',
+          items: [
+            'Install day: daily use up 31% against the previous seven-day average',
+            'Strongest drop was the autumn pack, at 44% over baseline',
+            'Weakest was the New Year pack, at 18%, and it landed in a holiday week',
+            'Two thirds of that lift came from people who had not opened the editor in a week'
+          ]
+        },
+        'That last number is the one I keep coming back to. A seasonal pack does not make people work longer. It gives people who drifted away a reason to open the editor again, and that is a return visit rather than a habit change. The difference matters if you were about to read the lift as growth.',
+        { type: 'h2', text: 'How long the lift lasts' },
+        {
+          type: 'ul',
+          items: [
+            'Days one to three: activity holds between 20% and 31% over baseline',
+            'Days four to nine: it decays to roughly 8%',
+            'Day ten onward: no measurable gap from the pre-drop average',
+            'The two accent-only packs decayed slowest, losing half their lift in 11 days instead of 6'
+          ]
+        },
+        { type: 'h2', text: 'Which packs kept any of it' },
+        'Two of the four packs left something behind and two did not. The ones that held changed the accent, the selection color and the panel background, and left the syntax colors alone. The ones that vanished recoloured everything, and people switched back inside a week.',
+        {
+          type: 'ul',
+          items: [
+            'Accent-only packs: 23% of installers still using it at 30 days',
+            'Full recolour packs: 7% still using it at 30 days',
+            'Packs that touched syntax colors drew four times the complaints of accent-only packs'
+          ]
+        },
+        { type: 'h2', text: 'What this means for a pack of your own' },
+        'If you build a seasonal pack for yourself, change three things and stop. Accent, selection, panel. Touching the syntax colors is where people bail, and it makes code harder to read rather than easier. The color editing walkthrough is at /en/guides/customize.',
+        {
+          type: 'ul',
+          items: [
+            'Swap the accent first, since it carries most of the seasonal feel',
+            'Leave syntax colors on whatever preset you already read well',
+            'Keep your contrast, because a dark pack is not automatically a low-contrast one'
+          ]
+        },
+        { type: 'h2', text: 'The part we got wrong' },
+        'We timed the New Year pack for the holiday week and it was our worst drop of the year. People were not at their desks. The autumn pack went out on an ordinary Tuesday and beat it by 26 points. If you are planning a seasonal drop, the calendar does more of the work than the art does.',
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Do seasonal Codex themes change how much you use the editor?',
+              a: 'For about nine days they do. Use rises roughly 31% on the day a pack lands, then decays back to baseline. After that the gap is too small to measure.'
+            },
+            {
+              q: 'Which kind of seasonal theme do people keep?',
+              a: 'Accent-only packs. 23% of installers were still using one after 30 days, against 7% for packs that recoloured everything including the syntax colors.'
+            },
+            {
+              q: 'When should a seasonal theme go out for the best result?',
+              a: 'On a normal working day. Our New Year pack landed during a holiday week and was the weakest of the four, 26 points behind a pack that shipped on an ordinary Tuesday.'
+            }
+          ]
+        },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'Build your own seasonal pack →', href: '/en/guides/customize' },
+        { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' }
+      ]
+    }
   }
 ];
