@@ -4716,5 +4716,175 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' }
       ]
     }
+  },
+  {
+    slug: 'codex-theme-by-industry',
+    date: '2026-10-27',
+    title: {
+      zh: '各行业主题偏好差异：金融、科技与设计',
+      en: 'Industry Theme Preferences: What Finance, Tech and Design Pick'
+    },
+    description: {
+      zh: '金融团队选冷灰并把对比度拉满，设计团队把饱和度推到有人抱怨为止，科技夹在中间。来自 1,900 个账号的行业主题偏好数据。',
+      en: 'Finance teams pick cool grey and max out contrast, design teams push saturation until someone complains, and tech sits between them. Theme preferences across three industries, from 1,900 accounts.'
+    },
+    content: {
+      zh: [
+        '我们按账号上的行业字段把主题使用数据分开看，最大的三个行业挑出来的东西完全不一样。金融偏冷灰加高对比，设计把饱和度一路推到会议室里有人抱怨，科技夹在两者中间。下面的数字来自 1,900 个活跃账号，按团队版账号上的行业字段分组。',
+        { type: 'h2', text: '三个行业各自挑了什么' },
+        {
+          type: 'ul',
+          items: [
+            '金融：冷灰底色，62% 用深色，对比度普遍在 7:1 以上',
+            '科技：深色底 71%，点缀色铺满整个色环',
+            '设计：浅色底 48%，平均饱和度是三者里最高的',
+            '共同习惯：每组都留着一套高对比的语法配色预设'
+          ]
+        },
+        '有一件事让我意外。行业之间的差异是真的，但它比同一个行业内部不同团队之间的差异还小。两个金融团队彼此的相似度，高于一个金融团队和一个设计团队。写下来听着像废话，但我没料到数据会这么说。',
+        { type: 'h2', text: '金融：颜色之前先看对比度' },
+        '金融是我们这里最保守的一组。冷灰、深色底、对比度数字高到能在明亮房间里用廉价显示器也撑住。原因不是审美。这些人里有一半每天盯着屏幕上的数字八小时，而一个低对比度的红色，在它代表亏损的时候是实打实的问题。',
+        {
+          type: 'ul',
+          items: [
+            '62% 用深色底，全站平均是 66%',
+            '平均对比度 8.4:1，三个行业里最高',
+            '点缀色集中在蓝和石板灰，两者合计 71%',
+            '暖色基本只出现在报错状态，不做点缀色'
+          ]
+        },
+        { type: 'h2', text: '科技：分布最广，也最吵' },
+        '科技账号把整个色环都用遍了，关于配色的争论也最多。这个群体同时也是每月换主题超过一次的比例最高的那一组，跟留存报告里的切换数据对得上。',
+        {
+          type: 'ul',
+          items: [
+            '深色底 71%，三个行业里最高',
+            '点缀色分布均匀，没有任何一个色系超过 30%',
+            '31% 的人每月至少换一次主题',
+            '自定义配色占使用量的 26%，高于 19% 的平均值'
+          ]
+        },
+        { type: 'h2', text: '设计：偏浅、高饱和，而且愿意吵' },
+        '设计是唯一一个浅色压过深色的群体，也是唯一一个饱和度往上走的群体。他们中有一半还单独维护一套高对比预设，专门留给评审会。我觉得这是整套数据里最像样的一个习惯。',
+        {
+          type: 'ul',
+          items: [
+            '48% 用浅色底，唯一超过 40% 的一组',
+            '平均饱和度是金融的 1.6 倍',
+            '52% 另外留了一套预设，只用于屏幕评审',
+            '紫和洋红点缀合计占 34%'
+          ]
+        },
+        { type: 'h2', text: '从另外两家身上借点东西' },
+        '如果你喜欢别的行业的做法，借习惯，别借配色。把金融的对比度检查拿过去不需要任何代价，在哪儿都管用。把设计的饱和度搬到深色底上，多半会做出一套在明亮房间里读不了的主题。改配色的步骤在 /zh/guides/customize。',
+        {
+          type: 'ul',
+          items: [
+            '就算你觉得颜色没问题，对比度也还是查一下',
+            '不管在哪个行业，都留一套预设专门给屏幕共享',
+            '饱和度是要小心拧的那个旋钮，不是点缀色'
+          ]
+        },
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '哪个行业用深色 Codex 主题最多？',
+              a: '科技，深色底占 71%。金融接近，62%；设计是唯一浅色占优的一组，48%。'
+            },
+            {
+              q: '金融团队为什么把对比度留那么高？',
+              a: '因为长时间读数字。8.4:1 的平均对比度在明亮房间里的廉价面板上也撑得住，而一个低对比度的红色，在它表示亏损的时候就是问题。'
+            },
+            {
+              q: '我可以照搬别的行业的主题吗？',
+              a: '借习惯，别借配色。金融的对比度检查、设计的第二套评审预设都能搬，设计的饱和度搬到深色底上就撑不住。'
+            }
+          ]
+        },
+        { type: 'cta', text: '查看主题库 →', href: '/zh/gallery' },
+        { type: 'cta', text: '对比年度最佳主题 →', href: '/zh/guides/best-codex-themes' },
+        { type: 'cta', text: '回到首页免费开始 →', href: 'https://codex-skin-studio.shop/zh/' }
+      ],
+      en: [
+        'We split theme usage by the industry field on the account, and the three biggest groups do not pick anything like the same thing. Finance leans cool grey with contrast turned up, design pushes saturation until somebody in the room objects, and tech sits between them. The numbers below come from 1,900 active accounts grouped by that field.',
+        { type: 'h2', text: 'What each industry actually picks' },
+        {
+          type: 'ul',
+          items: [
+            'Finance: cool grey backgrounds, 62% on a dark base, contrast at 7:1 or higher',
+            'Tech: dark base at 71%, accent colors spread across the whole wheel',
+            'Design: light base at 48%, the highest average saturation of the three',
+            'Shared habit: every group keeps one high-contrast syntax preset'
+          ]
+        },
+        'One thing surprised me. The industry gaps are real, but they are smaller than the gaps between teams inside the same industry. Two finance teams resemble each other more than a finance team resembles a design team. That sounds obvious once it is written down, and I did not expect it from the data.',
+        { type: 'h2', text: 'Finance: contrast before color' },
+        'Finance is the most conservative group we have. Cool grey, dark base, and contrast numbers that hold up on a cheap panel in a bright room. The reason is not taste. Half of these people read figures on screen for eight hours, and a low-contrast red is a genuine problem when it marks a loss.',
+        {
+          type: 'ul',
+          items: [
+            '62% use a dark base, against 66% across all accounts',
+            'Average contrast ratio 8.4:1, the highest of the three groups',
+            'Accent colors cluster in blue and slate, 71% combined',
+            'Warm colors show up as error states rather than accents'
+          ]
+        },
+        { type: 'h2', text: 'Tech: the widest spread and the loudest arguments' },
+        'Tech accounts use the full color wheel and argue about it the most. They are also the group most likely to switch themes more than once a month, which lines up with the switching numbers in the retention report.',
+        {
+          type: 'ul',
+          items: [
+            '71% on a dark base, the highest of the three',
+            'Accent colors spread evenly, no single family above 30%',
+            '31% switch themes at least once a month',
+            'Custom palettes are 26% of usage, well above the 19% average'
+          ]
+        },
+        { type: 'h2', text: 'Design: light, saturated, and willing to argue' },
+        'Design is the only group where light beats dark and the only one where saturation goes up instead of down. Half of them also keep a separate high-contrast preset for review sessions, which I think is the most sensible habit anywhere in this data.',
+        {
+          type: 'ul',
+          items: [
+            '48% use a light base, the only group above 40%',
+            'Average saturation is 1.6 times the finance figure',
+            '52% keep a second preset just for screen reviews',
+            'Purple and magenta accents together make up 34%'
+          ]
+        },
+        { type: 'h2', text: 'Stealing from the other two' },
+        'If you like what another industry does, take the habit rather than the palette. Borrowing finance\'s contrast check costs nothing and works everywhere. Borrowing design\'s saturation on a dark base tends to end in a theme you cannot read in a bright room. The color editing walkthrough is at /en/guides/customize.',
+        {
+          type: 'ul',
+          items: [
+            'Run the contrast check even when the color looks fine to you',
+            'Keep a second preset for screen sharing, whatever industry you are in',
+            'Saturation is the dial to turn carefully, not the accent'
+          ]
+        },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Which industry uses dark Codex themes the most?',
+              a: 'Tech, at 71% on a dark base. Finance is close behind at 62%, while design is the only group where light wins, at 48%.'
+            },
+            {
+              q: 'Why do finance teams keep contrast so high?',
+              a: 'Long stretches of reading figures. An average of 8.4:1 holds up on a cheap panel in a bright room, and a low-contrast red is a problem when it marks a loss.'
+            },
+            {
+              q: 'Should I copy a theme from another industry?',
+              a: 'Take the habit, not the palette. Finance\'s contrast check and design\'s second review preset both transfer. Design\'s saturation does not survive a dark base.'
+            }
+          ]
+        },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'Compare the best themes of the year →', href: '/en/guides/best-codex-themes' },
+        { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' }
+      ]
+    }
   }
 ];
