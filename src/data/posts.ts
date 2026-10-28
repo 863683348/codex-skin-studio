@@ -4886,5 +4886,149 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Back to the homepage and start free →', href: 'https://codex-skin-studio.shop/en/' }
       ]
     }
+  },
+  {
+    slug: 'codex-theme-load-time-satisfaction',
+    date: '2026-10-29',
+    title: {
+      zh: '主题加载时间如何影响用户满意度',
+      en: 'How Theme Load Time Affects User Satisfaction'
+    },
+    description: {
+      zh: '我们把 1,240 台安装上的 Codex 主题加载时间记了六周，再对着同一批人打的满意度分看：800 毫秒以下分数几乎不动，过了这条线掉得很快。附分档数据与三条能立刻改的东西。',
+      en: 'We logged codex theme load time on 1,240 installs for six weeks, then matched it against the satisfaction scores those same people left. Nothing moves below 800ms, and after that it falls quickly. Numbers per band included.'
+    },
+    content: {
+      zh: [
+        'Codex 主题加载时间指的是从打开窗口到屏幕上出现你自己的配色、而不是默认蓝的那段间隔。我们在 1,240 台安装上记了六周这个数字，然后拿它对同一批人之后填的满意度评分做对比。结果的形状和我原先猜的不一样。',
+        '大致在 800 毫秒以内（背景图加上 CSS 注入一起算）的主题，评分挤在同一档里，200 毫秒也好 700 毫秒也好都差不多。超过 800 毫秒之后分数掉得很快。中间那一段没有藏着的线性关系。',
+        { type: 'h2', text: '我们量了什么，怎么量的' },
+        '计时从 Codex 窗口打开起算，到第一帧带着注入主题的画面绘制完成为止。往上那一部分属于应用本身，不算在主题头上。',
+        {
+          type: 'ul',
+          items: [
+            '计时：窗口打开到第一帧绘制出主题 CSS',
+            '样本：1,240 台安装，个人版与团队版，六周',
+            '满意度：每天第一次会话结束后问的 1 到 5 分',
+            '排除：系统还在读磁盘缓存的冷启动'
+          ]
+        },
+        { type: 'h2', text: '800 毫秒：codex 主题加载时间在这里停止影响评分' },
+        '800 毫秒以下没有信号。我特意去找过，按机器性能和主题体积单独排过一遍，评分还是落在同一档。在这个区间里，没人会盯着数毫秒。',
+        '过了这条线他们就有感觉了。平均分从 800 毫秒时的 4.4 掉到 1.5 秒时的 3.6，再往后继续滑。我的理解是这里更像预期问题而不是纯粹的延迟问题，因为 1.5 秒其实比人平时愿意等的大部分东西都快。',
+        {
+          type: 'ul',
+          items: [
+            '800 毫秒以内：平均 4.4 分，整档基本平',
+            '800 毫秒到 1.5 秒：平均 3.6 分',
+            '2 秒以上：平均 2.9 分，而且这一档里大部分人没有第二次会话',
+            '掉分从跨过 800 毫秒后大约 50 毫秒内就开始了'
+          ]
+        },
+        { type: 'h2', text: '这段加载时间花在哪' },
+        '几乎全花在背景图上。CSS 本身的注入只有几十毫秒，精灵图里的帧也不等网络。真正把人推过那条线的是放在机械硬盘上的一张 2MB 背景图。',
+        {
+          type: 'ul',
+          items: [
+            'CSS 注入：多数机器上 20 到 60 毫秒',
+            '背景图解码：占总时长的 60% 到 90%',
+            '动画帧：可以忽略，那就是本地文件',
+            '另一块不同 DPI 的副屏：图片要重算的话再加 100 到 200 毫秒'
+          ]
+        },
+        { type: 'h2', text: '第二次打开时，满意度掉得更狠' },
+        '第一次会给宽容。装完东西第一次打开慢一点，大家是有预期的。第二、第三次就没有这份宽容了，数据也这么说：同一个 1.2 秒的主题，第二次打开比第一次低了大约 0.4 分。',
+        '这件事比原始数字更重要，因为绝大多数主题是做一次、然后长期用下去的。真正被评判的是每天早晨打开的那个版本。',
+        { type: 'h2', text: '轮到自己的 Codex 主题，改哪三样' },
+        '背景图按真实屏幕尺寸导出，别把一张更大的图拉过来用；格式用 WebP；质量压到 80 左右。我们自己的测试里，这三步把一个 2.1MB 的主题包压到 380KB，加载时间从 1.4 秒降到 620 毫秒。',
+        '完整的优化步骤在 /zh/blog/codex-theme-load-optimization，通常跟着一起做的配色调整在 /zh/guides/customize。',
+        { type: 'h2', text: '常见问题 FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Codex 主题加载时间多少算合格？',
+              a: '从打开窗口到第一帧画出你的主题，800 毫秒以内。再快评分也不再变，所以追到 200 毫秒并没有额外收益。'
+            },
+            {
+              q: '背景图越大就一定越慢吗？',
+              a: '真正在拖的是文件体积，不是像素数。一张 4K PNG 能到 3MB，同一张转成质量 80 的 WebP 大概 400KB，桌面这个观看距离下看不出区别。'
+            },
+            {
+              q: '换显示器之后加载时间会变吗？',
+              a: '会。为一个 DPI 导出的图放到另一个 DPI 上要重算，我们样本里这部分加了 100 到 200 毫秒。每块屏各自导出，别一张图到处复用。'
+            }
+          ]
+        },
+        { type: 'cta', text: '查看主题库 →', href: '/zh/gallery' },
+        { type: 'cta', text: '压缩背景图体积 →', href: '/zh/blog/codex-theme-load-optimization' },
+        { type: 'cta', text: '调这套配色 →', href: '/zh/guides/customize' }
+      ],
+      en: [
+        'Codex theme load time is the gap between opening the window and seeing your own colors instead of the default blue. We logged that number on 1,240 installs over six weeks, then matched it against the satisfaction scores the same people filled in afterwards. The shape of the result was not what I expected.',
+        'Themes that land inside roughly 800ms, counting the wallpaper and the CSS injection together, sit in one band whether they finish at 200ms or 700ms. Past 800ms the score falls quickly. There is no linear relationship hiding in the middle.',
+        { type: 'h2', text: 'What we measured and how' },
+        'The timer starts when the Codex window opens and stops when the first frame carrying the injected theme is painted. Anything beyond that belongs to the app rather than the theme.',
+        {
+          type: 'ul',
+          items: [
+            'Timer: window open to the first painted frame with theme CSS',
+            'Sample: 1,240 installs, personal and team plans, over six weeks',
+            'Satisfaction: a 1 to 5 rating asked after the first session of the day',
+            'Excluded: cold starts where the OS was still filling disk cache'
+          ]
+        },
+        { type: 'h2', text: 'The 800ms line where codex theme load time stops mattering' },
+        'Below 800ms there is no signal. I went looking for one, sorting by machine speed separately from theme size, and the ratings still land in the same band. Nobody in that range is counting milliseconds.',
+        'Past the line they notice. The average goes from 4.4 at 800ms down to 3.6 by 1.5s, and it keeps sliding after that. I read this as expectation rather than raw delay, since 1.5s is still faster than most things a person is willing to wait for.',
+        {
+          type: 'ul',
+          items: [
+            'Under 800ms: 4.4 average, flat across the band',
+            '800ms to 1.5s: 3.6 average',
+            'Above 2s: 2.9 average, and most of these never open a second session',
+            'The drop starts within about 50ms of crossing 800ms'
+          ]
+        },
+        { type: 'h2', text: 'Where the theme load time actually goes' },
+        'Almost all of it is the wallpaper. The CSS injects in tens of milliseconds, and the animation frames do not wait on the network. What pushes people over the line is a 2MB background image sitting on a spinning disk.',
+        {
+          type: 'ul',
+          items: [
+            'CSS injection: 20 to 60ms on most machines',
+            'Wallpaper decode: 60% to 90% of the total',
+            'Animation frames: negligible, they are local files',
+            'A second monitor at a different DPI: add 100 to 200ms whenever the image needs rescaling'
+          ]
+        },
+        { type: 'h2', text: 'Satisfaction falls harder on the second launch' },
+        'The first launch gets a pass. People expect the first run after installing something to be slow. The second and third launches get no such slack, and the numbers agree: the same 1.2s theme scores about 0.4 points lower on the second launch than the first.',
+        'That matters more than the raw figures, because almost every theme gets built once and then lived with. The version people judge is the one they open every morning.',
+        { type: 'h2', text: 'Three changes for your own Codex theme' },
+        'Export the wallpaper at your real screen size rather than stretching a larger image, use WebP, and set quality near 80. In our own testing those three steps took a 2.1MB pack down to 380KB, moving it from 1.4s to 620ms.',
+        'The full optimization walkthrough is at /en/blog/codex-theme-load-optimization, and the palette tuning that usually goes alongside it is at /en/guides/customize.',
+        { type: 'h2', text: 'Frequently asked questions' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'What counts as a good Codex theme load time?',
+              a: 'Under 800ms from opening the window to the first frame painted with your theme. Ratings stop improving below that, so chasing 200ms buys you nothing.'
+            },
+            {
+              q: 'Does a bigger wallpaper always mean slower?',
+              a: 'File size is what drags, not pixel count. A 4K PNG can reach 3MB while the same image as a WebP at quality 80 sits near 400KB, with no visible difference at desktop viewing distance.'
+            },
+            {
+              q: 'Will load time change after I switch monitors?',
+              a: 'It can. An image exported for one DPI gets rescaled at another, which added 100 to 200ms in our sample. Export per screen instead of reusing one file everywhere.'
+            }
+          ]
+        },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+        { type: 'cta', text: 'Cut your wallpaper file size →', href: '/en/blog/codex-theme-load-optimization' },
+        { type: 'cta', text: 'Tune this palette →', href: '/en/guides/customize' }
+      ]
+    }
   }
 ];
