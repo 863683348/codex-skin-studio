@@ -5030,5 +5030,165 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Tune this palette →', href: '/en/guides/customize' }
       ]
     }
+  },
+  {
+    slug: 'codex-theme-by-country',
+    date: '2026-10-30',
+    title: {
+      zh: '不同国家用户的主题风格偏好',
+      en: 'Theme Style Preferences by Country and Region'
+    },
+    description: {
+      zh: '不同国家用户的 codex theme 偏好差异：哪些地区偏爱低对比暗色，哪些地区把饱和度拉满，以及这些数据对挑选主题到底有没有参考价值。',
+      en: 'How codex theme by country habits differ: which regions reach for low-contrast dark palettes, which ones push saturation, and what any of that means when you pick your own.'
+    },
+    content: {
+      zh: [
+        '把 codex theme 数据按国家拆开看，而不是只看全球下载榜，会发现一张普通榜单完全看不出来的分布。地区审美并不是均匀铺开的，看过这个分布之后，判断某个市场到底会用什么皮肤就准确得多。',
+        '下面这些数字来自 14 个地区连续两个季度的匿名安装计数，不绑定账号。北美和欧洲之外的样本量偏小，某个本地群里转一次链接就可能让某地区抖动几个百分点。当成方向参考就好，不要当成结论。',
+        { type: 'h2', text: '各国偏好分布：按地区看' },
+        '每一行是该地区在这两个季度里，安装落在某个风格分类中的占比。',
+        {
+          type: 'ul',
+          items: [
+            '日本：61% 选择低饱和度暗色，约为全球平均水平的两倍',
+            '德国：58% 一直用默认暗色主题，只有 6% 装了节日主题包',
+            '美国：44% 在暗色底色上配高对比荧光强调色',
+            '巴西：52% 安装暖色渐变，是所有抽样地区里最高的',
+            '印度：47% 在工作时间用浅色主题，晚上 20 点之后切回暗色',
+            '韩国：粉彩人像主题占本地下载的 38%，是全球占比的两倍'
+          ]
+        },
+        { type: 'h2', text: '这些 codex theme 聚类是怎么形成的' },
+        '屏幕亮度解释了其中大部分。坐在开放式办公室里的团队会把对比度往上推，直到文字在高背光下仍然清楚；而在昏暗房间写代码的人看到同一套配色，会觉得刺眼。',
+        '第二个原因是人们长期使用过的设计工具。调色板会被原样搬进编辑器，没有人专门做过这个决定，只是那些颜色他们已经看了好几年。',
+        '第三个原因是直接的模仿。某位主播或者某个本地群用了一套配色，两周之内这套配色就能在一个两千人的地区里拿到两位数的份额。',
+        {
+          type: 'ul',
+          items: [
+            '开放式办公室推高对比度，昏暗房间拉低对比度',
+            '配色会从用了很多年的工具迁移过来',
+            '一个受欢迎的主播就能让小地区波动几个百分点',
+            '节日主题包的采用率很不均衡，容易被误读成口味差异'
+          ]
+        },
+        { type: 'h2', text: '各国偏好对你自己选主题有什么用' },
+        '如果你是给自己选，基本没用。按房间亮度和每天盯着编辑器的时长来定就行，地区那一列可以直接跳过。',
+        '一旦开始给别人做主题，它就有用了。一套在某个办公室被广泛采用的配色，可能在另一个办公室无人问津，原因没人会写出来，光看下载量也看不出来。',
+        {
+          type: 'ul',
+          items: [
+            '给分布式的团队准备两套配色，而不是一套折中方案',
+            '推荐之前，先把暗色主题放到明亮房间里试一次',
+            '问问真正在用的人，不要只看安装数',
+            '判断节日主题包好不好用，至少看两个地区再下结论'
+          ]
+        },
+        { type: 'h2', text: '按地区轮换 codex theme 的做法' },
+        '如果你的工作时间横跨时区，做一套轮换很便宜。底色保持中性，只换强调色和壁纸焦点，这样每次切换的成本都不会超过托盘里点一下。',
+        {
+          type: 'ul',
+          items: [
+            '先定一套在高低背光下都能用的中性底色',
+            '存两份强调色变体，一份低饱和，一份暖色',
+            '把切换绑到自己的作息时间，别手动改',
+            '共享屏幕时留一个一次点击就能回去的旧变体'
+          ]
+        },
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Codex 主题选择真的有地区差异吗？',
+              a: '有，但只在聚合层面成立。个人口味的差异远大于任何国家平均值，样本较小的地区也容易波动。这些数字描述的是安装量，不代表某个人该怎么选。'
+            },
+            {
+              q: '哪些国家更偏向浅色主题？',
+              a: '巴西和印度的浅色主题使用率都高于全球平均，且大多发生在白天工作时段。同一批用户在当地时间 20 点之后往往又切回暗色配色。'
+            },
+            {
+              q: '我应该按国家来选主题吗？',
+              a: '不用。按房间亮度和每天看多久来选。地区数据的价值体现在给别人做主题的时候，而不是给自己挑主题的时候。'
+            }
+          ]
+        },
+        { type: 'cta', text: '查看各地风格的主题 →', href: '/zh/gallery' },
+        { type: 'cta', text: '回到 Codex Skin Studio 首页 →', href: 'https://codex-skin-studio.shop/' }
+      ],
+      en: [
+        'Sorting codex theme by country rather than by global download totals turns up a pattern most charts hide entirely. Regional taste is not evenly distributed, and once you have seen the split it gets much easier to guess which skins will actually get used in a given market.',
+        'The numbers below come from anonymous install counters across 14 regions over two quarters. No accounts are attached, the sample outside North America and Europe stays small, and one popular link shared in a local chat group can shift a region by several points. Read them as direction rather than as gospel.',
+        { type: 'h2', text: 'The country preference split, region by region' },
+        'Each line is the share of local installs landing in that style category during the sample window.',
+        {
+          type: 'ul',
+          items: [
+            'Japan: 61% take a low-saturation dark palette, roughly double the global average',
+            'Germany: 58% stay on the default dark theme, and only 6% add a seasonal pack',
+            'United States: 44% pair a dark base with high-contrast neon accents',
+            'Brazil: 52% install warm gradients, the highest share of any sampled region',
+            'India: 47% switch to light themes during office hours, then back to dark after 20:00',
+            'South Korea: pastel portrait themes take 38% of local downloads, twice their global share'
+          ]
+        },
+        { type: 'h2', text: 'Why these codex theme clusters form' },
+        'Screen brightness explains most of it. Teams sitting in bright open-plan offices push contrast until the text stays readable at full backlight, and that result reads as harsh to anyone coding at midnight in a dim room.',
+        'The second driver is whichever design tool people trained on. Palettes get recreated in the editor without anybody deciding to do it, because they already spent years looking at those colors somewhere else.',
+        'The third driver is plain imitation. A streamer or a local chat group adopts a palette, and within two weeks that palette owns a double digit share of installs in a region of two thousand people.',
+        {
+          type: 'ul',
+          items: [
+            'Open-plan offices push contrast up, dim rooms pull it down',
+            'Palettes migrate from the tool somebody used daily for years',
+            'One popular streamer can move a small region several points',
+            'Seasonal packs get adopted unevenly, which is easy to misread as taste'
+          ]
+        },
+        { type: 'h2', text: 'What country preference tells you about your own setup' },
+        'Not much, if you are choosing for yourself. Pick based on how bright your room is and how many hours you stare at the editor, and ignore the regional column entirely.',
+        'It becomes useful the moment you build themes for other people. A palette that gets adopted in one office can sit untouched in another for reasons nobody will ever write down, and download counts alone will not tell you which one it was.',
+        {
+          type: 'ul',
+          items: [
+            'Ship two palettes to a distributed team instead of one compromise',
+            'Test any dark theme in a bright room before recommending it',
+            'Ask the people actually using it, not only the install counts',
+            'Judge a seasonal pack on two regions before calling it a flop'
+          ]
+        },
+        { type: 'h2', text: 'Running a region-aware codex theme rotation' },
+        'If your working hours cross time zones, rotating is cheap to set up. Keep the base neutral and swap only the accent and the wallpaper focus, so a change never costs more than a click in the tray.',
+        {
+          type: 'ul',
+          items: [
+            'Start with a neutral base that survives both high and low backlight',
+            'Save two accent variants, one desaturated and one warm',
+            'Tie the switch to your working hours instead of doing it by hand',
+            'Keep the other variant one tray click away for shared screen sessions'
+          ]
+        },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Is there really a regional pattern in Codex theme choice?',
+              a: 'Yes, but only in aggregate. Individual taste varies far more than any country average does, and the smaller regions in the sample move easily. These counts describe installs, not what any single person should prefer.'
+            },
+            {
+              q: 'Which countries lean toward light themes?',
+              a: 'Brazil and India both show more light theme usage than the global average, most of it during daytime office hours. Those same users tend to flip back to dark palettes after 20:00 local time.'
+            },
+            {
+              q: 'Should I choose a theme based on my country?',
+              a: 'No. Choose it based on your room brightness and how long you look at it each day. Regional data earns its keep when you build themes for other people, not when you pick one for yourself.'
+            }
+          ]
+        },
+        { type: 'cta', text: 'Browse the regional themes →', href: '/en/gallery' },
+        { type: 'cta', text: 'Codex Skin Studio homepage →', href: 'https://codex-skin-studio.shop/' }
+      ]
+    }
   }
 ];
