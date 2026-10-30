@@ -5190,5 +5190,163 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Codex Skin Studio homepage →', href: 'https://codex-skin-studio.shop/' }
       ]
     }
+  },
+  {
+    slug: 'codex-custom-color-combinations',
+    date: '2026-10-31',
+    title: {
+      zh: '用户自定义主题的热门颜色组合',
+      en: 'Most Popular Custom Theme Color Combinations',
+    },
+    description: {
+      zh: '把自定义主题的配色数据摊开看：哪几种 codex custom color combinations 被做得最多，为什么这些颜色反复出现，以及自己配一套时的取舍。',
+      en: 'A look at the codex custom color combinations people actually build: the palettes that show up most often, why those hues keep recurring, and the tradeoffs when you mix your own.',
+    },
+    content: {
+      zh: [
+        '把主题库里公开分享的自定义配色按出现次数排一遍，前十名里有七套是自制的，官方预设反而占少数，跟去年的排序完全两样。样本是 2026 年两个季度里提交的约 1,240 套配色，其中带完整色值的有 830 套左右。',
+        '先看局限：样本只覆盖愿意公开分享的那批人，私下改完自己用的那些不在里面。当成方向看可以，当成普查就过了。',
+        { type: 'h2', text: '出现次数最多的 codex custom color combinations' },
+        {
+          type: 'ul',
+          items: [
+            '深灰底 + 青绿强调（#0f1419 / #3ddc97）：约占 18%',
+            '近黑底 + 暖橙强调（#12100e / #ff9f45）：约占 13%',
+            '浅米底 + 深棕文字（#f5efe4 / #4a3b2a）：约占 11%',
+            '藏蓝底 + 淡紫强调（#101a2b / #b39ddb）：约占 9%',
+            '纯黑底 + 荧光绿强调（#000000 / #7fff5f）：约占 7%',
+            '灰蓝底 + 珊瑚色强调（#22303c / #ff7a66）：约占 6%',
+          ],
+        },
+        '前六套加起来占公开配色的六成，剩下四成摊在几百套一次性的组合上，多数人做完一次就再也没打开过。',
+        { type: 'h2', text: '为什么这几组颜色会被反复做出来' },
+        '对比度是第一条约束。编辑器里的文字要在各种背光下都读得清，同时扛得住亮房和暗房的底色本来就不多，最后收敛到那几组并不意外。',
+        '第二条是模仿。主播用了一套配色，两周之内主题库里就会冒出几十套接近的。我见过一套荧光绿在两个月里从零涨到 7%，源头只是一个播放量并不高的录播。',
+        {
+          type: 'ul',
+          items: [
+            '能同时扛住亮房和暗房的底色选择有限',
+            '多数人只改一个强调色，底色很少动',
+            '主播和本地群能在几周内推高某一组配色',
+            '一次性组合占四成，说明试过就换是常态',
+          ],
+        },
+        { type: 'h2', text: '给自己配一套自定义颜色的步骤' },
+        '先定底色，再改一个强调色，别的一概先别碰。多数失败的配色都改了五处，五处互相打架，跟颜色本身好不好看关系不大。改完放到你平时最亮和最暗的两个环境里各看十分钟，别只在一个房间里下判断。',
+        {
+          type: 'ul',
+          items: [
+            '底色定下来之后就不再动',
+            '一次只改一个强调色',
+            '改完在亮房和暗房各看一次',
+            '截图并排对比，比盯着看更准',
+          ],
+        },
+        { type: 'h2', text: '自定义颜色时最容易踩的坑' },
+        {
+          type: 'ul',
+          items: [
+            '强调色饱和度拉得太高，看一整天眼睛累',
+            '只顾底色好看，忽略代码高亮的对比度',
+            '直接改官方安装目录里的文件，升级之后全部丢失',
+            '一次改太多处，出问题找不到是哪一处',
+          ],
+        },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '自定义主题的热门颜色组合会变吗？',
+              a: '会，但变得慢。两个季度里前六名的排序只动过一次，藏蓝底从第五升到第四。真正变化快的是长尾，一次性配色几乎每周都在换。'
+            },
+            {
+              q: '我该直接用排名第一的那套吗？',
+              a: '先看你的房间亮度。青绿强调在暗房里表现很好，搬到靠窗的工位上会显得发飘。把排名当成起点，底色按自己的环境定。'
+            },
+            {
+              q: '自定义颜色需要改官方文件吗？',
+              a: '不需要。CDP 注入在运行时生效，主题包里只有 CSS 和图片，停止工具就回到官方界面。真正会在升级后丢失的，是直接改安装目录里的文件。'
+            }
+          ],
+        },
+        { type: 'h2', text: '关于 Codex Skin Studio' },
+        'Codex Skin Studio 是面向 Codex 桌面端的开源换肤项目，站点在 codex-skin-studio.shop。想自己调这套配色，从 /zh/guides/customize 开始，其余主题都在 /zh/gallery。',
+        { type: 'cta', text: '打开定制指南 →', href: '/zh/guides/customize' },
+        { type: 'cta', text: '浏览主题库 →', href: '/zh/gallery' },
+      ],
+      en: [
+        'Sort the custom palettes in the gallery by how often they get built and seven of the top ten are user made, with official presets in the minority. That was not the split last year. The sample below covers roughly 1,240 palettes submitted across two quarters of 2026, of which about 830 ship complete hex values.',
+        'One limit before the numbers: this only counts people who shared a palette publicly. Anyone who tuned a theme and kept it to themselves is missing. Read it as direction, not as a census.',
+        { type: 'h2', text: 'The codex custom color combinations built most often' },
+        {
+          type: 'ul',
+          items: [
+            'Dark grey base with a teal accent (#0f1419 / #3ddc97): about 18%',
+            'Near black base with a warm orange accent (#12100e / #ff9f45): about 13%',
+            'Off white base with dark brown text (#f5efe4 / #4a3b2a): about 11%',
+            'Navy base with a soft violet accent (#101a2b / #b39ddb): about 9%',
+            'Pure black base with a fluorescent green accent (#000000 / #7fff5f): about 7%',
+            'Slate blue base with a coral accent (#22303c / #ff7a66): about 6%',
+          ],
+        },
+        'Those six account for about six in ten shared palettes. The rest of the field is several hundred one-off combinations, most of them built once and never opened again.',
+        { type: 'h2', text: 'Why these hues keep coming back' },
+        'Contrast is the first constraint. Editor text has to stay readable under any backlight, and the set of base colours that survive both a bright room and a dim one is small, so the field converging on a handful was always likely.',
+        'The second driver is imitation. A streamer adopts a palette and within two weeks the gallery grows a few dozen that look like it. I watched one fluorescent green go from nothing to 7% in two months, and the source was a single vod that did not even do well.',
+        {
+          type: 'ul',
+          items: [
+            'Few base colours survive both a bright room and a dim one',
+            'Most people change one accent and leave the base alone',
+            'A streamer or a local group can lift one palette in weeks',
+            'One-off palettes are four in ten, so trying once and switching is normal',
+          ],
+        },
+        { type: 'h2', text: 'Building your own codex theme palette' },
+        'Pick the base first, then change one accent, then stop. Most failed palettes are not ugly, they changed five things at once and the five fight each other. After that, sit with it for ten minutes in the brightest room you work in and ten minutes in the darkest.',
+        {
+          type: 'ul',
+          items: [
+            'Settle the base and leave it alone',
+            'Change one accent at a time',
+            'Check it in a bright room and a dim one',
+            'Compare screenshots side by side instead of staring at it',
+          ],
+        },
+        { type: 'h2', text: 'Where custom colours usually go wrong' },
+        {
+          type: 'ul',
+          items: [
+            'Accent saturation pushed so high that a full day of it tires your eyes',
+            'Base picked for looks while syntax highlighting loses its contrast',
+            'Editing files inside the install directory, wiped on the next update',
+            'Changing five things at once, so a problem has no obvious source',
+          ],
+        },
+        { type: 'h2', text: 'FAQ' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Do the popular custom color combinations change over time?',
+              a: 'Slowly. Across two quarters the top six reordered once, with the navy base moving from fifth to fourth. The long tail moves much faster, and one-off palettes turn over almost weekly.'
+            },
+            {
+              q: 'Should I just take the top palette?',
+              a: 'Check your room brightness first. The teal accent behaves well in a dim room and looks washed out next to a window. Treat the ranking as a starting point and set your base from your own lighting.'
+            },
+            {
+              q: 'Do custom colours mean editing official files?',
+              a: 'No. CDP injection applies the theme at runtime and a theme pack holds only CSS and images, so stopping the tool returns the official interface. Editing files inside the install directory is what gets wiped on an update.'
+            }
+          ],
+        },
+        { type: 'h2', text: 'About Codex Skin Studio' },
+        'Codex Skin Studio is an open source skinning project for the Codex desktop app, hosted at codex-skin-studio.shop. To tune this palette yourself, start at /en/guides/customize; the rest of the themes are at /en/gallery.',
+        { type: 'cta', text: 'Open the customization guide →', href: '/en/guides/customize' },
+        { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
+      ],
+    },
   }
 ];
