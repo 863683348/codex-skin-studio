@@ -5348,5 +5348,186 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Browse the theme gallery →', href: '/en/gallery' },
       ],
     },
+  },
+{
+    slug: 'codex-theme-report-2026',
+    date: '2026-11-01',
+    title: {
+      zh: '2026 年度 Codex 主题报告：数据驱动的选择指南',
+      en: 'Codex Theme Report 2026: A Data-Driven Guide to Picking One'
+    },
+    description: {
+      zh: '这份 codex theme report 2026 不看截图好不好看，只看哪些主题真的留在了屏幕上。年度报告 / annual report 整理了过去十二个月画廊里的真实使用情况，以及自建配色从哪一刻开始不值得再花一下午。',
+      en: 'This codex theme report 2026 ignores screenshots and looks at what stayed installed. Twelve months of gallery activity, plus the point where building your own codex theme stops paying off.'
+    },
+    content: {
+      zh: [
+        '这份 codex theme report 2026 关心的不是截图好不好看，而是哪些主题真的留在了屏幕上。codex-skin-studio.shop 画廊过去十二个月的使用情况能说明三件事：哪些主题装上就再没卸过，哪些试一次就扔，以及自建配色到哪一刻开始不值得再花一个下午。',
+        {
+          type: 'h2',
+          text: '这一年真正变了的'
+        },
+        '有两件事变了。深色主题不再是一个单独的分类，它成了默认的起点。自定义配色从新鲜玩意儿变成了大约五分之一的使用量，节日套装则照例在假期冲一波，然后消失。',
+        '其余的基本没动。浅色主题仍然占一小块，主要出现在采光好的桌子和要投屏给客户看的场合。',
+        {
+          type: 'h2',
+          text: '被留下来的主题长什么样'
+        },
+        {
+          type: 'ul',
+          items: [
+            '深色底配一个暖色 accent，装上就再没动过',
+            '面板对比度压得比较低，长时间盯着比高对比那几套舒服',
+            '边缘有深色描边，浅色壁纸上不会糊掉',
+            '加载快的：带重动画背景的那几套，一周内基本都被换掉'
+          ]
+        },
+        {
+          type: 'h2',
+          text: '自建配色从哪一刻开始不划算'
+        },
+        '当你对颜色有一个明确主张时，自己做主题是值的。当你同时在调五个变量、而且一直用同一块显示器看效果时，就很不值了。',
+        {
+          type: 'ul',
+          items: [
+            '值：你只想改一个 accent，底色可以不动',
+            '值：两块显示器亮度差很多，需要分别照顾',
+            '不值：你在照抄别人截图里的配置',
+            '不值：改完的变化比花掉的时间还小'
+          ]
+        },
+        {
+          type: 'h2',
+          text: '如果只想从这份报告里拿走一条'
+        },
+        '那就这一条：底色按你的房间选，别按画廊排名选。排名只告诉你什么流行，它不知道你背后那扇窗有多亮。',
+        {
+          type: 'ul',
+          items: [
+            '房间亮：浅色或中间调底色，文字要深，避开低对比配色',
+            '房间暗：深色底，一个低饱和 accent，饱和度别拉满',
+            '两种情况都有：按暗的那边定底色，亮度交给显示器调',
+            '要共享屏幕：中间调底色加高文字对比，节日配色就算了'
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'FAQ'
+        },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '这份 2026 年度报告和趋势那篇有什么区别？',
+              a: '趋势那篇记录什么在变流行，这篇记录什么被留了下来，后者的集合要小得多。装上又卸掉的主题说明不了口味，只能说明好奇心。'
+            },
+            {
+              q: '该自己做配色还是直接用预设？',
+              a: '先用预设，只改一个 accent。从零开始的人大多花一个下午，最后做出来的东西和画廊里已有的差不多。等你心里有一个确定的颜色，再自己做。'
+            },
+            {
+              q: '报告覆盖 Windows 和 macOS 吗？',
+              a: '覆盖。两边都通过 CDP 注入应用主题，配色表现一致。真正有差别的是显示器校准，所以关于底色的建议讲的是你的房间，不是你的系统。'
+            }
+          ]
+        },
+        {
+          type: 'h2',
+          text: '关于 Codex Skin Studio'
+        },
+        'Codex Skin Studio 是一个面向 Codex 桌面端的开源换肤项目，站点在 codex-skin-studio.shop。主题库在 /zh/gallery，精选清单在 /zh/guides/best-codex-themes。',
+        {
+          type: 'cta',
+          text: '查看主题库 →',
+          href: '/zh/gallery'
+        }
+      ],
+      en: [
+        'This codex theme report 2026 looks at what stayed installed rather than what looked good in a screenshot. Twelve months of gallery activity on codex-skin-studio.shop answers three questions: which themes went on and never came off, which got tried once and dropped, and the point where building your own codex theme stops being worth the afternoon.',
+        {
+          type: 'h2',
+          text: 'What actually moved this year'
+        },
+        'Two things changed. Dark themes stopped being a separate category and became the default starting point. Custom palettes went from a novelty to roughly one in five applied themes, and the seasonal sets kept their holiday spike before disappearing again.',
+        'The rest held steady. Light themes still hold a small share, mostly on bright desks and on screens that get shared with a client.',
+        {
+          type: 'h2',
+          text: 'What the themes people keep have in common'
+        },
+        {
+          type: 'ul',
+          items: [
+            'A dark base with one warm accent, applied once and never touched again',
+            'Panel contrast kept low, which survives a long session better than a punchy one',
+            'A dark outline on the edges, so nothing blurs into a light wallpaper',
+            'Fast loading: the sets with heavy animated backgrounds are gone within a week'
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'Where a custom palette stops paying off'
+        },
+        'Building your own theme is worth it when you have one clear opinion about colour. It stops being worth it when you are tuning five variables at once and checking every result on the same monitor you tuned it on.',
+        {
+          type: 'ul',
+          items: [
+            'Worth it: you want to change one accent and can leave the base alone',
+            'Worth it: your two monitors differ enough in brightness to need separate handling',
+            'Not worth it: you are copying a screenshot of someone else\'s setup',
+            'Not worth it: the change ends up smaller than the time you spent making it'
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'If you take one thing from this report'
+        },
+        'Take this one: pick the base from your room, not from the gallery ranking. The ranking tells you what is popular. It knows nothing about the window behind your desk.',
+        {
+          type: 'ul',
+          items: [
+            'Bright room: light or mid base with dark text, skip the low contrast palettes',
+            'Dim room: dark base, one muted accent, keep saturation away from the top',
+            'Both: set the base for the dim case and handle brightness at the display',
+            'Shared screen: mid base with high text contrast, leave the seasonal sets alone'
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'FAQ'
+        },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'How is this 2026 annual report different from the trends post?',
+              a: 'The trends post tracks what became popular over time. This one tracks what stayed installed, which is a much smaller set. A theme applied once and removed says something about curiosity, not about taste.'
+            },
+            {
+              q: 'Should I build my own palette or use a preset?',
+              a: 'Start with a preset and change one accent. People who begin from scratch spend an afternoon and land close to something already in the gallery. Build your own once you have one specific colour in mind.'
+            },
+            {
+              q: 'Does the report cover Windows and macOS?',
+              a: 'Yes. Both apply themes through CDP injection, so the palette behaves the same. What differs is display calibration, which is why the base colour advice is about your room and not your operating system.'
+            }
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'About Codex Skin Studio'
+        },
+        'Codex Skin Studio is an open source theming project for the Codex desktop app, hosted at codex-skin-studio.shop. The gallery is at /en/gallery and the shortlist is at /en/guides/best-codex-themes.',
+        {
+          type: 'cta',
+          text: 'Browse the theme gallery →',
+          href: '/en/gallery'
+        },
+        {
+          type: 'cta',
+          text: 'Best Codex Themes 2026 →',
+          href: '/en/guides/best-codex-themes'
+        }
+      ]
+    }
   }
 ];
