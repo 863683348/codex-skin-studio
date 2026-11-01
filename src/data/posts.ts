@@ -5529,5 +5529,148 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         }
       ]
     }
+  },
+  {
+    slug: 'codex-skin-studio-faq',
+    date: '2026-11-02',
+    title: {
+      zh: 'Codex Skin Studio 常见问题答疑（上）',
+      en: 'Codex Skin Studio FAQ (Part 1)'
+    },
+    description: {
+      zh: 'codex skin studio faq 的第一部分：换肤到底动了哪些文件、为什么主题包里不能有 JavaScript、官方升级之后主题还能不能用，以及 macOS 和 Windows 的差别。',
+      en: 'Part one of the codex skin studio faq: which files theming actually touches, why theme packages cannot carry JavaScript, what an official update does to your themes, and where macOS and Windows differ.'
+    },
+    content: {
+      zh: [
+        '这是三篇常见问题答疑里的第一篇，只回答安装之前大家会问的那几件事：工具到底改了什么、哪些东西它坚决不碰、Codex 升级之后会怎样。恢复和排查放到后面两篇。',
+        {
+          type: 'h2',
+          text: '换肤原理，一段话讲完'
+        },
+        'Codex Skin Studio 连接 Codex 桌面端在本机开放的调试端口，把 CSS 注入到正在运行的窗口里。Codex 安装目录下的任何文件都不会被写入，所以官方升级不会因为主题出问题，主题也不会因为升级而损坏。',
+        {
+          type: 'ul',
+          items: [
+            '安装目录里的文件一律不动，包括 app.asar',
+            '停掉工具之后，下一次界面渲染就回到官方样式',
+            '主题包只含 CSS 和图片，不含 JavaScript'
+          ]
+        },
+        {
+          type: 'h2',
+          text: '常见问题'
+        },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Codex Skin Studio 会修改 Codex 的官方文件吗？',
+              a: '不会。主题是通过本机 CDP 回环端口在运行时注入的，Codex 安装目录里没有任何文件被写入。所以官方更新不会被主题弄坏，主题也不会被更新弄坏。'
+            },
+            {
+              q: '想看到主题效果，工具必须一直开着吗？',
+              a: '是的。注入是运行时行为，你想要主题，辅助进程就得开着。关掉之后界面在下一次渲染时回到官方样式，这也是判断一个问题是不是主题引起的最快办法。'
+            },
+            {
+              q: '主题包里能放 JavaScript 吗？',
+              a: '不能。主题包只允许 CSS 和图片资源，校验器会拒掉其他一切内容。这条限制是故意的，正因为如此，一个主题才读不到你的文件，也发不出任何东西。'
+            },
+            {
+              q: 'Codex 官方升级会把我的主题弄坏吗？',
+              a: '偶尔会，而且通常只是小问题。升级会改类名，某个面板或某条边框可能就掉了。修法是改选择器，不是重装，画廊里也会标出哪些主题是在最近一次发布之后重新做过的。'
+            },
+            {
+              q: 'macOS 版和 Windows 版有区别吗？',
+              a: '换肤引擎两边是同一套。区别在于打包方式：macOS 给的是签名应用加命令脚本，Windows 给的是安装包。主题文件在两个系统之间直接通用，不用改。'
+            },
+            {
+              q: '发现某个主题显示不对，去哪儿反馈？',
+              a: '去 GitHub 仓库提 issue，带上主题名、你的 Codex 版本和一张截图。升级之后布局错位是最常见的一类反馈，一般一两天内就会修好。'
+            }
+          ]
+        },
+        {
+          type: 'h2',
+          text: '关于 Codex Skin Studio'
+        },
+        'Codex Skin Studio 是一个面向 Codex 桌面端的开源换肤项目，站点在 codex-skin-studio.shop。完整问题清单在 /zh/faq，项目背景在 /zh/about。',
+        {
+          type: 'cta',
+          text: '查看完整常见问题 →',
+          href: '/zh/faq'
+        },
+        {
+          type: 'cta',
+          text: '关于这个项目 →',
+          href: '/zh/about'
+        }
+      ],
+      en: [
+        'This is the first of three FAQ posts, and it sticks to the questions people ask before installing anything: what the tool touches, what it refuses to touch, and what happens when Codex updates. Restore steps and troubleshooting land in the next two.',
+        {
+          type: 'h2',
+          text: 'How the theming works, in one paragraph'
+        },
+        'Codex Skin Studio connects to the local debugging port that the Codex desktop app opens on your own machine, then injects CSS into the running window. No file under the Codex install directory is opened for writing, so an update cannot be broken by a theme and a theme cannot be broken by an update.',
+        {
+          type: 'ul',
+          items: [
+            'Installed files stay untouched, including app.asar',
+            'Stop the helper and the next render is back to the stock interface',
+            'Theme packages hold CSS and images only, with no JavaScript'
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'FAQ'
+        },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'Does Codex Skin Studio modify official Codex files?',
+              a: 'No. Themes are injected at runtime through the local CDP loopback port, and nothing under the Codex install directory gets written. An official update cannot be broken by a theme, and a theme cannot be broken by an update.'
+            },
+            {
+              q: 'Does the tool have to stay running for the theme to show?',
+              a: 'Yes. Injection is a runtime behaviour, so the helper stays open while you want the theme. Closing it puts the stock interface back on the next render, which is also the fastest way to tell whether a problem comes from the theme at all.'
+            },
+            {
+              q: 'Can a theme package contain JavaScript?',
+              a: 'No. A package accepts CSS and image assets and the validator rejects everything else. The restriction is deliberate: it is the reason a theme cannot read your files or send anything anywhere.'
+            },
+            {
+              q: 'Will an official Codex update break my themes?',
+              a: 'Sometimes, and usually in a small way. Updates rename class names, so a panel or a border can drop out. The fix is a selector tweak rather than a reinstall, and the gallery marks which themes were rebuilt after the latest release.'
+            },
+            {
+              q: 'Is there a difference between the macOS and Windows builds?',
+              a: 'The theming engine is the same on both. What differs is packaging: macOS ships a signed app plus command scripts, Windows ships an installer. Theme files move between the two without any change.'
+            },
+            {
+              q: 'Where do I report a theme that renders wrong?',
+              a: 'Open an issue on the GitHub repository with the theme name, your Codex version and a screenshot. Layouts that break after an update are the most common report and they usually get fixed within a day or two.'
+            }
+          ]
+        },
+        {
+          type: 'h2',
+          text: 'About Codex Skin Studio'
+        },
+        'Codex Skin Studio is an open source theming project for the Codex desktop app, hosted at codex-skin-studio.shop. The full question list lives at /en/faq and the project background is at /en/about.',
+        {
+          type: 'cta',
+          text: 'Read the full FAQ →',
+          href: '/en/faq'
+        },
+        {
+          type: 'cta',
+          text: 'About the project →',
+          href: '/en/about'
+        }
+      ]
+    }
   }
+
 ];
