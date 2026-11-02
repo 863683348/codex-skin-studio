@@ -5671,6 +5671,145 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         }
       ]
     }
+  },
+
+  {
+    slug: 'codex-skin-studio-faq-part-2',
+    date: '2026-11-03',
+    title: {
+      zh: 'Codex Skin Studio 常见问题答疑（中）',
+      en: 'Codex Skin Studio FAQ (Part 2)',
+    },
+    description: {
+      zh: 'codex skin studio common questions 的第二部分：主题包怎么备份、换肤会不会拖慢 Codex、团队里怎么统一一套 codex 主题，以及为什么有的面板换了主题还是白的。',
+      en: 'Part two of the codex skin studio common questions: how to back up theme packages, whether theming slows Codex down, how a team settles on one codex theme, and why some panels stay white after you apply a theme.',
+    },
+    content: {
+      zh: [
+        '这是三篇常见问题答疑里的第二篇，回答的都是装上之后才会遇到的问题：备份怎么做、性能有没有影响、团队里能不能统一主题。换肤原理在上篇，链接放在文末。',
+        { type: 'h2', text: '备份和恢复' },
+        '主题包就是 CSS 加图片，没有别的东西，所以备份比大多数人想的简单。把主题目录整个复制走就算完成了。',
+        {
+          type: 'ul',
+          items: [
+            '把整个 themes 目录复制到网盘或者 U 盘，压不压缩都行',
+            '换机器时把目录放回同样的位置，下次启动就会被识别',
+            '自己调过的配色单独存一份 CSS 变量表，主题重装后不用重新调',
+            '团队共享的主题不用备份，服务端那份才是源头',
+          ],
+        },
+        { type: 'h2', text: '性能到底有没有影响' },
+        '换肤本身测不出差别。每个窗口多加载一份样式表，这个量级在 Codex 里看不到。真正会拖慢的是背景图。',
+        {
+          type: 'ul',
+          items: [
+            '背景图控制在 2MB 以内，用 WebP',
+            '少写全屏 keyframes，滚动和输入时会掉帧',
+            '开多个窗口时主题只注入一次，不是每个窗口跑一份进程',
+            '觉得卡就先停掉工具看一眼。界面回到官方样式之后还卡，问题就不在主题上',
+          ],
+        },
+        { type: 'h2', text: '团队里怎么统一一套 Codex 主题' },
+        '这件事靠自觉是撑不住的，一个月之后必然各用各的。团队版给了一个共享画廊，管理员发布，其他人下次同步就能拿到。',
+        {
+          type: 'ul',
+          items: [
+            '管理员在共享画廊发布一套官方主题，写清楚适配的 Codex 版本',
+            '成员本地可以覆盖，覆盖只影响自己，不会回写到共享里',
+            'Codex 大版本升级之后让管理员重新发布一次，别指望每个人自己去改选择器',
+            '新成员入职时把主题这件事写进环境准备清单，比事后挨个解释省事',
+          ],
+        },
+        { type: 'h2', text: '常见问题' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: '主题怎么备份？',
+              a: '把 themes 目录整个复制走就行。主题包只有 CSS 和图片，压成一个 zip 就够了。换机器时放回原来的位置，下次启动工具会自己识别。',
+            },
+            {
+              q: '换肤会拖慢 Codex 吗？',
+              a: '基本不会。每个窗口多一份样式表，这个量级测不出来。会拖慢的是大背景图，控制在 2MB 以内、用 WebP 就没有问题。',
+            },
+            {
+              q: '为什么有的面板换了主题还是白的？',
+              a: '两种可能。一是那个面板渲染在调试端口够不到的上下文里，二是这套主题还没给它写规则。画廊里的主题页面会列出已经覆盖的区域。',
+            },
+            {
+              q: '团队能共用一套主题吗？',
+              a: '可以。团队版带一个共享画廊，管理员发布之后其他人下次同步就能拿到。成员本地仍然可以覆盖，而且覆盖不会影响别人。',
+            },
+          ],
+        },
+        { type: 'h2', text: '关于 Codex Skin Studio' },
+        'Codex Skin Studio 是面向 Codex 桌面端的开源换肤项目，站点在 codex-skin-studio.shop。完整问题清单在 /zh/faq，安全性说明在 /zh/guides/is-it-safe。',
+        { type: 'cta', text: '查看完整常见问题 →', href: '/zh/faq' },
+        { type: 'cta', text: '换肤到底安不安全 →', href: '/zh/guides/is-it-safe' }
+      ],
+      en: [
+        'This is the second of three FAQ posts, and it covers what people ask after installing: how to back themes up, whether theming costs you performance, and how a team lands on one theme. Part one covered how injection works, and the link is at the bottom.',
+        { type: 'h2', text: 'Backup and restore' },
+        'A theme package is CSS plus images and nothing else, so backing one up is easier than most people expect. Copy the folder and you are done.',
+        {
+          type: 'ul',
+          items: [
+            'Copy the whole themes folder to cloud storage or a USB drive, zipped or not',
+            'On a new machine, put the folder back in the same place and it is picked up on the next launch',
+            'Keep a separate copy of any CSS variables you tuned, so a reinstall does not mean redoing them',
+            'Shared team themes do not need backing up, the copy on the server is the source',
+          ],
+        },
+        { type: 'h2', text: 'What it costs in performance' },
+        'Theming itself does not show up in measurements. One extra stylesheet per window sits below anything you will notice in Codex. What does cost time is a large background image.',
+        {
+          type: 'ul',
+          items: [
+            'Keep wallpapers under about 2MB and use WebP',
+            'Go easy on full-screen keyframes, they drop frames while you scroll or type',
+            'With several windows open the theme is injected once, not once per window process',
+            'If it feels slow, stop the tool and look again. Still slow with the official look back means the theme is not the cause',
+          ],
+        },
+        { type: 'h2', text: 'Getting a team onto one Codex theme' },
+        'Good intentions do not hold here. A month in, everyone is back on their own theme. The team plan ships a shared gallery where an admin publishes a theme and everyone else picks it up on the next sync.',
+        {
+          type: 'ul',
+          items: [
+            'An admin publishes one official theme in the shared gallery, with the Codex version it was built against',
+            'Members can override locally, and the override stays local without writing back to the shared copy',
+            'After a major Codex release have the admin republish, rather than expecting everyone to fix selectors themselves',
+            'Put theming in the onboarding checklist for new hires, it beats explaining it one by one later',
+          ],
+        },
+        { type: 'h2', text: 'Common questions' },
+        {
+          type: 'faq',
+          items: [
+            {
+              q: 'How do I back up my themes?',
+              a: 'Copy the themes folder somewhere else. Theme packages hold CSS and images only, so a single zip is enough. On a new machine, drop the folder back in its original place and the tool picks it up on the next launch.',
+            },
+            {
+              q: 'Does theming slow Codex down?',
+              a: 'Not in any way you will measure. Each window loads one extra stylesheet, which is below the threshold you would notice. Large background images are the thing that costs time, so keep them under about 2MB and use WebP.',
+            },
+            {
+              q: 'Why do some panels stay white after I apply a theme?',
+              a: 'Two possibilities. The panel renders in a context the local debug port cannot reach, or this theme has no rule for it yet. The theme page in the gallery lists the surfaces it covers.',
+            },
+            {
+              q: 'Can a team share one theme?',
+              a: 'Yes. The team plan includes a shared gallery, and once an admin publishes a theme everyone else gets it on the next sync. Members can still override locally, and that override does not affect anyone else.',
+            },
+          ],
+        },
+        { type: 'h2', text: 'About Codex Skin Studio' },
+        'Codex Skin Studio is an open-source skinning project for the Codex desktop app, hosted at codex-skin-studio.shop. The full question list lives at /en/faq, and the write-up on safety is at /en/guides/is-it-safe.',
+        { type: 'cta', text: 'Read the full FAQ →', href: '/en/faq' },
+        { type: 'cta', text: 'Is theming safe? Read this →', href: '/en/guides/is-it-safe' }
+      ]
+    }
   }
 
 ];
