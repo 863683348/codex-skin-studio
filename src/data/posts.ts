@@ -5810,6 +5810,168 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
         { type: 'cta', text: 'Is theming safe? Read this →', href: '/en/guides/is-it-safe' }
       ]
     }
+  },
+  {
+  slug: 'is-codex-skin-studio-a-game-cheat',
+  date: '2026-11-06',
+  title: {
+    zh: 'Codex Skin Studio 是游戏外挂吗？',
+    en: 'Is Codex Skin Studio a Game Cheat or External Tool?'
+  },
+  description: {
+    zh: '用「外挂」的判定标准逐条对照 Codex Skin Studio：不改文件、不发请求、不碰逻辑，它更像一层 CSS 主题。',
+    en: 'Checking Codex Skin Studio against what defines a cheat: no file edits, no network calls, no logic touched. It behaves like a CSS theme, not a cheat.'
+  },
+  content: {
+    zh: [
+      '「游戏外挂」这个词最近总跟 codex skin studio cheat 这组搜索绑在一起出现，所以先把结论放在前面：Codex Skin Studio 不是外挂。它是一套给 Codex 桌面端换主题的工具，工作方式更像给浏览器装一款皮肤扩展，跟改内存、注入逻辑的那类游戏外挂是两种东西。外挂的名声不好，担心可以理解，但担心之前值得先看看它到底做了什么。',
+      {
+        type: 'h2',
+        text: '外挂的定义，以及游戏外挂到底改什么'
+      },
+      '外挂之所以被禁止，核心是它篡改了程序运行时本不该被用户改动的部分：改内存数值、拦截网络封包、伪造输入信号，让程序做出开发者没有授权的行为。判定一个工具是不是外挂，不看它名字吓不吓人，看它有没有越过这条线。',
+      {
+        type: 'h2',
+        text: '逐条对照：Codex Skin Studio 做了什么'
+      },
+      '把外挂的判定标准一条条拿来对照，结果是每一条都不命中：',
+      {
+        type: 'ul',
+        items: [
+          '不修改官方文件：主题通过 Chrome DevTools Protocol 在运行时注入，官方安装目录一个字节都不动',
+          '不改程序逻辑：注入的内容只有 CSS 和图片，不允许 JavaScript，Codex 的功能行为不受影响',
+          '不发外部请求：主题包是本地文件，工具不把你的数据传到任何服务器',
+          '一键可逆：停止工具，界面立刻恢复官方原样，不留残余'
+        ]
+      },
+      '对照游戏外挂那几条典型行为（改内存、劫持封包、伪造输入），Codex Skin Studio 一条都不沾。它碰的只有「外观」这一层。',
+      {
+        type: 'h2',
+        text: '它和 game cheat 差在哪一层'
+      },
+      'game cheat 的目标是获得游戏内优势，比如自动瞄准、透视、加速。Codex 不是游戏，Codex Skin Studio 的目标也不是优势，是好看：换配色、换背景、调对比度。两者连作用对象都不同，谈不到同一类。如果一定要归类，它更接近浏览器主题或编辑器配色方案，属于个性化外观工具。',
+      {
+        type: 'h2',
+        text: '会被判定为作弊或封号吗'
+      },
+      'Codex 是开发工具，不是竞技游戏，没有反作弊系统在扫描你的界面样式。主题只改变你本地看到的颜色，不影响任何代码生成结果，也不影响账户行为数据。风险更现实的部分在别处：比如给商业演示用了不合规的背景图，或者主题 CSS 写坏导致界面显示异常。这些属于使用问题，不是作弊问题。安全性方面的详细分析，我们单独写过一篇 /en/guides/is-it-safe，建议配合阅读。',
+      {
+        type: 'h2',
+        text: 'Codex 主题的本质：一层 CSS'
+      },
+      '理解了 codex theme 是什么，外挂的担心自然就散了。一份主题包就是若干 CSS 规则加几张图，通过本地调试端口交给渲染进程，浏览器加载样式表用的同一套机制。开发者每天写的网页也有 CSS，没有人管给网页换配色叫外挂。工具里的所有主题都经过同一套约束：纯样式、无脚本、本地运行。',
+      {
+        type: 'h2',
+        text: '常见问题'
+      },
+      {
+        type: 'faq',
+        items: [
+          {
+            q: 'Codex Skin Studio 会修改 Codex 官方文件吗？',
+            a: '不会。注入发生在运行时，官方文件保持原样，Codex 升级也不需要重装主题。'
+          },
+          {
+            q: '用主题会被封号吗？',
+            a: '不会。主题只改变你本地的界面外观，不接触账户数据、代码生成或网络请求，没有任何可被判定的违规行为。'
+          },
+          {
+            q: '主题包里可以有脚本吗？',
+            a: '不可以，也不需要。主题格式只接受 CSS 和图片，这个限制本身就是安全设计的一部分。'
+          }
+        ]
+      },
+      {
+        type: 'h2',
+        text: '关于 Codex Skin Studio'
+      },
+      'Codex Skin Studio 是一个开源的 Codex 桌面端换肤项目，站点在 codex-skin-studio.shop。安全机制全文在 /en/guides/is-it-safe，常见问题总表在 /en/faq，主题库和下载入口在首页 /en。',
+      {
+        type: 'cta',
+        text: '查看安全性完整分析 →',
+        href: '/en/guides/is-it-safe'
+      },
+      {
+        type: 'cta',
+        text: '前往首页下载 →',
+        href: '/en'
+      }
+    ],
+    en: [
+      'Search phrases like "codex skin studio cheat" keep appearing, so the answer comes first: Codex Skin Studio is not a game cheat. It is a theming tool for the Codex desktop app, closer to a browser skin extension than to anything that tampers with memory or injects logic. The worry is understandable, since cheats have earned their bad reputation, but the label does not survive a look at what the tool actually does.',
+      {
+        type: 'h2',
+        text: 'What actually defines a game cheat'
+      },
+      'Cheats get banned because they alter parts of a program users are never meant to touch: rewriting memory values, intercepting network packets, faking input events so the software behaves in ways its developer never authorized. Whether a tool deserves the cheat label is not about its name, it is about crossing that line.',
+      {
+        type: 'h2',
+        text: 'Checklist: what Codex Skin Studio does and does not do'
+      },
+      'Run the checklist and nothing on the cheat side matches:',
+      {
+        type: 'ul',
+        items: [
+          'No official files modified: themes are injected at runtime through Chrome DevTools Protocol, and the install directory stays byte-for-byte untouched',
+          'No logic changed: a theme package contains CSS and images only, JavaScript is not allowed, and Codex behaves exactly the same',
+          'No external requests: themes are local files, and the tool sends nothing to any server',
+          'Reversible in one click: stop the tool and the official interface returns immediately, nothing left behind'
+        ]
+      },
+      'Compare that with the classic cheat behaviors (memory edits, packet hijacking, input faking) and the overlap is zero. The tool touches appearance, nothing deeper.',
+      {
+        type: 'h2',
+        text: 'Where a codex theme differs from an external tool'
+      },
+      'A game cheat buys you an in-game advantage: aim assistance, wallhacks, speed. Codex is not a game, and a codex theme does not buy advantages, it buys aesthetics: colors, backgrounds, contrast. The two do not even share a target, so the same category cannot hold both. If you must file it somewhere, put it next to browser themes and editor color schemes, in the personalization drawer.',
+      {
+        type: 'h2',
+        text: 'Can you get banned for using it?'
+      },
+      'Codex is a development tool, not a competitive game, and there is no anti-cheat system scanning your interface styling. A theme changes colors you see locally; it does not touch code generation results or account activity. The realistic risks sit elsewhere, like using an unlicensed background image in a commercial demo, or writing broken CSS that garbles a panel. Those are usage issues, not cheating issues. We cover the safety model in detail at /en/guides/is-it-safe, which pairs well with this article.',
+      {
+        type: 'h2',
+        text: 'The nature of a codex theme: one layer of CSS'
+      },
+      'Once you see what a codex theme is, the cheat worry dissolves. A theme package is a set of CSS rules plus a few images, handed to the renderer through a local debug port, the same mechanism a browser uses to load a stylesheet. Developers write CSS for the web every day, and nobody calls restyling a page cheating. Every theme in the gallery follows the same constraints: style only, no scripts, runs locally.',
+      {
+        type: 'h2',
+        text: 'Common questions'
+      },
+      {
+        type: 'faq',
+        items: [
+          {
+            q: 'Does Codex Skin Studio modify official Codex files?',
+            a: 'No. Injection happens at runtime, official files stay untouched, and a Codex update never forces you to reinstall themes.'
+          },
+          {
+            q: 'Can a theme get my account banned?',
+            a: 'No. Themes change your local interface appearance only, and never touch account data, code generation, or network requests, so there is nothing to flag.'
+          },
+          {
+            q: 'Can a theme package contain scripts?',
+            a: 'It cannot, and it does not need to. The format accepts CSS and images only, and that restriction is part of the safety design.'
+          }
+        ]
+      },
+      {
+        type: 'h2',
+        text: 'About Codex Skin Studio'
+      },
+      'Codex Skin Studio is an open source theming project for the Codex desktop app, hosted at codex-skin-studio.shop. The full safety write-up lives at /en/guides/is-it-safe, the complete FAQ at /en/faq, and the theme gallery plus download at the homepage /en.',
+      {
+        type: 'cta',
+        text: 'Read the full safety analysis →',
+        href: '/en/guides/is-it-safe'
+      },
+      {
+        type: 'cta',
+        text: 'Visit the homepage →',
+        href: '/en'
+      }
+    ]
   }
+}
 
 ];
