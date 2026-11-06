@@ -5972,6 +5972,177 @@ export type PostBlock =  | string  | { type: 'h2'; text: string }  | { type: 'p'
       }
     ]
   }
+},
+
+  {
+  slug: 'restore-official-codex-ui',
+  date: '2026-11-07',
+  title: {
+    zh: '换肤后如何完全恢复官方界面',
+    en: 'How to Fully Restore Official Codex UI After Theming'
+  },
+  description: {
+    zh: '三步 codex 完全恢复教程：停工具、重启 Codex、必要时清理主题文件，把 Codex 界面还原成官方原样，不用重装。',
+    en: 'A three-step codex restore official ui walkthrough: stop the tool, restart Codex, and clear theme files if needed. No reinstall required.'
+  },
+  content: {
+    zh: [
+      '给 Codex 换了主题，哪天想回到官方默认外观，其实用不了一分钟。这篇按 codex restore official ui 的完整流程走一遍：多数情况停掉工具就够，少数情况需要做一次 codex theme uninstall，把本地主题文件清掉。全程不需要重装 Codex，也不会动你的代码和设置。',
+      {
+        type: 'h2',
+        text: '为什么恢复这么简单：官方文件从头到尾没被改过'
+      },
+      'Codex Skin Studio 的注入走本地 CDP 回环，主题 CSS 只在工具运行时生效，Codex 的安装目录一个字节都没动。codex 完全恢复之所以简单，道理就在这里：不存在「还原被修改的文件」这一步，让注入停下来就够了。安全机制的细节在 /zh/guides/is-it-safe，不修改官方文件的原理在 /zh/blog/codex-skin-studio-no-file-edit 有更完整的说明。',
+      {
+        type: 'h2',
+        text: '第一步：停掉 Codex Skin Studio'
+      },
+      '关掉或退出 Codex Skin Studio，注入的 CSS 会随工具一起卸载，界面立即回到官方默认样式。想回到官方默认外观的话，多数人做到这一步就完事了：',
+      {
+        type: 'ul',
+        items: [
+          '退出 Codex Skin Studio 进程（托盘图标右键退出也可以）',
+          '如果 Codex 正在运行，重启一次 Codex，确保残留的样式表全部卸载',
+          '检查标题栏、配色和背景图，应该已经回到官方默认'
+        ]
+      },
+      '这一步也回答了另一个常见问题：codex 完全恢复不需要卸载 Codex 本体，主题层和程序层是分开的。',
+      {
+        type: 'h2',
+        text: '第二步：清掉不再想要的主题与预设'
+      },
+      '如果连本地主题文件也不想要了，就做一次完整的 codex theme uninstall。主题包和预设都是本地文件，删掉即可，路径记录在主题管理页面里：',
+      {
+        type: 'ul',
+        items: [
+          '打开 Codex Skin Studio 的主题管理页，记下主题包所在的本地目录',
+          '删除不需要的主题包文件（.css 与配套图片）',
+          '自定义预设如果以后还想用，先按 /zh/blog/codex-theme-backup-and-restore 里的备份方法存一份再删',
+          '重启工具确认主题列表已经清空'
+        ]
+      },
+      '预设文件只保存颜色和背景配置，不含脚本，删除后不会留下任何残余进程或开机自启项。',
+      {
+        type: 'h2',
+        text: 'Codex 更新之后界面还是不对怎么办'
+      },
+      '偶尔有读者在 Codex 升级后发现界面样式不对劲，通常是旧主题的注入会话还挂着。先彻底退出工具再重启 Codex；如果还不行，把主题包里针对旧版本的 CSS 移出目录再试。新版 Codex 官方界面自带的样式升级不会和你冲突，因为官方更新本来就覆盖不了主题层，反过来也一样，这也是主题在 Codex 升级后不用重装的原因。',
+      {
+        type: 'h2',
+        text: '常见问题'
+      },
+      {
+        type: 'faq',
+        items: [
+          {
+            q: '恢复官方界面会删掉我生成的代码或设置吗？',
+            a: '不会。主题只作用于 CSS 外观层，碰不到代码、会话和账户设置，恢复外观不影响任何功能数据。'
+          },
+          {
+            q: 'codex 完全恢复需要重装 Codex 吗？',
+            a: '不需要。停掉工具即可还原，因为官方文件从未被修改，重装是多余的。'
+          },
+          {
+            q: '删除主题后以后还能再用吗？',
+            a: '能。主题包是独立文件，删掉后随时可以从画廊重新下载；想保留自定义预设就先备份，方法见主题备份那篇。'
+          }
+        ]
+      },
+      {
+        type: 'h2',
+        text: '关于 Codex Skin Studio'
+      },
+      'Codex Skin Studio 是一个开源的 Codex 桌面端换肤项目，站点在 codex-skin-studio.shop。下载入口在 /zh/download，安全机制全文在 /zh/guides/is-it-safe，常见问题总表在 /zh/faq。',
+      {
+        type: 'cta',
+        text: '前往下载页 →',
+        href: '/zh/download'
+      },
+      {
+        type: 'cta',
+        text: '回到首页 →',
+        href: '/zh'
+      }
+    ],
+    en: [
+      'Want the stock Codex interface back after trying a theme? Nothing was broken, and getting the default look back takes under a minute. This guide walks the full codex restore official ui flow: stopping the tool is usually enough, and in a few cases a proper codex theme uninstall clears the local theme files too. You never need to reinstall Codex, and nothing you wrote is at risk.',
+      {
+        type: 'h2',
+        text: 'Why restoring is easy: official files were never touched'
+      },
+      'Codex Skin Studio injects through a local CDP loopback, and theme CSS only applies while the tool runs. Not a single byte in the Codex install directory changes, so a full restore means stopping the injection, not repairing any file. That is the whole codex restore official ui story. The safety model is documented at /en/guides/is-it-safe, and /en/blog/codex-skin-studio-no-file-edit explains the no-file-edit design in more depth.',
+      {
+        type: 'h2',
+        text: 'Step 1: stop Codex Skin Studio'
+      },
+      'Closing the tool unloads the injected CSS, and the interface returns to official defaults immediately. Most people can stop after this step:',
+      {
+        type: 'ul',
+        items: [
+          'Quit the Codex Skin Studio process (right-click the tray icon and exit works too)',
+          'Restart Codex if it was open, so any leftover stylesheets unload',
+          'Check the title bar, colors and background image; they should match official defaults again'
+        ]
+      },
+      'This step also answers a related question: a full restore never requires reinstalling Codex. The theme layer and the application layer are separate by design.',
+      {
+        type: 'h2',
+        text: 'Step 2: remove themes and presets you no longer want'
+      },
+      'If you also want the local theme files gone, do a complete codex theme uninstall. Theme packages and presets are plain local files, so removal is a delete operation:',
+      {
+        type: 'ul',
+        items: [
+          'Open the theme manager in Codex Skin Studio and note the local folder where packages live',
+          'Delete the theme packages you do not want (the .css files and their images)',
+          'If you might want a custom preset later, back it up first using the method in /en/blog/codex-theme-backup-and-restore',
+          'Restart the tool and confirm the theme list is empty'
+        ]
+      },
+      'Presets store colors and background configuration only, no scripts, and deleting them leaves no background processes or startup entries behind.',
+      {
+        type: 'h2',
+        text: 'Interface still looks off after a Codex update'
+      },
+      'Now and then a reader reports odd styling right after a Codex upgrade. The usual cause is a stale injection session from an old theme. Quit the tool fully and restart Codex; if that does not fix it, move the CSS written for the old version out of the theme folder and try again. Official interface updates never fight with the theme layer, which is also why themes survive Codex upgrades without a reinstall.',
+      {
+        type: 'h2',
+        text: 'Common questions'
+      },
+      {
+        type: 'faq',
+        items: [
+          {
+            q: 'Will restoring the official UI delete my code or settings?',
+            a: 'No. Themes only affect the CSS appearance layer. Your code, sessions and account settings sit outside what a theme can touch, so a full restore removes none of them.'
+          },
+          {
+            q: 'Do I need to reinstall Codex for a full restore?',
+            a: 'No. Stopping the tool restores the stock look, because official files were never modified. Reinstalling would be wasted effort.'
+          },
+          {
+            q: 'Can I use a deleted theme again later?',
+            a: 'Yes. Theme packages are standalone files, and the gallery lets you download any of them again. Back up custom presets before deleting if you want to keep them.'
+          }
+        ]
+      },
+      {
+        type: 'h2',
+        text: 'About Codex Skin Studio'
+      },
+      'Codex Skin Studio is an open source theming project for the Codex desktop app, hosted at codex-skin-studio.shop. The download lives at /en/download, the full safety write-up at /en/guides/is-it-safe, and the complete FAQ at /en/faq.',
+      {
+        type: 'cta',
+        text: 'Go to the download page →',
+        href: '/en/download'
+      },
+      {
+        type: 'cta',
+        text: 'Back to the homepage →',
+        href: '/en'
+      }
+    ]
+  }
 }
 
 ];
